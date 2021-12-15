@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>shanyu0205.github.io/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Dec 2021 14:59:12 +0800</lastBuildDate><atom:link href="shanyu0205.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blog</title>
+      <link>shanyu0205.github.io/post/blog/</link>
+      <pubDate>Wed, 15 Dec 2021 14:59:12 +0800</pubDate>
+      
+      <guid>shanyu0205.github.io/post/blog/</guid>
+      <description>JAVA 学习 1.JAVA语言基础 1.1Java中的数值类型 1.1.1 数值类型 1.1.2 数据类型转换 顾名思义，即为将一个值从一个类型转换为另一个类型的过程。例如，可以将String类型的数据“457”转换为数值型，也可以将任意类型的数据转换为String类型。如果从低精度数据类型向高精度数据类型转换，则永远不会溢出，即更加安全，并且总是成功，；而把高精度类型数据转换为低精度类型数据时，被可能存在数据的丢失，又可能失败。
+数据转换有两种形式，隐式转换（由低精度转换为高精度）与显式转换（由高精度转换为低精度）。精度由低到高：（不包含逻辑类型与字符类型）byte &amp;lt; short &amp;lt; int&amp;lt; long &amp;lt; float &amp;lt; double 例：
+int x =50; float y = x; //由于浮点型精度高于整数型，所以此转换为隐式转换，结果为50.0 当我们需要把高精度的变量赋给低精度的变量时，必须使用显示类型转换运算（又称强制类型转换）。例:
+int a = (int)45.23; // 输出为45 long y = (long)456.5F; // 输出为456 int b = (int)&amp;#39;d&amp;#39;; // 输出为100 除布尔型以外，其他基本类型数据都能进行显型类型转换。
+1.1.3 运算符 在Java中有着算数运算符，关系运算符，位运算符，逻辑运算符，赋值运算符以及其他运算符。在此，我们主要讨论自增、自减运算符和位运算符。
+b = ++a; b = a++; 上述两行代码看似差不多，实际上有很大区别：第一行翻译为先将a的值+1，然后再赋给b；第二行则是先将a的值赋给b，a的值再+1。
+1.2类中的变量类型  局部变量：在方法，构造方法或者语句块中被定义的变量。方法结束后，变量会自动销毁。 成员变量：成员变量是定义在类中，方法体之外的变量，可以被类中方法、构造方法等语句块访问，没有static修饰。 类变量：类变量也申明在类中，方法体之外，但必须声明为static类型。  例：
+public class Variable{ static int allclicks = 0; // 类变量（静态变量）  String str = &amp;#34;hello world&amp;#34;; // 实例变量（成员变量）  public void method(){ int i = 0; // 局部变量  } } 在Java中，所有变量在使用前都必须声明。例：</description>
+    </item>
+    
+  </channel>
+</rss>
