@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Blog2 // 我的博客</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.90.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://shanyu0205.github.io/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Blog2"/>
+<meta name="twitter:description" content="Java 数据类型 变量就是申请内存来存储值。也就是说，当创建变量的时候，需要在内存中申请空间。内存管理系统根据变量的类型为变量分配存储空间，分配的空间只能用来储存该类型数据。
+Java有着两大数据类型，内置数据类型和引用数据类型。
+内置数据类型 其中包括6种数字类型（4个整数型和2个浮点数型），一种字符类型，及一种布尔型。数字类型 byte：  byte的数据类型是8位、有符号的，以二进制补码（2‘s）表示的整数。 最小值是-128（-2^7） 最大值是127（2^7-1） 默认值是0 byte 类型用在大型数组中节约空间，主要代替整数，因为 byte 变量占用的空间只有 int 类型的四分之一； 例子：byte a = 100，byte b = -50。  short:  short 数据类型是 16 位、有符号的以二进制补码表示的整数 最小值是 -32768（-2^15） 最大值是 32767（2^15 - 1） Short 数据类型也可以像 byte 那样节省空间。一个short变量是int型变量所占空间的二分之一 默认值是0 例子：short s = 1000，short r = -20000。  int:  int 数据类型是32位、有符号的以二进制补码表示的整数 最小值是-2^31（-2147483638） 最大值是2^31-1（-2147483637） 一般的整型变量默认为int型 默认值是0 例子：int i = 100；  long：  long 数据类型是 64 位、有符号的以二进制补码表示的整数； 最小值是 -9,223,372,036,854,775,808（-2^63）最大值是 9,223,372,036,854,775,807（2^63 -1） 这种类型主要使用在需要比较大整数的系统上； 默认值是 0L； 例子： long a = 100000L，Long b = -200000L。 &ldquo;L&quot;理论上不分大小写，但是若写成&quot;l&quot;容易与数字&quot;1&quot;混淆，不容易分辩。所以最好大写。  float：  float 数据类型是单精度、32位、符合IEEE 754标准的浮点数； float 在储存大型浮点数组的时候可节省内存空间； 默认值是 0."/>
+
+    <meta property="og:title" content="Blog2" />
+<meta property="og:description" content="Java 数据类型 变量就是申请内存来存储值。也就是说，当创建变量的时候，需要在内存中申请空间。内存管理系统根据变量的类型为变量分配存储空间，分配的空间只能用来储存该类型数据。
+Java有着两大数据类型，内置数据类型和引用数据类型。
+内置数据类型 其中包括6种数字类型（4个整数型和2个浮点数型），一种字符类型，及一种布尔型。数字类型 byte：  byte的数据类型是8位、有符号的，以二进制补码（2‘s）表示的整数。 最小值是-128（-2^7） 最大值是127（2^7-1） 默认值是0 byte 类型用在大型数组中节约空间，主要代替整数，因为 byte 变量占用的空间只有 int 类型的四分之一； 例子：byte a = 100，byte b = -50。  short:  short 数据类型是 16 位、有符号的以二进制补码表示的整数 最小值是 -32768（-2^15） 最大值是 32767（2^15 - 1） Short 数据类型也可以像 byte 那样节省空间。一个short变量是int型变量所占空间的二分之一 默认值是0 例子：short s = 1000，short r = -20000。  int:  int 数据类型是32位、有符号的以二进制补码表示的整数 最小值是-2^31（-2147483638） 最大值是2^31-1（-2147483637） 一般的整型变量默认为int型 默认值是0 例子：int i = 100；  long：  long 数据类型是 64 位、有符号的以二进制补码表示的整数； 最小值是 -9,223,372,036,854,775,808（-2^63）最大值是 9,223,372,036,854,775,807（2^63 -1） 这种类型主要使用在需要比较大整数的系统上； 默认值是 0L； 例子： long a = 100000L，Long b = -200000L。 &ldquo;L&quot;理论上不分大小写，但是若写成&quot;l&quot;容易与数字&quot;1&quot;混淆，不容易分辩。所以最好大写。  float：  float 数据类型是单精度、32位、符合IEEE 754标准的浮点数； float 在储存大型浮点数组的时候可节省内存空间； 默认值是 0." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://shanyu0205.github.io/post/blog2/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-12-31T15:38:50+08:00" />
+<meta property="article:modified_time" content="2021-12-31T15:38:50+08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://shanyu0205.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>我的博客</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Blog2</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Dec 31, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h1 id="java-数据类型">Java 数据类型</h1>
+<p>变量就是申请内存来存储值。也就是说，当创建变量的时候，需要在内存中申请空间。<!-- raw HTML omitted -->
+内存管理系统根据变量的类型为变量分配存储空间，分配的空间只能用来储存该类型数据。</p>
+<p>Java有着两大数据类型，内置数据类型和引用数据类型。</p>
+<h2 id="内置数据类型">内置数据类型</h2>
+<p>其中包括6种数字类型（4个整数型和2个浮点数型），一种字符类型，及一种布尔型。<!-- raw HTML omitted --></p>
+<h3 id="数字类型">数字类型</h3>
+<h4 id="byte"><code>byte</code>：</h4>
+<ul>
+<li>byte的数据类型是8位、有符号的，以二进制补码（2‘s）表示的整数。</li>
+<li>最小值是-128（-2^7） 最大值是127（2^7-1）</li>
+<li><strong>默认值是0</strong></li>
+<li>byte 类型用在大型数组中节约空间，主要代替整数，因为 byte 变量占用的空间只有 int 类型的四分之一；</li>
+<li>例子：byte a = 100，byte b = -50。</li>
+</ul>
+<h4 id="short"><code>short</code>:</h4>
+<ul>
+<li>short 数据类型是 16 位、有符号的以二进制补码表示的整数</li>
+<li>最小值是 -32768（-2^15） 最大值是 32767（2^15 - 1）</li>
+<li>Short 数据类型也可以像 byte 那样节省空间。一个short变量是int型变量所占空间的二分之一</li>
+<li><strong>默认值是0</strong></li>
+<li>例子：short s = 1000，short r = -20000。</li>
+</ul>
+<h4 id="int"><code>int</code>:</h4>
+<ul>
+<li>int 数据类型是32位、有符号的以二进制补码表示的整数</li>
+<li>最小值是-2^31（-2147483638） 最大值是2^31-1（-2147483637）</li>
+<li>一般的整型变量默认为int型</li>
+<li><strong>默认值是0</strong></li>
+<li>例子：int i = 100；</li>
+</ul>
+<h4 id="long"><code>long</code>：</h4>
+<ul>
+<li>long 数据类型是 64 位、有符号的以二进制补码表示的整数；</li>
+<li>最小值是 -9,223,372,036,854,775,808（-2^63）最大值是 9,223,372,036,854,775,807（2^63 -1）</li>
+<li>这种类型主要使用在需要比较大整数的系统上；</li>
+<li><strong>默认值是 0L；</strong></li>
+<li>例子： long a = 100000L，Long b = -200000L。
+<strong>&ldquo;L&quot;理论上不分大小写</strong>，但是若写成&quot;l&quot;容易与数字&quot;1&quot;混淆，不容易分辩。所以最好大写。</li>
+</ul>
+<h4 id="float"><code>float</code>：</h4>
+<ul>
+<li>float 数据类型是单精度、32位、符合IEEE 754标准的浮点数；</li>
+<li>float 在储存大型浮点数组的时候可节省内存空间；</li>
+<li><strong>默认值是 0.0f；</strong></li>
+<li>浮点数不能用来表示精确的值，如货币；</li>
+<li>例子：float f1 = 234.5f。</li>
+</ul>
+<h4 id="double"><code>double</code>:</h4>
+<ul>
+<li>double 数据类型是双精度、64 位、符合 IEEE 754 标准的浮点数；</li>
+<li>浮点数的默认类型为 double 类型；</li>
+<li>double类型同样不能表示精确的值，如货币；</li>
+<li><strong>默认值是 0.0d；</strong></li>
+</ul>
+<h4 id="boolean"><code>boolean</code>：</h4>
+<ul>
+<li>boolean数据类型表示一位的信息；</li>
+<li>只有两个取值：true 和 false；</li>
+<li>这种类型只作为一种标志来记录 true/false 情况；</li>
+<li><strong>默认值是 false；</strong></li>
+<li>例子：boolean one = true。</li>
+</ul>
+<h4 id="char"><code>char</code>:</h4>
+<ul>
+<li>char 类型是一个单一的 16 位 Unicode 字符；</li>
+<li>最小值是 \u0000（十进制等效值为 0）；</li>
+<li>最大值是 \uffff（即为 65535）；</li>
+<li>char 数据类型可以储存任何字符；</li>
+<li>例子：char letter = &lsquo;A&rsquo;;</li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

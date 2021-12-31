@@ -6,7 +6,18 @@
     <description>Recent content in Posts on 我的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Dec 2021 14:59:12 +0800</lastBuildDate><atom:link href="https://shanyu0205.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 31 Dec 2021 15:38:50 +0800</lastBuildDate><atom:link href="https://shanyu0205.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blog2</title>
+      <link>https://shanyu0205.github.io/post/blog2/</link>
+      <pubDate>Fri, 31 Dec 2021 15:38:50 +0800</pubDate>
+      
+      <guid>https://shanyu0205.github.io/post/blog2/</guid>
+      <description>Java 数据类型 变量就是申请内存来存储值。也就是说，当创建变量的时候，需要在内存中申请空间。内存管理系统根据变量的类型为变量分配存储空间，分配的空间只能用来储存该类型数据。
+Java有着两大数据类型，内置数据类型和引用数据类型。
+内置数据类型 其中包括6种数字类型（4个整数型和2个浮点数型），一种字符类型，及一种布尔型。数字类型 byte：  byte的数据类型是8位、有符号的，以二进制补码（2‘s）表示的整数。 最小值是-128（-2^7） 最大值是127（2^7-1） 默认值是0 byte 类型用在大型数组中节约空间，主要代替整数，因为 byte 变量占用的空间只有 int 类型的四分之一； 例子：byte a = 100，byte b = -50。  short:  short 数据类型是 16 位、有符号的以二进制补码表示的整数 最小值是 -32768（-2^15） 最大值是 32767（2^15 - 1） Short 数据类型也可以像 byte 那样节省空间。一个short变量是int型变量所占空间的二分之一 默认值是0 例子：short s = 1000，short r = -20000。  int:  int 数据类型是32位、有符号的以二进制补码表示的整数 最小值是-2^31（-2147483638） 最大值是2^31-1（-2147483637） 一般的整型变量默认为int型 默认值是0 例子：int i = 100；  long：  long 数据类型是 64 位、有符号的以二进制补码表示的整数； 最小值是 -9,223,372,036,854,775,808（-2^63）最大值是 9,223,372,036,854,775,807（2^63 -1） 这种类型主要使用在需要比较大整数的系统上； 默认值是 0L； 例子： long a = 100000L，Long b = -200000L。 &amp;ldquo;L&amp;quot;理论上不分大小写，但是若写成&amp;quot;l&amp;quot;容易与数字&amp;quot;1&amp;quot;混淆，不容易分辩。所以最好大写。  float：  float 数据类型是单精度、32位、符合IEEE 754标准的浮点数； float 在储存大型浮点数组的时候可节省内存空间； 默认值是 0.</description>
+    </item>
+    
     <item>
       <title>Blog</title>
       <link>https://shanyu0205.github.io/post/blog/</link>
