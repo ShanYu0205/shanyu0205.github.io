@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>features on Hugo tranquilpeak theme</title>
+    <link>https://shanyu0205.github.io/categories/features/</link>
+    <description>Recent content in features on Hugo tranquilpeak theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 02 Oct 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://shanyu0205.github.io/categories/features/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java学习1</title>
+      <link>https://shanyu0205.github.io/post/chinese-test/</link>
+      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://shanyu0205.github.io/post/chinese-test/</guid>
+      <description>&lt;p&gt;Java学习记录（一）&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java学习2</title>
+      <link>https://shanyu0205.github.io/post/chinese-test/</link>
+      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://shanyu0205.github.io/post/chinese-test/</guid>
+      <description>&lt;p&gt;Java学习记录（2）&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>中文測試</title>
+      <link>https://shanyu0205.github.io/post/chinese-test/</link>
+      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://shanyu0205.github.io/post/chinese-test/</guid>
+      <description>&lt;p&gt;This is a chinese test post to show you how chinese is displayed.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

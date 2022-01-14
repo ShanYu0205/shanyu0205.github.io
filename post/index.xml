@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 我的博客</title>
+    <title>Posts on Hugo tranquilpeak theme</title>
     <link>https://shanyu0205.github.io/post/</link>
-    <description>Recent content in Posts on 我的博客</description>
+    <description>Recent content in Posts on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Dec 2021 15:38:50 +0800</lastBuildDate><atom:link href="https://shanyu0205.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Oct 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://shanyu0205.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Blog2</title>
-      <link>https://shanyu0205.github.io/post/blog2/</link>
-      <pubDate>Fri, 31 Dec 2021 15:38:50 +0800</pubDate>
+      <title>Java学习1</title>
+      <link>https://shanyu0205.github.io/post/chinese-test/</link>
+      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://shanyu0205.github.io/post/blog2/</guid>
-      <description>Java 数据类型 变量就是申请内存来存储值。也就是说，当创建变量的时候，需要在内存中申请空间。内存管理系统根据变量的类型为变量分配存储空间，分配的空间只能用来储存该类型数据。
-Java有着两大数据类型，内置数据类型和引用数据类型。
-内置数据类型 其中包括6种数字类型（4个整数型和2个浮点数型），一种字符类型，及一种布尔型。数字类型 byte：  byte的数据类型是8位、有符号的，以二进制补码（2‘s）表示的整数。 最小值是-128（-2^7） 最大值是127（2^7-1） 默认值是0 byte 类型用在大型数组中节约空间，主要代替整数，因为 byte 变量占用的空间只有 int 类型的四分之一； 例子：byte a = 100，byte b = -50。  short:  short 数据类型是 16 位、有符号的以二进制补码表示的整数 最小值是 -32768（-2^15） 最大值是 32767（2^15 - 1） Short 数据类型也可以像 byte 那样节省空间。一个short变量是int型变量所占空间的二分之一 默认值是0 例子：short s = 1000，short r = -20000。  int:  int 数据类型是32位、有符号的以二进制补码表示的整数 最小值是-2^31（-2147483638） 最大值是2^31-1（-2147483637） 一般的整型变量默认为int型 默认值是0 例子：int i = 100；  long：  long 数据类型是 64 位、有符号的以二进制补码表示的整数； 最小值是 -9,223,372,036,854,775,808（-2^63）最大值是 9,223,372,036,854,775,807（2^63 -1） 这种类型主要使用在需要比较大整数的系统上； 默认值是 0L； 例子： long a = 100000L，Long b = -200000L。 &amp;ldquo;L&amp;quot;理论上不分大小写，但是若写成&amp;quot;l&amp;quot;容易与数字&amp;quot;1&amp;quot;混淆，不容易分辩。所以最好大写。  float：  float 数据类型是单精度、32位、符合IEEE 754标准的浮点数； float 在储存大型浮点数组的时候可节省内存空间； 默认值是 0.</description>
+      <guid>https://shanyu0205.github.io/post/chinese-test/</guid>
+      <description>&lt;p&gt;Java学习记录（一）&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Blog</title>
-      <link>https://shanyu0205.github.io/post/blog/</link>
-      <pubDate>Wed, 15 Dec 2021 14:59:12 +0800</pubDate>
+      <title>Java学习2</title>
+      <link>https://shanyu0205.github.io/post/chinese-test/</link>
+      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://shanyu0205.github.io/post/blog/</guid>
-      <description>JAVA 学习 1.JAVA语言基础 1.1Java中的数值类型 1.1.1 数值类型 1.1.2 数据类型转换 顾名思义，即为将一个值从一个类型转换为另一个类型的过程。例如，可以将String类型的数据“457”转换为数值型，也可以将任意类型的数据转换为String类型。如果从低精度数据类型向高精度数据类型转换，则永远不会溢出，即更加安全，并且总是成功，；而把高精度类型数据转换为低精度类型数据时，被可能存在数据的丢失，又可能失败。
-数据转换有两种形式，隐式转换（由低精度转换为高精度）与显式转换（由高精度转换为低精度）。精度由低到高：（不包含逻辑类型与字符类型）byte &amp;lt; short &amp;lt; int&amp;lt; long &amp;lt; float &amp;lt; double 例：
-int x =50; float y = x; //由于浮点型精度高于整数型，所以此转换为隐式转换，结果为50.0 当我们需要把高精度的变量赋给低精度的变量时，必须使用显示类型转换运算（又称强制类型转换）。例:
-int a = (int)45.23; // 输出为45 long y = (long)456.5F; // 输出为456 int b = (int)&amp;#39;d&amp;#39;; // 输出为100 除布尔型以外，其他基本类型数据都能进行显型类型转换。
-1.1.3 运算符 在Java中有着算数运算符，关系运算符，位运算符，逻辑运算符，赋值运算符以及其他运算符。在此，我们主要讨论自增、自减运算符和位运算符。
-b = ++a; b = a++; 上述两行代码看似差不多，实际上有很大区别：第一行翻译为先将a的值+1，然后再赋给b；第二行则是先将a的值赋给b，a的值再+1。
-1.2类中的变量类型  局部变量：在方法，构造方法或者语句块中被定义的变量。方法结束后，变量会自动销毁。 成员变量：成员变量是定义在类中，方法体之外的变量，可以被类中方法、构造方法等语句块访问，没有static修饰。 类变量：类变量也申明在类中，方法体之外，但必须声明为static类型。  例：
-public class Variable{ static int allclicks = 0; // 类变量（静态变量）  String str = &amp;#34;hello world&amp;#34;; // 实例变量（成员变量）  public void method(){ int i = 0; // 局部变量  } } 在Java中，所有变量在使用前都必须声明。例：</description>
+      <guid>https://shanyu0205.github.io/post/chinese-test/</guid>
+      <description>&lt;p&gt;Java学习记录（2）&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>中文測試</title>
+      <link>https://shanyu0205.github.io/post/chinese-test/</link>
+      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://shanyu0205.github.io/post/chinese-test/</guid>
+      <description>&lt;p&gt;This is a chinese test post to show you how chinese is displayed.&lt;/p&gt;</description>
     </item>
     
   </channel>
