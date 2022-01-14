@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>我的博客 on 我的文章</title>
+    <link>https://shanyu0205.github.io/categories/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/</link>
+    <description>Recent content in 我的博客 on 我的文章</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shanyu0205.github.io/categories/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java学习1</title>
+      <link>https://shanyu0205.github.io/post/blog/</link>
+      <pubDate>Sat, 02 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://shanyu0205.github.io/post/blog/</guid>
+      <description>&lt;p&gt;Java学习记录（一）&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java学习2</title>
+      <link>https://shanyu0205.github.io/post/blog2/</link>
+      <pubDate>Wed, 08 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://shanyu0205.github.io/post/blog2/</guid>
+      <description>&lt;p&gt;Java学习记录（二）&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Java on Hugo tranquilpeak theme</title>
+    <title>Java on 我的文章</title>
     <link>https://shanyu0205.github.io/tags/java/</link>
-    <description>Recent content in Java on Hugo tranquilpeak theme</description>
+    <description>Recent content in Java on 我的文章</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Oct 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://shanyu0205.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shanyu0205.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java学习1</title>
-      <link>https://shanyu0205.github.io/post/chinese-test/</link>
-      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
+      <link>https://shanyu0205.github.io/post/blog/</link>
+      <pubDate>Sat, 02 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://shanyu0205.github.io/post/chinese-test/</guid>
+      <guid>https://shanyu0205.github.io/post/blog/</guid>
       <description>&lt;p&gt;Java学习记录（一）&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Java学习2</title>
-      <link>https://shanyu0205.github.io/post/chinese-test/</link>
-      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
+      <link>https://shanyu0205.github.io/post/blog2/</link>
+      <pubDate>Wed, 08 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://shanyu0205.github.io/post/chinese-test/</guid>
-      <description>&lt;p&gt;Java学习记录（2）&lt;/p&gt;</description>
+      <guid>https://shanyu0205.github.io/post/blog2/</guid>
+      <description>&lt;p&gt;Java学习记录（二）&lt;/p&gt;</description>
     </item>
     
   </channel>

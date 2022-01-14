@@ -1,28 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tranquilpeak on Hugo tranquilpeak theme</title>
+    <title>tranquilpeak on 我的文章</title>
     <link>https://shanyu0205.github.io/categories/tranquilpeak/</link>
-    <description>Recent content in tranquilpeak on Hugo tranquilpeak theme</description>
+    <description>Recent content in tranquilpeak on 我的文章</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Oct 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://shanyu0205.github.io/categories/tranquilpeak/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Jun 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://shanyu0205.github.io/categories/tranquilpeak/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Java学习1</title>
-      <link>https://shanyu0205.github.io/post/chinese-test/</link>
-      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
+      <title>Welcome to Tranquilpeak 0.5.3-BETA</title>
+      <link>https://shanyu0205.github.io/post/welcome-to-the-new-tranquilpeak/</link>
+      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://shanyu0205.github.io/post/chinese-test/</guid>
-      <description>&lt;p&gt;Java学习记录（一）&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Java学习2</title>
-      <link>https://shanyu0205.github.io/post/chinese-test/</link>
-      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://shanyu0205.github.io/post/chinese-test/</guid>
-      <description>&lt;p&gt;Java学习记录（2）&lt;/p&gt;</description>
+      <guid>https://shanyu0205.github.io/post/welcome-to-the-new-tranquilpeak/</guid>
+      <description>&lt;p&gt;Tranquilpeak is a gorgeous responsive theme for Hugo blog framework. It has many features and integrated services to improve user experience.&lt;/p&gt;</description>
     </item>
     
     <item>
