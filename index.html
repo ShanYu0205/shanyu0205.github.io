@@ -518,16 +518,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<link disabled id="dark-mode-theme" rel="stylesheet" href="https://shanyu0205.github.io/css/dark.css"></link>
-
-<li class="post-action" style="position: fixed;bottom: 20%;right: 4%;">
-  <a id="dark-mode-toggle" class="post-action-btn btn btn--default">
-      <i id="dark-mode-toggle-i" class="fa fa-moon-o"></i>
-      
-  </a>          
-  </li>   
-  
-
 <script src="https://shanyu0205.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
 
 
@@ -546,6 +536,104 @@ $(document).ready(function() {
 
 
 
+
+
+
+<link disabled id="dark-mode-theme" rel="stylesheet" href="https://shanyu0205.github.io/css/dark.css"></link>
+
+<li class="post-action" style="position: fixed;bottom: 20%;right: 4%;">
+  <a id="dark-mode-toggle" class="post-action-btn btn btn--default">
+      <i id="dark-mode-toggle-i" class="fa fa-moon-o"></i>
+  </a>          
+  </li>   
+  
+<script>
+var darkMode = {
+  config:{    
+    startHour:19,
+    endHour:7,
+  },
+  _darkTheme:null,  
+  _modeToggle:null, 
+  _modeToggleParent:null, 
+  _currentHour:0, 
+  _storageKey:"dark-mode-storage",
+  _storageByHandLastTIme:0, 
+  _storageOverdueHours:12,  
+
+  init:function(){
+    
+    this._modeToggleParent = document.getElementById("dark-mode-toggle");
+    this._modeToggle = document.getElementById("dark-mode-toggle-i");    
+    this._darkTheme = document.getElementById("dark-mode-theme");  
+    this._currentHour = new Date().getHours();  
+
+    this.toggleListen();
+    this.initMode();
+  },
+  initMode:function(){
+    
+    let initMode = this.getModeFromStorage() || this.autoMode(); 
+    this.setMode(initMode);
+  },
+  toggleListen:function(){
+    let _this = this;
+    
+    this._modeToggleParent.addEventListener("click", () => {
+        if (this._modeToggle.className === "fa fa-moon-o") {
+            _this.setModeByHand("dark");
+        } else if (this._modeToggle.className === "fa fa-sun-o") {
+            _this.setModeByHand("light");
+        }
+    });
+
+  },  
+  autoMode:function(){
+    let _currentHour = this._currentHour;
+    if(_currentHour > this.config.startHour || _currentHour < this.config.endHour){
+      return "dark";  
+    }  
+    return "light";    
+  },
+  setMode:function(mode){
+    if (mode === "dark") {
+        this._darkTheme.disabled = false;
+        this._modeToggle.className = "fa fa-sun-o";
+    } else if (mode === "light") {
+        this._darkTheme.disabled = true;
+        this._modeToggle.className = "fa fa-moon-o";
+    }          
+  },
+  setModeByHand:function(mode){
+    this.setMode(mode);
+    this.setModeToStorage(mode);    
+  },
+  setModeToStorage:function(mode){
+    localStorage.setItem(this._storageKey, mode);
+    localStorage.setItem(this._storageKey+"-last-time", (new Date().getTime()));     
+  },
+  getModeFromStorage:function(){
+    let _mode = localStorage.getItem(this._storageKey);
+    let _lastSetTime = localStorage.getItem(this._storageKey+"-last-time");
+    if(_mode && _lastSetTime){
+      _lastSetTime = _lastSetTime/1000;
+      let _currentTime = new Date().getTime()/1000;
+      let _overdueSeconds = this._storageOverdueHours * 3600;
+      if(_currentTime - _lastSetTime < _overdueSeconds){            
+        return _mode;
+      }
+    }
+    localStorage.removeItem(this._storageKey);
+    localStorage.removeItem(this._storageKey+"-last-time");
+    return false;
+
+  },
+  
+
+};
+
+darkMode.init();
+</script>
 
     
   </body>
