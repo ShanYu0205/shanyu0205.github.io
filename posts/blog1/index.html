@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Java学习1 - 山雨欲来风满楼</title><meta name="Description" content=""><meta property="og:title" content="Java学习1" />
+<meta property="og:description" content="Java学习记录（一）" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://shanyu0205.github.io/posts/blog1/" /><meta property="og:image" content="https://shanyu0205.github.io/posts/blog1/featured-image-preview.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-10-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-10-02T00:00:00+00:00" /><meta property="og:site_name" content="山雨欲来风满楼" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://shanyu0205.github.io/posts/blog1/featured-image-preview.jpg"/>
+<meta name="twitter:title" content="Java学习1"/>
+<meta name="twitter:description" content="Java学习记录（一）"/>
+<meta name="application-name" content="山雨欲来风满楼">
+<meta name="apple-mobile-web-app-title" content="山雨欲来风满楼"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://shanyu0205.github.io/posts/blog1/" /><link rel="prev" href="https://shanyu0205.github.io/posts/blog2/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Java学习1",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/shanyu0205.github.io\/posts\/blog1\/"
+        },"genre": "posts","keywords": "Java","wordcount":  2969 ,
+        "url": "https:\/\/shanyu0205.github.io\/posts\/blog1\/","datePublished": "2021-10-02T00:00:00+00:00","dateModified": "2021-10-02T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Will"},"author": {
+                "@type": "Person",
+                "name": "Will"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="山雨欲来风满楼">山雨欲来风满楼</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/about/" title="关于"> 关于 </a><a class="menu-item" href="https://github.com/ShanYu0205" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/en/posts/blog1/">English</option><option value="/posts/blog1/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="山雨欲来风满楼">山雨欲来风满楼</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/about/" title="关于">关于</a><a class="menu-item" href="https://github.com/ShanYu0205" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/en/posts/blog1/">English</option><option value="/posts/blog1/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Java学习1</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Will</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/"><i class="far fa-folder fa-fw"></i>我的博客</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-10-02">2021-10-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2969 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/blog1/featured-image-preview.jpg"
+        data-srcset="/posts/blog1/featured-image-preview.jpg, /posts/blog1/featured-image-preview.jpg 1.5x, /posts/blog1/featured-image-preview.jpg 2x"
+        data-sizes="auto"
+        alt="/posts/blog1/featured-image-preview.jpg"
+        title="/posts/blog1/featured-image-preview.jpg" /></div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1java语言基础">1.JAVA语言基础</a>
+      <ul>
+        <li><a href="#11java中的数值类型">1.1Java中的数值类型</a></li>
+        <li><a href="#111-数值类型">1.1.1 数值类型</a></li>
+        <li><a href="#12类中的变量类型">1.2类中的变量类型</a></li>
+        <li><a href="#13java常量">1.3Java常量</a></li>
+        <li><a href="#14构造方法">1.4构造方法</a></li>
+        <li><a href="#15创建对象">1.5创建对象</a></li>
+        <li><a href="#16访问实例变量和方法">1.6访问实例变量和方法</a></li>
+      </ul>
+    </li>
+    <li><a href="#2java修饰符">2.JAVA修饰符</a>
+      <ul>
+        <li><a href="#默认访问修饰符-不使用任何关键字br"><strong>默认访问修饰符-不使用任何关键字</strong><!-- raw HTML omitted --></a></li>
+        <li><a href="#私有访问修饰符-privatebr"><strong>私有访问修饰符-private</strong><!-- raw HTML omitted --></a></li>
+        <li><a href="#受保护的访问修饰符-protectedbr"><strong>受保护的访问修饰符-protected</strong><!-- raw HTML omitted --></a></li>
+      </ul>
+    </li>
+    <li><a href="#非访问修饰符">非访问修饰符</a>
+      <ul>
+        <li><a href="#final修饰符关键字br"><strong><code>final</code>修饰符(关键字)</strong><!-- raw HTML omitted --></a></li>
+        <li><a href="#static修饰符">static修饰符</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Java学习记录（一）</p>
+<h1 id="java-学习">JAVA 学习</h1>
+<h2 id="1java语言基础">1.JAVA语言基础</h2>
+<h3 id="11java中的数值类型">1.1Java中的数值类型</h3>
+<h3 id="111-数值类型">1.1.1 数值类型</h3>
+<h4 id="112-数据类型转换">1.1.2 数据类型转换</h4>
+<p>顾名思义，即为将一个值从一个类型转换为另一个类型的过程。例如，可以将String类型的数据“457”转换为数值型，也可以将任意类型的数据转换为String类型。<!-- raw HTML omitted --></p>
+<p><strong>如果从低精度数据类型向高精度数据类型转换，则永远不会溢出，即更加安全，并且总是成功，；而把高精度类型数据转换为低精度类型数据时，被可能存在数据的丢失，又可能失败</strong>。</p>
+<p>数据转换有两种形式，隐式转换（由低精度转换为高精度）与显式转换（由高精度转换为低精度）。<!-- raw HTML omitted --></p>
+<p>精度由低到高：（不包含逻辑类型与字符类型）<!-- raw HTML omitted -->
+byte &lt; short &lt; int&lt; long &lt; float &lt; double <!-- raw HTML omitted -->
+例：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span><span class="n">50</span><span class="o">;</span>
+<span class="kt">float</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">;</span> <span class="c1">//由于浮点型精度高于整数型，所以此转换为隐式转换，结果为50.0
+</span></code></pre></div><p>当我们需要把高精度的变量赋给低精度的变量时，必须使用显示类型转换运算（又称强制类型转换）。<!-- raw HTML omitted --></p>
+<p>例:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span><span class="n">45</span><span class="o">.</span><span class="na">23</span><span class="o">;</span>     <span class="c1">// 输出为45
+</span><span class="c1"></span><span class="kt">long</span> <span class="n">y</span> <span class="o">=</span> <span class="o">(</span><span class="kt">long</span><span class="o">)</span><span class="n">456</span><span class="o">.</span><span class="na">5F</span><span class="o">;</span>  <span class="c1">// 输出为456
+</span><span class="c1"></span><span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span><span class="sc">&#39;d&#39;</span><span class="o">;</span>       <span class="c1">// 输出为100 
+</span></code></pre></div><p>除布尔型以外，其他基本类型数据都能进行显型类型转换。</p>
+<h4 id="113-运算符">1.1.3 运算符</h4>
+<p>在Java中有着算数运算符，关系运算符，位运算符，逻辑运算符，赋值运算符以及其他运算符。在此，我们主要讨论自增、自减运算符和位运算符。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="n">b</span> <span class="o">=</span> <span class="o">++</span><span class="n">a</span><span class="o">;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">++;</span>
+</code></pre></div><p>上述两行代码看似差不多，实际上有很大区别：<strong>第一行翻译为先将a的值+1，然后再赋给b；第二行则是先将a的值赋给b，a的值再+1。</strong></p>
+<h3 id="12类中的变量类型">1.2类中的变量类型</h3>
+<ul>
+<li>局部变量：在方法，构造方法或者语句块中被定义的变量。方法结束后，变量会自动销毁。</li>
+<li>成员变量：成员变量是定义在类中，方法体之外的变量，可以被类中方法、构造方法等语句块访问，<strong>没有static修饰</strong>。</li>
+<li>类变量：类变量也申明在类中，方法体之外，<strong>但必须声明为static类型</strong>。</li>
+</ul>
+<p>例：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Variable</span><span class="o">{</span>
+    <span class="kd">static</span> <span class="kt">int</span> <span class="n">allclicks</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span> <span class="c1">// 类变量（静态变量）
+</span><span class="c1"></span>    
+    <span class="n">String</span> <span class="n">str</span> <span class="o">=</span> <span class="s">&#34;hello world&#34;</span><span class="o">;</span> <span class="c1">// 实例变量（成员变量）
+</span><span class="c1"></span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">method</span><span class="o">(){</span>
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span> <span class="c1">// 局部变量
+</span><span class="c1"></span>    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p>在Java中，所有变量在使用前都必须声明。<!-- raw HTML omitted -->
+例：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">,</span><span class="n">c</span><span class="o">;</span>          <span class="c1">// 声明了3个int型整数：a，b，c。
+</span><span class="c1"></span><span class="kt">int</span> <span class="n">d</span> <span class="o">=</span> <span class="n">3</span><span class="o">,</span><span class="n">e</span><span class="o">,</span><span class="n">f</span> <span class="o">=</span> <span class="n">5</span><span class="o">;</span>  <span class="c1">// 声明三个整数并赋予初值。
+</span><span class="c1"></span><span class="kt">byte</span> <span class="n">z</span> <span class="o">=</span><span class="n">22</span><span class="o">;</span>         <span class="c1">// 声明并初始化。
+</span><span class="c1"></span><span class="kt">char</span> <span class="n">x</span> <span class="o">=</span> <span class="sc">&#39;x&#39;</span><span class="o">;</span>       <span class="c1">// 变量x的值是字符‘x’。
+</span><span class="c1"></span><span class="kt">double</span> <span class="n">pi</span> <span class="o">=</span> <span class="n">3</span><span class="o">.</span><span class="na">14159</span><span class="o">;</span><span class="c1">// 声明了pi。
+</span></code></pre></div><p>既然有变量，那就会有常量。</p>
+<h3 id="13java常量">1.3Java常量</h3>
+<p>常量就是一个固定值。他们不需要计算，直接代表相应的值。<!-- raw HTML omitted -->
+常量指不能改变的值，在Java中用final标志：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="kt">double</span> <span class="n">PI</span> <span class="o">=</span> <span class="n">3</span><span class="o">.</span><span class="na">1415927</span><span class="o">;</span>
+</code></pre></div><h3 id="14构造方法">1.4构造方法</h3>
+<p>每个类都有构造方法。</p>
+<p>在创建一个对象时，至少要调用一个构造方法。构造方法的名称必须与类同名，<strong>一个类可以有多个构造方法</strong>。</p>
+<p>例：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nf">Puppy</span><span class="o">(){</span>
+    <span class="kd">public</span> <span class="nf">Puppy</span><span class="o">(){</span>
+
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="nf">Puppy</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">){</span>
+
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p>上述代码类的构造方法为<code>Puppy()</code>,返回值为字符串类型的‘name’，即调用该构造方法时，<code>Puppy(&quot;name&quot;)</code>, &lsquo;name&rsquo; 即为用户想输入的小狗的名字。</p>
+<h3 id="15创建对象">1.5创建对象</h3>
+<p>在Java中使用关键字 <code>new</code> 来创建一个新的对象。</p>
+<ul>
+<li>声明：声明一个对象，包括对象名称和类型。</li>
+<li>实例化：使用关键字 <code>new</code> 来创建一个对象。</li>
+<li>初始化：使用 <code>new</code> 创建对象时，会调用构造方法(constructor)初始化对象。</li>
+</ul>
+<p>例：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">
+<span class="kd">public</span> <span class="kd">class</span> <span class="nf">Puppy</span><span class="o">(){</span>
+    <span class="kd">public</span> <span class="nf">Puppy</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">){</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Puppy name is : &#34;</span><span class="o">+</span> <span class="n">name</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="o">[]</span><span class="n">args</span><span class="o">){</span>
+        <span class="n">Puppy</span> <span class="n">myPuppy</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Puppy</span><span class="o">(</span><span class="s">&#34;tommy&#34;</span><span class="o">);</span>
+        <span class="c1">// 上述语句创建了一个Puppy对象
+</span><span class="c1"></span>    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p>代码块的结果会显示为：<code>Puppy name is tommy</code></p>
+<h3 id="16访问实例变量和方法">1.6访问实例变量和方法</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="cm">/*实例化对象*/</span>
+<span class="n">ObjectReference</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Constructor</span><span class="o">();</span>
+<span class="cm">/*访问其中的变量*/</span>
+<span class="n">ObjecReference</span><span class="o">.</span><span class="na">variableName</span><span class="o">;</span>
+<span class="cm">/*访问类中的变量*/</span>
+<span class="n">bjecReference</span><span class="o">.</span><span class="na">MethodName</span><span class="o">();</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nf">Puppy</span><span class="o">(){</span>
+    <span class="kt">int</span> <span class="n">puppyAge</span><span class="o">;</span> <span class="c1">//定义了一个名为puppyAge的int型成员变量
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="nf">Puppy</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">){</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Passed Name is: &#34;</span><span class="o">+</span> <span class="n">name</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAge</span><span class="o">(</span><span class="kt">int</span> <span class="n">age</span><span class="o">){</span>
+        <span class="n">puppyAge</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getAge</span><span class="o">(){</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Puppy&#39;s age is: &#34;</span> <span class="o">+</span> <span class="n">puppyAge</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">puppyAge</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="o">[]</span><span class="n">args</span><span class="o">){</span>
+        <span class="cm">/*创建对象*/</span>
+        <span class="n">Puppy</span> <span class="n">myPuppy</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Puppy</span><span class="o">(</span><span class="s">&#34;tommy&#34;</span><span class="o">);</span>
+        <span class="cm">/*调用方法来设定age*/</span>
+        <span class="n">myPuppy</span><span class="o">.</span><span class="na">setAge</span><span class="o">(</span><span class="n">2</span><span class="o">);</span>
+        <span class="cm">/*调用另一个方法来获取age*/</span>
+        <span class="n">myPuppy</span><span class="o">.</span><span class="na">getAge</span><span class="o">();</span>
+        <span class="cm">/*访问成员变量*/</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">,</span><span class="n">println</span><span class="o">(</span><span class="s">&#34;Variable Value: &#34;</span> <span class="o">+</span> <span class="n">myPuppy</span><span class="o">.</span><span class="na">puppyAge</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p>结果为： <!-- raw HTML omitted -->
+Passed name is: tommy  <!-- raw HTML omitted -->
+Puppy&rsquo;s age is: 2 <!-- raw HTML omitted -->
+Variable Value: 2</p>
+<h2 id="2java修饰符">2.JAVA修饰符</h2>
+<ul>
+<li>访问修饰符</li>
+<li>非访问修饰符<!-- raw HTML omitted --></li>
+</ul>
+<p>修饰符用来定义类、方法或者变量，通常放在语句的最前端。<!-- raw HTML omitted -->
+Java中，可以使用访问控制符来保护对类、变量、方法和构造方法的访问。Java 支持 4 种不同的访问权限。</p>
+<ul>
+<li><strong>default</strong> (即默认，什么也不写）: 在同一包内可见，不使用任何修饰符。使用对象：类、接口、变量、方法。</li>
+<li><strong>private</strong> : 在同一类内可见。使用对象：变量、方法。 <strong>注意：不能修饰类（外部类)</strong></li>
+<li><strong>public</strong> : 对所有类可见。使用对象：类、接口、变量、方法</li>
+<li><strong>protected</strong> : 对同一包内的类和所有子类可见。使用对象：变量、方法。 <strong>注意：不能修饰类（外部类）</strong>。</li>
+</ul>
+<h3 id="默认访问修饰符-不使用任何关键字br"><strong>默认访问修饰符-不使用任何关键字</strong><!-- raw HTML omitted --></h3>
+<p>使用默认访问修饰符声明的变量和方法，对同一个包内的类是可见的。接口里的变量都隐式声明为 <code>public static final</code>,而接口里的方法默认情况下访问权限为 <code>public</code>。</p>
+<p>如下例，变量和方法的声明可以不适用任何修饰符：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="n">String</span> <span class="n">version</span> <span class="o">=</span> <span class="s">&#34;1.5.1&#34;</span>
+<span class="kt">boolean</span> <span class="nf">processOder</span><span class="o">(){</span>
+    <span class="k">return</span> <span class="kc">true</span>
+<span class="o">}</span>
+</code></pre></div><h3 id="私有访问修饰符-privatebr"><strong>私有访问修饰符-private</strong><!-- raw HTML omitted --></h3>
+<p>私有访问修饰符是最严格的访问级别，所以被声明为<code>private</code> 的方法、变量和构造方法只能被<strong>所属类访问</strong>，并且类和接口不能声明为<code>private</code>。
+声明为私有访问类型的变量只能通过类中公共的<code>getter</code> 方法被外部类访问。
+<strong><code>Private</code> 访问修饰符的使用主要用来隐藏类的实现细节和保护类的数据。</strong>
+下面的类使用了私有访问修饰符<code>private</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Logger</span> <span class="o">{</span>
+   <span class="kd">private</span> <span class="n">String</span> <span class="n">format</span><span class="o">;</span>
+   <span class="kd">public</span> <span class="n">String</span> <span class="nf">getFormat</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">format</span><span class="o">;</span>
+   <span class="o">}</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setFormat</span><span class="o">(</span><span class="n">String</span> <span class="n">format</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">format</span> <span class="o">=</span> <span class="n">format</span><span class="o">;</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p><code>Logger</code> 类中的 <code>format</code> 变量为私有变量，所以其他类不能直接得到和设置该变量的值。为了使其他类能够操作该变量，定义了两个 <code>public</code>方法：<code>getFormat()</code> （返回 format的值）和 <code>setFormat</code>(String)（设置 format 的值）。</p>
+<p><strong>公有访问修饰符-public</strong><!-- raw HTML omitted -->
+被声明为 <code>public</code> 的类、方法、构造方法和接口能够被<strong>任何其他类访问</strong>。
+如果几个相互访问的 <code>public</code> 类分布在不同的包中，则需要导入相应 <code>public</code>类所在的包。由于类的继承性，类所有的公有方法和变量都能被其子类继承。最常见的公有访问即为<code>public static void main(String []args){...}</code>。Java 程序的<code>main()</code>方法必须设置成公有的，否则Java 解释器将不能运行该类。</p>
+<h3 id="受保护的访问修饰符-protectedbr"><strong>受保护的访问修饰符-protected</strong><!-- raw HTML omitted --></h3>
+<p>被声明为<code>protected</code>的变量、方法和构造器能被同一个包中的任何其他类访问，也能被不同包中的字类访问。<!-- raw HTML omitted --></p>
+<h2 id="非访问修饰符">非访问修饰符</h2>
+<ul>
+<li>例如<code>static</code>修饰符，用来创建方法和类变量。</li>
+<li><code>final</code>修饰符，用来修饰类、方法和变量，<code>final</code>修饰的类不能被继承，修饰的方法不能被继承重新定义，修饰的变量是不可修改的。</li>
+<li><code>abstract</code>修饰符，用来创建抽象类和抽象方法。
+-<code>synchronized</code>和<code>volatie</code>修饰符，主要用于线程的编程。</li>
+</ul>
+<h3 id="final修饰符关键字br"><strong><code>final</code>修饰符(关键字)</strong><!-- raw HTML omitted --></h3>
+<p><code>final</code>变量能被显式地初始化并且只能初始化一次。被声明为<code>final</code>的对象的引用不能指向不同对象。但是final对象里的数据可以被改变，也就是说<code>final</code>对象的引用不能改变，但是里面的值可以改变。<!-- raw HTML omitted -->
+<code>final</code>修饰符通常和<code>static</code>修饰符一起是用来创建常量。<!-- raw HTML omitted -->
+例：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span><span class="o">{</span>
+    <span class="kd">final</span> <span class="kt">int</span> <span class="n">value</span> <span class="o">=</span> <span class="n">10</span><span class="o">;</span>
+    <span class="c1">//  下面是声明常量的实例
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">BOXWIDTH</span> <span class="o">=</span> <span class="n">6</span><span class="o">;</span>
+    <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">TITLE</span> <span class="o">=</span> <span class="s">&#34;Manager&#34;</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">changeValue</span><span class="o">(){</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">12</span><span class="o">;</span><span class="c1">//将输出一个错误
+</span><span class="c1"></span>    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p>由于value的值已经被final定义过，所以无法被改变。<!-- raw HTML omitted --></p>
+<p>类中的<code>final</code>方法可以被字类继承，但是不能被字类修改。<code>fianl</code>类不能被继承，没有类能够继承<code>final</code>类的任何特性。</p>
+<h3 id="static修饰符">static修饰符</h3>
+<ul>
+<li>静态变量：<!-- raw HTML omitted -->
+static关键字用来声明独立于对象的静态变量，静态变量也被称为类变量。局部变量不能被声明为static变量。<!-- raw HTML omitted --></li>
+</ul>
+<p>例：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">InstanceCounter</span><span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">numInstances</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span>
+    <span class="kd">protected</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getCount</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="n">numInstances</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">addInstance</span><span class="o">(){</span>
+         <span class="n">numInstances</span><span class="o">++;</span>
+    <span class="o">}</span>
+
+    <span class="n">InstanceCounter</span><span class="o">(){</span>
+        <span class="n">InstanceCounter</span><span class="o">.</span><span class="na">addInstance</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="o">[]</span><span class="n">args</span><span class="o">){</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Starting with &#34;</span><span class="o">+:</span><span class="n">InstanceCounter</span><span class="o">.</span><span class="na">getCount</span><span class="o">()+</span> <span class="s">&#34;instances&#34;</span><span class="o">);</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">500</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+            <span class="k">new</span> <span class="n">InstanceCounter</span><span class="o">();</span>
+        <span class="o">}</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Created &#34;</span><span class="o">+</span> <span class="n">InstanceCounter</span><span class="o">.</span><span class="na">getCount</span><span class="o">()+</span><span class="s">&#34; instances&#34;</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><p>结果如下：<!-- raw HTML omitted --></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="n">Started</span> <span class="n">with</span> <span class="n">0</span> <span class="n">instances</span>
+<span class="n">Created</span> <span class="n">500</span> <span class="n">instances</span>
+</code></pre></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2021-10-02</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/java/">Java</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/blog2/" class="prev" rel="prev" title="Java学习2"><i class="fas fa-angle-left fa-fw"></i>Java学习2</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.90.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

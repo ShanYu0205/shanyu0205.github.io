@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 我的文章</title>
+    <title>Posts on 我的全新 Hugo 网站</title>
     <link>https://shanyu0205.github.io/post/</link>
-    <description>Recent content in Posts on 我的文章</description>
+    <description>Recent content in Posts on 我的全新 Hugo 网站</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Sat, 02 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://shanyu0205.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java学习1</title>
@@ -14,33 +14,6 @@
       
       <guid>https://shanyu0205.github.io/post/blog/</guid>
       <description>&lt;p&gt;Java学习记录（一）&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Java学习2</title>
-      <link>https://shanyu0205.github.io/post/blog2/</link>
-      <pubDate>Wed, 08 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://shanyu0205.github.io/post/blog2/</guid>
-      <description>&lt;p&gt;Java学习记录（二）&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Welcome to Tranquilpeak 0.5.3-BETA</title>
-      <link>https://shanyu0205.github.io/post/welcome-to-the-new-tranquilpeak/</link>
-      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://shanyu0205.github.io/post/welcome-to-the-new-tranquilpeak/</guid>
-      <description>&lt;p&gt;Tranquilpeak is a gorgeous responsive theme for Hugo blog framework. It has many features and integrated services to improve user experience.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>中文測試</title>
-      <link>https://shanyu0205.github.io/post/chinese-test/</link>
-      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://shanyu0205.github.io/post/chinese-test/</guid>
-      <description>&lt;p&gt;This is a chinese test post to show you how chinese is displayed.&lt;/p&gt;</description>
     </item>
     
   </channel>
