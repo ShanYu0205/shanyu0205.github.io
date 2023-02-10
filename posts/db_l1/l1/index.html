@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Data Base system - L1 - </title><meta name="Description" content="这篇文章展示了数据库系统的学习记录"><meta property="og:title" content="Data Base system - L1" />
+<meta property="og:description" content="这篇文章展示了数据库系统的学习记录" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://shanyu0205.github.io/posts/db_l1/l1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-04T13:20:10+08:00" />
+<meta property="article:modified_time" content="2022-09-04T13:20:10+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Data Base system - L1"/>
+<meta name="twitter:description" content="这篇文章展示了数据库系统的学习记录"/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://shanyu0205.github.io/posts/db_l1/l1/" /><link rel="prev" href="https://shanyu0205.github.io/posts/blog1/" /><link rel="next" href="https://shanyu0205.github.io/posts/first_post/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Data Base system - L1",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/shanyu0205.github.io\/posts\/db_l1\/l1\/"
+        },"genre": "posts","keywords": "Data Base","wordcount":  1576 ,
+        "url": "https:\/\/shanyu0205.github.io\/posts\/db_l1\/l1\/","datePublished": "2022-09-04T13:20:10+08:00","dateModified": "2022-09-04T13:20:10+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "山雨欲来风满楼"
+            },"description": "这篇文章展示了数据库系统的学习记录"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Data Base system - L1</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>山雨欲来风满楼</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-04">2022-09-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1576 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#11-what-is-databasedb">1.1 What is Database(DB)?</a></li>
+    <li><a href="#12-database-management-system">1.2 Database Management System</a></li>
+    <li><a href="#13-basic-concept-and-terminologies">1.3 Basic concept and terminologies</a></li>
+    <li><a href="#14-data-abstraction-3-level-architecture">1.4 Data Abstraction: 3-level architecture</a></li>
+    <li><a href="#15-data-independence">1.5 Data Independence</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#21-basic-definition">2.1 Basic Definition</a>
+      <ul>
+        <li><a href="#211-er模型的作用">2.1.1 ER模型的作用</a></li>
+        <li><a href="#212-er模型的组成">2.1.2 ER模型的组成</a></li>
+      </ul>
+    </li>
+    <li><a href="#23-er-diagram">2.3 ER diagram</a>
+      <ul>
+        <li><a href="#231-er图的基本构成">2.3.1 ER图的基本构成</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><em><strong>这篇文章展示了数据库系统的学习记录</strong></em></p>
+<hr>
+<h2 id="11-what-is-databasedb">1.1 What is Database(DB)?</h2>
+<blockquote>
+<p>A <strong>non-redundant</strong>, <strong>persistent</strong>(like store in hard disk) collection of <strong>logically related</strong> records/files that are <em>structured</em> to support various <strong>processing and retrieval needs</strong>.</p>
+</blockquote>
+<hr>
+<h2 id="12-database-management-system">1.2 Database Management System</h2>
+<blockquote>
+<p>A set of software programs for creating, storing, updating, and accessing the data of a DB.</p>
+</blockquote>
+<hr>
+<h2 id="13-basic-concept-and-terminologies">1.3 Basic concept and terminologies</h2>
+<ul>
+<li>
+<p>instance <em>(compared to the instance in oop)</em></p>
+<ul>
+<li>the collection of data (information) stored in the DB at a particular moment (ie, a snapshot)</li>
+<li>The data in the database at <strong>a particular moment in time</strong> is called a database state or snapshot. It is also called the current set of occurrences or <strong>instances</strong> in the database.</li>
+</ul>
+</li>
+<li>
+<p>scheme/schema</p>
+<ul>
+<li>the overall structure (design) of the DB &ndash; relatively static</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db_l1/schema.png"
+        data-srcset="/posts/db_l1/schema.png, /posts/db_l1/schema.png 1.5x, /posts/db_l1/schema.png 2x"
+        data-sizes="auto"
+        alt="/posts/db_l1/schema.png"
+        title="/posts/db_l1/schema.png" /></p>
+<hr>
+<h2 id="14-data-abstraction-3-level-architecture">1.4 Data Abstraction: 3-level architecture</h2>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db_l1/3-level.png"
+        data-srcset="/posts/db_l1/3-level.png, /posts/db_l1/3-level.png 1.5x, /posts/db_l1/3-level.png 2x"
+        data-sizes="auto"
+        alt="/posts/db_l1/3-level.png"
+        title="/posts/db_l1/3-level.png" /></p>
+<ul>
+<li>
+<p><em><strong>Internal/Physical Level</strong></em>: the complete details of data storage and access paths for the database. (i.e., SSD,Cloud,disk)(<strong>how</strong> data are actually stored)</p>
+<ul>
+<li><em>Internal level has an internal schema, which describes the physical storage structure of the database.</em></li>
+</ul>
+</li>
+<li>
+<p><em><strong>Conceptual Level</strong></em>: which describes the structure of the whole database. For a 2D array, it will be stored as a &ldquo;<strong>table</strong>&rdquo; in database. It hides the detail of internal level.(<strong>what</strong> data are actually stored)</p>
+<ul>
+<li><em>The conceptual schema hides the details of physical storage structures and concentrates on <strong>describing entities, data types, relationships, user operations, and constraints.(data model)</strong></em></li>
+</ul>
+</li>
+<li>
+<p><em><strong>External Level</strong></em>: It only privides the data which the user wants and hide the rest of the datbase.</p>
+</li>
+</ul>
+<blockquote>
+<p>Consider a two-dimensional integer array of size n*m</p>
+<ul>
+<li>The <em>physical level</em> would simply be n × m (probably consecutive) storage locations</li>
+<li>The <em>conceptual level</em> is a grid of boxes, each possibly containing an integer, which is n boxes high by m boxes wide.</li>
+<li>There are $2^{n×m}$ possible views (<em>external level</em>). For example, a view might be the entire array, or may be a part of array.</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="15-data-independence">1.5 Data Independence</h2>
+<ul>
+<li>The ability to modify a schema definition in one level <em>without</em> affecting a schema in the next higher level</li>
+</ul>
+<ul>
+<li>Physical data independence: capacity to change the <em>internal schema</em> <strong>without</strong> having to change the <em>conceptual schema</em></li>
+<li>Logical data independence: the capacity to change the <em>conceptual schema</em> <strong>without</strong> having to change <em>external schemas or application programs</em>.</li>
+</ul>
+<blockquote>
+<p>DB System Architecture
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db_l1/DB_Sys_Arch.png"
+        data-srcset="/posts/db_l1/DB_Sys_Arch.png, /posts/db_l1/DB_Sys_Arch.png 1.5x, /posts/db_l1/DB_Sys_Arch.png 2x"
+        data-sizes="auto"
+        alt="/posts/db_l1/DB_Sys_Arch.png"
+        title="/posts/db_l1/DB_Sys_Arch.png" /></p>
+</blockquote>
+<hr>
+<h1 id="2-the-entity-relationship-model实体关系模型">2 The Entity-Relationship Model(实体关系模型)</h1>
+<h2 id="21-basic-definition">2.1 Basic Definition</h2>
+<hr>
+<h3 id="211-er模型的作用">2.1.1 ER模型的作用</h3>
+<ul>
+<li>数据库设计的第一步是需求分析阶段，也是最重要的一步</li>
+<li>概念建模也就是ER建模,将需求以ER图的方式进行可视化</li>
+<li>ER图可以描述一个数据库的逻辑结构</li>
+</ul>
+<hr>
+<h3 id="212-er模型的组成">2.1.2 ER模型的组成</h3>
+<h4 id="2121-entity">2.1.2.1 entity</h4>
+<ul>
+<li>
+<p><strong>entity(实体)</strong>: a distinguishable object with <em>an</em> independent existence</p>
+<blockquote>
+<ul>
+<li>一个entity可以是具体的(如：人，书，CityU), 也可以是抽象的(如：假期)</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p><strong>entity set</strong>: a set of entities of the same type</p>
+<blockquote>
+<ul>
+<li>Like: Student Bank&hellip;&hellip;</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h4 id="2122-attribute">2.1.2.2 attribute</h4>
+<ul>
+<li><strong>attribute</strong>(属性): 一个entity用一组attributes来表示，每一个attribute有一个对应的值，比如一个人可以有<strong>name，SSN，gender，phone number</strong>等attributes
+<ul>
+<li><em>Different type of Attributes</em>:
+<ul>
+<li><strong>Simple</strong>:  Each entity has a single atomic value for the attribute. <em>For example SSN or Sex</em></li>
+<li><strong>Composite</strong>: The attribute may consist of several components. <em>For example, Name(FirstName, MiddleName, LastName).</em></li>
+<li><strong>Multi-valiue</strong>: An entity may have multiple values for that attribute. <em>For example, Color of a CAR, denoted as {Color}.</em></li>
+</ul>
+<blockquote>
+<p>In general, composite and multi-valued attributes may be nested.</p>
+</blockquote>
+</li>
+<li><strong>Domain</strong>: 一个attribute的domain是这个attribute值的有效范围</li>
+<li>Formally, an attribute <strong>A</strong> is a function which maps from an entity set <strong>E</strong> into a domain <strong>D</strong>:
+$$A: E\to D$$</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="2123-relationship">2.1.2.3 relationship</h4>
+<ul>
+<li>
+<p><strong>Relationship</strong>: the relationship(association) among several entities</p>
+<blockquote>
+<p>An attribite <em>$A:E\to D$</em> is a &ldquo;simplified form of a relationshihp&rdquo;</p>
+<ul>
+<li>if we allow <strong>D</strong> to be an Entity Set, then <strong>A</strong> becomes a relationship</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>A realtionship can carry attribute</p>
+<ul>
+<li>Example: Patrick takes cs2450 with a grade of B+.
+&ldquo;takes&rdquo; is relationship bteween &ldquo;Patrick&rdquo; and &ldquo;CS2450&rdquo;, &ldquo;B+&rdquo; is the attribute of this relationship, since &ldquo;B+&rdquo; is neither the attribute of &ldquo;Patrick&rdquo; nor &ldquo;CS2450&rdquo;, which is <strong>&ldquo;Patrick takes cs2450&rdquo;</strong></li>
+</ul>
+</blockquote>
+<ul>
+<li>The <strong>degree</strong> of a relationship set/type is the number of participating entity sets/types.
+<ul>
+<li>Both <em>MANAGES</em> and <em>WORKS_ON</em> are <strong>binary</strong> relationships.</li>
+<li>In general, an n-ray relationship is <strong>not equialent</strong> to n binary relationships.</li>
+</ul>
+</li>
+<li>The relationship has participation constraint
+<ul>
+<li>partial participation: <strong>single line</strong> (not all entity participate)</li>
+<li>total participation: <strong>double line</strong> (every entity participate)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db_l1/total_participation.png"
+        data-srcset="/posts/db_l1/total_participation.png, /posts/db_l1/total_participation.png 1.5x, /posts/db_l1/total_participation.png 2x"
+        data-sizes="auto"
+        alt="/posts/db_l1/total_participation.png"
+        title="/posts/db_l1/total_participation.png" /></p>
+<ul>
+<li>(min,max) notation for relationship
+<ul>
+<li>Specified on each participationof an entity set E
+in a relationship set R</li>
+<li>Specifies that each entity e in E participates in at
+<strong>least</strong> min and at <strong>most</strong> max relationship instances in R</li>
+<li>Default (no constraint): min=0, max=n ! Must have: $min&lt;=max,min&gt;=0,max&gt;=1$</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db_l1/min_max_no.png"
+        data-srcset="/posts/db_l1/min_max_no.png, /posts/db_l1/min_max_no.png 1.5x, /posts/db_l1/min_max_no.png 2x"
+        data-sizes="auto"
+        alt="/posts/db_l1/min_max_no.png"
+        title="/posts/db_l1/min_max_no.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db_l1/ternay_rela.png"
+        data-srcset="/posts/db_l1/ternay_rela.png, /posts/db_l1/ternay_rela.png 1.5x, /posts/db_l1/ternay_rela.png 2x"
+        data-sizes="auto"
+        alt="/posts/db_l1/ternay_rela.png"
+        title="/posts/db_l1/ternay_rela.png" /></p>
+<blockquote>
+<p>(a) is not equivalent to (b) but to (c).</p>
+</blockquote>
+<hr>
+<h2 id="23-er-diagram">2.3 ER diagram</h2>
+<hr>
+<h3 id="231-er图的基本构成">2.3.1 ER图的基本构成</h3>
+<ul>
+<li>Rectangles(正方形): Entity Sets</li>
+<li>Ellipses(椭圆形): Attributes</li>
+<li>Diamonds(菱形): Relationship Sets</li>
+<li>Lines: Attributes to Entity/ Relationship Sets or, Entity Sets to Realtionship Sets</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db_l1/ER_Diagram.png"
+        data-srcset="/posts/db_l1/ER_Diagram.png, /posts/db_l1/ER_Diagram.png 1.5x, /posts/db_l1/ER_Diagram.png 2x"
+        data-sizes="auto"
+        alt="/posts/db_l1/ER_Diagram.png"
+        title="/posts/db_l1/ER_Diagram.png" /></p>
+<ul>
+<li>不同的键(Key): to distinguish individual entities or relationships
+<ul>
+<li><em>Superkey</em> (超键): a set of one or more <strong>attributes</strong> which, taken together, identify uniquely an entity in an entity set
+<ul>
+<li>在关系中能<strong>唯一标识</strong>元组的属性集称为关系模式的超键</li>
+<li>Example: 一般来说，学号是标识学生实体的唯一标识，所以该元组的超键就为学号。我们可以将学号和其他属性结合起来，(学号，性别)，(学号，年龄)等也为超键。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><em>Candiaite key</em>(候选键): minimal set of attributes which can identify uniquely an entity in an entity set
+<ul>
+<li>最小的超键，仅包括独一标识实体所必需得<strong>最小属性的数量</strong>，即不含多余属性的超键为候选键</li>
+<li>Example: stident ID identify a student, but Name is not a candidate key</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>候选键是超键的子集</strong></p>
+</blockquote>
+<hr>
+<ul>
+<li><em>Primary key</em>(主键):  a <strong>candidate key</strong> chosen by the DB designer to identify an entity in an entity set
+<ul>
+<li>是从候选码(candidate key)中人为挑选的一个</li>
+</ul>
+</li>
+<li><em>Foreign key</em>: FK is a set of attributes of R1, which refers to the PK(primary key(s)) of R2
+<ul>
+<li>Domain of FK should be the same as PK</li>
+<li>t1[FK] in R1 either occurs as a value of t2[PK] in R2 or is NULL.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>实体间的联系</li>
+<li>Integrity Constraints
+<ul>
+<li><em>One-to-one</em>(一对一): 例如班级和班长之间就是一对一联系，一个班级只有一个班长</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db_l1/1-to-1.png"
+        data-srcset="/posts/db_l1/1-to-1.png, /posts/db_l1/1-to-1.png 1.5x, /posts/db_l1/1-to-1.png 2x"
+        data-sizes="auto"
+        alt="/posts/db_l1/1-to-1.png"
+        title="/posts/db_l1/1-to-1.png" /></p>
+<ul>
+<li><em>One-to-many</em>(一对多/多对一): 例如一个班级有一个辅导员，但担任辅导员的老师可以同时担任其他班级的辅导员，所以辅导员和班级之间就是一对多联系</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db_l1/1-to-many.png"
+        data-srcset="/posts/db_l1/1-to-many.png, /posts/db_l1/1-to-many.png 1.5x, /posts/db_l1/1-to-many.png 2x"
+        data-sizes="auto"
+        alt="/posts/db_l1/1-to-many.png"
+        title="/posts/db_l1/1-to-many.png" /></p>
+<ul>
+<li><em>Many-to-many</em>(多对多): 例如一个学生可以学习多门课程，每门课程也可以有多个学生，那么学生和课程之间的关系就是多对多联系</li>
+</ul>
+<hr>
+<ul>
+<li><em>Weak Entity Set</em>
+<ul>
+<li>An entity set that does NOT have enough attributes to form a primary/candidate key</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db_l1/Weak_entity_set.png"
+        data-srcset="/posts/db_l1/Weak_entity_set.png, /posts/db_l1/Weak_entity_set.png 1.5x, /posts/db_l1/Weak_entity_set.png 2x"
+        data-sizes="auto"
+        alt="/posts/db_l1/Weak_entity_set.png"
+        title="/posts/db_l1/Weak_entity_set.png" /></p>
+<hr>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db_l1/ER-example.png"
+        data-srcset="/posts/db_l1/ER-example.png, /posts/db_l1/ER-example.png 1.5x, /posts/db_l1/ER-example.png 2x"
+        data-sizes="auto"
+        alt="/posts/db_l1/ER-example.png"
+        title="/posts/db_l1/ER-example.png" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db_l1/ER-Notation.png"
+        data-srcset="/posts/db_l1/ER-Notation.png, /posts/db_l1/ER-Notation.png 1.5x, /posts/db_l1/ER-Notation.png 2x"
+        data-sizes="auto"
+        alt="/posts/db_l1/ER-Notation.png"
+        title="/posts/db_l1/ER-Notation.png" /></p>
+<hr>
+<p><em><strong>学习笔记，仅供参考</strong></em></p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-09-04</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://shanyu0205.github.io/posts/db_l1/l1/" data-title="Data Base system - L1" data-hashtags="Data Base"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://shanyu0205.github.io/posts/db_l1/l1/" data-hashtag="Data Base"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://shanyu0205.github.io/posts/db_l1/l1/" data-title="Data Base system - L1"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://shanyu0205.github.io/posts/db_l1/l1/" data-title="Data Base system - L1"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://shanyu0205.github.io/posts/db_l1/l1/" data-title="Data Base system - L1"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/data-base/">Data Base</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/blog1/" class="prev" rel="prev" title="Java学习1"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Java学习1</a>
+            <a href="/posts/first_post/" class="next" rel="next" title="First_post">First_post<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.110.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
