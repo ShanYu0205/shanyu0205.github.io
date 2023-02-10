@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Java学习2 - </title><meta name="Description" content="This is my cool site"><meta property="og:title" content="Java学习2" />
+<meta property="og:description" content="Java学习记录（二）" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://shanyu0205.github.io/posts/blog2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-09-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-09-08T00:00:00+00:00" /><meta property="og:site_name" content="My cool site" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Java学习2"/>
+<meta name="twitter:description" content="Java学习记录（二）"/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://shanyu0205.github.io/posts/blog2/" /><link rel="next" href="https://shanyu0205.github.io/posts/l1/l1/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Java学习2",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/shanyu0205.github.io\/posts\/blog2\/"
+        },"genre": "posts","keywords": "Java","wordcount":  1127 ,
+        "url": "https:\/\/shanyu0205.github.io\/posts\/blog2\/","datePublished": "2021-09-08T00:00:00+00:00","dateModified": "2021-09-08T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "山雨欲来风满楼"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Java学习2</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>山雨欲来风满楼</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>我的博客</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2021-09-08">2021-09-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1127 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#内置数据类型">内置数据类型</a>
+      <ul>
+        <li><a href="#数字类型">数字类型</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Java学习记录（二）</p>
+<h1 id="java-数据类型">Java 数据类型</h1>
+<p>变量就是申请内存来存储值。也就是说，当创建变量的时候，需要在内存中申请空间。<!-- raw HTML omitted -->
+内存管理系统根据变量的类型为变量分配存储空间，分配的空间只能用来储存该类型数据。</p>
+<p>Java有着两大数据类型，内置数据类型和引用数据类型。</p>
+<h2 id="内置数据类型">内置数据类型</h2>
+<p>其中包括6种数字类型（4个整数型和2个浮点数型），一种字符类型，及一种布尔型。<!-- raw HTML omitted --></p>
+<h3 id="数字类型">数字类型</h3>
+<h4 id="byte"><code>byte</code>：</h4>
+<ul>
+<li>byte的数据类型是8位、有符号的，以二进制补码（2‘s）表示的整数。</li>
+<li>最小值是-128（-2^7） 最大值是127（2^7-1）</li>
+<li><strong>默认值是0</strong></li>
+<li>byte 类型用在大型数组中节约空间，主要代替整数，因为 byte 变量占用的空间只有 int 类型的四分之一；</li>
+<li>例子：byte a = 100，byte b = -50。</li>
+</ul>
+<h4 id="short"><code>short</code>:</h4>
+<ul>
+<li>short 数据类型是 16 位、有符号的以二进制补码表示的整数</li>
+<li>最小值是 -32768（-2^15） 最大值是 32767（2^15 - 1）</li>
+<li>Short 数据类型也可以像 byte 那样节省空间。一个short变量是int型变量所占空间的二分之一</li>
+<li><strong>默认值是0</strong></li>
+<li>例子：short s = 1000，short r = -20000。</li>
+</ul>
+<h4 id="int"><code>int</code>:</h4>
+<ul>
+<li>int 数据类型是32位、有符号的以二进制补码表示的整数</li>
+<li>最小值是-2^31（-2147483638） 最大值是2^31-1（-2147483637）</li>
+<li>一般的整型变量默认为int型</li>
+<li><strong>默认值是0</strong></li>
+<li>例子：int i = 100；</li>
+</ul>
+<h4 id="long"><code>long</code>：</h4>
+<ul>
+<li>long 数据类型是 64 位、有符号的以二进制补码表示的整数；</li>
+<li>最小值是 -9,223,372,036,854,775,808（-2^63）最大值是 9,223,372,036,854,775,807（2^63 -1）</li>
+<li>这种类型主要使用在需要比较大整数的系统上；</li>
+<li><strong>默认值是 0L；</strong></li>
+<li>例子： long a = 100000L，Long b = -200000L。
+<strong>&ldquo;L&quot;理论上不分大小写</strong>，但是若写成&quot;l&quot;容易与数字&quot;1&quot;混淆，不容易分辩。所以最好大写。</li>
+</ul>
+<h4 id="float"><code>float</code>：</h4>
+<ul>
+<li>float 数据类型是单精度、32位、符合IEEE 754标准的浮点数；</li>
+<li>float 在储存大型浮点数组的时候可节省内存空间；</li>
+<li><strong>默认值是 0.0f；</strong></li>
+<li>浮点数不能用来表示精确的值，如货币；</li>
+<li>例子：float f1 = 234.5f。</li>
+</ul>
+<h4 id="double"><code>double</code>:</h4>
+<ul>
+<li>double 数据类型是双精度、64 位、符合 IEEE 754 标准的浮点数；</li>
+<li>浮点数的默认类型为 double 类型；</li>
+<li>double类型同样不能表示精确的值，如货币；</li>
+<li><strong>默认值是 0.0d；</strong></li>
+</ul>
+<h4 id="boolean"><code>boolean</code>：</h4>
+<ul>
+<li>boolean数据类型表示一位的信息；</li>
+<li>只有两个取值：true 和 false；</li>
+<li>这种类型只作为一种标志来记录 true/false 情况；</li>
+<li><strong>默认值是 false；</strong></li>
+<li>例子：boolean one = true。</li>
+</ul>
+<h4 id="char"><code>char</code>:</h4>
+<ul>
+<li>char 类型是一个单一的 16 位 Unicode 字符；</li>
+<li>最小值是 \u0000（十进制等效值为 0）；</li>
+<li>最大值是 \uffff（即为 65535）；</li>
+<li>char 数据类型可以储存任何字符；</li>
+<li>例子：char letter = &lsquo;A&rsquo;;</li>
+</ul>
+<h4 id="测试">测试</h4></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2021-09-08</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://shanyu0205.github.io/posts/blog2/" data-title="Java学习2" data-hashtags="Java"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://shanyu0205.github.io/posts/blog2/" data-hashtag="Java"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://shanyu0205.github.io/posts/blog2/" data-title="Java学习2"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://shanyu0205.github.io/posts/blog2/" data-title="Java学习2"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://shanyu0205.github.io/posts/blog2/" data-title="Java学习2"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/java/">Java</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/posts/l1/l1/" class="next" rel="next" title="Data Base system - L1">Data Base system - L1<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.110.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
