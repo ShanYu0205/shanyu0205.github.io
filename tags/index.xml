@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Tags - 标签 - </title>
+        <title>Tags - 标签 - 山雨欲来风满楼的博客</title>
         <link>https://shanyu0205.github.io/tags/</link>
-        <description>Tags - 标签 - </description>
+        <description>Tags - 标签 - 山雨欲来风满楼的博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 04 Sep 2022 13:20:10 &#43;0800</lastBuildDate><atom:link href="https://shanyu0205.github.io/tags/" rel="self" type="application/rss+xml" /><item>
     <title>Data Base</title>
     <link>https://shanyu0205.github.io/tags/data-base/</link>
