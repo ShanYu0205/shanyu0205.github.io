@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Data base system - L5 - 山雨欲来风满楼的博客</title><meta name="Description" content="这篇文章展示了数据库系统的学习记录"><meta property="og:title" content="Data base system - L5" />
+<meta property="og:description" content="这篇文章展示了数据库系统的学习记录" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://shanyu0205.github.io/posts/db/db_l5/l5/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-30T11:05:10+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Data base system - L5"/>
+<meta name="twitter:description" content="这篇文章展示了数据库系统的学习记录"/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://shanyu0205.github.io/posts/db/db_l5/l5/" /><link rel="prev" href="https://shanyu0205.github.io/posts/db/db_l4/l4/" /><link rel="next" href="https://shanyu0205.github.io/posts/db/db_l6-7/l6-7/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Data base system - L5",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/shanyu0205.github.io\/posts\/db\/db_l5\/l5\/"
+        },"genre": "posts","keywords": "Data Base","wordcount":  813 ,
+        "url": "https:\/\/shanyu0205.github.io\/posts\/db\/db_l5\/l5\/","datePublished": "2022-09-30T00:00:00+00:00","dateModified": "2020-09-30T11:05:10+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "山雨欲来风满楼"
+            },"description": "这篇文章展示了数据库系统的学习记录"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="山雨欲来风满楼的博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/categories/documentation/"> 文档 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/ShanYu0205" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
+                    <i class="fa fa-globe" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/db/db_l5/l5/" selected>简体中文</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="山雨欲来风满楼的博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/categories/documentation/" title="">文档</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/ShanYu0205" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/db/db_l5/l5/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Data base system - L5</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>山雨欲来风满楼</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-30">2022-09-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 813 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#41-inference-rules-for-fds">4.1 Inference Rules for FDs</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#51-first-normal-form-1nf---第一范式">5.1 First Normal Form (1NF - 第一范式)</a></li>
+    <li><a href="#52-second-normal-form-2nf---第二范式">5.2 Second Normal Form (2NF - 第二范式)</a></li>
+    <li><a href="#53-third-normal-form-3nf---第三范式">5.3 Third Normal Form (3NF - 第三范式)</a></li>
+    <li><a href="#53-bcnf---bc范式">5.3 BCNF - BC范式</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><em><strong>这篇文章展示了数据库系统的学习记录</strong></em></p>
+<hr>
+<h1 id="integrity-constraints--normal-forms">Integrity Constraints &amp; Normal Forms</h1>
+<hr>
+<h1 id="1-key-constraints">1 Key constraints</h1>
+<ul>
+<li>
+<p><em>Superkey of R</em>: A set of attributes SK of R such that no two tuples in any valid relation instance r(R) will have the same value for SK. That is, for any distinct tuples t1 and t2 in r(R), t1[SK] &lt;&gt; t2[SK].</p>
+</li>
+<li>
+<p><em>Candidate key of R</em>: A &ldquo;minimal&rdquo; superkey; that is, a superkey K such that removal of any attribute from K results in a set of attributes that is not a superkey.</p>
+</li>
+<li>
+<p><em>Primary key of R</em>: choice by the DB designer when
+there are more than one candidate key</p>
+</li>
+</ul>
+<hr>
+<h1 id="2-domainentity-integrity-constraints">2 Domain/Entity integrity constraints</h1>
+<ul>
+<li>No <em><strong>&ldquo;NULL&rdquo;</strong></em> value for particular attributes</li>
+<li>Must be <em><strong>&ldquo;UNIQUENESS&rdquo;</strong></em></li>
+</ul>
+<hr>
+<h1 id="3-referential-integrity-constraintsforeign-key-constraints">3 Referential integrity constraints(Foreign key constraints)</h1>
+<ul>
+<li><em>Two relation constraints</em> (<strong>single relation above</strong>)
+<ul>
+<li>To ensure that a value appears in one relation also appears in another relation.</li>
+<li>Implies &ldquo;<strong>subset dependency</strong>&rdquo; relationship between 2 sets of attributes in 2 tables</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l5/pic/foeign_key_con.png"
+        data-srcset="/posts/db/db_l5/pic/foeign_key_con.png, /posts/db/db_l5/pic/foeign_key_con.png 1.5x, /posts/db/db_l5/pic/foeign_key_con.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l5/pic/foeign_key_con.png"
+        title="/posts/db/db_l5/pic/foeign_key_con.png" /></p>
+<blockquote>
+<p><em>Supplier</em> relation is a foreign table of <em>Shipment</em></p>
+</blockquote>
+<blockquote>
+<p>When to check integrity constraints?</p>
+<ul>
+<li><em><strong>INSERT, DELETE, MODIFY</strong></em> the tuple</li>
+</ul>
+</blockquote>
+<hr>
+<h1 id="4-functional-dependency">4 Functional Dependency</h1>
+<ul>
+<li>FD is a particular kind of constraints</li>
+<li><em>Definition</em>
+<ul>
+<li>R is a relation schema, and $\alpha \subseteq R$, $\beta \subseteq R$, then</li>
+<li>$$\alpha \to \beta$$</li>
+<li>for all pairs of tuples tq and t2 in any legal relation instance r(R), we have</li>
+<li>$$t1[\alpha]=t2[\alpha]\to t1[\beta]=t2[\beta]$$</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>As a result, FD can be used to identify and find <em><strong>primary key</strong></em>.</p>
+</blockquote>
+<hr>
+<h2 id="41-inference-rules-for-fds">4.1 Inference Rules for FDs</h2>
+<ul>
+<li>
+<p>Given a set of FDs $F$, we can infer additional FDs that hold whenever the FDs in $F$:</p>
+<ul>
+<li>IR1 - Reflexive: If $Y$ is a <em>subset</em> of $X$, then $X\to Y$</li>
+<li>IR2 - Augmentation: If $X\to Y$, then $XZ\to YZ$, ($XZ$ stands for $X \cup Z$)</li>
+<li>IR3 - Transitive: If $X\to Y$ and $Y\to X$, then $X\to Z$</li>
+</ul>
+</li>
+<li>
+<p><em><strong>Closure</strong></em> of a set $F$ of FDs is the set $F^+$ of all FDs that can be <em><strong>inferred from</strong></em> $F$</p>
+</li>
+<li>
+<p>Equivalence of two sets $F$ and $G$ of FDs</p>
+<ul>
+<li>Every FD in $F$ can be inferred from $G$</li>
+<li>Every FD in $F$ can be inferred from $G$</li>
+<li>Hence, $F$ and $G$ are equivalent if $F^+$ = $G^+$</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="5-relational-database-design">5 Relational Database Design</h1>
+<hr>
+<h2 id="51-first-normal-form-1nf---第一范式">5.1 First Normal Form (1NF - 第一范式)</h2>
+<ul>
+<li>A relation R is in 1NF <em><strong>if and only if</strong></em> all underlying domians cantain <em><strong>atomic(indivisible) value</strong></em> only</li>
+</ul>
+<blockquote>
+<p><em>atomic</em>: an attribute can not be decomposed, like, address can be decomposed to province, city, road number, door number, etc.</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l5/pic/1NF.png"
+        data-srcset="/posts/db/db_l5/pic/1NF.png, /posts/db/db_l5/pic/1NF.png 1.5x, /posts/db/db_l5/pic/1NF.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l5/pic/1NF.png"
+        title="/posts/db/db_l5/pic/1NF.png" /></p>
+<ul>
+<li>
+<p><em>Problem</em></p>
+<ul>
+<li>Insert Anomalies
+<ul>
+<li>Inability to represent certain information</li>
+<li>Eg, cannot enter &ldquo;Supplier and City&rdquo; info until Supplier supplies at least one part(P#)</li>
+</ul>
+</li>
+<li>Delete Anomalies
+<ul>
+<li>Deleting the “only tuple” for a supplier will destroy all the information about that supplier</li>
+</ul>
+</li>
+<li>Update Anomalies
+<ul>
+<li>“S# and City” could be redundantly represented for each P#, which may cause potential inconsistency when updating a tuple</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><em>Solution(2NF)</em></p>
+<ul>
+<li>Replace original table by two sub-tables(<em><strong>Normalization</strong></em>)</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l5/pic/solu_1NF.png"
+        data-srcset="/posts/db/db_l5/pic/solu_1NF.png, /posts/db/db_l5/pic/solu_1NF.png 1.5x, /posts/db/db_l5/pic/solu_1NF.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l5/pic/solu_1NF.png"
+        title="/posts/db/db_l5/pic/solu_1NF.png" /></p>
+<hr>
+<h2 id="52-second-normal-form-2nf---第二范式">5.2 Second Normal Form (2NF - 第二范式)</h2>
+<ul>
+<li>A relation R is in 2NF <em><strong>if amd only if</strong></em> it is in 1NF and every non-key attributes is <strong>fully</strong> dependent on any <strong>candidate/primary</strong> key(include that nonprime attribute is <strong>transitively dependent</strong> on the primary key)
+<ul>
+<li>R(I,C,D,N)</li>
+<li>FD:{I-&gt;C, I-&gt;D, CD-&gt;N, IO-&gt;G}</li>
+<li>R is 2NF
+<ul>
+<li>I is a candidate key</li>
+<li>C, D, N are fully (transitively) dependent on I, which can be treated as CD-&gt;N &lt;==&gt; I-&gt;N</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>There is only one type of data stored a particular table, rather a combined-type data.</li>
+</ul>
+<blockquote>
+<p>Both relations are in 2NF in the above case.</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l5/pic/prob_2NF.png"
+        data-srcset="/posts/db/db_l5/pic/prob_2NF.png, /posts/db/db_l5/pic/prob_2NF.png 1.5x, /posts/db/db_l5/pic/prob_2NF.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l5/pic/prob_2NF.png"
+        title="/posts/db/db_l5/pic/prob_2NF.png" /></p>
+<ul>
+<li><em>Solution(3NF)</em>
+<ul>
+<li>Replcae second table by two sub-tables
+<ul>
+<li>SC(S#,City)</li>
+<li>CS(City,Status)</li>
+<li>Keep SP(S#,P#,Qty)
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l5/pic/solu_2NF.png"
+        data-srcset="/posts/db/db_l5/pic/solu_2NF.png, /posts/db/db_l5/pic/solu_2NF.png 1.5x, /posts/db/db_l5/pic/solu_2NF.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l5/pic/solu_2NF.png"
+        title="/posts/db/db_l5/pic/solu_2NF.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="53-third-normal-form-3nf---第三范式">5.3 Third Normal Form (3NF - 第三范式)</h2>
+<ul>
+<li>A relation R is in 3NF <em><strong>if and only if</strong></em> it is in
+2NF and every non-key attribute is <em>non-transitively</em>
+dependent on any candidate key.</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l5/pic/3NF.png"
+        data-srcset="/posts/db/db_l5/pic/3NF.png, /posts/db/db_l5/pic/3NF.png 1.5x, /posts/db/db_l5/pic/3NF.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l5/pic/3NF.png"
+        title="/posts/db/db_l5/pic/3NF.png" /></p>
+<ul>
+<li>Some redundancy still exists</li>
+<li><em>Solution</em>
+<ul>
+<li>Replace original SSP by two sub-tables</li>
+<li>SS(S#,Sname)</li>
+<li>SP(S#,P#,Qty) [or,SP(Sname,P#,Qty)]</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="53-bcnf---bc范式">5.3 BCNF - BC范式</h2>
+<ul>
+<li>A relation R is in BCNF if and only if every determinant (l<em><strong>eft-hand side of an FD</strong></em>) is a <em><strong>candidate key</strong></em>.</li>
+</ul>
+<blockquote>
+<p>第一范式：1NF是对属性的原子性约束，要求属性具有原子性，不可分解；
+第二范式：2NF是对记录的惟一性约束，要求记录有惟一标识，即实体的惟一性；
+第三范式：3NF是对字段冗余性的约束，即任何字段不能由其他字段派生出来，它要求字段没有冗余。</p>
+</blockquote>
+<p><a href="https://www.cnblogs.com/sky20080101/articles/8445061.html" target="_blank" rel="noopener noreffer ">参考</a></p>
+<hr>
+<p><em><strong>学习笔记，仅供参考</strong></em></p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-09-30</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://shanyu0205.github.io/posts/db/db_l5/l5/" data-title="Data base system - L5" data-hashtags="Data Base"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://shanyu0205.github.io/posts/db/db_l5/l5/" data-hashtag="Data Base"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://shanyu0205.github.io/posts/db/db_l5/l5/" data-title="Data base system - L5"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://shanyu0205.github.io/posts/db/db_l5/l5/" data-title="Data base system - L5"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://shanyu0205.github.io/posts/db/db_l5/l5/" data-title="Data base system - L5"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/data-base/">Data Base</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/db/db_l4/l4/" class="prev" rel="prev" title="Data base system - L4"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Data base system - L4</a>
+            <a href="/posts/db/db_l6-7/l6-7/" class="next" rel="next" title="Data base system - L6-7">Data base system - L6-7<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{},"data":{"id-1":"山雨欲来风满楼的网站","id-2":"山雨欲来风满楼的网站"},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Data base system - L6-7 - 山雨欲来风满楼的博客</title><meta name="Description" content="这篇文章展示了数据库系统的学习记录"><meta property="og:title" content="Data base system - L6-7" />
+<meta property="og:description" content="这篇文章展示了数据库系统的学习记录" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://shanyu0205.github.io/posts/db/db_l6-7/l6-7/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-10-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-10-09T17:28:10+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Data base system - L6-7"/>
+<meta name="twitter:description" content="这篇文章展示了数据库系统的学习记录"/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://shanyu0205.github.io/posts/db/db_l6-7/l6-7/" /><link rel="prev" href="https://shanyu0205.github.io/posts/db/db_l5/l5/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Data base system - L6-7",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/shanyu0205.github.io\/posts\/db\/db_l6-7\/l6-7\/"
+        },"genre": "posts","keywords": "Data Base","wordcount":  1458 ,
+        "url": "https:\/\/shanyu0205.github.io\/posts\/db\/db_l6-7\/l6-7\/","datePublished": "2022-10-08T00:00:00+00:00","dateModified": "2020-10-09T17:28:10+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "山雨欲来风满楼"
+            },"description": "这篇文章展示了数据库系统的学习记录"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="山雨欲来风满楼的博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/categories/documentation/"> 文档 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/ShanYu0205" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
+                    <i class="fa fa-globe" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/db/db_l6-7/l6-7/" selected>简体中文</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="山雨欲来风满楼的博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/categories/documentation/" title="">文档</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/ShanYu0205" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/db/db_l6-7/l6-7/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Data base system - L6-7</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>山雨欲来风满楼</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-10-08">2022-10-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1458 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#22-operation-on-files">2.2 Operation on Files</a></li>
+    <li><a href="#23-unordered-files--ordered-files">2.3 Unordered Files &amp; ordered Files</a></li>
+    <li><a href="#24-hashed-files">2.4 Hashed Files</a></li>
+    <li><a href="#25-dynamic-and-extendible-hashing-techniques">2.5 Dynamic and Extendible Hashing Techniques</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#31-primary-indexes">3.1 Primary Indexes</a></li>
+    <li><a href="#32-clustering-indexes">3.2 Clustering Indexes</a></li>
+    <li><a href="#33-secondary-indexes">3.3 Secondary Indexes</a></li>
+    <li><a href="#34-multi-level-indexes">3.4 Multi-level Indexes</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#52-tuning">5.2 Tuning</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><em><strong>这篇文章展示了数据库系统的学习记录</strong></em></p>
+<hr>
+<h1 id="1-disk-storage-devices">1 Disk Storage Devices</h1>
+<ul>
+<li>Data stored as magnetized areas on magnetic disk surfaces.</li>
+<li>A <em>disk pack</em> contains several magnetic disks connected to a rotating spindle.</li>
+<li>Disks are divided into concentric circular <em><strong>tracks</strong></em> on each disk <em><strong>surface</strong></em>. Track capacities vary typically from 4 to 50 Kbytes.</li>
+<li>A track is divided into <em><strong>blocks</strong></em> (In some systems, there is an intermediate unit called <em><strong>sectors</strong></em>). The block size B is fixed for each system. Typical block sizes range from B=512 bytes to B=4096 bytes.</li>
+<li>Whole blocks are transferred between disk and main memory
+for processing.</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l6-7/pic/sector_disk.png"
+        data-srcset="/posts/db/db_l6-7/pic/sector_disk.png, /posts/db/db_l6-7/pic/sector_disk.png 1.5x, /posts/db/db_l6-7/pic/sector_disk.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l6-7/pic/sector_disk.png"
+        title="/posts/db/db_l6-7/pic/sector_disk.png" /></p>
+<ul>
+<li>A <em><strong>read-write</strong></em> head moves to the track that contains the block to be transferred. Disk rotation moves the block under the read-write head for reading or writing</li>
+<li>A physical disk block address consists of a surface number, track number (within surface), and block number (within track)</li>
+<li><em><strong>Reading or writing a disk block is time consuming</strong></em> because of the <em>seek time</em> $s$ and <em>rotational delay (latency)</em> $rd$</li>
+<li>Double buffering can be used to speed up the transfer of contiguous disk blocks</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l6-7/pic/read-write_head.png"
+        data-srcset="/posts/db/db_l6-7/pic/read-write_head.png, /posts/db/db_l6-7/pic/read-write_head.png 1.5x, /posts/db/db_l6-7/pic/read-write_head.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l6-7/pic/read-write_head.png"
+        title="/posts/db/db_l6-7/pic/read-write_head.png" /></p>
+<hr>
+<h1 id="21-file-of-records">2.1 File of Records</h1>
+<ul>
+<li>
+<p>A file is sequence of records, where each record is a collection of data values or items.</p>
+<ul>
+<li>A <em>file descriptotr or header</em> includes information that describes the file, such as the <em>field names</em> and their <em>data tpyes</em>, and the addressseds of the file blocks on the disk.</li>
+<li>Records are stored on disk blocks. The <em><strong>blocking factor</strong></em> <strong>bfr</strong> for a file is the (average) number of file records stored in a disk block.</li>
+<li>A file can have <em><strong>fixed-length</strong></em> records or <em><strong>variable-length</strong></em> records.</li>
+</ul>
+</li>
+<li>
+<p>File records can be</p>
+<ul>
+<li><em>unspanned</em>: no record can span two blocks</li>
+<li><em>spanned</em>: a record can be stored in more than one block</li>
+</ul>
+</li>
+<li>
+<p>In a file of <strong>fixed-length</strong> records, all records have the <em><strong>same</strong></em> format. Usually, unspanned blocking is used with such files.</p>
+</li>
+<li>
+<p>Files of <strong>variable-length</strong> records require additional information to be stored in each record. Usually spanned blocking is used with such files.</p>
+</li>
+<li>
+<p>The records of a file can be <em><strong>contiguous</strong></em>, <em><strong>linked</strong></em>, or <em><strong>indexed</strong></em>.</p>
+</li>
+</ul>
+<hr>
+<h2 id="22-operation-on-files">2.2 Operation on Files</h2>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l6-7/pic/operation_file_1.png"
+        data-srcset="/posts/db/db_l6-7/pic/operation_file_1.png, /posts/db/db_l6-7/pic/operation_file_1.png 1.5x, /posts/db/db_l6-7/pic/operation_file_1.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l6-7/pic/operation_file_1.png"
+        title="/posts/db/db_l6-7/pic/operation_file_1.png" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l6-7/pic/operation_file_2.png"
+        data-srcset="/posts/db/db_l6-7/pic/operation_file_2.png, /posts/db/db_l6-7/pic/operation_file_2.png 1.5x, /posts/db/db_l6-7/pic/operation_file_2.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l6-7/pic/operation_file_2.png"
+        title="/posts/db/db_l6-7/pic/operation_file_2.png" /></p>
+<hr>
+<h2 id="23-unordered-files--ordered-files">2.3 Unordered Files &amp; ordered Files</h2>
+<ul>
+<li><em>Unordered Files</em>: also called <em>pile</em> file</li>
+<li>New records are insterted at the <em><strong>end</strong></em> of the file</li>
+<li><em><strong>Linear search</strong></em> through the file is necessary, which requires reading and searching half the file blocks on the average. <strong>QUITE EXPENSIVE</strong>.</li>
+<li>Insertion is quite efficient</li>
+<li>Reading the records in order of a particular field requires sorting the file records.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>9</th>
+<th>16</th>
+<th>50</th>
+<th>2</th>
+<th>10</th>
+<th>4</th>
+<th>8</th>
+<th>12</th>
+<th>60</th>
+<th>100</th>
+</tr>
+</thead>
+</table>
+<hr>
+<ul>
+<li><em>Ordered Files</em>: also called <em>sequential</em> file</li>
+<li>File records are kept sorted by the values of an ordering field.</li>
+<li><strong>Insertion is expensive</strong>: records must be inserted in the correct position. It is common to keep a separate unordered overflow file for new records to improve insertion efficiency; this is periodically merged with the main ordered file</li>
+<li>A binary search can be used to search for a record on its ordering field value. This requires reading and searching ${log_2}^{n}$ of the file blocks on the average.</li>
+<li>Reading the records according to the order of the ordering field is quite efficient.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>2</th>
+<th>4</th>
+<th>6</th>
+<th>14</th>
+<th>18</th>
+<th>50</th>
+<th>100</th>
+<th>5000</th>
+<th>9000</th>
+<th>100000</th>
+</tr>
+</thead>
+</table>
+<hr>
+<h2 id="24-hashed-files">2.4 Hashed Files</h2>
+<ul>
+<li>Hashing for disk files is called <strong>External Hashing</strong></li>
+<li><em><strong>Collisions</strong></em> occur when a new record hashes to a bucket that is
+already full
+<ul>
+<li>an <strong>overflow</strong> file is kept for storing such records;</li>
+<li><em>overflow</em> records that hash to each bucket can be linked together.</li>
+</ul>
+</li>
+</ul>
+<p><em>[Resolution]</em></p>
+<ul>
+<li><strong>Open addressing</strong>: Proceeding from the occupied position specified by the hash address, the program checks the subsequent positions in order until an unused (empty) position is found.
+<ul>
+<li><em><strong>Linear Prob</strong></em>: If collide, try Bucket_id+1, Bucket_id+2, …</li>
+<li><em><strong>Quadratic Prob</strong></em>: If collide, try Bucket_id+1, Bucket_id+4,…(try to not affect the close neighbors like linear probing)</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l6-7/pic/resolution_collision.png"
+        data-srcset="/posts/db/db_l6-7/pic/resolution_collision.png, /posts/db/db_l6-7/pic/resolution_collision.png 1.5x, /posts/db/db_l6-7/pic/resolution_collision.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l6-7/pic/resolution_collision.png"
+        title="/posts/db/db_l6-7/pic/resolution_collision.png" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l6-7/pic/hashed_overflow_handle.png"
+        data-srcset="/posts/db/db_l6-7/pic/hashed_overflow_handle.png, /posts/db/db_l6-7/pic/hashed_overflow_handle.png 1.5x, /posts/db/db_l6-7/pic/hashed_overflow_handle.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l6-7/pic/hashed_overflow_handle.png"
+        title="/posts/db/db_l6-7/pic/hashed_overflow_handle.png" /></p>
+<blockquote>
+<p>Main disadvantagesof static external hashing:
+Fixed number of buckets M is a problem when the number of records in the file grows or shrinks.</p>
+</blockquote>
+<hr>
+<h2 id="25-dynamic-and-extendible-hashing-techniques">2.5 Dynamic and Extendible Hashing Techniques</h2>
+<ul>
+<li>Both <strong>dynamic</strong> and <strong>extendible</strong> hashing use the <em><strong>binary representation</strong></em> of the hash value h(K) in order to access a <strong>directory</strong>.
+<ul>
+<li>In dynamic hashing the directory is a binary tree.</li>
+<li>In extendible hashing the directory is an array of size $2^d$ where d is called the <strong>global depth</strong>.</li>
+</ul>
+</li>
+<li>The directories can be stored on disk, and they expand or shrink <strong>dynamically</strong>.</li>
+<li>An insertion in a bucket that is full causes the bucket to <em><strong>split</strong></em> into two buckets and the records are <strong>redistributed</strong> among the two buckets.</li>
+<li>Dynamic and extendible hashing <em><strong>do not</strong></em> require an <strong>overflow</strong> area.</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l6-7/pic/extendible_hashing.png"
+        data-srcset="/posts/db/db_l6-7/pic/extendible_hashing.png, /posts/db/db_l6-7/pic/extendible_hashing.png 1.5x, /posts/db/db_l6-7/pic/extendible_hashing.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l6-7/pic/extendible_hashing.png"
+        title="/posts/db/db_l6-7/pic/extendible_hashing.png" /></p>
+<hr>
+<h1 id="3-types-of-single-level-indexes">3 Types of Single-level Indexes</h1>
+<ul>
+<li>One form of an index:
+<ul>
+<li>a file of entries <em>&lt;field value, ptr to record&gt;</em>, which is ordered by field value</li>
+</ul>
+</li>
+<li>The index is called an <em><strong>access path</strong></em> on the field
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l6-7/pic/index_1.png"
+        data-srcset="/posts/db/db_l6-7/pic/index_1.png, /posts/db/db_l6-7/pic/index_1.png 1.5x, /posts/db/db_l6-7/pic/index_1.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l6-7/pic/index_1.png"
+        title="/posts/db/db_l6-7/pic/index_1.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l6-7/pic/index_2.png"
+        data-srcset="/posts/db/db_l6-7/pic/index_2.png, /posts/db/db_l6-7/pic/index_2.png 1.5x, /posts/db/db_l6-7/pic/index_2.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l6-7/pic/index_2.png"
+        title="/posts/db/db_l6-7/pic/index_2.png" /></li>
+</ul>
+<hr>
+<h2 id="31-primary-indexes">3.1 Primary Indexes</h2>
+<ul>
+<li>Defined on an ordered data file</li>
+<li>The data file is ordered on a <em><strong>key</strong></em> field</li>
+<li>Includes one index entry for each block in the data file; the index entry has the key field value for the <em>first</em> record in the block, which is called the <em>block anchor</em></li>
+<li>A similar scheme can use the last record in a block</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="pic/primary_index_1.png"
+        data-srcset="pic/primary_index_1.png, pic/primary_index_1.png 1.5x, pic/primary_index_1.png 2x"
+        data-sizes="auto"
+        alt="pic/primary_index_1.png"
+        title="pic/primary_index_1.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l6-7/pic/primary_index_2.png"
+        data-srcset="/posts/db/db_l6-7/pic/primary_index_2.png, /posts/db/db_l6-7/pic/primary_index_2.png 1.5x, /posts/db/db_l6-7/pic/primary_index_2.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l6-7/pic/primary_index_2.png"
+        title="/posts/db/db_l6-7/pic/primary_index_2.png" /></p>
+<hr>
+<h2 id="32-clustering-indexes">3.2 Clustering Indexes</h2>
+<ul>
+<li>Defined on an ordered data file</li>
+<li>The data file is ordered on a <em>non-key</em> field</li>
+<li>Includes one index entry for <em>each distinct value</em> of the field; the index entry points to the first data block that contains records with that field value</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l6-7/pic/cluster_index_1.png"
+        data-srcset="/posts/db/db_l6-7/pic/cluster_index_1.png, /posts/db/db_l6-7/pic/cluster_index_1.png 1.5x, /posts/db/db_l6-7/pic/cluster_index_1.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l6-7/pic/cluster_index_1.png"
+        title="/posts/db/db_l6-7/pic/cluster_index_1.png" /></p>
+<hr>
+<h2 id="33-secondary-indexes">3.3 Secondary Indexes</h2>
+<ul>
+<li>A secondary index provides a secondary means of accessing a file for which some primary access already exists</li>
+<li>The secondary index may be on a <strong>candidate key field</strong> or a <strong>non-key field</strong></li>
+</ul>
+<blockquote>
+<p>There can be many secondary indexes for the same data file.</p>
+</blockquote>
+<ul>
+<li>The index is an <strong>ordered</strong> file with two fields.
+<ul>
+<li>The first field is of the same data type as some <em><strong>non-ordering field</strong></em> (ie.,the indexing field) of the data file.</li>
+<li>The second field is either a block pointer or a record pointer</li>
+<li>If we include one entry for each record in the data file, then it is called a <em>dense index</em></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="34-multi-level-indexes">3.4 Multi-level Indexes</h2>
+<ul>
+<li>Because a single-level index is an ordered file, we can create a primary index to the index itself ; in this case, the original index file is called the <em>first-level index</em> and the  index to the index is called the <em>second-level index</em></li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l6-7/pic/two-level_index.png"
+        data-srcset="/posts/db/db_l6-7/pic/two-level_index.png, /posts/db/db_l6-7/pic/two-level_index.png 1.5x, /posts/db/db_l6-7/pic/two-level_index.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l6-7/pic/two-level_index.png"
+        title="/posts/db/db_l6-7/pic/two-level_index.png" /></p>
+<hr>
+<h1 id="4-b-trees-and-b-trees-as-dynamic-multi-level-indexes">4 B-Trees and B+-Trees as Dynamic Multi-level Indexes</h1>
+<ul>
+<li>In B Tree and B+ Tree data structures, each node corresponds to a disk block</li>
+<li>Each node is kept between <em>half-full</em> and <em>completely full</em></li>
+</ul>
+<hr>
+<p><em>[An insertion into a node that is not full is quite efficient; if a node is full the insertion causes a split into two nodes]</em></p>
+<p><em>[If a deletion causes a node to become less than half full, it must be merged with neighboring nodes]</em></p>
+<ul>
+<li>In a B tree, pointers to data records exist at all levels of the tree</li>
+<li>In a B+ tree, all pointers to data records exists at the leaf-level nodes</li>
+<li>Internal pointer <em><strong>must</strong></em> point to a block</li>
+</ul>
+<hr>
+<ul>
+<li>A search tree of order $p$ is a tree such that each node contains at most $p−1$ <strong>search values</strong> and $p$ <strong>pointers</strong>
+<ul>
+<li>Each internal node has at most $p$ tree <strong>pointers</strong>, $p-1$ <strong>value(s)</strong>.</li>
+<li>Each internal node, except the root, has at least $⎡(p/2)⎤$ tree <strong>pointers</strong>,  $⎡(p/2)⎤-1$ <strong>value(s)</strong>. The root node has at least two tree <strong>pointers</strong> if it is an internal node.</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l6-7/pic/B-tree_node.png"
+        data-srcset="/posts/db/db_l6-7/pic/B-tree_node.png, /posts/db/db_l6-7/pic/B-tree_node.png 1.5x, /posts/db/db_l6-7/pic/B-tree_node.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l6-7/pic/B-tree_node.png"
+        title="/posts/db/db_l6-7/pic/B-tree_node.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l6-7/pic/B&#43;-tree_node.png"
+        data-srcset="/posts/db/db_l6-7/pic/B&#43;-tree_node.png, /posts/db/db_l6-7/pic/B&#43;-tree_node.png 1.5x, /posts/db/db_l6-7/pic/B&#43;-tree_node.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l6-7/pic/B&#43;-tree_node.png"
+        title="/posts/db/db_l6-7/pic/B&#43;-tree_node.png" /></p>
+<hr>
+<ul>
+<li>During the insertion, the node has to be splited when it is full.</li>
+<li>During the deletion, the node has to be merge when it is too small (number of value &lt; $⎡(p/2)⎤-1$). Normally, we choose the <strong>left leaf node</strong> of the <strong>same subtree</strong> to merge. <em>(When there exists right or left leaf node within a same subtree, it should be different results.)</em></li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l6-7/pic/insertion_B&#43;_1.png"
+        data-srcset="/posts/db/db_l6-7/pic/insertion_B&#43;_1.png, /posts/db/db_l6-7/pic/insertion_B&#43;_1.png 1.5x, /posts/db/db_l6-7/pic/insertion_B&#43;_1.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l6-7/pic/insertion_B&#43;_1.png"
+        title="/posts/db/db_l6-7/pic/insertion_B&#43;_1.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l6-7/pic/insertion_B&#43;_2.png"
+        data-srcset="/posts/db/db_l6-7/pic/insertion_B&#43;_2.png, /posts/db/db_l6-7/pic/insertion_B&#43;_2.png 1.5x, /posts/db/db_l6-7/pic/insertion_B&#43;_2.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l6-7/pic/insertion_B&#43;_2.png"
+        title="/posts/db/db_l6-7/pic/insertion_B&#43;_2.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l6-7/pic/deletion_B&#43;.png"
+        data-srcset="/posts/db/db_l6-7/pic/deletion_B&#43;.png, /posts/db/db_l6-7/pic/deletion_B&#43;.png 1.5x, /posts/db/db_l6-7/pic/deletion_B&#43;.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l6-7/pic/deletion_B&#43;.png"
+        title="/posts/db/db_l6-7/pic/deletion_B&#43;.png" /></p>
+<hr>
+<h1 id="5-physical-database-design-decisions">5 Physical Database Design Decisions</h1>
+<hr>
+<h1 id="51-physical-database-design-decisions">5.1 Physical Database Design Decisions</h1>
+<ul>
+<li>Denormalization as a design decision for speeding up queries
+<ul>
+<li>The goal of <em><strong>normalization</strong></em> is to separate the logically related attributes into tables to <em><strong>minimize redundancy</strong></em> and thereby <em><strong>avoid the update anomalies</strong></em> that cause an <em><strong>extra processing overheard</strong></em> to <em><strong>maintain consistency</strong></em> of the database.</li>
+<li>The goal of <em><strong>denormalizationis</strong></em> to improve the performance of <em><strong>frequently occurring queries and transactions.</strong></em> (Typically the designer adds to a table attributes that are needed for answering queries or producing reports so that a join with another table is avoided.)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="52-tuning">5.2 Tuning</h2>
+<ul>
+<li>
+<p>Goal:</p>
+<ul>
+<li>To make application run faster</li>
+<li>To lower the response time of queries/transactions</li>
+<li>To improve the overall throughput of transactions</li>
+</ul>
+</li>
+<li>
+<p>Tuning Index</p>
+</li>
+<li>
+<p>Tuning Queries</p>
+</li>
+</ul>
+<hr>
+<p><em><strong>学习笔记，仅供参考</strong></em></p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-10-09</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://shanyu0205.github.io/posts/db/db_l6-7/l6-7/" data-title="Data base system - L6-7" data-hashtags="Data Base"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://shanyu0205.github.io/posts/db/db_l6-7/l6-7/" data-hashtag="Data Base"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://shanyu0205.github.io/posts/db/db_l6-7/l6-7/" data-title="Data base system - L6-7"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://shanyu0205.github.io/posts/db/db_l6-7/l6-7/" data-title="Data base system - L6-7"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://shanyu0205.github.io/posts/db/db_l6-7/l6-7/" data-title="Data base system - L6-7"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/data-base/">Data Base</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/db/db_l5/l5/" class="prev" rel="prev" title="Data base system - L5"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Data base system - L5</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{},"data":{"id-1":"山雨欲来风满楼的网站","id-2":"山雨欲来风满楼的网站"},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

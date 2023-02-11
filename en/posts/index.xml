@@ -5,12 +5,12 @@
         <description>All Posts | 山雨欲来风满楼的博客</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 02 Oct 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://shanyu0205.github.io/en/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Java学习1</title>
-    <link>https://shanyu0205.github.io/en/posts/blog1/</link>
+    <link>https://shanyu0205.github.io/en/posts/blog/blog1/</link>
     <pubDate>Sat, 02 Oct 2021 00:00:00 &#43;0000</pubDate>
     <author>Will</author>
-    <guid>https://shanyu0205.github.io/en/posts/blog1/</guid>
+    <guid>https://shanyu0205.github.io/en/posts/blog/blog1/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/posts/blog1/featured-image-preview.jpg" referrerpolicy="no-referrer">
+                <img src="/posts/blog/blog1/featured-image-preview.jpg" referrerpolicy="no-referrer">
             </div><p>Java学习记录（一）</p>]]></description>
 </item>
 </channel>

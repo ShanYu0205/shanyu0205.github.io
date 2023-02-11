@@ -3,49 +3,64 @@
         <title>所有文章 - 山雨欲来风满楼的博客</title>
         <link>https://shanyu0205.github.io/posts/</link>
         <description>所有文章 | 山雨欲来风满楼的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 10 Feb 2023 16:47:52 &#43;0800</lastBuildDate><atom:link href="https://shanyu0205.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>Second_post</title>
-    <link>https://shanyu0205.github.io/posts/second_post/</link>
-    <pubDate>Fri, 10 Feb 2023 16:47:52 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://shanyu0205.github.io/posts/second_post/</guid>
-    <description><![CDATA[This is a md file.]]></description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 08 Oct 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://shanyu0205.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Data base system - L6-7</title>
+    <link>https://shanyu0205.github.io/posts/db/db_l6-7/l6-7/</link>
+    <pubDate>Sat, 08 Oct 2022 00:00:00 &#43;0000</pubDate>
+    <author>山雨欲来风满楼</author>
+    <guid>https://shanyu0205.github.io/posts/db/db_l6-7/l6-7/</guid>
+    <description><![CDATA[<p><em><strong>这篇文章展示了数据库系统的学习记录</strong></em></p>]]></description>
 </item>
 <item>
-    <title>First_post</title>
-    <link>https://shanyu0205.github.io/posts/first_post/</link>
-    <pubDate>Fri, 10 Feb 2023 15:19:12 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://shanyu0205.github.io/posts/first_post/</guid>
-    <description><![CDATA[111111
-asdadsadad
-sad a dasd]]></description>
+    <title>Data base system - L5</title>
+    <link>https://shanyu0205.github.io/posts/db/db_l5/l5/</link>
+    <pubDate>Fri, 30 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>山雨欲来风满楼</author>
+    <guid>https://shanyu0205.github.io/posts/db/db_l5/l5/</guid>
+    <description><![CDATA[<p><em><strong>这篇文章展示了数据库系统的学习记录</strong></em></p>]]></description>
+</item>
+<item>
+    <title>Data base system - L4</title>
+    <link>https://shanyu0205.github.io/posts/db/db_l4/l4/</link>
+    <pubDate>Wed, 21 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>山雨欲来风满楼</author>
+    <guid>https://shanyu0205.github.io/posts/db/db_l4/l4/</guid>
+    <description><![CDATA[<p><em><strong>这篇文章展示了数据库系统的学习记录</strong></em></p>]]></description>
+</item>
+<item>
+    <title>Data base system - L2</title>
+    <link>https://shanyu0205.github.io/posts/db/db_l2/l2/</link>
+    <pubDate>Sun, 11 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>山雨欲来风满楼</author>
+    <guid>https://shanyu0205.github.io/posts/db/db_l2/l2/</guid>
+    <description><![CDATA[<p><em><strong>这篇文章展示了数据库系统的学习记录</strong></em></p>
+<hr>]]></description>
 </item>
 <item>
     <title>Data Base system - L1</title>
-    <link>https://shanyu0205.github.io/posts/db_l1/l1/</link>
+    <link>https://shanyu0205.github.io/posts/db/db_l1/l1/</link>
     <pubDate>Sun, 04 Sep 2022 13:20:10 &#43;0800</pubDate>
     <author>山雨欲来风满楼</author>
-    <guid>https://shanyu0205.github.io/posts/db_l1/l1/</guid>
+    <guid>https://shanyu0205.github.io/posts/db/db_l1/l1/</guid>
     <description><![CDATA[<p><em><strong>这篇文章展示了数据库系统的学习记录</strong></em></p>
 <hr>]]></description>
 </item>
 <item>
     <title>Java学习1</title>
-    <link>https://shanyu0205.github.io/posts/blog1/</link>
+    <link>https://shanyu0205.github.io/posts/blog/blog1/</link>
     <pubDate>Sat, 02 Oct 2021 00:00:00 &#43;0000</pubDate>
     <author>山雨欲来风满楼</author>
-    <guid>https://shanyu0205.github.io/posts/blog1/</guid>
+    <guid>https://shanyu0205.github.io/posts/blog/blog1/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/posts/blog1/featured-image-preview.jpg" referrerpolicy="no-referrer">
+                <img src="/posts/blog/blog1/featured-image-preview.jpg" referrerpolicy="no-referrer">
             </div><p>Java学习记录（一）</p>]]></description>
 </item>
 <item>
     <title>Java学习2</title>
-    <link>https://shanyu0205.github.io/posts/blog2/</link>
+    <link>https://shanyu0205.github.io/posts/blog/blog2/</link>
     <pubDate>Wed, 08 Sep 2021 00:00:00 &#43;0000</pubDate>
     <author>山雨欲来风满楼</author>
-    <guid>https://shanyu0205.github.io/posts/blog2/</guid>
+    <guid>https://shanyu0205.github.io/posts/blog/blog2/</guid>
     <description><![CDATA[<p>Java学习记录（二）</p>]]></description>
 </item>
 </channel>

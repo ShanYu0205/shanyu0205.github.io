@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Data base system - L2 - 山雨欲来风满楼的博客</title><meta name="Description" content="这篇文章展示了数据库系统的学习记录"><meta property="og:title" content="Data base system - L2" />
+<meta property="og:description" content="这篇文章展示了数据库系统的学习记录" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://shanyu0205.github.io/posts/db/db_l2/l2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-11T13:20:10+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Data base system - L2"/>
+<meta name="twitter:description" content="这篇文章展示了数据库系统的学习记录"/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://shanyu0205.github.io/posts/db/db_l2/l2/" /><link rel="prev" href="https://shanyu0205.github.io/posts/db/db_l1/l1/" /><link rel="next" href="https://shanyu0205.github.io/posts/db/db_l4/l4/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Data base system - L2",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/shanyu0205.github.io\/posts\/db\/db_l2\/l2\/"
+        },"genre": "posts","keywords": "Data Base","wordcount":  1432 ,
+        "url": "https:\/\/shanyu0205.github.io\/posts\/db\/db_l2\/l2\/","datePublished": "2022-09-11T00:00:00+00:00","dateModified": "2020-09-11T13:20:10+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "山雨欲来风满楼"
+            },"description": "这篇文章展示了数据库系统的学习记录"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="山雨欲来风满楼的博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/categories/documentation/"> 文档 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/ShanYu0205" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
+                    <i class="fa fa-globe" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/db/db_l2/l2/" selected>简体中文</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="山雨欲来风满楼的博客"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/categories/documentation/" title="">文档</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/ShanYu0205" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/db/db_l2/l2/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Data base system - L2</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>山雨欲来风满楼</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-11">2022-09-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1432 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#11-basic-structure">1.1 Basic structure</a></li>
+    <li><a href="#12-key">1.2 Key</a></li>
+    <li><a href="#13-characteristic-of-relations">1.3 Characteristic of Relations</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#21-mapping-er-diagrams-into-tables">2.1 Mapping ER Diagrams into Tables</a>
+      <ul>
+        <li><a href="#211-repersentation-of-entitystrong-sets">2.1.1 Repersentation of Entity(Strong) sets</a></li>
+        <li><a href="#212-repersentation-of-weak-entity-sets">2.1.2 Repersentation of Weak Entity sets</a></li>
+        <li><a href="#213-repersentation-of-mn-relationship-sets">2.1.3 Repersentation of M:N Relationship Sets</a></li>
+        <li><a href="#214-er-to-relational-schema">2.1.4 ER to relational schema</a></li>
+      </ul>
+    </li>
+    <li><a href="#22-minmax-notation">2.2 (min,max) notation</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#31-basic-syntax-structure-of-sql">3.1 Basic syntax (structure) of SQL</a></li>
+    <li><a href="#32-null-value">3.2 NULL Value</a></li>
+    <li><a href="#33-aggregate-function">3.3 Aggregate Function</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><em><strong>这篇文章展示了数据库系统的学习记录</strong></em></p>
+<hr>
+<h1 id="1-rational-data-model-record-based-logical-model">1 Rational Data Model (record-based logical model)</h1>
+<hr>
+<h2 id="11-basic-structure">1.1 Basic structure</h2>
+<ul>
+<li>
+<p>Relations:</p>
+<ul>
+<li>Data stored as tables (called relations); each has a unique name</li>
+<li>A relation consists of rows (called tuples) and columns (called attributes)</li>
+</ul>
+</li>
+<li>
+<p>Attributes:</p>
+<ul>
+<li>An attribute has a &ldquo;domain&rdquo;</li>
+</ul>
+</li>
+<li>
+<p>Record:</p>
+<ul>
+<li>Each row/tuple in a relation is a record (an entity)</li>
+<li>Each attribute in a relation corresponds to a particular filed of a record</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l2/pic/Rational_data_model.png"
+        data-srcset="/posts/db/db_l2/pic/Rational_data_model.png, /posts/db/db_l2/pic/Rational_data_model.png 1.5x, /posts/db/db_l2/pic/Rational_data_model.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l2/pic/Rational_data_model.png"
+        title="/posts/db/db_l2/pic/Rational_data_model.png" /></p>
+<blockquote>
+<p>DB Schema: relatively <em><strong>static</strong></em>, the whole structure
+DB instance: <em><strong>dynamic</strong></em>, data &amp; structure</p>
+</blockquote>
+<hr>
+<h2 id="12-key">1.2 Key</h2>
+<blockquote>
+<p>Candidate and primary keys are also defined by relational data model
+Super keys are similar to candidate/primary keys, but are not required to be minimal. (可以有其他属性)</p>
+</blockquote>
+<hr>
+<h2 id="13-characteristic-of-relations">1.3 Characteristic of Relations</h2>
+<ul>
+<li>
+<p>Ordering of tuples in a relation r(R): The tuples are
+<em><strong>not considered to be ordered</strong></em>, even though they appear
+in order in the table form.</p>
+</li>
+<li>
+<p>Ordering of attributes in a relation schema R (and of
+values within each tuple): We will consider the attributes
+in R(A1, A2, &hellip;, An) and the values in t=&lt;v1, v2, &hellip;, vn&gt;
+to be <em><strong>ordered</strong></em> .</p>
+</li>
+<li>
+<p>Values in a tuple: All values are considered atomic (indivisible). A special <em><strong>null</strong></em> value is used to represent values that are unknown or inapplicable to certain tuples.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>Can a key attribute contain NULL values? Why?</strong>
+<em>No, since a key attribute is a unique data to identify an entity in an entity set, if the key is null, which is meaningless.</em></p>
+</blockquote>
+<hr>
+<h1 id="2-er-vs-rational-data-model">2 ER vs. Rational Data Model</h1>
+<hr>
+<h2 id="21-mapping-er-diagrams-into-tables">2.1 Mapping ER Diagrams into Tables</h2>
+<hr>
+<h3 id="211-repersentation-of-entitystrong-sets">2.1.1 Repersentation of Entity(Strong) sets</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l2/pic/map1.png"
+        data-srcset="/posts/db/db_l2/pic/map1.png, /posts/db/db_l2/pic/map1.png 1.5x, /posts/db/db_l2/pic/map1.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l2/pic/map1.png"
+        title="/posts/db/db_l2/pic/map1.png" /></p>
+<hr>
+<h3 id="212-repersentation-of-weak-entity-sets">2.1.2 Repersentation of Weak Entity sets</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l2/pic/map2.png"
+        data-srcset="/posts/db/db_l2/pic/map2.png, /posts/db/db_l2/pic/map2.png 1.5x, /posts/db/db_l2/pic/map2.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l2/pic/map2.png"
+        title="/posts/db/db_l2/pic/map2.png" /></p>
+<hr>
+<h3 id="213-repersentation-of-mn-relationship-sets">2.1.3 Repersentation of M:N Relationship Sets</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/db/db_l2/pic/map3.png"
+        data-srcset="/posts/db/db_l2/pic/map3.png, /posts/db/db_l2/pic/map3.png 1.5x, /posts/db/db_l2/pic/map3.png 2x"
+        data-sizes="auto"
+        alt="/posts/db/db_l2/pic/map3.png"
+        title="/posts/db/db_l2/pic/map3.png" /></p>
+<hr>
+<h3 id="214-er-to-relational-schema">2.1.4 ER to relational schema</h3>
+<p><em><strong>Relation Table &amp; Entity Table</strong></em></p>
+<ul>
+<li><strong>Relation table</strong></li>
+</ul>
+<blockquote>
+<p><em>Strong relation</em></p>
+<table>
+<thead>
+<tr>
+<th>primary keys of connecting entities</th>
+<th>relation attributes(if any)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Weak relation</em></td>
+<td></td>
+</tr>
+<tr>
+<td>primary keys of connecting strong entities</td>
+<td>all attributes of all weak entities</td>
+</tr>
+<tr>
+<td>&mdash;</td>
+<td>&mdash;</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<ul>
+<li><strong>Entity table</strong></li>
+</ul>
+<blockquote>
+<p><em>Strong entity</em></p>
+<table>
+<thead>
+<tr>
+<th>all attributes (sign the key attribute(s))</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Weak entity</em></td>
+</tr>
+<tr>
+<td>all primary keys of corresponding strong entity</td>
+</tr>
+<tr>
+<td>&mdash;</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<hr>
+<h2 id="22-minmax-notation">2.2 (min,max) notation</h2>
+<ul>
+<li>(min,max) notation replaces the cardinality ratio(1:1,1:N,M:N) and single/double-line notation for participation constraints;</li>
+<li>Definition:</li>
+</ul>
+<blockquote>
+<p>For <strong>EACH</strong> entity e in E, e <strong>MUST participate</strong> in <strong>at least</strong> $min$ and <strong>at most</strong> $max$ relationship instances in R at any point in time.</p>
+</blockquote>
+<ul>
+<li>Conver it into English: for a particular entity(e.g. Stundet A in Student Entity), MUST appear(participate) in <strong>at most</strong> $max$ &amp; <strong>at least</strong> $min$ tuples in the table(relation R).</li>
+<li>As a result
+<ul>
+<li>For $min$
+<ul>
+<li>$min = 0\to$ <strong>partial participation</strong> - single line, not all entities participate</li>
+<li>$min&gt;0\to$ <strong>total paricipation</strong> - double line, all entities MUST appear in rows</li>
+</ul>
+</li>
+<li>For $max$
+<ul>
+<li>For a entity, it MUST appear in <strong>at most</strong> $max$ rows in a table</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>[Example]</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/Y2S1/COMP2411/L1/pic/min_max_no.png"
+        data-srcset="/Y2S1/COMP2411/L1/pic/min_max_no.png, /Y2S1/COMP2411/L1/pic/min_max_no.png 1.5x, /Y2S1/COMP2411/L1/pic/min_max_no.png 2x"
+        data-sizes="auto"
+        alt="/Y2S1/COMP2411/L1/pic/min_max_no.png"
+        title="/Y2S1/COMP2411/L1/pic/min_max_no.png" /></p>
+<hr>
+<p><strong>Translation</strong> between Cardinality ratio and (min,max) notation:</p>
+<ol>
+<li>Cardinality ratio <strong>1:1</strong> $\to$ (min,max): $(x,1)$;$(1,x)$
+<ul>
+<li>$x=0$, the entity has <strong>partial</strong> participation</li>
+<li>$x=1$, the entity has <strong>total</strong> participation</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example</strong>:</p>
+<p>ID === HAS === Student
+<strong>Cardinality ratio 1:1</strong>: double lines mean <strong>total</strong> participation</p>
+<ul>
+<li>For every ID, it MUST be hold by one and only one student</li>
+<li>For each student, he/she MUST has one and only one ID</li>
+</ul>
+<p>ID =(1,1)= HAS =(1,1)= Student
+<strong>(min,max) notation</strong>: in HAS tabke</p>
+<ul>
+<li>Each student MUSt appear in the table one and only one row</li>
+<li>Each ID MUSt appear in the table one and only one row</li>
+</ul>
+<hr>
+<ol start="2">
+<li>Cardinality ratio <strong>1:N</strong> $\to$ (min,max): $(x,N)$;$(1,x)$
+<ul>
+<li>$x=0$, the entity has <strong>partial</strong> participation</li>
+<li>$x=1$, the entity has <strong>total</strong> participation</li>
+</ul>
+</li>
+<li>Cardinality ratio <strong>N:1</strong> $\to$ (min,max): $(x,1)$;$(N,x)$
+<ul>
+<li>$x=0$, the entity has <strong>partial</strong> participation</li>
+<li>$x=1$, the entity has <strong>total</strong> participation</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example</strong>
+Employee === WORKS_FOR === Department
+<strong>Cardinality ratio 1:N</strong>: double lines mean <strong>total</strong> participation</p>
+<ul>
+<li>One employee must work for one and only one department</li>
+<li>One department must has at least one employee working for it</li>
+</ul>
+<p><strong>(min,max) notation</strong>: =(1,1)= WORKS_FOR =(1,N)= Department</p>
+<ul>
+<li>Each employee MUST appear in the table one and only one row</li>
+<li>Each department MUST appear in the table at least one row, <strong>at most</strong> N rows</li>
+</ul>
+<hr>
+<ol start="4">
+<li>Cardinality ratio <strong>M:N</strong> $\to$ (min,max): $(x,N)$;$(x,M)$
+<ul>
+<li>$x=0$, the entity has <strong>partial</strong> participation</li>
+<li>$x=1$, the entity has <strong>total</strong> participation</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="3-sql">3 SQL</h1>
+<h2 id="31-basic-syntax-structure-of-sql">3.1 Basic syntax (structure) of SQL</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> [<span style="color:#66d9ef">DISTINCT</span>] attribute1,...
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> table1 [name1], tabel2 [name2],...
+</span></span><span style="display:flex;"><span>    [<span style="color:#66d9ef">WHERE</span> requirement]
+</span></span><span style="display:flex;"><span>    [<span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> (attribute) <span style="color:#66d9ef">HAVING</span> requirement];
+</span></span></code></pre></div><p><em>[Example]</em></p>
+<blockquote>
+<p>Following relational schema:
+Customer (cname, street, city)
+Branch (bname, assets, b-city)
+Borrow (bname, loan#, cname, amount)
+Deposit (bname, acct#, cname, balance)</p>
+</blockquote>
+<ul>
+<li>E1: Find all customers of the Sai Kong branch</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>(<span style="color:#66d9ef">SELECT</span> cname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Deposit
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> bname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sai Kong&#39;</span>) <span style="color:#75715e">-- 注意是单引号
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">UNION</span> <span style="color:#75715e">-- not only Deposit customres, but borrow customers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  (<span style="color:#66d9ef">SELECT</span> cname
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">FROM</span> Borrow
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">WHERE</span> bname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sai Kong&#39;</span>);
+</span></span></code></pre></div><ul>
+<li>E2: Find the name and city of all customers having a loan at the
+Sai Kong branch</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">DISTINCT</span> Customer.cname,city
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Borrow,Customer
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> Borrow.cname <span style="color:#f92672">=</span> Customer.cname
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">AND</span> Borrow.bname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sai Kong&#39;</span>;
+</span></span></code></pre></div><ul>
+<li>E3: Find the names of all customers whose street has the substring
+‘Main’ included</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> cname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Customer
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> Customer.street <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;%Main%&#39;</span>;
+</span></span></code></pre></div><ul>
+<li>E4: Find all customers who have an account at some branch in
+which Jones has an account</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">DISTINCT</span> S1.cname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Deposit S1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> S1.bname <span style="color:#66d9ef">IN</span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#66d9ef">SELECT</span> bname
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">FROM</span> Deposit S2
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">WHERE</span> S2.cname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Jones&#39;</span>)
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> S1.cname <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;Jnoes&#39;</span>;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">DISTINCT</span> S2.cname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Deposit S1,Deposit S2
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> S1.cname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Jnoes&#39;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">AND</span> S1.bname <span style="color:#f92672">=</span> S2.bname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">AND</span> S1.cname <span style="color:#f92672">!=</span> S2.cname;
+</span></span></code></pre></div><ul>
+<li>E5: Find branches having greater assets than all branches in N.T.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> B1.bname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Branch B1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> B1.assets <span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">ALL</span> (<span style="color:#66d9ef">SELECT</span> B2.assets
+</span></span><span style="display:flex;"><span>                       <span style="color:#66d9ef">FROM</span> Branch B2
+</span></span><span style="display:flex;"><span>                       <span style="color:#66d9ef">WHERE</span> B2.b<span style="color:#f92672">-</span>city <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;N.T.&#39;</span>
+</span></span><span style="display:flex;"><span>                       );
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> B1.bname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Branch B1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">EXISTS</span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">FROM</span> Branch B2
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">WHERE</span> B2.assets <span style="color:#f92672">&gt;=</span> B1.assets
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> B2.b<span style="color:#f92672">-</span>city <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;N.T.&#39;</span>
+</span></span><span style="display:flex;"><span>  ); 
+</span></span></code></pre></div><ul>
+<li>E6: Find names of all branches that have greater assets than some
+branch located in Kowloon</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> bname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Branch
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> assets <span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">SOME</span> 
+</span></span><span style="display:flex;"><span>  (<span style="color:#66d9ef">SELECT</span> assets
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">FROM</span> Branch
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">WHERE</span> b<span style="color:#f92672">-</span>city <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Kwoloon&#39;</span>);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> bname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Branch B1,Branch B2
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> B1.assets <span style="color:#f92672">&gt;</span> B2.assets
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">AND</span> B2.b<span style="color:#f92672">-</span>city <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Kwoloon&#39;</span>;
+</span></span></code></pre></div><ul>
+<li>E7: Find all customers who have a deposit account at allbranches located in Kowloon</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">DISTINCT</span> S.cname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Deposit S
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> 
+</span></span><span style="display:flex;"><span> (<span style="color:#66d9ef">SELECT</span> T.bname
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">FROM</span> Deposit T account
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">WHERE</span> S.cname <span style="color:#f92672">=</span> T.cname) <span style="color:#75715e">-- the set of branches he/she has a deposit account
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">CONTAINS</span>
+</span></span><span style="display:flex;"><span> (<span style="color:#66d9ef">SELECT</span> bname
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">FROM</span> Branch 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">WHERE</span> b<span style="color:#f92672">-</span>city <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Kowloon&#39;</span>); <span style="color:#75715e">-- the set of branches on Kwoloon
+</span></span></span></code></pre></div><ul>
+<li>E8: Find all customers of Central branch who have an account there but no loan there</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">C</span>.cname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Customer <span style="color:#66d9ef">C</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> <span style="color:#66d9ef">EXISTS</span> 
+</span></span><span style="display:flex;"><span>  (<span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">FROM</span> Deposit D 
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">WHERE</span> D.cname <span style="color:#f92672">=</span> <span style="color:#66d9ef">C</span>.cname
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> D.bname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Central&#39;</span>)
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">EXISTS</span>
+</span></span><span style="display:flex;"><span>      (<span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">FROM</span> Borrow B
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">WHERE</span> B.cname <span style="color:#f92672">=</span> <span style="color:#66d9ef">C</span>.cname
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">AND</span> B.bname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Central&#39;</span>);
+</span></span></code></pre></div><ul>
+<li>E9: Find all customers who have a deposit account at ALL branches located in Kowloon</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">DISTINCT</span> S.cname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Deposit S
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">WHERE</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">EXISTS</span>(
+</span></span><span style="display:flex;"><span>  (<span style="color:#66d9ef">SELECT</span> bname
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">FROM</span> Branch 
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">WHERE</span> b<span style="color:#f92672">-</span>city <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Kowloon&#39;</span>)
+</span></span><span style="display:flex;"><span>MINUS
+</span></span><span style="display:flex;"><span>  (<span style="color:#66d9ef">SELECT</span> T.bname customer S 
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">FROM</span> Deposit T
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">WHERE</span> S.cname <span style="color:#f92672">=</span> T.cname));
+</span></span></code></pre></div><ul>
+<li>E10: List in alphabetic order all customers having a loan at
+branches in Kowloon</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">DISTINCT</span> cname
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Borrow
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> b<span style="color:#f92672">-</span>city <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Kowloon&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> cname;  <span style="color:#75715e">--By default, in ascending order.
+</span></span></span></code></pre></div><ul>
+<li>E11: List the entire borrow table in descending order of amount, and if several loans have the same amount, order them in ascending order by loan#</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Borrow
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> amount <span style="color:#66d9ef">DESC</span>, loan<span style="color:#f92672">#</span> <span style="color:#66d9ef">ASC</span>; <span style="color:#75715e">-- when the &lt;amount&gt; is the same, order aomunt by &lt;loan#&gt; in ascending, and so on.
+</span></span></span></code></pre></div><hr>
+<h2 id="32-null-value">3.2 NULL Value</h2>
+<ul>
+<li>
+<p><em><strong>All comparisons involving Null become FALSE!!!</strong></em></p>
+</li>
+<li>
+<p><em><strong>A modification is permitted through a view ONLY IF the view is defined in terms of ONE base/physical relation(whether all the values of tuple are full).</strong></em></p>
+</li>
+<li>
+<p>In most SQL-based DBMSs, the special keyword NULL may be used to test for a null value.</p>
+</li>
+</ul>
+<p><em>[like]</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">c</span><span style="color:#f92672">-</span>name 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Deposit 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> balance <span style="color:#66d9ef">IS</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>;
+</span></span></code></pre></div><hr>
+<h2 id="33-aggregate-function">3.3 Aggregate Function</h2>
+<ul>
+<li>
+<p>Compute functions on groups of tuples using the <code>group by</code> clause</p>
+<ul>
+<li>Tuples with the <em>same value</em> on all attributes in the group by clause are placed in one group</li>
+<li>Aggregate function includeds: <code>avg</code>, <code>sum</code>, <code>min</code>, <code>count</code>, <code>max</code></li>
+</ul>
+</li>
+<li>
+<p>E1: Find the average account balance at each branch:</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> b<span style="color:#f92672">-</span>name, <span style="color:#66d9ef">AVG</span>(balance) 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Deposit 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> b<span style="color:#f92672">-</span>name;
+</span></span></code></pre></div><ul>
+<li>E2:  If only interested in branches where average balance is &gt; $12000:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> b<span style="color:#f92672">-</span>name, <span style="color:#66d9ef">AVG</span>(balance)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Deposit
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> b<span style="color:#f92672">-</span>name
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">HAVING</span> <span style="color:#66d9ef">AVG</span>(balance) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">12000</span>;
+</span></span></code></pre></div><ul>
+<li>E3:  Find those branches with the highest average balance:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> b<span style="color:#f92672">-</span>name 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Deposit 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> b<span style="color:#f92672">-</span>name 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">HAVING</span> <span style="color:#66d9ef">AVG</span>(balance) <span style="color:#f92672">=</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">MAX</span>(<span style="color:#66d9ef">AVG</span>(balance))
+</span></span><span style="display:flex;"><span>                      <span style="color:#66d9ef">FROM</span> Deposit 
+</span></span><span style="display:flex;"><span>                      <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> b<span style="color:#f92672">-</span>name);
+</span></span></code></pre></div><ul>
+<li>E4: Find the average balance of all depositers who live in Laguna city and have at least 3 accounts:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">AVG</span>(balance) 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Deposit, Customer 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> Deposit.<span style="color:#66d9ef">c</span><span style="color:#f92672">-</span>name <span style="color:#f92672">=</span> Customer.<span style="color:#66d9ef">c</span><span style="color:#f92672">-</span>name 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">AND</span> city <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Laguna&#39;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> Deposit.<span style="color:#66d9ef">c</span><span style="color:#f92672">-</span>name <span style="color:#66d9ef">HAVING</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#66d9ef">DISTINCT</span> acct<span style="color:#f92672">#</span>) <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">3</span>;
+</span></span></code></pre></div><hr>
+<p><em><strong>学习笔记，仅供参考</strong></em></p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-09-11</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://shanyu0205.github.io/posts/db/db_l2/l2/" data-title="Data base system - L2" data-hashtags="Data Base"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://shanyu0205.github.io/posts/db/db_l2/l2/" data-hashtag="Data Base"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://shanyu0205.github.io/posts/db/db_l2/l2/" data-title="Data base system - L2"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://shanyu0205.github.io/posts/db/db_l2/l2/" data-title="Data base system - L2"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://shanyu0205.github.io/posts/db/db_l2/l2/" data-title="Data base system - L2"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/data-base/">Data Base</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/db/db_l1/l1/" class="prev" rel="prev" title="Data Base system - L1"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Data Base system - L1</a>
+            <a href="/posts/db/db_l4/l4/" class="next" rel="next" title="Data base system - L4">Data base system - L4<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{},"data":{"id-1":"山雨欲来风满楼的网站","id-2":"山雨欲来风满楼的网站"},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
