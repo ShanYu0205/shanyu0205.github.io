@@ -3,9 +3,17 @@
         <title>山雨欲来风满楼的博客</title>
         <link>https://shanyu0205.github.io/</link>
         <description>This is my cool site</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 08 Oct 2022 00:00:00 &#43;0000</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 09 May 2023 15:48:10 &#43;0800</lastBuildDate>
             <atom:link href="https://shanyu0205.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Data Base system - L1</title>
+    <link>https://shanyu0205.github.io/posts/server-file/server-build/</link>
+    <pubDate>Tue, 09 May 2023 15:48:10 &#43;0800</pubDate>
+    <author>山雨欲来风满楼</author>
+    <guid>https://shanyu0205.github.io/posts/server-file/server-build/</guid>
+    <description><![CDATA[这篇文章展示了基础的博客搭建]]></description>
+</item>
+<item>
     <title>Data base system - L6-7</title>
     <link>https://shanyu0205.github.io/posts/db/db_l6-7/l6-7/</link>
     <pubDate>Sat, 08 Oct 2022 00:00:00 &#43;0000</pubDate>

@@ -620,6 +620,24 @@ branches in Kowloon</li>
 
     <div class="post-nav"><a href="/posts/db/db_l1/l1/" class="prev" rel="prev" title="Data Base system - L1"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Data Base system - L1</a>
             <a href="/posts/db/db_l4/l4/" class="next" rel="next" title="Data base system - L4">Data base system - L4<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+
+    <div style="padding: 10px 0; margin: 20px auto; width: 100%; font-size:16px; text-align: center;">
+        <button id="rewardButton" disable="enable"
+            onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+            <span>打赏</span></button>
+        <div id="QR" style="display: none;">
+            <div id="wechat" style="display: inline-block">
+                <a class="fancybox" rel="group">
+                    <img id="wechat_qr" src="https://www.wusiqi.cn/WeChatPay.JPG" alt="WeChat Pay"></a>
+                <p>微信打赏</p>
+            </div>
+            <div id="alipay" style="display: inline-block">
+                <a class="fancybox" rel="group">
+                    <img id="alipay_qr" src="https://www.wusiqi.cn/AliPay.JPG" alt="Alipay"></a>
+                <p>支付宝打赏</p>
+            </div>
+        </div>
+    </div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
