@@ -6,7 +6,8 @@
 
 <!--more-->
 ---
-# Integrity Constraints & Normal Forms
+**Integrity Constraints & Normal Forms**
+
 ---
 # 1 Key constraints
 - *Superkey of R*: A set of attributes SK of R such that no two tuples in any valid relation instance r(R) will have the same value for SK. That is, for any distinct tuples t1 and t2 in r(R), t1[SK] <> t2[SK].

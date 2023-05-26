@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Data Base system - L1 - 山雨欲来风满楼的博客</title><meta name="Description" content="这篇文章展示了基础的博客搭建"><meta property="og:title" content="Data Base system - L1" />
+        <title>Hugo个人博客搭建(极简版) - 山雨欲来风满楼的博客</title><meta name="Description" content="这篇文章展示了基础的博客搭建"><meta property="og:title" content="Hugo个人博客搭建(极简版)" />
 <meta property="og:description" content="这篇文章展示了基础的博客搭建" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://shanyu0205.github.io/posts/server-file/server-build/" /><meta property="og:image" content="https://shanyu0205.github.io/logo.png"/><meta property="article:section" content="posts" />
@@ -13,7 +13,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://shanyu0205.github.io/logo.png"/>
 
-<meta name="twitter:title" content="Data Base system - L1"/>
+<meta name="twitter:title" content="Hugo个人博客搭建(极简版)"/>
 <meta name="twitter:description" content="这篇文章展示了基础的博客搭建"/>
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -24,12 +24,12 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "Data Base system - L1",
+        "headline": "Hugo个人博客搭建(极简版)",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/shanyu0205.github.io\/posts\/server-file\/server-build\/"
-        },"genre": "posts","keywords": "Server and blog","wordcount":  941 ,
+        },"genre": "posts","keywords": "Server and blog","wordcount":  1010 ,
         "url": "https:\/\/shanyu0205.github.io\/posts\/server-file\/server-build\/","datePublished": "2023-05-09T15:48:10+08:00","dateModified": "2023-05-09T15:48:10+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -107,10 +107,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Data Base system - L1</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Hugo个人博客搭建(极简版)</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>山雨欲来风满楼</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>个人博客相关</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-05-09">2023-05-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 941 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/server-file/server-build/" class="leancloud_visitors" data-flag-title="Data Base system - L1">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-05-09">2023-05-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1010 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/server-file/server-build/" class="leancloud_visitors" data-flag-title="Hugo个人博客搭建(极简版)">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -120,26 +120,21 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#2-相关环境安装">2 相关环境安装</a>
-      <ul>
-        <li><a href="#21-安装git">2.1 安装<code>git</code></a></li>
-        <li><a href="#22-安装homebrew">2.2 安装<code>Homebrew</code></a></li>
-        <li><a href="#23-安装hugo">2.3 安装<code>hugo</code></a></li>
-      </ul>
-    </li>
-    <li><a href="#3-博客相关操作">3 博客相关操作</a>
-      <ul>
-        <li><a href="#31-新建自己的博客站点">3.1 新建自己的博客站点</a></li>
-        <li><a href="#32-设置主题">3.2 设置主题</a></li>
-        <li><a href="#33-创建第一篇文章">3.3 创建第一篇文章</a></li>
-        <li><a href="#34-本地启动博客">3.4 本地启动博客</a></li>
-        <li><a href="#34-构建网站">3.4 构建网站</a></li>
-        <li><a href="#35-将博客部署到github远端">3.5 将博客部署到github远端</a></li>
-      </ul>
-    </li>
+    <li><a href="#21-安装git">2.1 安装<code>git</code></a></li>
+    <li><a href="#22-安装homebrew">2.2 安装<code>Homebrew</code></a></li>
+    <li><a href="#23-安装hugo">2.3 安装<code>hugo</code></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#31-新建自己的博客站点">3.1 新建自己的博客站点</a></li>
+    <li><a href="#32-设置主题">3.2 设置主题</a></li>
+    <li><a href="#33-创建第一篇文章">3.3 创建第一篇文章</a></li>
+    <li><a href="#34-本地启动博客">3.4 本地启动博客</a></li>
+    <li><a href="#34-构建网站">3.4 构建网站</a></li>
+    <li><a href="#35-将博客部署到github远端">3.5 将博客部署到github远端</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="hugo个人博客搭建">Hugo个人博客搭建</h1>
+            </div><div class="content" id="content"><p><strong>Hugo个人博客搭建</strong></p>
 <hr>
 <h1 id="1-快速开始">1 快速开始</h1>
 <ul>
@@ -179,28 +174,28 @@
 </li>
 </ul>
 <hr>
-<h2 id="2-相关环境安装">2 相关环境安装</h2>
-<h3 id="21-安装git">2.1 安装<code>git</code></h3>
+<h1 id="2-相关环境安装">2 相关环境安装</h1>
+<h2 id="21-安装git">2.1 安装<code>git</code></h2>
 <p><strong>打开终端,即terminal</strong>, 输入以下命令，回车执行</p>
 <pre tabindex="0"><code>git --version
 </code></pre><p>如果已经安装，则会显示安装的版本信息；若没有安装，则会提示安装，按照提示安装即可。</p>
 <hr>
-<h3 id="22-安装homebrew">2.2 安装<code>Homebrew</code></h3>
+<h2 id="22-安装homebrew">2.2 安装<code>Homebrew</code></h2>
 <pre tabindex="0"><code>/bin/bash -c &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&#34;
 </code></pre><p>同样可以通过，<code>brew -v</code>来检查是否已经安装或者是否安装成功</p>
 <hr>
-<h3 id="23-安装hugo">2.3 安装<code>hugo</code></h3>
+<h2 id="23-安装hugo">2.3 安装<code>hugo</code></h2>
 <pre tabindex="0"><code>brew install hugo 
 
 # 检查安装成功
 hugo version
 </code></pre><hr>
-<h2 id="3-博客相关操作">3 博客相关操作</h2>
-<h3 id="31-新建自己的博客站点">3.1 新建自己的博客站点</h3>
+<h1 id="3-博客相关操作">3 博客相关操作</h1>
+<h2 id="31-新建自己的博客站点">3.1 新建自己的博客站点</h2>
 <p>首先新建一个网站，名字随便起，这里以 <code>myblog</code> 为例，[PATH] 为自己想要存放的路径，<code>myblog</code> 为网站名。</p>
 <pre tabindex="0"><code>hugo new site [PATH]/myblog
 </code></pre><hr>
-<h3 id="32-设置主题">3.2 设置主题</h3>
+<h2 id="32-设置主题">3.2 设置主题</h2>
 <p>这里以<strong>LoveIt</strong>为例, 该主题仓库是：https://github.com/dillonzq/LoveIt</p>
 <p>通常来说，我们将这个主题直接克隆<code>clone</code>到<code>theme</code>目录即可</p>
 <pre tabindex="0"><code># 先进入myblog目录下
@@ -209,20 +204,20 @@ cd [PATH]/myblog
 # 克隆操作
 git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
 </code></pre><hr>
-<h3 id="33-创建第一篇文章">3.3 创建第一篇文章</h3>
+<h2 id="33-创建第一篇文章">3.3 创建第一篇文章</h2>
 <pre tabindex="0"><code>hugo new posts/first_post.md
 </code></pre><hr>
-<h3 id="34-本地启动博客">3.4 本地启动博客</h3>
+<h2 id="34-本地启动博客">3.4 本地启动博客</h2>
 <pre tabindex="0"><code>hugo serve
 </code></pre><p>去查看 http://localhost:1313.</p>
 <!-- raw HTML omitted -->
 <hr>
-<h3 id="34-构建网站">3.4 构建网站</h3>
+<h2 id="34-构建网站">3.4 构建网站</h2>
 <p>当你准备好部署你的网站时, 运行以下命令:</p>
 <pre tabindex="0"><code>hugo
 </code></pre><p>会生成一个 <code>public</code> 目录, 其中包含你网站的所有静态内容和资源. 现在可以将其部署在任何 Web 服务器上</p>
 <hr>
-<h3 id="35-将博客部署到github远端">3.5 将博客部署到github远端</h3>
+<h2 id="35-将博客部署到github远端">3.5 将博客部署到github远端</h2>
 <ol>
 <li>首先在自己的GitHub赏创建一个新的仓库，名称必须为<code>Github用户名.github.io</code>，例如我的就是<code>shanyu0205.github.io</code>,用户名必须全小写.</li>
 </ol>
@@ -242,6 +237,9 @@ git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
 <ol start="3">
 <li>接下来就可以通过<code>[].github.io</code>直接访问自己的博客了。[]中填写自己的github用户名</li>
 </ol>
+<blockquote>
+<p>此时，如果你的博客还没有显示出来，那么就需要等待一段时间，因为github需要一段时间来构建你的博客，一般来说，等待时间不会超过10分钟。</p>
+</blockquote>
 <hr></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -266,25 +264,8 @@ git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
     </div>
 
     <div class="post-nav"><a href="/posts/db/db_l6-7/l6-7/" class="prev" rel="prev" title="Data base system - L6-7"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Data base system - L6-7</a></div>
-
-    <div style="padding: 10px 0; margin: 20px auto; width: 100%; font-size:16px; text-align: center;">
-        <button id="rewardButton" disable="enable"
-            onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-            <span>打赏</span></button>
-        <div id="QR" style="display: none;">
-            <div id="wechat" style="display: inline-block">
-                <a class="fancybox" rel="group">
-                    <img id="wechat_qr" src="https://www.wusiqi.cn/WeChatPay.JPG" alt="WeChat Pay"></a>
-                <p>微信打赏</p>
-            </div>
-            <div id="alipay" style="display: inline-block">
-                <a class="fancybox" rel="group">
-                    <img id="alipay_qr" src="https://www.wusiqi.cn/AliPay.JPG" alt="Alipay"></a>
-                <p>支付宝打赏</p>
-            </div>
-        </div>
-    </div>
 </div>
+
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
             </noscript></div></article></div>
