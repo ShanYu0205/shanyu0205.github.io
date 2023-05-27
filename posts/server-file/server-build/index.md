@@ -103,6 +103,8 @@ hugo
 
 2. 创建成功后，将自己的博客文件夹下的`public`文件夹下的所有文件复制到`Github用户名.github.io`仓库下，然后提交到远端即可。
 
+> 所有git命令都应在`public`文件夹下执行，应为`public`文件夹下才是真正的博客文件，其他的都是配置文件
+
 ```python
 cd public  # 进入public文件夹
 git init   
@@ -111,13 +113,23 @@ git commit -m "我的第一个hugo博客"
 git remote add origin "https://github.com/"你的库的地址"" # 与远端的git仓库进行关联
 git push   # 如果是第一次提交，需要加上-u参数: git push -u origin master
 ```
+> 注意：由于Github修改了关于公钥的条例，所以在`push`的时候,可能会出现`Permission denied`的错误
+> 所以需要在`push`之前,先在Github的`Settings`的`Developer settings`里,找到`Personal access token`,并选择`token(classic)`，然后点击`Generate new token`，然后在弹出的页面中，勾选`repo`，然后点击`Generate token`，然后将生成的token复制下来输入终端.
+> 详情请见：https://blog.csdn.net/qq_43382853/article/details/119221234
 
-> 所有git命令都应在`public`文件夹下执行，应为`public`文件夹下才是真正的博客文件，其他的都是配置文件
 
-3. 接下来就可以通过`[].github.io`直接访问自己的博客了。[]中填写自己的github用户名
+3. 接下来就可以通过`[].github.io`直接访问自己的博客了。`[]`中填写自己的github用户名
 
 > 此时，如果你的博客还没有显示出来，那么就需要等待一段时间，因为github需要一段时间来构建你的博客，一般来说，等待时间不会超过10分钟。
 ---
+
+<center><img src="/content/posts/server-file/dashang.jpeg" width=200></center>
+
+<p>
+  <center>
+  <font color="gray">感谢你的支持</font>
+  </center>
+</p>
 
 
 

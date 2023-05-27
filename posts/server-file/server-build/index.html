@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/shanyu0205.github.io\/posts\/server-file\/server-build\/"
-        },"genre": "posts","keywords": "Server and blog","wordcount":  1010 ,
+        },"genre": "posts","keywords": "Server and blog","wordcount":  1289 ,
         "url": "https:\/\/shanyu0205.github.io\/posts\/server-file\/server-build\/","datePublished": "2023-05-09T15:48:10+08:00","dateModified": "2023-05-09T15:48:10+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Hugo个人博客搭建(极简版)</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>山雨欲来风满楼</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>个人博客相关</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-05-09">2023-05-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1010 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-05-09">2023-05-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1289 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/server-file/server-build/" class="leancloud_visitors" data-flag-title="Hugo个人博客搭建(极简版)">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -231,6 +231,9 @@ git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
 <ol start="2">
 <li>创建成功后，将自己的博客文件夹下的<code>public</code>文件夹下的所有文件复制到<code>Github用户名.github.io</code>仓库下，然后提交到远端即可。</li>
 </ol>
+<blockquote>
+<p>所有git命令都应在<code>public</code>文件夹下执行，应为<code>public</code>文件夹下才是真正的博客文件，其他的都是配置文件</p>
+</blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>cd public  <span style="color:#75715e"># 进入public文件夹</span>
 </span></span><span style="display:flex;"><span>git init   
 </span></span><span style="display:flex;"><span>git add <span style="color:#f92672">.</span>  <span style="color:#75715e"># 注意后面有个点</span>
@@ -238,15 +241,19 @@ git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
 </span></span><span style="display:flex;"><span>git remote add origin <span style="color:#e6db74">&#34;https://github.com/&#34;</span>你的库的地址<span style="color:#e6db74">&#34;&#34;</span> <span style="color:#75715e"># 与远端的git仓库进行关联</span>
 </span></span><span style="display:flex;"><span>git push   <span style="color:#75715e"># 如果是第一次提交，需要加上-u参数: git push -u origin master</span>
 </span></span></code></pre></div><blockquote>
-<p>所有git命令都应在<code>public</code>文件夹下执行，应为<code>public</code>文件夹下才是真正的博客文件，其他的都是配置文件</p>
+<p>注意：由于Github修改了关于公钥的条例，所以在<code>push</code>的时候,可能会出现<code>Permission denied</code>的错误
+所以需要在<code>push</code>之前,先在Github的<code>Settings</code>的<code>Developer settings</code>里,找到<code>Personal access token</code>,并选择<code>token(classic)</code>，然后点击<code>Generate new token</code>，然后在弹出的页面中，勾选<code>repo</code>，然后点击<code>Generate token</code>，然后将生成的token复制下来输入终端.
+详情请见：https://blog.csdn.net/qq_43382853/article/details/119221234</p>
 </blockquote>
 <ol start="3">
-<li>接下来就可以通过<code>[].github.io</code>直接访问自己的博客了。[]中填写自己的github用户名</li>
+<li>接下来就可以通过<code>[].github.io</code>直接访问自己的博客了。<code>[]</code>中填写自己的github用户名</li>
 </ol>
 <blockquote>
 <p>此时，如果你的博客还没有显示出来，那么就需要等待一段时间，因为github需要一段时间来构建你的博客，一般来说，等待时间不会超过10分钟。</p>
 </blockquote>
-<hr></div><div class="post-footer" id="post-footer">
+<hr>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted --></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
