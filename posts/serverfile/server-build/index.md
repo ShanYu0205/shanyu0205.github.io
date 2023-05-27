@@ -24,23 +24,23 @@
 ## 2 相关环境安装
 ### 2.1 安装`git`
 **打开终端,即terminal**, 输入以下命令，回车执行
-```
+
+```Bash
 git --version
 ```
-如果已经安装，则会显示安装的版本信息；若没有安装，则会提示安装，按照提示安装即可。
 
+如果已经安装，则会显示安装的版本信息；若没有安装，则会提示安装，按照提示安装即可。
 
 ---
 ### 2.2 安装`Homebrew`
-```
+```Bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 同样可以通过，`brew -v`来检查是否已经安装或者是否安装成功
 
-
 ---
 ### 2.3 安装`hugo`
-```
+```bash
 brew install hugo 
 
 # 检查安装成功
@@ -52,7 +52,7 @@ hugo version
 ### 3.1 新建自己的博客站点
 首先新建一个网站，名字随便起，这里以 `myblog` 为例，[PATH] 为自己想要存放的路径，`myblog` 为网站名。
 
-```
+```bash
 hugo new site [PATH]/myblog
 ```
 
@@ -61,7 +61,7 @@ hugo new site [PATH]/myblog
 这里以**LoveIt**为例, 该主题仓库是：https://github.com/dillonzq/LoveIt
 
 通常来说，我们将这个主题直接克隆`clone`到`theme`目录即可
-```
+```bash
 # 先进入myblog目录下
 cd [PATH]/myblog
 
@@ -71,14 +71,14 @@ git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
 
 ---
 ### 3.3 创建第一篇文章
-```
+```bash
 hugo new posts/first_post.md
 ```
 
 
 ---
 ### 3.4 本地启动博客
-```
+```bash
 hugo serve
 ```
 
@@ -90,7 +90,7 @@ hugo serve
 ### 3.4 构建网站
 当你准备好部署你的网站时, 运行以下命令:
 
-```
+```bash
 hugo
 ```
 
@@ -107,7 +107,7 @@ hugo
 
 > 所有git命令都应在`public`文件夹下执行，应为`public`文件夹下才是真正的博客文件，其他的都是配置文件
 
-```python
+```bash
 cd public  # 进入public文件夹
 git init   
 git add .  # 注意后面有个点
@@ -125,8 +125,7 @@ git push   # 如果是第一次提交，需要加上-u参数: git push -u origin
 > 此时，如果你的博客还没有显示出来，那么就需要等待一段时间，因为github需要一段时间来构建你的博客，一般来说，等待时间不会超过10分钟。
 ---
 
-{{< image src="/posts/serverfile/dashang.jpeg" height="30%" width="30%" caption="感谢你的支持"  >}}
-
+{{< image src="/posts/serverfile/dashang.jpeg" width="30%" caption="感谢你的支持">}}
 
 
 
