@@ -120,23 +120,29 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#21-安装git">2.1 安装<code>git</code></a></li>
-    <li><a href="#22-安装homebrew">2.2 安装<code>Homebrew</code></a></li>
-    <li><a href="#23-安装hugo">2.3 安装<code>hugo</code></a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#31-新建自己的博客站点">3.1 新建自己的博客站点</a></li>
-    <li><a href="#32-设置主题">3.2 设置主题</a></li>
-    <li><a href="#33-创建第一篇文章">3.3 创建第一篇文章</a></li>
-    <li><a href="#34-本地启动博客">3.4 本地启动博客</a></li>
-    <li><a href="#34-构建网站">3.4 构建网站</a></li>
-    <li><a href="#35-将博客部署到github远端">3.5 将博客部署到github远端</a></li>
+    <li><a href="#1-快速开始">1 快速开始</a></li>
+    <li><a href="#2-相关环境安装">2 相关环境安装</a>
+      <ul>
+        <li><a href="#21-安装git">2.1 安装<code>git</code></a></li>
+        <li><a href="#22-安装homebrew">2.2 安装<code>Homebrew</code></a></li>
+        <li><a href="#23-安装hugo">2.3 安装<code>hugo</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#3-博客相关操作">3 博客相关操作</a>
+      <ul>
+        <li><a href="#31-新建自己的博客站点">3.1 新建自己的博客站点</a></li>
+        <li><a href="#32-设置主题">3.2 设置主题</a></li>
+        <li><a href="#33-创建第一篇文章">3.3 创建第一篇文章</a></li>
+        <li><a href="#34-本地启动博客">3.4 本地启动博客</a></li>
+        <li><a href="#34-构建网站">3.4 构建网站</a></li>
+        <li><a href="#35-将博客部署到github远端">3.5 将博客部署到github远端</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p><strong>Hugo个人博客搭建</strong></p>
 <hr>
-<h1 id="1-快速开始">1 快速开始</h1>
+<h2 id="1-快速开始">1 快速开始</h2>
 <ul>
 <li>基于Mac系统</li>
 <li>主要流程
@@ -174,28 +180,28 @@
 </li>
 </ul>
 <hr>
-<h1 id="2-相关环境安装">2 相关环境安装</h1>
-<h2 id="21-安装git">2.1 安装<code>git</code></h2>
+<h2 id="2-相关环境安装">2 相关环境安装</h2>
+<h3 id="21-安装git">2.1 安装<code>git</code></h3>
 <p><strong>打开终端,即terminal</strong>, 输入以下命令，回车执行</p>
 <pre tabindex="0"><code>git --version
 </code></pre><p>如果已经安装，则会显示安装的版本信息；若没有安装，则会提示安装，按照提示安装即可。</p>
 <hr>
-<h2 id="22-安装homebrew">2.2 安装<code>Homebrew</code></h2>
+<h3 id="22-安装homebrew">2.2 安装<code>Homebrew</code></h3>
 <pre tabindex="0"><code>/bin/bash -c &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&#34;
 </code></pre><p>同样可以通过，<code>brew -v</code>来检查是否已经安装或者是否安装成功</p>
 <hr>
-<h2 id="23-安装hugo">2.3 安装<code>hugo</code></h2>
+<h3 id="23-安装hugo">2.3 安装<code>hugo</code></h3>
 <pre tabindex="0"><code>brew install hugo 
 
 # 检查安装成功
 hugo version
 </code></pre><hr>
-<h1 id="3-博客相关操作">3 博客相关操作</h1>
-<h2 id="31-新建自己的博客站点">3.1 新建自己的博客站点</h2>
+<h2 id="3-博客相关操作">3 博客相关操作</h2>
+<h3 id="31-新建自己的博客站点">3.1 新建自己的博客站点</h3>
 <p>首先新建一个网站，名字随便起，这里以 <code>myblog</code> 为例，[PATH] 为自己想要存放的路径，<code>myblog</code> 为网站名。</p>
 <pre tabindex="0"><code>hugo new site [PATH]/myblog
 </code></pre><hr>
-<h2 id="32-设置主题">3.2 设置主题</h2>
+<h3 id="32-设置主题">3.2 设置主题</h3>
 <p>这里以<strong>LoveIt</strong>为例, 该主题仓库是：https://github.com/dillonzq/LoveIt</p>
 <p>通常来说，我们将这个主题直接克隆<code>clone</code>到<code>theme</code>目录即可</p>
 <pre tabindex="0"><code># 先进入myblog目录下
@@ -204,20 +210,20 @@ cd [PATH]/myblog
 # 克隆操作
 git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
 </code></pre><hr>
-<h2 id="33-创建第一篇文章">3.3 创建第一篇文章</h2>
+<h3 id="33-创建第一篇文章">3.3 创建第一篇文章</h3>
 <pre tabindex="0"><code>hugo new posts/first_post.md
 </code></pre><hr>
-<h2 id="34-本地启动博客">3.4 本地启动博客</h2>
+<h3 id="34-本地启动博客">3.4 本地启动博客</h3>
 <pre tabindex="0"><code>hugo serve
 </code></pre><p>去查看 http://localhost:1313.</p>
 <!-- raw HTML omitted -->
 <hr>
-<h2 id="34-构建网站">3.4 构建网站</h2>
+<h3 id="34-构建网站">3.4 构建网站</h3>
 <p>当你准备好部署你的网站时, 运行以下命令:</p>
 <pre tabindex="0"><code>hugo
 </code></pre><p>会生成一个 <code>public</code> 目录, 其中包含你网站的所有静态内容和资源. 现在可以将其部署在任何 Web 服务器上</p>
 <hr>
-<h2 id="35-将博客部署到github远端">3.5 将博客部署到github远端</h2>
+<h3 id="35-将博客部署到github远端">3.5 将博客部署到github远端</h3>
 <ol>
 <li>首先在自己的GitHub赏创建一个新的仓库，名称必须为<code>Github用户名.github.io</code>，例如我的就是<code>shanyu0205.github.io</code>,用户名必须全小写.</li>
 </ol>
