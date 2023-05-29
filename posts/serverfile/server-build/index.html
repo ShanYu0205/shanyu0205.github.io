@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/shanyu0205.github.io\/posts\/serverfile\/server-build\/"
-        },"genre": "posts","keywords": "Server and blog","wordcount":  1295 ,
+        },"genre": "posts","keywords": "Server and blog","wordcount":  1316 ,
         "url": "https:\/\/shanyu0205.github.io\/posts\/serverfile\/server-build\/","datePublished": "2023-05-09T15:48:10+08:00","dateModified": "2023-05-09T15:48:10+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Hugo个人博客搭建(极简版)</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>山雨欲来风满楼</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>个人博客相关</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-05-09">2023-05-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1295 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-05-09">2023-05-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1316 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/serverfile/server-build/" class="leancloud_visitors" data-flag-title="Hugo个人博客搭建(极简版)">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -183,45 +183,108 @@
 <h2 id="2-相关环境安装">2 相关环境安装</h2>
 <h3 id="21-安装git">2.1 安装<code>git</code></h3>
 <p><strong>打开终端,即terminal</strong>, 输入以下命令，回车执行</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span>git <span style="color:#f92672">--</span>version
-</span></span></code></pre></div><p>如果已经安装，则会显示安装的版本信息；若没有安装，则会提示安装，按照提示安装即可。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="line"><span class="cl"><span class="n">git</span> <span class="o">--</span><span class="n">version</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果已经安装，则会显示安装的版本信息；若没有安装，则会提示安装，按照提示安装即可。</p>
 <hr>
 <h3 id="22-安装homebrew">2.2 安装<code>Homebrew</code></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Bash" data-lang="Bash"><span style="display:flex;"><span>/bin/bash -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
-</span></span></code></pre></div><p>同样可以通过，<code>brew -v</code>来检查是否已经安装或者是否安装成功</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl">/bin/bash -c <span class="s2">&#34;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>同样可以通过，<code>brew -v</code>来检查是否已经安装或者是否安装成功</p>
 <hr>
 <h3 id="23-安装hugo">2.3 安装<code>hugo</code></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install hugo 
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 检查安装成功</span>
-</span></span><span style="display:flex;"><span>hugo version
-</span></span></code></pre></div><hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brew install hugo 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 检查安装成功</span>
+</span></span><span class="line"><span class="cl">hugo version
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
 <h2 id="3-博客相关操作">3 博客相关操作</h2>
 <h3 id="31-新建自己的博客站点">3.1 新建自己的博客站点</h3>
 <p>首先新建一个网站，名字随便起，这里以 <code>myblog</code> 为例，[PATH] 为自己想要存放的路径，<code>myblog</code> 为网站名。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site <span style="color:#f92672">[</span>PATH<span style="color:#f92672">]</span>/myblog
-</span></span></code></pre></div><hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new site <span class="o">[</span>PATH<span class="o">]</span>/myblog
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
 <h3 id="32-设置主题">3.2 设置主题</h3>
 <p>这里以<strong>LoveIt</strong>为例, 该主题仓库是：https://github.com/dillonzq/LoveIt</p>
 <p>通常来说，我们将这个主题直接克隆<code>clone</code>到<code>theme</code>目录即可</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 先进入myblog目录下</span>
-</span></span><span style="display:flex;"><span>cd <span style="color:#f92672">[</span>PATH<span style="color:#f92672">]</span>/myblog
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 克隆操作</span>
-</span></span><span style="display:flex;"><span>git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
-</span></span></code></pre></div><hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 先进入myblog目录下</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> <span class="o">[</span>PATH<span class="o">]</span>/myblog
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 克隆操作</span>
+</span></span><span class="line"><span class="cl">git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
 <h3 id="33-创建第一篇文章">3.3 创建第一篇文章</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new posts/first_post.md
-</span></span></code></pre></div><hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new posts/first_post.md
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
 <h3 id="34-本地启动博客">3.4 本地启动博客</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo serve
-</span></span></code></pre></div><p>去查看 http://localhost:1313.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo serve
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>去查看 http://localhost:1313.</p>
 <!-- raw HTML omitted -->
 <hr>
 <h3 id="34-构建网站">3.4 构建网站</h3>
 <p>当你准备好部署你的网站时, 运行以下命令:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo
-</span></span></code></pre></div><p>会生成一个 <code>public</code> 目录, 其中包含你网站的所有静态内容和资源. 现在可以将其部署在任何 Web 服务器上</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>会生成一个 <code>public</code> 目录, 其中包含你网站的所有静态内容和资源. 现在可以将其部署在任何 Web 服务器上</p>
 <hr>
 <h3 id="35-将博客部署到github远端">3.5 将博客部署到github远端</h3>
 <ol>
@@ -242,13 +305,25 @@
 <blockquote>
 <p>所有git命令都应在<code>public</code>文件夹下执行，应为<code>public</code>文件夹下才是真正的博客文件，其他的都是配置文件</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd public  <span style="color:#75715e"># 进入public文件夹</span>
-</span></span><span style="display:flex;"><span>git init   
-</span></span><span style="display:flex;"><span>git add .  <span style="color:#75715e"># 注意后面有个点</span>
-</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;我的第一个hugo博客&#34;</span> 
-</span></span><span style="display:flex;"><span>git remote add origin <span style="color:#e6db74">&#34;https://github.com/&#34;</span>你的库的地址<span style="color:#e6db74">&#34;&#34;</span> <span style="color:#75715e"># 与远端的git仓库进行关联</span>
-</span></span><span style="display:flex;"><span>git push   <span style="color:#75715e"># 如果是第一次提交，需要加上-u参数: git push -u origin master</span>
-</span></span></code></pre></div><blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> public  <span class="c1"># 进入public文件夹</span>
+</span></span><span class="line"><span class="cl">git init   
+</span></span><span class="line"><span class="cl">git add .  <span class="c1"># 注意后面有个点</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;我的第一个hugo博客&#34;</span> 
+</span></span><span class="line"><span class="cl">git remote add origin <span class="s2">&#34;https://github.com/&#34;</span>你的库的地址<span class="s2">&#34;&#34;</span> <span class="c1"># 与远端的git仓库进行关联</span>
+</span></span><span class="line"><span class="cl">git push   <span class="c1"># 如果是第一次提交，需要加上-u参数: git push -u origin master</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
 <p>注意：由于Github修改了关于公钥的条例，所以在<code>push</code>的时候,可能会出现<code>Permission denied</code>的错误
 所以需要在<code>push</code>之前,先在Github的<code>Settings</code>的<code>Developer settings</code>里,找到<code>Personal access token</code>,并选择<code>token(classic)</code>，然后点击<code>Generate new token</code>，然后在弹出的页面中，勾选<code>repo</code>，然后点击<code>Generate token</code>，然后将生成的token复制下来输入终端.</p>
 <p>详情请见：<a href="https://blog.csdn.net/qq_43382853/article/details/119221234" target="_blank" rel="noopener noreffer ">https://blog.csdn.net/qq_43382853/article/details/119221234</a></p>

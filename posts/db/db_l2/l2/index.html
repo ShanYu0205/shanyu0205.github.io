@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/shanyu0205.github.io\/posts\/db\/db_l2\/l2\/"
-        },"genre": "posts","keywords": "Data Base","wordcount":  1432 ,
+        },"genre": "posts","keywords": "Data Base","wordcount":  1546 ,
         "url": "https:\/\/shanyu0205.github.io\/posts\/db\/db_l2\/l2\/","datePublished": "2022-09-11T00:00:00+00:00","dateModified": "2020-09-11T13:20:10+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -109,8 +109,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Data base system - L2</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>山雨欲来风满楼</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-11">2022-09-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1432 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/db/db_l2/l2/" class="leancloud_visitors" data-flag-title="Data base system - L2">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-11">2022-09-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1546 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/posts/db/db_l2/l2/" class="leancloud_visitors" data-flag-title="Data base system - L2">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -397,11 +397,21 @@ Employee === WORKS_FOR === Department
 <hr>
 <h1 id="3-sql">3 SQL</h1>
 <h2 id="31-basic-syntax-structure-of-sql">3.1 Basic syntax (structure) of SQL</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> [<span style="color:#66d9ef">DISTINCT</span>] attribute1,...
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> table1 [name1], tabel2 [name2],...
-</span></span><span style="display:flex;"><span>    [<span style="color:#66d9ef">WHERE</span> requirement]
-</span></span><span style="display:flex;"><span>    [<span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> (attribute) <span style="color:#66d9ef">HAVING</span> requirement];
-</span></span></code></pre></div><p><em>[Example]</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-SQL" data-lang="SQL"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="p">[</span><span class="k">DISTINCT</span><span class="p">]</span><span class="w"> </span><span class="n">attribute1</span><span class="p">,...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">table1</span><span class="w"> </span><span class="p">[</span><span class="n">name1</span><span class="p">],</span><span class="w"> </span><span class="n">tabel2</span><span class="w"> </span><span class="p">[</span><span class="n">name2</span><span class="p">],...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">[</span><span class="k">WHERE</span><span class="w"> </span><span class="n">requirement</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">[</span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="p">(</span><span class="n">attribute</span><span class="p">)</span><span class="w"> </span><span class="k">HAVING</span><span class="w"> </span><span class="n">requirement</span><span class="p">];</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><em>[Example]</em></p>
 <blockquote>
 <p>Following relational schema:
 Customer (cname, street, city)
@@ -412,131 +422,304 @@ Deposit (bname, acct#, cname, balance)</p>
 <ul>
 <li>E1: Find all customers of the Sai Kong branch</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>(<span style="color:#66d9ef">SELECT</span> cname
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Deposit
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> bname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sai Kong&#39;</span>) <span style="color:#75715e">-- 注意是单引号
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">UNION</span> <span style="color:#75715e">-- not only Deposit customres, but borrow customers
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  (<span style="color:#66d9ef">SELECT</span> cname
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">FROM</span> Borrow
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">WHERE</span> bname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sai Kong&#39;</span>);
-</span></span></code></pre></div><ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">cname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">Deposit</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="n">bname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Sai Kong&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">-- 注意是单引号
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">UNION</span><span class="w"> </span><span class="c1">-- not only Deposit customres, but borrow customers
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">  </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">cname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">Borrow</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">bname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Sai Kong&#39;</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>E2: Find the name and city of all customers having a loan at the
 Sai Kong branch</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">DISTINCT</span> Customer.cname,city
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Borrow,Customer
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> Borrow.cname <span style="color:#f92672">=</span> Customer.cname
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">AND</span> Borrow.bname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sai Kong&#39;</span>;
-</span></span></code></pre></div><ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">Customer</span><span class="p">.</span><span class="n">cname</span><span class="p">,</span><span class="n">city</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">Borrow</span><span class="p">,</span><span class="n">Customer</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="n">Borrow</span><span class="p">.</span><span class="n">cname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Customer</span><span class="p">.</span><span class="n">cname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">AND</span><span class="w"> </span><span class="n">Borrow</span><span class="p">.</span><span class="n">bname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Sai Kong&#39;</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>E3: Find the names of all customers whose street has the substring
 ‘Main’ included</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> cname
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Customer
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> Customer.street <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;%Main%&#39;</span>;
-</span></span></code></pre></div><ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="n">cname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">Customer</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="n">Customer</span><span class="p">.</span><span class="n">street</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;%Main%&#39;</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>E4: Find all customers who have an account at some branch in
 which Jones has an account</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">DISTINCT</span> S1.cname
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Deposit S1
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> S1.bname <span style="color:#66d9ef">IN</span>
-</span></span><span style="display:flex;"><span>  (<span style="color:#66d9ef">SELECT</span> bname
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">FROM</span> Deposit S2
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">WHERE</span> S2.cname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Jones&#39;</span>)
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> S1.cname <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;Jnoes&#39;</span>;
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">DISTINCT</span> S2.cname
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Deposit S1,Deposit S2
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> S1.cname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Jnoes&#39;</span> 
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">AND</span> S1.bname <span style="color:#f92672">=</span> S2.bname
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">AND</span> S1.cname <span style="color:#f92672">!=</span> S2.cname;
-</span></span></code></pre></div><ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">S1</span><span class="p">.</span><span class="n">cname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">Deposit</span><span class="w"> </span><span class="n">S1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="n">S1</span><span class="p">.</span><span class="n">bname</span><span class="w"> </span><span class="k">IN</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">bname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="k">FROM</span><span class="w"> </span><span class="n">Deposit</span><span class="w"> </span><span class="n">S2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="k">WHERE</span><span class="w"> </span><span class="n">S2</span><span class="p">.</span><span class="n">cname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Jones&#39;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="k">AND</span><span class="w"> </span><span class="n">S1</span><span class="p">.</span><span class="n">cname</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;Jnoes&#39;</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">S2</span><span class="p">.</span><span class="n">cname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">Deposit</span><span class="w"> </span><span class="n">S1</span><span class="p">,</span><span class="n">Deposit</span><span class="w"> </span><span class="n">S2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="n">S1</span><span class="p">.</span><span class="n">cname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Jnoes&#39;</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">AND</span><span class="w"> </span><span class="n">S1</span><span class="p">.</span><span class="n">bname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">S2</span><span class="p">.</span><span class="n">bname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">AND</span><span class="w"> </span><span class="n">S1</span><span class="p">.</span><span class="n">cname</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">S2</span><span class="p">.</span><span class="n">cname</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>E5: Find branches having greater assets than all branches in N.T.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> B1.bname
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Branch B1
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> B1.assets <span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">ALL</span> (<span style="color:#66d9ef">SELECT</span> B2.assets
-</span></span><span style="display:flex;"><span>                       <span style="color:#66d9ef">FROM</span> Branch B2
-</span></span><span style="display:flex;"><span>                       <span style="color:#66d9ef">WHERE</span> B2.b<span style="color:#f92672">-</span>city <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;N.T.&#39;</span>
-</span></span><span style="display:flex;"><span>                       );
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> B1.bname
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Branch B1
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">EXISTS</span>
-</span></span><span style="display:flex;"><span>  (<span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">FROM</span> Branch B2
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">WHERE</span> B2.assets <span style="color:#f92672">&gt;=</span> B1.assets
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> B2.b<span style="color:#f92672">-</span>city <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;N.T.&#39;</span>
-</span></span><span style="display:flex;"><span>  ); 
-</span></span></code></pre></div><ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="n">B1</span><span class="p">.</span><span class="n">bname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">Branch</span><span class="w"> </span><span class="n">B1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="n">B1</span><span class="p">.</span><span class="n">assets</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">B2</span><span class="p">.</span><span class="n">assets</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                       </span><span class="k">FROM</span><span class="w"> </span><span class="n">Branch</span><span class="w"> </span><span class="n">B2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                       </span><span class="k">WHERE</span><span class="w"> </span><span class="n">B2</span><span class="p">.</span><span class="n">b</span><span class="o">-</span><span class="n">city</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;N.T.&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                       </span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="n">B1</span><span class="p">.</span><span class="n">bname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">Branch</span><span class="w"> </span><span class="n">B1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="k">FROM</span><span class="w"> </span><span class="n">Branch</span><span class="w"> </span><span class="n">B2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="k">WHERE</span><span class="w"> </span><span class="n">B2</span><span class="p">.</span><span class="n">assets</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">B1</span><span class="p">.</span><span class="n">assets</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="k">AND</span><span class="w"> </span><span class="n">B2</span><span class="p">.</span><span class="n">b</span><span class="o">-</span><span class="n">city</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;N.T.&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">);</span><span class="w"> 
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>E6: Find names of all branches that have greater assets than some
 branch located in Kowloon</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> bname
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Branch
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> assets <span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">SOME</span> 
-</span></span><span style="display:flex;"><span>  (<span style="color:#66d9ef">SELECT</span> assets
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">FROM</span> Branch
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">WHERE</span> b<span style="color:#f92672">-</span>city <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Kwoloon&#39;</span>);
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> bname
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Branch B1,Branch B2
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> B1.assets <span style="color:#f92672">&gt;</span> B2.assets
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">AND</span> B2.b<span style="color:#f92672">-</span>city <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Kwoloon&#39;</span>;
-</span></span></code></pre></div><ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="n">bname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">Branch</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="n">assets</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">SOME</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">assets</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="k">FROM</span><span class="w"> </span><span class="n">Branch</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="k">WHERE</span><span class="w"> </span><span class="n">b</span><span class="o">-</span><span class="n">city</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Kwoloon&#39;</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="n">bname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">Branch</span><span class="w"> </span><span class="n">B1</span><span class="p">,</span><span class="n">Branch</span><span class="w"> </span><span class="n">B2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="n">B1</span><span class="p">.</span><span class="n">assets</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">B2</span><span class="p">.</span><span class="n">assets</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">AND</span><span class="w"> </span><span class="n">B2</span><span class="p">.</span><span class="n">b</span><span class="o">-</span><span class="n">city</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Kwoloon&#39;</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>E7: Find all customers who have a deposit account at allbranches located in Kowloon</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">DISTINCT</span> S.cname
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Deposit S
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> 
-</span></span><span style="display:flex;"><span> (<span style="color:#66d9ef">SELECT</span> T.bname
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">FROM</span> Deposit T account
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">WHERE</span> S.cname <span style="color:#f92672">=</span> T.cname) <span style="color:#75715e">-- the set of branches he/she has a deposit account
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">CONTAINS</span>
-</span></span><span style="display:flex;"><span> (<span style="color:#66d9ef">SELECT</span> bname
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">FROM</span> Branch 
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">WHERE</span> b<span style="color:#f92672">-</span>city <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Kowloon&#39;</span>); <span style="color:#75715e">-- the set of branches on Kwoloon
-</span></span></span></code></pre></div><ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">cname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">Deposit</span><span class="w"> </span><span class="n">S</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">T</span><span class="p">.</span><span class="n">bname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">Deposit</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="n">account</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">cname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="p">.</span><span class="n">cname</span><span class="p">)</span><span class="w"> </span><span class="c1">-- the set of branches he/she has a deposit account
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">CONTAINS</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">bname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">Branch</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">b</span><span class="o">-</span><span class="n">city</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Kowloon&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">-- the set of branches on Kwoloon
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>E8: Find all customers of Central branch who have an account there but no loan there</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">C</span>.cname
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Customer <span style="color:#66d9ef">C</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> <span style="color:#66d9ef">EXISTS</span> 
-</span></span><span style="display:flex;"><span>  (<span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">FROM</span> Deposit D 
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">WHERE</span> D.cname <span style="color:#f92672">=</span> <span style="color:#66d9ef">C</span>.cname
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> D.bname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Central&#39;</span>)
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">AND</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">EXISTS</span>
-</span></span><span style="display:flex;"><span>      (<span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
-</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">FROM</span> Borrow B
-</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">WHERE</span> B.cname <span style="color:#f92672">=</span> <span style="color:#66d9ef">C</span>.cname
-</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">AND</span> B.bname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Central&#39;</span>);
-</span></span></code></pre></div><ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="k">C</span><span class="p">.</span><span class="n">cname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">Customer</span><span class="w"> </span><span class="k">C</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="k">FROM</span><span class="w"> </span><span class="n">Deposit</span><span class="w"> </span><span class="n">D</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="k">WHERE</span><span class="w"> </span><span class="n">D</span><span class="p">.</span><span class="n">cname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">C</span><span class="p">.</span><span class="n">cname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="k">AND</span><span class="w"> </span><span class="n">D</span><span class="p">.</span><span class="n">bname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Central&#39;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="k">AND</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="k">FROM</span><span class="w"> </span><span class="n">Borrow</span><span class="w"> </span><span class="n">B</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="k">WHERE</span><span class="w"> </span><span class="n">B</span><span class="p">.</span><span class="n">cname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">C</span><span class="p">.</span><span class="n">cname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">       </span><span class="k">AND</span><span class="w"> </span><span class="n">B</span><span class="p">.</span><span class="n">bname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Central&#39;</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>E9: Find all customers who have a deposit account at ALL branches located in Kowloon</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">DISTINCT</span> S.cname
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Deposit S
-</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">WHERE</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">EXISTS</span>(
-</span></span><span style="display:flex;"><span>  (<span style="color:#66d9ef">SELECT</span> bname
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">FROM</span> Branch 
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">WHERE</span> b<span style="color:#f92672">-</span>city <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Kowloon&#39;</span>)
-</span></span><span style="display:flex;"><span>MINUS
-</span></span><span style="display:flex;"><span>  (<span style="color:#66d9ef">SELECT</span> T.bname customer S 
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">FROM</span> Deposit T
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">WHERE</span> S.cname <span style="color:#f92672">=</span> T.cname));
-</span></span></code></pre></div><ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">cname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">Deposit</span><span class="w"> </span><span class="n">S</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">bname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="k">FROM</span><span class="w"> </span><span class="n">Branch</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="k">WHERE</span><span class="w"> </span><span class="n">b</span><span class="o">-</span><span class="n">city</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Kowloon&#39;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">MINUS</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">T</span><span class="p">.</span><span class="n">bname</span><span class="w"> </span><span class="n">customer</span><span class="w"> </span><span class="n">S</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="k">FROM</span><span class="w"> </span><span class="n">Deposit</span><span class="w"> </span><span class="n">T</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="k">WHERE</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">cname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">T</span><span class="p">.</span><span class="n">cname</span><span class="p">));</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>E10: List in alphabetic order all customers having a loan at
 branches in Kowloon</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">DISTINCT</span> cname
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Borrow
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> b<span style="color:#f92672">-</span>city <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Kowloon&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> cname;  <span style="color:#75715e">--By default, in ascending order.
-</span></span></span></code></pre></div><ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">cname</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">Borrow</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="n">b</span><span class="o">-</span><span class="n">city</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Kowloon&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">cname</span><span class="p">;</span><span class="w">  </span><span class="c1">--By default, in ascending order.
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>E11: List the entire borrow table in descending order of amount, and if several loans have the same amount, order them in ascending order by loan#</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Borrow
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> amount <span style="color:#66d9ef">DESC</span>, loan<span style="color:#f92672">#</span> <span style="color:#66d9ef">ASC</span>; <span style="color:#75715e">-- when the &lt;amount&gt; is the same, order aomunt by &lt;loan#&gt; in ascending, and so on.
-</span></span></span></code></pre></div><hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">Borrow</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">amount</span><span class="w"> </span><span class="k">DESC</span><span class="p">,</span><span class="w"> </span><span class="n">loan</span><span class="o">#</span><span class="w"> </span><span class="k">ASC</span><span class="p">;</span><span class="w"> </span><span class="c1">-- when the &lt;amount&gt; is the same, order aomunt by &lt;loan#&gt; in ascending, and so on.
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
 <h2 id="32-null-value">3.2 NULL Value</h2>
 <ul>
 <li>
@@ -550,10 +733,19 @@ branches in Kowloon</li>
 </li>
 </ul>
 <p><em>[like]</em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">c</span><span style="color:#f92672">-</span>name 
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Deposit 
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> balance <span style="color:#66d9ef">IS</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>;
-</span></span></code></pre></div><hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="k">c</span><span class="o">-</span><span class="n">name</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">Deposit</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
 <h2 id="33-aggregate-function">3.3 Aggregate Function</h2>
 <ul>
 <li>
@@ -567,34 +759,76 @@ branches in Kowloon</li>
 <p>E1: Find the average account balance at each branch:</p>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> b<span style="color:#f92672">-</span>name, <span style="color:#66d9ef">AVG</span>(balance) 
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Deposit 
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> b<span style="color:#f92672">-</span>name;
-</span></span></code></pre></div><ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="n">b</span><span class="o">-</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">balance</span><span class="p">)</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">Deposit</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">b</span><span class="o">-</span><span class="n">name</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>E2:  If only interested in branches where average balance is &gt; $12000:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> b<span style="color:#f92672">-</span>name, <span style="color:#66d9ef">AVG</span>(balance)
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Deposit
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> b<span style="color:#f92672">-</span>name
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">HAVING</span> <span style="color:#66d9ef">AVG</span>(balance) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">12000</span>;
-</span></span></code></pre></div><ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="n">b</span><span class="o">-</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">balance</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">Deposit</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">b</span><span class="o">-</span><span class="n">name</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">HAVING</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">balance</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">12000</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>E3:  Find those branches with the highest average balance:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> b<span style="color:#f92672">-</span>name 
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Deposit 
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> b<span style="color:#f92672">-</span>name 
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">HAVING</span> <span style="color:#66d9ef">AVG</span>(balance) <span style="color:#f92672">=</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">MAX</span>(<span style="color:#66d9ef">AVG</span>(balance))
-</span></span><span style="display:flex;"><span>                      <span style="color:#66d9ef">FROM</span> Deposit 
-</span></span><span style="display:flex;"><span>                      <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> b<span style="color:#f92672">-</span>name);
-</span></span></code></pre></div><ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="n">b</span><span class="o">-</span><span class="n">name</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">Deposit</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">b</span><span class="o">-</span><span class="n">name</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">HAVING</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">balance</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="k">MAX</span><span class="p">(</span><span class="k">AVG</span><span class="p">(</span><span class="n">balance</span><span class="p">))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                      </span><span class="k">FROM</span><span class="w"> </span><span class="n">Deposit</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">                      </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">b</span><span class="o">-</span><span class="n">name</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>E4: Find the average balance of all depositers who live in Laguna city and have at least 3 accounts:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">AVG</span>(balance) 
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Deposit, Customer 
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> Deposit.<span style="color:#66d9ef">c</span><span style="color:#f92672">-</span>name <span style="color:#f92672">=</span> Customer.<span style="color:#66d9ef">c</span><span style="color:#f92672">-</span>name 
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">AND</span> city <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Laguna&#39;</span> 
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> Deposit.<span style="color:#66d9ef">c</span><span style="color:#f92672">-</span>name <span style="color:#66d9ef">HAVING</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#66d9ef">DISTINCT</span> acct<span style="color:#f92672">#</span>) <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">3</span>;
-</span></span></code></pre></div><hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">balance</span><span class="p">)</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">Deposit</span><span class="p">,</span><span class="w"> </span><span class="n">Customer</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="n">Deposit</span><span class="p">.</span><span class="k">c</span><span class="o">-</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Customer</span><span class="p">.</span><span class="k">c</span><span class="o">-</span><span class="n">name</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">AND</span><span class="w"> </span><span class="n">city</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Laguna&#39;</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Deposit</span><span class="p">.</span><span class="k">c</span><span class="o">-</span><span class="n">name</span><span class="w"> </span><span class="k">HAVING</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">acct</span><span class="o">#</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
 <p><em><strong>学习笔记，仅供参考</strong></em></p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">

@@ -28,7 +28,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/shanyu0205.github.io\/posts\/blog\/blog1\/"
-        },"genre": "posts","keywords": "Java","wordcount":  2968 ,
+        },"genre": "posts","keywords": "Java","wordcount":  3086 ,
         "url": "https:\/\/shanyu0205.github.io\/posts\/blog\/blog1\/","datePublished": "2021-10-02T00:00:00+00:00","dateModified": "2021-10-02T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -108,8 +108,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Java学习1</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>山雨欲来风满楼</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>我的博客</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2021-10-02">2021-10-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 2968 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 6 分钟&nbsp;<span id="/posts/blog/blog1/" class="leancloud_visitors" data-flag-title="Java学习1">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2021-10-02">2021-10-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 3086 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 7 分钟&nbsp;<span id="/posts/blog/blog1/" class="leancloud_visitors" data-flag-title="Java学习1">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="featured-image"><img
@@ -165,20 +165,45 @@
 <p>精度由低到高：（不包含逻辑类型与字符类型）<!-- raw HTML omitted -->
 byte &lt; short &lt; int&lt; long &lt; float &lt; double <!-- raw HTML omitted -->
 例：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span><span style="color:#ae81ff">50</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> y <span style="color:#f92672">=</span> x<span style="color:#f92672">;</span> <span style="color:#75715e">//由于浮点型精度高于整数型，所以此转换为隐式转换，结果为50.0
-</span></span></span></code></pre></div><p>当我们需要把高精度的变量赋给低精度的变量时，必须使用显示类型转换运算（又称强制类型转换）。<!-- raw HTML omitted --></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span><span class="mi">50</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">float</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">;</span> <span class="c1">//由于浮点型精度高于整数型，所以此转换为隐式转换，结果为50.0
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>当我们需要把高精度的变量赋给低精度的变量时，必须使用显示类型转换运算（又称强制类型转换）。<!-- raw HTML omitted --></p>
 <p>例:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">)</span><span style="color:#ae81ff">45.23</span><span style="color:#f92672">;</span>     <span style="color:#75715e">// 输出为45
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">long</span> y <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">long</span><span style="color:#f92672">)</span><span style="color:#ae81ff">456.5F</span><span style="color:#f92672">;</span>  <span style="color:#75715e">// 输出为456
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">)</span><span style="color:#e6db74">&#39;d&#39;</span><span style="color:#f92672">;</span>       <span style="color:#75715e">// 输出为100 
-</span></span></span></code></pre></div><p>除布尔型以外，其他基本类型数据都能进行显型类型转换。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span><span class="mf">45.23</span><span class="o">;</span>     <span class="c1">// 输出为45
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">long</span> <span class="n">y</span> <span class="o">=</span> <span class="o">(</span><span class="kt">long</span><span class="o">)</span><span class="mf">456.5F</span><span class="o">;</span>  <span class="c1">// 输出为456
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span><span class="sc">&#39;d&#39;</span><span class="o">;</span>       <span class="c1">// 输出为100 
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>除布尔型以外，其他基本类型数据都能进行显型类型转换。</p>
 <hr>
 <h4 id="113-运算符">1.1.3 运算符</h4>
 <p>在Java中有着算数运算符，关系运算符，位运算符，逻辑运算符，赋值运算符以及其他运算符。在此，我们主要讨论自增、自减运算符和位运算符。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>b <span style="color:#f92672">=</span> <span style="color:#f92672">++</span>a<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>b <span style="color:#f92672">=</span> a<span style="color:#f92672">++;</span>
-</span></span></code></pre></div><p>上述两行代码看似差不多，实际上有很大区别：<strong>第一行翻译为先将a的值+1，然后再赋给b；第二行则是先将a的值赋给b，a的值再+1。</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="o">++</span><span class="n">a</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">++;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>上述两行代码看似差不多，实际上有很大区别：<strong>第一行翻译为先将a的值+1，然后再赋给b；第二行则是先将a的值赋给b，a的值再+1。</strong></p>
 <hr>
 <h3 id="12类中的变量类型">1.2类中的变量类型</h3>
 <ul>
@@ -187,42 +212,89 @@ byte &lt; short &lt; int&lt; long &lt; float &lt; double <!-- raw HTML omitted -
 <li>类变量：类变量也申明在类中，方法体之外，<strong>但必须声明为static类型</strong>。</li>
 </ul>
 <p>例：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Variable</span><span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> allclicks <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;</span> <span style="color:#75715e">// 类变量（静态变量）
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    
-</span></span><span style="display:flex;"><span>    String str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello world&#34;</span><span style="color:#f92672">;</span> <span style="color:#75715e">// 实例变量（成员变量）
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;</span> <span style="color:#75715e">// 局部变量
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>在Java中，所有变量在使用前都必须声明。<!-- raw HTML omitted -->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Variable</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="kt">int</span> <span class="n">allclicks</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="c1">// 类变量（静态变量）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    
+</span></span><span class="line"><span class="cl">    <span class="n">String</span> <span class="n">str</span> <span class="o">=</span> <span class="s">&#34;hello world&#34;</span><span class="o">;</span> <span class="c1">// 实例变量（成员变量）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">method</span><span class="o">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="c1">// 局部变量
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在Java中，所有变量在使用前都必须声明。<!-- raw HTML omitted -->
 例：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> a<span style="color:#f92672">,</span>b<span style="color:#f92672">,</span>c<span style="color:#f92672">;</span>          <span style="color:#75715e">// 声明了3个int型整数：a，b，c。
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> d <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">,</span>e<span style="color:#f92672">,</span>f <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span><span style="color:#f92672">;</span>  <span style="color:#75715e">// 声明三个整数并赋予初值。
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">byte</span> z <span style="color:#f92672">=</span><span style="color:#ae81ff">22</span><span style="color:#f92672">;</span>         <span style="color:#75715e">// 声明并初始化。
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;x&#39;</span><span style="color:#f92672">;</span>       <span style="color:#75715e">// 变量x的值是字符‘x’。
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">double</span> pi <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.14159</span><span style="color:#f92672">;</span><span style="color:#75715e">// 声明了pi。
-</span></span></span></code></pre></div><p>既然有变量，那就会有常量。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">,</span><span class="n">c</span><span class="o">;</span>          <span class="c1">// 声明了3个int型整数：a，b，c。
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">d</span> <span class="o">=</span> <span class="mi">3</span><span class="o">,</span><span class="n">e</span><span class="o">,</span><span class="n">f</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>  <span class="c1">// 声明三个整数并赋予初值。
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">byte</span> <span class="n">z</span> <span class="o">=</span><span class="mi">22</span><span class="o">;</span>         <span class="c1">// 声明并初始化。
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">char</span> <span class="n">x</span> <span class="o">=</span> <span class="sc">&#39;x&#39;</span><span class="o">;</span>       <span class="c1">// 变量x的值是字符‘x’。
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">double</span> <span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159</span><span class="o">;</span><span class="c1">// 声明了pi。
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>既然有变量，那就会有常量。</p>
 <hr>
 <h3 id="13java常量">1.3Java常量</h3>
 <p>常量就是一个固定值。他们不需要计算，直接代表相应的值。<!-- raw HTML omitted -->
 常量指不能改变的值，在Java中用final标志：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">final</span> <span style="color:#66d9ef">double</span> PI <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.1415927</span><span style="color:#f92672">;</span>
-</span></span></code></pre></div><hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">final</span> <span class="kt">double</span> <span class="n">PI</span> <span class="o">=</span> <span class="mf">3.1415927</span><span class="o">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
 <h3 id="14构造方法">1.4构造方法</h3>
 <p>每个类都有构造方法。</p>
 <p>在创建一个对象时，至少要调用一个构造方法。构造方法的名称必须与类同名，<strong>一个类可以有多个构造方法</strong>。</p>
 <p>例：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Puppy</span><span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Puppy</span><span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Puppy</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">){</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>上述代码类的构造方法为<code>Puppy()</code>,返回值为字符串类型的‘name’，即调用该构造方法时，<code>Puppy(&quot;name&quot;)</code>, &rsquo;name&rsquo; 即为用户想输入的小狗的名字。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nf">Puppy</span><span class="o">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="nf">Puppy</span><span class="o">(){</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="nf">Puppy</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>上述代码类的构造方法为<code>Puppy()</code>,返回值为字符串类型的‘name’，即调用该构造方法时，<code>Puppy(&quot;name&quot;)</code>, &rsquo;name&rsquo; 即为用户想输入的小狗的名字。</p>
 <hr>
 <h3 id="15创建对象">1.5创建对象</h3>
 <p>在Java中使用关键字 <code>new</code> 来创建一个新的对象。</p>
@@ -232,51 +304,104 @@ byte &lt; short &lt; int&lt; long &lt; float &lt; double <!-- raw HTML omitted -
 <li>初始化：使用 <code>new</code> 创建对象时，会调用构造方法(constructor)初始化对象。</li>
 </ul>
 <p>例：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Puppy</span><span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Puppy</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">){</span>
-</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Puppy name is : &#34;</span><span style="color:#f92672">+</span> name<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String <span style="color:#f92672">[]</span>args<span style="color:#f92672">){</span>
-</span></span><span style="display:flex;"><span>        Puppy myPuppy <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Puppy<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;tommy&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 上述语句创建了一个Puppy对象
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>代码块的结果会显示为：<code>Puppy name is tommy</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nf">Puppy</span><span class="o">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="nf">Puppy</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Puppy name is : &#34;</span><span class="o">+</span> <span class="n">name</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="o">[]</span><span class="n">args</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Puppy</span> <span class="n">myPuppy</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Puppy</span><span class="o">(</span><span class="s">&#34;tommy&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 上述语句创建了一个Puppy对象
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>代码块的结果会显示为：<code>Puppy name is tommy</code></p>
 <hr>
 <h3 id="16访问实例变量和方法">1.6访问实例变量和方法</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/*实例化对象*/</span>
-</span></span><span style="display:flex;"><span>ObjectReference <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Constructor<span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">/*访问其中的变量*/</span>
-</span></span><span style="display:flex;"><span>ObjecReference<span style="color:#f92672">.</span><span style="color:#a6e22e">variableName</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">/*访问类中的变量*/</span>
-</span></span><span style="display:flex;"><span>bjecReference<span style="color:#f92672">.</span><span style="color:#a6e22e">MethodName</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Puppy</span><span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> puppyAge<span style="color:#f92672">;</span> <span style="color:#75715e">//定义了一个名为puppyAge的int型成员变量
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Puppy</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">){</span>
-</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Passed Name is: &#34;</span><span style="color:#f92672">+</span> name<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setAge</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> age<span style="color:#f92672">){</span>
-</span></span><span style="display:flex;"><span>        puppyAge <span style="color:#f92672">=</span> age<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getAge</span><span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Puppy&#39;s age is: &#34;</span> <span style="color:#f92672">+</span> puppyAge<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> puppyAge<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String <span style="color:#f92672">[]</span>args<span style="color:#f92672">){</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">/*创建对象*/</span>
-</span></span><span style="display:flex;"><span>        Puppy myPuppy <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Puppy<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;tommy&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">/*调用方法来设定age*/</span>
-</span></span><span style="display:flex;"><span>        myPuppy<span style="color:#f92672">.</span><span style="color:#a6e22e">setAge</span><span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">/*调用另一个方法来获取age*/</span>
-</span></span><span style="display:flex;"><span>        myPuppy<span style="color:#f92672">.</span><span style="color:#a6e22e">getAge</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">/*访问成员变量*/</span>
-</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">,</span>println<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Variable Value: &#34;</span> <span style="color:#f92672">+</span> myPuppy<span style="color:#f92672">.</span><span style="color:#a6e22e">puppyAge</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>结果为： <!-- raw HTML omitted -->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="cm">/*实例化对象*/</span>
+</span></span><span class="line"><span class="cl"><span class="n">ObjectReference</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Constructor</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/*访问其中的变量*/</span>
+</span></span><span class="line"><span class="cl"><span class="n">ObjecReference</span><span class="o">.</span><span class="na">variableName</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="cm">/*访问类中的变量*/</span>
+</span></span><span class="line"><span class="cl"><span class="n">bjecReference</span><span class="o">.</span><span class="na">MethodName</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nf">Puppy</span><span class="o">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">puppyAge</span><span class="o">;</span> <span class="c1">//定义了一个名为puppyAge的int型成员变量
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">public</span> <span class="nf">Puppy</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Passed Name is: &#34;</span><span class="o">+</span> <span class="n">name</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAge</span><span class="o">(</span><span class="kt">int</span> <span class="n">age</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">puppyAge</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getAge</span><span class="o">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Puppy&#39;s age is: &#34;</span> <span class="o">+</span> <span class="n">puppyAge</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">puppyAge</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="o">[]</span><span class="n">args</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">        <span class="cm">/*创建对象*/</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Puppy</span> <span class="n">myPuppy</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Puppy</span><span class="o">(</span><span class="s">&#34;tommy&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="cm">/*调用方法来设定age*/</span>
+</span></span><span class="line"><span class="cl">        <span class="n">myPuppy</span><span class="o">.</span><span class="na">setAge</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="cm">/*调用另一个方法来获取age*/</span>
+</span></span><span class="line"><span class="cl">        <span class="n">myPuppy</span><span class="o">.</span><span class="na">getAge</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">        <span class="cm">/*访问成员变量*/</span>
+</span></span><span class="line"><span class="cl">        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">,</span><span class="n">println</span><span class="o">(</span><span class="s">&#34;Variable Value: &#34;</span> <span class="o">+</span> <span class="n">myPuppy</span><span class="o">.</span><span class="na">puppyAge</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>结果为： <!-- raw HTML omitted -->
 Passed name is: tommy  <!-- raw HTML omitted -->
 Puppy&rsquo;s age is: 2 <!-- raw HTML omitted -->
 Variable Value: 2</p>
@@ -297,26 +422,51 @@ Java中，可以使用访问控制符来保护对类、变量、方法和构造�
 <h3 id="默认访问修饰符-不使用任何关键字br"><strong>默认访问修饰符-不使用任何关键字</strong><!-- raw HTML omitted --></h3>
 <p>使用默认访问修饰符声明的变量和方法，对同一个包内的类是可见的。接口里的变量都隐式声明为 <code>public static final</code>,而接口里的方法默认情况下访问权限为 <code>public</code>。</p>
 <p>如下例，变量和方法的声明可以不适用任何修饰符：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>String version <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1.5.1&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">processOder</span><span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">String</span> <span class="n">version</span> <span class="o">=</span> <span class="s">&#34;1.5.1&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">boolean</span> <span class="nf">processOder</span><span class="o">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
 <h3 id="私有访问修饰符-privatebr"><strong>私有访问修饰符-private</strong><!-- raw HTML omitted --></h3>
 <p>私有访问修饰符是最严格的访问级别，所以被声明为<code>private</code> 的方法、变量和构造方法只能被<strong>所属类访问</strong>，并且类和接口不能声明为<code>private</code>。
 声明为私有访问类型的变量只能通过类中公共的<code>getter</code> 方法被外部类访问。
 <strong><code>Private</code> 访问修饰符的使用主要用来隐藏类的实现细节和保护类的数据。</strong>
 下面的类使用了私有访问修饰符<code>private</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Logger</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">private</span> String format<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getFormat</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setFormat</span><span style="color:#f92672">(</span>String format<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">format</span> <span style="color:#f92672">=</span> format<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p><code>Logger</code> 类中的 <code>format</code> 变量为私有变量，所以其他类不能直接得到和设置该变量的值。为了使其他类能够操作该变量，定义了两个 <code>public</code>方法：<code>getFormat()</code> （返回 format的值）和 <code>setFormat</code>(String)（设置 format 的值）。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Logger</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">   <span class="kd">private</span> <span class="n">String</span> <span class="n">format</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">   <span class="kd">public</span> <span class="n">String</span> <span class="nf">getFormat</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">format</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">   <span class="o">}</span>
+</span></span><span class="line"><span class="cl">   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setFormat</span><span class="o">(</span><span class="n">String</span> <span class="n">format</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">this</span><span class="o">.</span><span class="na">format</span> <span class="o">=</span> <span class="n">format</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">   <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>Logger</code> 类中的 <code>format</code> 变量为私有变量，所以其他类不能直接得到和设置该变量的值。为了使其他类能够操作该变量，定义了两个 <code>public</code>方法：<code>getFormat()</code> （返回 format的值）和 <code>setFormat</code>(String)（设置 format 的值）。</p>
 <p><strong>公有访问修饰符-public</strong><!-- raw HTML omitted -->
 被声明为 <code>public</code> 的类、方法、构造方法和接口能够被<strong>任何其他类访问</strong>。
 如果几个相互访问的 <code>public</code> 类分布在不同的包中，则需要导入相应 <code>public</code>类所在的包。由于类的继承性，类所有的公有方法和变量都能被其子类继承。最常见的公有访问即为<code>public static void main(String []args){...}</code>。Java 程序的<code>main()</code>方法必须设置成公有的，否则Java 解释器将不能运行该类。</p>
@@ -336,17 +486,33 @@ Java中，可以使用访问控制符来保护对类、变量、方法和构造�
 <p><code>final</code>变量能被显式地初始化并且只能初始化一次。被声明为<code>final</code>的对象的引用不能指向不同对象。但是final对象里的数据可以被改变，也就是说<code>final</code>对象的引用不能改变，但是里面的值可以改变。<!-- raw HTML omitted -->
 <code>final</code>修饰符通常和<code>static</code>修饰符一起是用来创建常量。<!-- raw HTML omitted -->
 例：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Test</span><span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> value <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//  下面是声明常量的实例
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> BOXWIDTH <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> String TITLE <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Manager&#34;</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">changeValue</span><span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>        value <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span><span style="color:#f92672">;</span><span style="color:#75715e">//将输出一个错误
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>由于value的值已经被final定义过，所以无法被改变。<!-- raw HTML omitted --></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">final</span> <span class="kt">int</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//  下面是声明常量的实例
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">BOXWIDTH</span> <span class="o">=</span> <span class="mi">6</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">TITLE</span> <span class="o">=</span> <span class="s">&#34;Manager&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">changeValue</span><span class="o">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">value</span> <span class="o">=</span> <span class="mi">12</span><span class="o">;</span><span class="c1">//将输出一个错误
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>由于value的值已经被final定义过，所以无法被改变。<!-- raw HTML omitted --></p>
 <p>类中的<code>final</code>方法可以被字类继承，但是不能被字类修改。<code>fianl</code>类不能被继承，没有类能够继承<code>final</code>类的任何特性。</p>
 <hr>
 <h3 id="static修饰符">static修饰符</h3>
@@ -355,32 +521,68 @@ Java中，可以使用访问控制符来保护对类、变量、方法和构造�
 static关键字用来声明独立于对象的静态变量，静态变量也被称为类变量。局部变量不能被声明为static变量。<!-- raw HTML omitted --></li>
 </ul>
 <p>例：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">InstanceCounter</span><span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> numInstances <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getCount</span><span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> numInstances<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addInstance</span><span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>         numInstances<span style="color:#f92672">++;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    InstanceCounter<span style="color:#f92672">(){</span>
-</span></span><span style="display:flex;"><span>        InstanceCounter<span style="color:#f92672">.</span><span style="color:#a6e22e">addInstance</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String <span style="color:#f92672">[]</span>args<span style="color:#f92672">){</span>
-</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Starting with &#34;</span><span style="color:#f92672">+:</span>InstanceCounter<span style="color:#f92672">.</span><span style="color:#a6e22e">getCount</span><span style="color:#f92672">()+</span> <span style="color:#e6db74">&#34;instances&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">500</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++){</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">new</span> InstanceCounter<span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Created &#34;</span><span style="color:#f92672">+</span> InstanceCounter<span style="color:#f92672">.</span><span style="color:#a6e22e">getCount</span><span style="color:#f92672">()+</span><span style="color:#e6db74">&#34; instances&#34;</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>结果如下：<!-- raw HTML omitted --></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Started with <span style="color:#ae81ff">0</span> instances
-</span></span><span style="display:flex;"><span>Created <span style="color:#ae81ff">500</span> instances
-</span></span></code></pre></div><hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">InstanceCounter</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">numInstances</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">protected</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getCount</span><span class="o">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">numInstances</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">addInstance</span><span class="o">(){</span>
+</span></span><span class="line"><span class="cl">         <span class="n">numInstances</span><span class="o">++;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">InstanceCounter</span><span class="o">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">InstanceCounter</span><span class="o">.</span><span class="na">addInstance</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span> <span class="o">[]</span><span class="n">args</span><span class="o">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Starting with &#34;</span><span class="o">+:</span><span class="n">InstanceCounter</span><span class="o">.</span><span class="na">getCount</span><span class="o">()+</span> <span class="s">&#34;instances&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">500</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">new</span> <span class="n">InstanceCounter</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;Created &#34;</span><span class="o">+</span> <span class="n">InstanceCounter</span><span class="o">.</span><span class="na">getCount</span><span class="o">()+</span><span class="s">&#34; instances&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>结果如下：<!-- raw HTML omitted --></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Started</span> <span class="n">with</span> <span class="mi">0</span> <span class="n">instances</span>
+</span></span><span class="line"><span class="cl"><span class="n">Created</span> <span class="mi">500</span> <span class="n">instances</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
 <p><em><strong>引用时请标明出处</strong></em></p></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
