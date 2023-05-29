@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Server and blog - 标签 - 山雨欲来风满楼的博客</title>
+        <link>https://shanyu0205.github.io/tags/server-and-blog/</link>
+        <description>Server and blog - 标签 - 山雨欲来风满楼的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 09 May 2023 15:48:10 &#43;0800</lastBuildDate><atom:link href="https://shanyu0205.github.io/tags/server-and-blog/" rel="self" type="application/rss+xml" /><item>
+    <title>Hugo个人博客搭建(极简版)</title>
+    <link>https://shanyu0205.github.io/posts/serverfile/server-build/</link>
+    <pubDate>Tue, 09 May 2023 15:48:10 &#43;0800</pubDate>
+    <author>山雨欲来风满楼</author>
+    <guid>https://shanyu0205.github.io/posts/serverfile/server-build/</guid>
+    <description><![CDATA[<p><strong>Hugo个人博客搭建</strong></p>]]></description>
+</item>
+</channel>
+</rss>

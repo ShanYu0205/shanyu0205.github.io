@@ -1,9 +1,8 @@
 # Hugo个人博客搭建(极简版)
 
-<!--more-->
-
 **Hugo个人博客搭建**
 
+<!--more-->
 ---
 ## 1 快速开始
 - 基于Mac系统
@@ -25,7 +24,7 @@
 ### 2.1 安装`git`
 **打开终端,即terminal**, 输入以下命令，回车执行
 
-```Bash
+```Python
 git --version
 ```
 
@@ -94,7 +93,6 @@ hugo serve
 hugo
 ```
 
-
 会生成一个 `public` 目录, 其中包含你网站的所有静态内容和资源. 现在可以将其部署在任何 Web 服务器上
 
 ---
@@ -126,10 +124,5 @@ git push   # 如果是第一次提交，需要加上-u参数: git push -u origin
 ---
 
 {{< image src="/posts/serverfile/dashang.jpeg" width="30%" caption="感谢你的支持">}}
-
-
-
-
-
 
 
