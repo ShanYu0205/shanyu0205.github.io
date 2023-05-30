@@ -22,9 +22,14 @@
 ---
 ## 2 相关环境安装
 ### 2.1 安装`git`
-**打开终端,即terminal**, 输入以下命令，回车执行
+Git是一个版本控制工具，可以用来帮忙管理我们的博客，直接前往官网下载安装包即可
 
-```Python
+> [下载地址](https://git-scm.com/downloads)。
+
+然后**打开终端,即terminal**, 输入以下命令，回车执行
+
+```Bash
+# 检查是否安装成功
 git --version
 ```
 
@@ -42,7 +47,7 @@ git --version
 ```bash
 brew install hugo 
 
-# 检查安装成功
+# 检查是否安装成功
 hugo version
 ```
 
@@ -109,7 +114,7 @@ hugo
 cd public  # 进入public文件夹
 git init   
 git add .  # 注意后面有个点
-git commit -m "我的第一个hugo博客" 
+git commit -m "我的第一个hugo博客" # 注意为英文双引号
 git remote add origin "https://github.com/"你的库的地址"" # 与远端的git仓库进行关联
 git push   # 如果是第一次提交，需要加上-u参数: git push -u origin master
 ```
@@ -121,6 +126,12 @@ git push   # 如果是第一次提交，需要加上-u参数: git push -u origin
 3. 接下来就可以通过`[].github.io`直接访问自己的博客了。`[]`中填写自己的github用户名
 
 > 此时，如果你的博客还没有显示出来，那么就需要等待一段时间，因为github需要一段时间来构建你的博客，一般来说，等待时间不会超过10分钟。
+---
+## 参考链接：
+- [Hugo官网](https://gohugo.io/)
+- [雨临Lewis的博客](https://lewky.cn/posts/hugo-1.html/)
+- b站CodeSheep: BV1q4411i7gL
+
 ---
 
 {{< image src="/posts/serverfile/dashang.jpeg" width="30%" caption="感谢你的支持">}}
