@@ -98,7 +98,7 @@ to be ***ordered*** .
 
 **[Example]**
 
-![](/Y2S1/COMP2411/L1/pic/min_max_no.png)
+![](/Y2S1/COMP2411/L2/pic/min_max_no.png)
 
 ---
 **Translation** between Cardinality ratio and (min,max) notation:
@@ -363,3 +363,4 @@ GROUP BY Deposit.c-name HAVING COUNT(DISTINCT acct#) >= 3;
 ```
 ---
 ***学习笔记，仅供参考***
+
