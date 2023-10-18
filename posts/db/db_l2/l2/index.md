@@ -98,7 +98,7 @@ to be ***ordered*** .
 
 **[Example]**
 
-![](/Y2S1/COMP2411/L2/pic/min_max_no.png)
+![](/posts/db/db_l2/pic/min_max_no.png)
 
 ---
 **Translation** between Cardinality ratio and (min,max) notation:
