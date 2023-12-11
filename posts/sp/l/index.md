@@ -21,7 +21,7 @@ Use the hardware in an efficient manner
 
 <!-- <center><img src="./pic/0_0.png) -->
 
-![](./pic/0_0.png)
+![](/posts/sp/pic/0_0.png)
 
 ---
 ### 0.1 Types of Operating Systems
@@ -155,9 +155,9 @@ CPU`<==>`PIC`<==>`I/O devices
 ---
 #### 0.5.4 IRQ Architecture
 
-![](./pic/0_1.png)
+![](/posts/sp/pic/0_1.png)
 
-![](./pic/0_2.png)
+![](/posts/sp/pic/0_2.png)
 
 ---
 #### 0.5.5 Hardware Handling of Interrupts (Conventional IRQ as an Example)
@@ -197,7 +197,7 @@ Output Devices: Actuators
 >> Complexity: have to know the tedious low-level programming details of the hardware
 >> Inflexibility: when the hardware changes, the application has to change with it.
 
-![](./pic/0_3.png)
+![](/posts/sp/pic/0_3.png)
 
 
 - Application built on top of OS
@@ -206,7 +206,7 @@ Output Devices: Actuators
 >> As long as the OS API remain the same, the hardware can change.
 >> Design goal conflict: Full exploitation of hardware features Versus Full platform independence and simple API
 
-![](./pic/0_4.png)
+![](/posts/sp/pic/0_4.png)
 
 - Application built on top of OS
 >> Ideal:
@@ -214,13 +214,13 @@ Output Devices: Actuators
 >> As long as the OS API remain the same, the hardware can change.
 >> Design goal conflict: Full exploitation of hardware features Versus Full platform independence and simple API
 
-![](./pic/0_5.png)
+![](/posts/sp/pic/0_5.png)
 
 Want to exploit more features of the hardware: Application + OS
 Want to be more platform independent and simpler API: Application + Virtual Machine (VM)
 
 ---
-![](./pic/0_6.png)
+![](/posts/sp/pic/0_6.png)
 
 Virtual Machine (VM) can hide the heterogeneity of OS APIs 
 
@@ -237,13 +237,13 @@ As long as the VM API remain the same, the OS (and hardware) can change, and the
   - Programs that interface other software with the hardware
 
 **Layers of Programs (Development Time)**
-![](./pic/1_1.png)
+![](/posts/sp/pic/1_1.png)
 
 **Layers of Programs (Run Time)**
-![](./pic/1_3.png)
+![](/posts/sp/pic/1_3.png)
 
 
-![](./pic/1_2.png)
+![](/posts/sp/pic/1_2.png)
 
 ## 1 Unix
 
@@ -256,7 +256,7 @@ As long as the VM API remain the same, the OS (and hardware) can change, and the
 
 ---
 ### 1.2 Unix Kernel and System Calls
-![](./pic/1_4.png)
+![](/posts/sp/pic/1_4.png)
 
 Main duties
 -  **process** scheduling and management
@@ -293,9 +293,9 @@ A **system call** is an entry point into the kernel, typically packaged as a fun
 
 ---
 ### 1.5 Unix Libraries & Device Drivers
-![](./pic/1_6.png)
+![](/posts/sp/pic/1_6.png)
 
-![](./pic/1_5.png)
+![](/posts/sp/pic/1_5.png)
 
 ---
 ### Features of Unix
@@ -508,7 +508,7 @@ In older OSs, each process has its **exclusive** set of resources, even for proc
 
 Modern OSs propose the notion of "threads". Threads are processes that have **shared resources**, typically created by a same **ancestor process**. Because the resource allocation is more thrifty, threads are also called "**lightweight processes**".
 
-![](./pic/2_1.png)
+![](/posts/sp/pic/2_1.png)
 
 - left: multi-processes - `fork()`
 - right: multi-threads
@@ -516,8 +516,8 @@ Modern OSs propose the notion of "threads". Threads are processes that have **sh
 ---
 ### 2.5 What resources to share and what not to share?
 
-![](./pic/2_2.png)
-![](./pic/2_3.png)
+![](/posts/sp/pic/2_2.png)
+![](/posts/sp/pic/2_3.png)
 
 - store and restore the register values
 - partition the registers into **different sets** ***temporarily*** for threads
@@ -534,7 +534,7 @@ For example, modern Linux no longer differentiate threads and processes, all are
 ---
 ### 2.8 Process Image
 
-![](./pic/2_4.png)
+![](/posts/sp/pic/2_4.png)
 
 ---
 ### 2.9 Process management
@@ -581,7 +581,7 @@ void main (void){
 ```
 
 **Result**
-![](./demopic/3_1.png)
+![](/posts/sp/demopic/3_1.png)
 
 ---
 #### Demo Task3
@@ -609,7 +609,7 @@ void main(void){
 ```
 
 **Result**
-![](./demopic/3_2.png)
+![](/posts/sp/demopic/3_2.png)
 
 - use `man -S3  sleep` to see the manual of `sleep` system call
 - user `man sleep` to check sleep user command
@@ -639,7 +639,7 @@ void main(void){
 ```
 
 **Result**
-![](./demopic/3_4.png)
+![](/posts/sp/demopic/3_4.png)
 
 #### Demo Task 5
 In-class exercise: forking a **chain** of processes 
@@ -662,7 +662,7 @@ void main(void){
 ```
 
 **Result**
-![](./demopic/3_3.png)
+![](/posts/sp/demopic/3_3.png)
 
 - `parallels@ubuntu-linux-20-04-desktop:~/Desktop/text$`
 - the result above shows the parent process `PID=164147` has terminated before the child process `PID=164149` are created, so these two child processes become orphan processes, with parent process `PID=1193` (the `init` process - **user**)
@@ -688,13 +688,13 @@ void main(void){
 ```
 
 **Result**
-![](./demopic/3_5.png)
+![](/posts/sp/demopic/3_5.png)
 
 - the order can be different since the parent and child processes are running concurrently which is scheduled by scheduler
 - the parent process of `PID=187708` is `PID=12244` (the `bash` process)
 - the result above shows the parent process `PID=187709` has terminated before the child process `PID=187710` are created, so this child processes become orphan process, with parent process `PID=1193` (the `init` process - **user**)
 
-![](./demopic/3_6.png)
+![](/posts/sp/demopic/3_6.png)
 
 ---
 The `fork` system call creates a **copy** of the calling process. However, many application requires that the child process execute a **different** program from the parent process.
@@ -1107,10 +1107,10 @@ In Unix, disk files and other devices are **named** and **accessed** in the **sa
 ### 3.5 `ls -l` command
 For each file there are ten characters before the user and group owner. The first character shows the types of file
 
-![](./pic/3_1.png)
+![](/posts/sp/pic/3_1.png)
 
 **access right**
-![](./pic/3_2.png)
+![](/posts/sp/pic/3_2.png)
 
 ---
 #### Demo Task 1
@@ -1129,7 +1129,7 @@ Hello world!
 ### 3.6 Hierarchical file organization
 A Unix file system has a **hierarchical** tree structure where **internal nodes** are **directories** and **leaf nodes** are **files**
 
-![](./pic/3_3.png)
+![](/posts/sp/pic/3_3.png)
 
 - fully-quallified path name uniquely specifies a file: `/dirA/dirB/My1.dat.`
 - relative pathname, begining from the current directory rather the root ditrectory: `../My2.dat`
@@ -1168,7 +1168,7 @@ int main(){
 - Information about a filesystem structure is stored both on disk and main memory. 
 - Unix uses a logical structure called `i-node` to store the information about a file on disk – each file in a file system is represented by an i-node:
 
-![](./pic/3_4.png)
+![](/posts/sp/pic/3_4.png)
 
 - **i-nodes** are **stored** at the front of each region of **disk** that contains a Unix file system.
   - both conceptual and physical
@@ -1176,7 +1176,7 @@ int main(){
   - Each i-node corresponds to a unique i-number (index).
   - data blocks may be placed in neighboring disk blocks, but it can not be guaranteed.
   
-![](./pic/3_5.png)
+![](/posts/sp/pic/3_5.png)
 
 - more layers(tree structures) to access the data blocks
 - store pointers in data blocks
@@ -1189,13 +1189,13 @@ int main(){
 
 *[Example of directory file]*
 
-![](./pic/3_6.png)
+![](/posts/sp/pic/3_6.png)
 
 #### 3.8.2 Hard link & Symbolic link
 *[Example of directory file: hard link]*
 Hard link creation command: `ln My1.dat My2.dat`
 
-![](./pic/3_7.png)
+![](/posts/sp/pic/3_7.png)
 
 **Hard link**
 - create a new entry for the same `i-node`, when modifying any of entry, the result will change
@@ -1209,7 +1209,7 @@ Hard link creation command: `ln My1.dat My2.dat`
 - absolute symbolic link: when the **"root"** is moved, the link will not be broken
 - i-node reference a new data block which stores a **URL**, of which the reference of source file
 
-![](./pic/3_8.png)
+![](/posts/sp/pic/3_8.png)
 
 **absulute path or relative path**
 - Hard links must be on the same file system, while symbolic links can cross file systems.
@@ -1233,7 +1233,7 @@ Hard link creation command: `ln My1.dat My2.dat`
 - Similarly, a **triple indirect pointer** points to $64TB$ of file content. 
 - So one I-node can at the most point to $64TB + 32GB + 16MB + 96KB$ of file content.
 
-![](./pic/3_9.png)
+![](/posts/sp/pic/3_9.png)
 
 ---
 ### 3.9 File Access
@@ -1265,7 +1265,7 @@ file **pointers** - (in `stdio.h`)
   - lock;
   - read/write offset etc.
 
-![](./pic/3_10.png)
+![](/posts/sp/pic/3_10.png)
 
 > Several **entries** in SFT may point to the **same** physical file.
 
@@ -1355,7 +1355,7 @@ void main(){
 - A file pointer points to a data structure `FILE`, called a **file structure** in the user area of the process. 
 -  A file structure **contains** a **buffer** and a **file descriptor** (*so a file pointer is a handle to a handle*) 
 
-![](./pic/3_11.png)
+![](/posts/sp/pic/3_11.png)
 
 #### Demo Task 5
 ```c
@@ -1413,7 +1413,7 @@ printf(formatted_string, ...)
 - `formatted_string`: string that describes the output information, variable types are escaped with `%` 
 - The formatted string is followed by as many expressions as are **referenced** in the formatted string
 
-![](./pic/3_12.png)
+![](/posts/sp/pic/3_12.png)
 
 *Escaping variable types*
 - `%d`,`%i` – decimal integer 
@@ -1536,7 +1536,7 @@ void main() {
 
 - Recall: to access a file, a process uses a file descriptor, which is an index into the process file descriptor table, which **in turn** points to an entry in the system file table.
 
-![](./pic/3_13.png)
+![](/posts/sp/pic/3_13.png)
 
 - `cat`: reads a file and outputs to `stdout`.
   - `cat test > my.file`
@@ -1573,11 +1573,11 @@ int main(int argc, char* argv[]){
 }
 ```
 
-![](./pic/3_14.png)
-![](./pic/3_15.png)
-![](./pic/3_16.png)
-![](./pic/3_17.png)
-![](./pic/3_19.png)
+![](/posts/sp/pic/3_14.png)
+![](/posts/sp/pic/3_15.png)
+![](/posts/sp/pic/3_16.png)
+![](/posts/sp/pic/3_17.png)
+![](/posts/sp/pic/3_19.png)
 
 ---
 #### 3.10.2 Communication between parent/child via pipe 
@@ -1587,7 +1587,7 @@ int main(int argc, char* argv[]){
 - `int pipe(int fd[2]);`
   - Return: 0 success; -1 error
 
-![](./pic/3_18.png)
+![](/posts/sp/pic/3_18.png)
 
 #### Demo Task 9
 ```c
@@ -1643,9 +1643,9 @@ int main(){
 - File subsystem and its relations with char/block device driver tables
 - Char/block device driver tables
 
-![](./pic/4_1.png)
-![](./pic/4_2.png)
-![](./pic/4_3.png)
+![](/posts/sp/pic/4_1.png)
+![](/posts/sp/pic/4_2.png)
+![](/posts/sp/pic/4_3.png)
 
 - Most of device derivers are character device drivers, like printer; block device driver operats on massive file system, like disk, CD-ROM, etc.
 
@@ -1704,7 +1704,7 @@ bolck device file   major number 97, minor number 0
 #### 4.5.1 Block Device Driver
 - Communicate with the OS through a collection of fixed size buffers
 
-![](./pic/4_4.png)
+![](/posts/sp/pic/4_4.png)
 
 - OS manages a **buffer cache**; **satisfy user requests** for data by accessing buffers in the cache.
 - Driver is invoked when **requested data** is **NOT** **in the cache**; when buffers in the cache have been changed and must be written out (**write back** to the devices).
@@ -1718,7 +1718,7 @@ bolck device file   major number 97, minor number 0
 - or work best with data in chunks smaller or larger than the standard fixed size buffer used by device driver (e.g. ADC)
 
 *[Communication structure]*
-![](./pic/4_5.png)
+![](/posts/sp/pic/4_5.png)
 
 **Difference between block & character deivers**
 - Block driver – **only** interacts with **buffer cache**
@@ -1815,10 +1815,10 @@ static int zili_demo_char1_release(struct inode *inode, struct file*fp){
 
 ```
 
-![](./pic/5_1.png)
-![](./pic/5_2.png)
-![](./pic/5_3.png)
-![](./pic/5_4.png)
+![](/posts/sp/pic/5_1.png)
+![](/posts/sp/pic/5_2.png)
+![](/posts/sp/pic/5_3.png)
+![](/posts/sp/pic/5_4.png)
 
 ```c
 #include <linux/module.h> // no need to write "include/linux/module.h"
@@ -1854,7 +1854,7 @@ MODULE_DESCRIPTION("Char Device Driver for helloworld!");
 - The resources that **only** kernel can access are also called the "**kernel land**", while the resources that the user can access are also called the "**user land**".
 
 
-![](./pic/5_5.png)
+![](/posts/sp/pic/5_5.png)
 
 ---
 
@@ -1887,7 +1887,7 @@ MODULE_DESCRIPTION("Char Device Driver for helloworld!");
 - Symbolic representation/mnemonics of machine language
   - `add $t6, $t5, 4`
 
-![](./pic/6_1.png)
+![](/posts/sp/pic/6_1.png)
 
 **Benefit of High-level Language**
 - human readable
@@ -1895,7 +1895,7 @@ MODULE_DESCRIPTION("Char Device Driver for helloworld!");
 - Make programs more robust: information is specified before its use, enabling subsequent error checking at compile time
 - Make programs portable: the same program can be compiled on different machines
 
-![](./pic/6_2.png)
+![](/posts/sp/pic/6_2.png)
 
 ---
 ### 6.2 Translation Mechanism
@@ -1909,7 +1909,7 @@ MODULE_DESCRIPTION("Char Device Driver for helloworld!");
 - **Hybrid**: **Compilation + Interpretation**
   - Java, complied into byte code, and then interpreted by JVM during runtime
 
-![](./pic/6_3.png)
+![](/posts/sp/pic/6_3.png)
 
 ---
 ### 6.3 Complier and Phases of a Compliation
@@ -1917,10 +1917,10 @@ MODULE_DESCRIPTION("Char Device Driver for helloworld!");
 - A **compiler** is a software that takes a program written in one language (called the **source language**) and translates it into another (usually equivalent) program in another language (called the **target language**).
 - Also reports errors (**bugs**) in the source program.
 
-![](./pic/6_4.png)
+![](/posts/sp/pic/6_4.png)
 
 *[Phases of a Compliation]*
-![](./pic/6_5.png)
+![](/posts/sp/pic/6_5.png)
 
 ---
 #### 6.3.1 Lexical Analysis
@@ -1931,7 +1931,7 @@ MODULE_DESCRIPTION("Char Device Driver for helloworld!");
 - Example: `position := initial + rate * 60`
 - Read one by one
 
-![](./pic/6_6.png)
+![](/posts/sp/pic/6_6.png)
 
 ---
 #### 6.3.2 Syntax Analysis
@@ -1947,7 +1947,7 @@ MODULE_DESCRIPTION("Char Device Driver for helloworld!");
   - Evaluation begins from bottom and moves up.
   - E.g., parse tree for `position := initial + rate * 60`
 
-![](./pic/6_7.png)
+![](/posts/sp/pic/6_7.png)
 
 ---
 #### 6.3.4 Semantic Analysis
@@ -1955,26 +1955,26 @@ MODULE_DESCRIPTION("Char Device Driver for helloworld!");
   - syntax analysis recognizes grammatical events;
   - semantic analysis processes such events, e.g., type checking, or triggering corresponding intermediate code generation
 
-![](./pic/6_8.png)
+![](/posts/sp/pic/6_8.png)
 
 ---
 #### 6.3.5 Intermediate Code Generation
 - Generate IR (Intermediate Representation) code:
 - Easier to generate machine code from IR code.
 
-![](./pic/6_9.png)
+![](/posts/sp/pic/6_9.png)
 
 ---
 #### 6.3.6 Code Optimization
 - Modify program representation so that program can run faster, use less memory, power, etc.
 
-![](./pic/6_10.png)
+![](/posts/sp/pic/6_10.png)
 
 ---
 #### 6.3.7 Code Generation
 - Generate the target program
 
-![](./pic/6_11.png)
+![](/posts/sp/pic/6_11.png)
 
 ---
 #### 6.3.8 Distinction between Phases and Passes
@@ -1996,12 +1996,12 @@ MODULE_DESCRIPTION("Char Device Driver for helloworld!");
 **Why need Lexical Analysis?**
 - Group the character into meaningful words
 
-![](./pic/6_12.png)
+![](/posts/sp/pic/6_12.png)
 
 #### 6.4.1 Input and Output of Lexical Analysis
 In lexical analysis, a source program is read from **left-to-right** and grouped into **tokens**. A token is a sequence of characters with a collective meaning.
 
-![](./pic/6_13.png)
+![](/posts/sp/pic/6_13.png)
 
 **Token**
 - A syntactic category 
@@ -2014,11 +2014,11 @@ In lexical analysis, a source program is read from **left-to-right** and grouped
 
 *[Expression]*
 
-![](./pic/6_14.png)
+![](/posts/sp/pic/6_14.png)
 
 *[Mini Program]*
 
-![](./pic/6_15.png)
+![](/posts/sp/pic/6_15.png)
 
 **Reason for tokens**
 - Classify program substrings according to their syntactic role.
@@ -2069,7 +2069,7 @@ In lexical analysis, a source program is read from **left-to-right** and grouped
 #### 6.5.4 Operations on languages
 - Particularly **union**, **concatenation**, **Kleene closure**, and **positive closure**. 
 
-![](./pic/6_16.png)
+![](/posts/sp/pic/6_16.png)
 
 **Precedence**
 - Kleene closure $\succ$ concatenation $\succ$ union
@@ -2077,33 +2077,33 @@ In lexical analysis, a source program is read from **left-to-right** and grouped
 - Exponentiation (concatenating the same language) ≻ multiplication (concatenating different/same languages) ≻ addition (union)
   - {1} + {2} $\cdot$ {3}^2.
 
-![](./pic/6_17.png)
+![](/posts/sp/pic/6_17.png)
 
 Let $L={a,b,...,z,A,B,...,Z}$ and $D={0,1,2,...,9}$
 
-![](./pic/6_18.png)
+![](/posts/sp/pic/6_18.png)
 
 ---
 #### 6.5.6 Reaular Expressions
 Let $\sum = {a,b}$
 
-![](./pic/6_19.png)
-![](./pic/6_20.png)
+![](/posts/sp/pic/6_19.png)
+![](/posts/sp/pic/6_20.png)
 
 ---
 #### 6.5.7 Identifiers in Pascal
 - Pascal identifier: a string of letters and digits beginning with a letter.
 - Regular definition
 
-![](./pic/6_21.png)
+![](/posts/sp/pic/6_21.png)
 
 *[Unsigned Numbers in Pascal]*
 
-![](./pic/6_22.png)
+![](/posts/sp/pic/6_22.png)
 
 *[Notation Shorthands]*
 
-![](./pic/6_23.png)
+![](/posts/sp/pic/6_23.png)
 
 ---
 #### 6.5.8 Implementation of Lexical Analyzer
@@ -2123,12 +2123,12 @@ Let $\sum = {a,b}$
 - Output: Produces a C program that can recognize the matching tokens and trigger the specified actions.
 - Especially useful when coupled with a parser generator 
 
-![](./pic/6_24.png)
+![](/posts/sp/pic/6_24.png)
 
 ---
 ## 7 Lexical Analysis(III) - Finite Automata
 
-![](./pic/7_1.png)
+![](/posts/sp/pic/7_1.png)
 
 ### 7.1 NFA, DFA, and NFA $\to$ DFA Conversion
 **Recognizing Tokens**
@@ -2150,14 +2150,14 @@ Let $\sum = {a,b}$
 
 **Transition Graphs**
 
-![](./pic/7_2.png)
-![](./pic/7_3.png)
+![](/posts/sp/pic/7_2.png)
+![](/posts/sp/pic/7_3.png)
 
 ---
 ### 7.3 State Transition Table
 The transition function of an NFA can also be implemented by a **transition table**, where the entries of rows are states and columns, respectively.
 
-![](./pic/7_4.png)
+![](/posts/sp/pic/7_4.png)
 
 
 
@@ -2165,8 +2165,8 @@ The transition function of an NFA can also be implemented by a **transition tabl
 ### 7.4 ε - Transition
 A nother kind of transition, where the automaton transits from one state to another state without reading any input.
 
-![](./pic/7_5.png)
-![](./pic/7_6.png)
+![](/posts/sp/pic/7_5.png)
+![](/posts/sp/pic/7_6.png)
 
 - NFA based recognitions (decisions) are hard to implement 
 - Can have multiple transitions from one input in a given state 
@@ -2179,12 +2179,12 @@ A nother kind of transition, where the automaton transits from one state to anot
 >> One transition per input per state
 >> No ε-transitions
 
-![](./pic/7_7.png)
+![](/posts/sp/pic/7_7.png)
 
 **Examples of NFA and DFA Given alphabet**
 
-![](./pic/7_8.png)
-![](./pic/7_9.png)
+![](/posts/sp/pic/7_8.png)
+![](/posts/sp/pic/7_9.png)
 
 - NFA: 
   - Easy to generate strings. 
@@ -2196,20 +2196,20 @@ A nother kind of transition, where the automaton transits from one state to anot
   - Does not go anywhere when there is no input; does not have any  ε-transition.
 
 **Table Implementation of DFA**
-![](./pic/7_10.png)
+![](/posts/sp/pic/7_10.png)
 
 ---
 ### 7.6 Algorithm: Simulating a DFA
-![](./pic/7_11.png)
+![](/posts/sp/pic/7_11.png)
 
 ---
 ### 7.7 Regular Expression to NFA 
 
-![](./pic/7_12.png)
+![](/posts/sp/pic/7_12.png)
 
 *[Break Regular Expression to NFA]*
 
-![](./pic/7_13.png)
+![](/posts/sp/pic/7_13.png)
 
 **NFA to DFA**
 - A DFA is a special case of NFA. The conversion of an NFA to a DFA needs to meet the two requirements on DFA:
@@ -2218,7 +2218,7 @@ A nother kind of transition, where the automaton transits from one state to anot
 
 - Conversion Algorithm
   
-![](./pic/7_14.png)
+![](/posts/sp/pic/7_14.png)
 
 - States of DFA obtained from NFA 
   - An NFA may be in many states at any time. 
@@ -2229,13 +2229,13 @@ A nother kind of transition, where the automaton transits from one state to anot
 ---
 ### 7.8 Regular Expression to NFA 
 
-![](./pic/7_15.png)
-![](./pic/7_16.png)
+![](/posts/sp/pic/7_15.png)
+![](/posts/sp/pic/7_16.png)
 
 ---
 ## 8 Syntax Analysis
 
-![](./pic/8_1.png)
+![](/posts/sp/pic/8_1.png)
 
 ### 8.1 Introduction
 - Input: sequence of **tokens** from lexical analysiss
@@ -2243,11 +2243,11 @@ A nother kind of transition, where the automaton transits from one state to anot
 
 *[Comparison between Lexical and Syntax]*
 
-![](./pic/8_2.png)
+![](/posts/sp/pic/8_2.png)
 
 *[Example]*
 
-![](./pic/8_3.png)
+![](/posts/sp/pic/8_3.png)
 
 ---
 **Syntax and Grammar**
@@ -2272,22 +2272,22 @@ end
 
 **Not Regular Expression**
 
-![](./pic/8_4.png)
+![](/posts/sp/pic/8_4.png)
 
 **Regular Expression, CFG, and Automata**
 
-![](./pic/8_5.png)
+![](/posts/sp/pic/8_5.png)
 
 **Language Classfication**
 
-![](./pic/8_6.png)
+![](/posts/sp/pic/8_6.png)
 
 ---
 **Regular Expression vs. CFG**
 - Every language that can be described by a regular expression can also be described by a CFG
   - e.g., $(a|b)^*abb$
 
-![](./pic/8_7.png)
+![](/posts/sp/pic/8_7.png)
 
 **Derivations, Language of a CFG**
 - Based on a grammar for a language, we can generate **sentences** (strings consisting only of terminals) of the language. This is done by **derivations**. For CFG, derivation means start from the start nonterminal, repeatedly use productions to replace nonterminals, until a sentence is produced (i.e. all nonterminals are replaced).
@@ -2304,7 +2304,7 @@ end
   - An **interior node** is labeled by a **nonterminal**;
   - If A is the nonterminal labeling some interior node, and $X_1X_2...X_n$ are the labels of the children of that node from left to right, then $A \to X_1X_2...X_n$ is a production.
 
-![](./pic/8_8.png)
+![](/posts/sp/pic/8_8.png)
 
 - A  string of terminals is a sentence of a CFG grammar iff there is a (can have more) parse tree for this string. The derivation of the sentence can be shown pictorially by this parse tree.
 - Suppose the parse tree of the sentence is found. 
@@ -2316,7 +2316,7 @@ end
 ---
 ### 8.3 Parsing Methods
 
-![](./pic/8_9.png)
+![](/posts/sp/pic/8_9.png)
 
 #### 8.3.1 Bottom-Up Parsing
 - Start at the **leaves** and build the parse tree from bottom up. 
@@ -2325,7 +2325,7 @@ end
   - Reduce when handle is identified by left side. 
   - Used to implement automatic parser generator such as Yacc.
 
-![](./pic/8_10.png)
+![](/posts/sp/pic/8_10.png)
 
 **Shift-reduce Parser**
 - Two data structures: 
@@ -2343,9 +2343,9 @@ end
 > If the priority of incoming operator is more than the priority of in stack operator, then shift action is performed. 
 >  If the priority of in stack operator is same or less than the priority of in stack operator, then reduce action is performed.
 
-![](./pic/8_11.png)
-![](./pic/8_12.png)
-![](./pic/8_13.png)
+![](/posts/sp/pic/8_11.png)
+![](/posts/sp/pic/8_12.png)
+![](/posts/sp/pic/8_13.png)
 
 ---
 #### 8.3.2 Top-Down Parsing
@@ -2379,15 +2379,15 @@ $$
 #### 8.3.3 Convert Left recursion into Right recursion
 - If a CFG contains left recursion then the compiler may go to infinity loop, hence, to avoid the looping of the compiler, we need to convert the left recursive grammar into its equivalent right recursive production
 
-![](./pic/8_14.png)
+![](/posts/sp/pic/8_14.png)
 
 *[Examples]*
 
-![](./pic/8_15.png)
-![](./pic/8_16.png)
-![](./pic/8_17.png)
-![](./pic/8_18.png)
-![](./pic/8_19.png)
+![](/posts/sp/pic/8_15.png)
+![](/posts/sp/pic/8_16.png)
+![](/posts/sp/pic/8_17.png)
+![](/posts/sp/pic/8_18.png)
+![](/posts/sp/pic/8_19.png)
 
 ---
 **Ambiguous Grammars**
@@ -2395,33 +2395,33 @@ $$
 - Sometimes a **grammar** may have (produce, imply) **more than one parse tree** for some of its sentences. Such a grammar is said to be **ambiguous**. For such a sentence (i.e., having more than one parse tree), its leftmost and rightmost derivations may be different.
   - e.g., grammar: $E\to E+E|E*E|id$, sntence `id+id*id`
 
-![](./pic/8_20.png)
+![](/posts/sp/pic/8_20.png)
 
 - Grammar which is **both** **left** and **right** **recursive** is always ambiguous ***but*** ambiguous grammar need not be both left and right recursive
 
 *[Example]*
 
-![](./pic/8_21.png)
-![](./pic/8_22.png)
+![](/posts/sp/pic/8_21.png)
+![](/posts/sp/pic/8_22.png)
 
 ---
 #### 8.3.4 Non-deteministic Grammar
 - The grammar with common prefix is known as non-deterministic grammar.
   - $A\to \alpha\beta_1, \alpha\beta_2$
 
-![](./pic/8_23.png)
+![](/posts/sp/pic/8_23.png)
 
 - Grammar with common prefixes requires a lot of Back-tracking, which is time consuming and inefficient.
 - To avoid the back-tracking, we need to remove the common prefix from the grammar, like convert non-deterministic grammar into deterministic grammar.
 
-![](./pic/8_24.png)
-![](./pic/8_25.png)
+![](/posts/sp/pic/8_24.png)
+![](/posts/sp/pic/8_25.png)
 
 ---
 **Normalization of CFG**
 - Chomsky Normal Form (CNF), if every production is in form: $A\to BC|a$
 
-![](./pic/8_26.png)
+![](/posts/sp/pic/8_26.png)
 
 ---
 ### 8.4 First and Follow Sets
@@ -2430,8 +2430,8 @@ $$
 
 *[Examples]*
 
-![](./pic/8_30.png)
-![](./pic/8_31.png)
+![](/posts/sp/pic/8_30.png)
+![](/posts/sp/pic/8_31.png)
 
 **Follow**
 - Follow(A) is the set of all terminals that may **follow** to the right of (A) in any form of sentential Grammar.
@@ -2443,9 +2443,9 @@ $$
 
 *[Examples]*
 
-![](./pic/8_27.png)
-![](./pic/8_28.png)
-![](./pic/8_29.png)
+![](/posts/sp/pic/8_27.png)
+![](/posts/sp/pic/8_28.png)
+![](/posts/sp/pic/8_29.png)
 
 ---
 ***学习笔记，仅供参考***
