@@ -6,6 +6,14 @@
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 04 Sep 2023 00:00:00 &#43;0000</lastBuildDate>
             <atom:link href="https://shanyu0205.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Software Engineering</title>
+    <link>https://shanyu0205.github.io/posts/se/l/</link>
+    <pubDate>Mon, 04 Sep 2023 00:00:00 &#43;0000</pubDate>
+    <author>山雨欲来风满楼</author>
+    <guid>https://shanyu0205.github.io/posts/se/l/</guid>
+    <description><![CDATA[<p><em><strong>这篇文章展示了软件工程的学习记录</strong></em></p>]]></description>
+</item>
+<item>
     <title>System Programming</title>
     <link>https://shanyu0205.github.io/posts/sp/l/</link>
     <pubDate>Mon, 04 Sep 2023 00:00:00 &#43;0000</pubDate>
@@ -80,16 +88,6 @@
     <author>山雨欲来风满楼</author>
     <guid>https://shanyu0205.github.io/posts/blog/blog2/</guid>
     <description><![CDATA[<p>Java学习记录（二）</p>]]></description>
-</item>
-<item>
-    <title></title>
-    <link>https://shanyu0205.github.io/posts/sp/demo/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>https://shanyu0205.github.io/posts/sp/demo/</guid>
-    <description><![CDATA[L3 Demo Task1 ps ps -a ps -l Task 2:
-ls: list the files in the current directory
-ls -l: list the files in the current directory in long format ls -a: list the files in the current directory, including the hidden files ls -t: list the files in the current directory, sorted by time ls -lat: list the files in the current directory, including the hidden files, in long format, sorted by time cd: change the current directory]]></description>
 </item>
 </channel>
 </rss>

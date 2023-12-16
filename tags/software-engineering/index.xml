@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Software Engineering - 标签 - 山雨欲来风满楼的博客</title>
+        <link>https://shanyu0205.github.io/tags/software-engineering/</link>
+        <description>Software Engineering - 标签 - 山雨欲来风满楼的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 04 Sep 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://shanyu0205.github.io/tags/software-engineering/" rel="self" type="application/rss+xml" /><item>
+    <title>Software Engineering</title>
+    <link>https://shanyu0205.github.io/posts/se/l/</link>
+    <pubDate>Mon, 04 Sep 2023 00:00:00 &#43;0000</pubDate>
+    <author>山雨欲来风满楼</author>
+    <guid>https://shanyu0205.github.io/posts/se/l/</guid>
+    <description><![CDATA[<p><em><strong>这篇文章展示了软件工程的学习记录</strong></em></p>]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,4173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Software Engineering - 山雨欲来风满楼的博客</title><meta name="Description" content="这篇文章展示了软件工程的学习记录"><meta property="og:title" content="Software Engineering" />
+<meta property="og:description" content="这篇文章展示了软件工程的学习记录" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://shanyu0205.github.io/posts/se/l/" /><meta property="og:image" content="https://shanyu0205.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-09-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-11-14T14:24:10+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://shanyu0205.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Software Engineering"/>
+<meta name="twitter:description" content="这篇文章展示了软件工程的学习记录"/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://shanyu0205.github.io/posts/se/l/" /><link rel="prev" href="https://shanyu0205.github.io/posts/sp/l/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Software Engineering",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/shanyu0205.github.io\/posts\/se\/l\/"
+        },"genre": "posts","keywords": "Software Engineering, 笔记","wordcount":  11782 ,
+        "url": "https:\/\/shanyu0205.github.io\/posts\/se\/l\/","datePublished": "2023-09-04T00:00:00+00:00","dateModified": "2023-11-14T14:24:10+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "山雨欲来风满楼"
+            },"description": "这篇文章展示了软件工程的学习记录"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="山雨欲来风满楼的博客"><span class="header-title-pre"><i class='fa-solid fa-mountain-sun'></i></span><span id="id-1" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/categories/documentation/"> 文档 </a><a class="menu-item" href="/about/"> 关于我 </a><a class="menu-item" href="https://github.com/ShanYu0205" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
+                    <i class="fa fa-globe" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/se/l/" selected>简体中文</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="山雨欲来风满楼的博客"><span class="header-title-pre"><i class='fa-solid fa-mountain-sun'></i></span><span id="id-2" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/categories/documentation/" title="">文档</a><a class="menu-item" href="/about/" title="">关于我</a><a class="menu-item" href="https://github.com/ShanYu0205" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/se/l/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Software Engineering</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>山雨欲来风满楼</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>学习笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-09-04">2023-09-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 11782 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 24 分钟&nbsp;<span id="/posts/se/l/" class="leancloud_visitors" data-flag-title="Software Engineering">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-introduction-to-software-engineering">1 Introduction to Software Engineering</a>
+      <ul>
+        <li><a href="#11-software-attributes">1.1 Software Attributes</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-software-process">2 Software Process</a>
+      <ul>
+        <li><a href="#21-plan-driven-and-agile-processes">2.1 Plan-Driven and Agile Processes</a></li>
+        <li><a href="#22-software-process-models">2.2 Software Process Models</a></li>
+        <li><a href="#223-incremental-development">2.2.3 Incremental Development</a></li>
+        <li><a href="#23-process-activities">2.3 Process Activities</a></li>
+        <li><a href="#24-coping-with-change">2.4 Coping with Change</a></li>
+        <li><a href="#25-process-improvement">2.5 PROCESS IMPROVEMENT</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-agile-software-development">3 Agile Software Development</a>
+      <ul>
+        <li><a href="#31-agile-methods-or-agile-development">3.1 Agile Methods (or Agile Development)</a></li>
+        <li><a href="#32-agile-development-techniques">3.2 AGILE DEVELOPMENT TECHNIQUES</a></li>
+        <li><a href="#33-agile-project-management">3.3 Agile Project Management</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-requirements-engineering">4 Requirements Engineering</a>
+      <ul>
+        <li><a href="#41-requirements-and-requirements-engineering">4.1 Requirements and Requirements Engineering</a></li>
+        <li><a href="#42-functional-and-non-functional-requirements">4.2 FUNCTIONAL AND NON-FUNCTIONAL REQUIREMENTS</a></li>
+        <li><a href="#43-requirements-engineering-processes">4.3 REQUIREMENTS ENGINEERING PROCESSES</a></li>
+        <li><a href="#44-requirements-elicitation">4.4 REQUIREMENTS ELICITATION</a></li>
+        <li><a href="#45-requirements-specification">4.5 REQUIREMENTS SPECIFICATION</a></li>
+        <li><a href="#46-requirements-validation">4.6 REQUIREMENTS VALIDATION</a></li>
+        <li><a href="#47-requirements-change">4.7 REQUIREMENTS CHANGE</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-system-modeling">5 System Modeling</a>
+      <ul>
+        <li><a href="#51-usage-of-graphical-system-models">5.1 Usage of Graphical System Models</a></li>
+        <li><a href="#52-uml-unified-modeling-language">5.2 UML (Unified Modeling Language)</a></li>
+        <li><a href="#53-context-models">5.3 Context Models</a></li>
+        <li><a href="#54-interaction-models">5.4 Interaction Models</a></li>
+        <li><a href="#55-structural-models">5.5 Structural Models</a></li>
+        <li><a href="#56-behavioral-models">5.6 Behavioral Models</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-architectural-design">6 Architectural Design</a>
+      <ul>
+        <li><a href="#61-architectural-design-decisions">6.1 Architectural Design Decisions</a></li>
+        <li><a href="#62-architectural-views">6.2 Architectural Views</a></li>
+        <li><a href="#63-architectural-patterns">6.3 Architectural Patterns</a></li>
+        <li><a href="#64-application-architectures">6.4 Application Architectures</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-brief-introduction-to-oop-in-java">7 Brief Introduction to OOP in Java</a>
+      <ul>
+        <li><a href="#71-class-and-object">7.1 Class and Object</a></li>
+        <li><a href="#72-encapsulation">7.2 Encapsulation</a></li>
+        <li><a href="#73-inheritance">7.3 Inheritance</a></li>
+        <li><a href="#74-polymorphism">7.4 Polymorphism</a></li>
+        <li><a href="#75-abstract-class-and-methods">7.5 Abstract Class and Methods</a></li>
+        <li><a href="#76-interface">7.6 Interface</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-object-oriented-analysis-and-design">8 Object-Oriented Analysis and Design</a>
+      <ul>
+        <li><a href="#81-object-oriented-analysis-ooa">8.1 Object-Oriented Analysis (OOA)</a></li>
+        <li><a href="#82-object-oriented-design-ood">8.2 Object-Oriented Design (OOD)</a></li>
+        <li><a href="#83-solid-design-principles">8.3 SOLID DESIGN PRINCIPLES</a></li>
+      </ul>
+    </li>
+    <li><a href="#9-software-testing">9 Software Testing</a>
+      <ul>
+        <li><a href="#91-program-testing">9.1 Program Testing</a></li>
+        <li><a href="#92-development-testing">9.2 DEVELOPMENT TESTING</a></li>
+        <li><a href="#93-release-testing">9.3 Release Testing</a></li>
+        <li><a href="#94-user-testing">9.4 User Testing</a></li>
+      </ul>
+    </li>
+    <li><a href="#10-software-evolution">10 Software Evolution</a>
+      <ul>
+        <li><a href="#101-evolution-processes">10.1 Evolution Processes</a></li>
+        <li><a href="#102-software-maintenance">10.2 Software Maintenance</a></li>
+        <li><a href="#1023-refactoring-vs-re-engineering">10.2.3 Refactoring vs. Re-engineering</a></li>
+        <li><a href="#103-version-management">10.3 Version Management</a></li>
+        <li><a href="#104-legacy-system">10.4 Legacy System</a></li>
+      </ul>
+    </li>
+    <li><a href="#11-software-reuse">11 Software Reuse</a>
+      <ul>
+        <li><a href="#111-reuse-landscape">11.1 Reuse Landscape</a></li>
+        <li><a href="#112-application-frameworks">11.2 APPLICATION FRAMEWORKS</a></li>
+        <li><a href="#113-software-product-lines">11.3 SOFTWARE PRODUCT LINES</a></li>
+        <li><a href="#114-component-based-software-engineering-cbse">11.4 COMPONENT-BASED SOFTWARE ENGINEERING (CBSE)</a></li>
+        <li><a href="#115-service-oriented-architectures">11.5 SERVICE-ORIENTED ARCHITECTURES</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><em><strong>这篇文章展示了软件工程的学习记录</strong></em></p>
+<hr>
+<h1 id="software-engineering">Software Engineering</h1>
+<h2 id="1-introduction-to-software-engineering">1 Introduction to Software Engineering</h2>
+<h3 id="11-software-attributes">1.1 Software Attributes</h3>
+<p><strong>Acceptability</strong></p>
+<ul>
+<li>MUST be acceptable to the type of users for which it is designed</li>
+<li>Understandable, usable, and compatible with other systems</li>
+</ul>
+<p><strong>Dependability</strong></p>
+<ul>
+<li>Include <strong>reliability</strong>, <strong>security</strong>, and <strong>safety</strong></li>
+<li>Should <strong>NOT</strong> cause physical or economic <strong>damage</strong> in event of system <strong>failure</strong></li>
+<li>MUST be secure</li>
+</ul>
+<p><strong>Efficiency</strong></p>
+<ul>
+<li>Software should <strong>NOT</strong> make <strong>wasteful use</strong> of system resources such as memory and processor cycles</li>
+<li>include responsiveness, processing time, memory/resource utilization, etc.</li>
+</ul>
+<p><strong>Maintainability</strong></p>
+<ul>
+<li>Software should be written in such a way so that it can evolve to <strong>meet changing requirements</strong></li>
+<li>Critical attribute since software change is an inevitable requirement of a changing business environment</li>
+</ul>
+<hr>
+<h2 id="2-software-process">2 Software Process</h2>
+<p>A structured set of activities required to develop a software system.</p>
+<p>There are many different software processes, but they all involve:</p>
+<ul>
+<li><strong>Specification</strong> – <em>defining</em> what the system should do;</li>
+<li><strong>Development</strong> – <em>producing</em> the software that meets the specification;</li>
+<li><strong>Validation</strong> – <em>checking</em> that it does what it should do;</li>
+<li><strong>Evolution</strong> – <em>changing</em> the system in response to changing needs.</li>
+</ul>
+<p><strong>Description</strong>
+Process descriptions may also include:</p>
+<ul>
+<li>Products, or deliverables, which are the outcomes of a process activity;</li>
+<li>Roles, which reflect the responsibilities of the people involved in the process;</li>
+<li><strong>Pre- and post-conditions</strong>, which are statements that are true before and after a process activity has been enacted or a product produced.</li>
+</ul>
+<hr>
+<h3 id="21-plan-driven-and-agile-processes">2.1 Plan-Driven and Agile Processes</h3>
+<ul>
+<li>
+<p><strong>Plan-driven processes</strong> are processes where <strong>all</strong> of the process activities are <strong>planned in advance</strong> and progress is measured against this plan.</p>
+</li>
+<li>
+<p>In <strong>agile processes</strong>, planning is <strong>incremental</strong>, and changing the process to reflect changing customer requirements is easier.</p>
+<ul>
+<li>In practice, most practical processes include elements of both plan-driven and agile approaches.</li>
+<li>There are no right or wrong software processes.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="22-software-process-models">2.2 Software Process Models</h3>
+<h4 id="221-waterfall-model">2.2.1 Waterfall Model</h4>
+<p>There are separate identified phases in the waterfall model, and in principle, a phase must be completed before moving on to the next phase</p>
+<ul>
+<li><strong>Requirements analysis and definition</strong></li>
+<li><strong>System and software design</strong></li>
+<li><strong>Implementation and unit testing</strong></li>
+<li><strong>Integration and system testing</strong></li>
+<li><strong>Operation and maintenance</strong></li>
+</ul>
+<hr>
+<h4 id="222-waterfall-model-problems">2.2.2 Waterfall Model Problems</h4>
+<ul>
+<li>
+<p><em><strong>Inflexible</strong></em> partitioning of the project into distinct stages makes it difficult to <strong>respond</strong> to <strong>changing customer requirements</strong>.</p>
+<ul>
+<li>Therefore, this model is only appropriate when the <strong>requirements</strong> are <strong>well-understood</strong> and <strong>changes</strong> will be fairly <strong>limited</strong> during the design process.</li>
+</ul>
+</li>
+<li>
+<p>Types of systems for which the waterfall model is appropriate</p>
+<ul>
+<li><strong>Embedded systems</strong> where the software has to interface with hardware systems</li>
+<li><strong>Critical systems</strong> where there is a need for extensive safety and security analysis of the software specification and design</li>
+<li><strong>Large software systems</strong> that are part of broader engineering systems developed by several partner companies</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="223-incremental-development">2.2.3 Incremental Development</h3>
+<ul>
+<li>Incremental development is based on the idea of developing an <strong>initial implementation</strong>, getting <strong>feedback</strong> from users and others, and <strong>evolving</strong> the software through several <strong>versions</strong> until the <strong>required</strong> system has been developed
+<ul>
+<li>This approach can be either plan-driven, agile or, more usually, a mixture of these approaches.</li>
+<li>You don’t have to deliver each increment to the system customer.</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/2_1.png"
+        data-srcset="./pic/2_1.png, ./pic/2_1.png 1.5x, ./pic/2_1.png 2x"
+        data-sizes="auto"
+        alt="./pic/2_1.png"
+        title="./pic/2_1.png" /></p>
+<hr>
+<h4 id="224-incremental-development-benefits-and-problems">2.2.4 Incremental Development Benefits and Problems</h4>
+<p>Benefits</p>
+<ul>
+<li>It is easier to get customer feedback on the development work that has been done.</li>
+<li>The cost of accommodating changing customer requirements is reduced.</li>
+<li>More rapid delivery and deployment of useful software to the customer is possible.</li>
+</ul>
+<p>Problems</p>
+<ul>
+<li>There may be a mismatch between the organizations’ bureaucratic procedures and a more informal iterative or agile process</li>
+<li>System structure tends to <strong>degrade</strong> as new increments are added.</li>
+</ul>
+<hr>
+<h4 id="225-integration-and-configuration">2.2.5 Integration and Configuration</h4>
+<p>Based on software reuse where systems are integrated from existing components or application systems, or COTS (Commercial-off-the-shelf) systems.</p>
+<ul>
+<li>Reused elements may be configured to adapt their behaviour and functionality to a user’s requirements</li>
+<li>Reuse is now the standard approach for building many types of business systems</li>
+</ul>
+<p>Types of reusable software</p>
+<ul>
+<li>Stand-alone application systems that are configured for use in a particular environment.</li>
+<li>Collections of objects that are developed as a component or a package to be integrated with frameworks like .NET or J2EE.</li>
+<li>Web services that are developed according to service standards and that are available for remote invocation.</li>
+</ul>
+<hr>
+<h4 id="226-reuse-oriented-software-engineering">2.2.6 Reuse-oriented Software Engineering</h4>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/2_2.png"
+        data-srcset="./pic/2_2.png, ./pic/2_2.png 1.5x, ./pic/2_2.png 2x"
+        data-sizes="auto"
+        alt="./pic/2_2.png"
+        title="./pic/2_2.png" /></p>
+<p>Advantages and disadvantages</p>
+<ul>
+<li>Reduced costs and risks as less software is developed from scratch</li>
+<li>Faster delivery and deployment of systems</li>
+<li>Requirements compromises are inevitable so the system may not meet the real needs of users</li>
+<li>Loss of control over the system evolution</li>
+</ul>
+<hr>
+<h3 id="23-process-activities">2.3 Process Activities</h3>
+<p>Real software processes are inter-leaved sequences of technical, collaborative and managerial activities with the overall goal of specifying, designing, implementing and testing a software system.</p>
+<p>The four basic process activities of specification, development, validation and evolution are organized differently in different development processes.</p>
+<p>For example, in the waterfall model, they are organized in sequence, whereas in incremental development they are interleaved.</p>
+<hr>
+<h4 id="231-software-specification">2.3.1 Software Specification</h4>
+<p>The process of establishing what services are required and identifying the constraints on the system’s operation and development.</p>
+<p>Requirements engineering process</p>
+<ul>
+<li>Requirements elicitation and analysis
+<ul>
+<li>What do the system stakeholders require or expect from the system?</li>
+</ul>
+</li>
+<li>Requirements specification
+<ul>
+<li>Defining the requirements in detail</li>
+</ul>
+</li>
+<li>Requirements validation
+<ul>
+<li>Checking the validity of the requirements</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/2_3.png"
+        data-srcset="./pic/2_3.png, ./pic/2_3.png 1.5x, ./pic/2_3.png 2x"
+        data-sizes="auto"
+        alt="./pic/2_3.png"
+        title="./pic/2_3.png" /></p>
+<hr>
+<h4 id="232-software-development">2.3.2 Software Development</h4>
+<p>The process of developing an executable system for delivery to the customer.</p>
+<ul>
+<li>
+<p>Design and implementation are interleaved activities for most types of software systems.</p>
+</li>
+<li>
+<p>Software design</p>
+<ul>
+<li>Design a software structure to realize the requirements</li>
+<li>Architectural design, database design, interface design, component selection and design, &hellip;</li>
+</ul>
+</li>
+<li>
+<p>Implementation</p>
+</li>
+<li>
+<p>Translate this structure into an executable program</p>
+</li>
+<li>
+<p>Programming is an individual activity with no standard process</p>
+</li>
+</ul>
+<hr>
+<h4 id="233-software-validation---needs">2.3.3 Software Validation - needs</h4>
+<blockquote>
+<p><strong>Verification</strong> and <strong>validation</strong> <strong>(V &amp; V)</strong> is intended to show that a system conforms to its <strong>specification</strong> and meets the <strong>requirements</strong> of the system customer.</p>
+</blockquote>
+<ul>
+<li><strong>Verification</strong>
+<ul>
+<li>Check implementation again the perceived req.(user and system from developer point of view) as <strong>internal checking of a developer group</strong>;</li>
+</ul>
+</li>
+<li><strong>Validation</strong>
+<ul>
+<li>Check real user requirements.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Validation: Are we building the <strong>right</strong> product?
+Verification: Are we building the product <strong>right</strong>?</p>
+</blockquote>
+<ul>
+<li>
+<p>It involves checking processes (such as inspections and reviews) and system testing (static vs. dynamic)</p>
+</li>
+<li>
+<p><strong>Testing</strong> is the most commonly used V &amp; V activity.</p>
+<ul>
+<li><strong>Component</strong> testing (<em><strong>Verification</strong></em>): Testing of individual components;</li>
+<li><strong>System</strong> testing (<em><strong>Verification</strong></em>): Testing of the system as a whole;</li>
+<li><strong>Customer</strong> testing (<em><strong>Validation</strong></em>): Testing with customer data;</li>
+</ul>
+</li>
+<li>
+<p>Defect testing and debugging are different processes. Testing establishes the existence of defects. Debugging is concerned with locating and correcting these defects.</p>
+</li>
+</ul>
+<hr>
+<h4 id="234-software-evolution">2.3.4 Software Evolution</h4>
+<blockquote>
+<p>Software is inherently flexible and can change.</p>
+</blockquote>
+<ul>
+<li>As requirements change, the software that supports the business must also evolve and change.</li>
+<li>Although there has been a demarcation between development and evolution (maintenance), the distinction is increasingly irrelevant as fewer and fewer systems are completely new.</li>
+<li>It is more realistic to think of software engineering as an evolutionary process where software is continually changed in response to changing requirements and customer needs.</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/2_4.png"
+        data-srcset="./pic/2_4.png, ./pic/2_4.png 1.5x, ./pic/2_4.png 2x"
+        data-sizes="auto"
+        alt="./pic/2_4.png"
+        title="./pic/2_4.png" /></p>
+<hr>
+<h3 id="24-coping-with-change">2.4 Coping with Change</h3>
+<p>Change is <strong>inevitable</strong> in all large software projects.</p>
+<ul>
+<li>A software product is a model of the real world, which is continually changing</li>
+<li>Software professionals are human, and they make mistakes.</li>
+</ul>
+<p>The moving target problem: The requirements change while the software product is being developed</p>
+<ul>
+<li>Any change made to a software product can potentially cause a regression fault</li>
+<li>If there are too many changes, the entire product may have to be redesigned and reimplemented</li>
+<li>There is no solution to the moving target problem</li>
+</ul>
+<p>Change leads to rework so the costs of change include both rework (e.g., re-analyzing requirements) as well as the costs of implementing new functionality</p>
+<hr>
+<h4 id="241-reducing-the-costs-of-rework">2.4.1 Reducing The Costs of Rework</h4>
+<p><strong>Two related approaches</strong></p>
+<ul>
+<li>Change anticipation, where the software process includes activities that can anticipate possible changes before significant rework is required.
+<ul>
+<li>For example, a prototype system may be developed to show customers some key features of the system.</li>
+</ul>
+</li>
+<li>Change tolerance, where the process is designed so that changes can be accommodated at a relatively low cost.
+<ul>
+<li>This normally involves some form of incremental development.</li>
+<li>The longer a change is delayed, the more it costs to implement.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="242-two-ways-of-coping-with-changing-requirements">2.4.2 Two Ways of Coping with Changing Requirements</h4>
+<p><strong>System prototyping</strong></p>
+<ul>
+<li>A version or part of the system is developed quickly to check the customer’s requirements and the feasibility of design decisions.</li>
+<li>This is a method of change anticipation as it allows users to experiment with the system before delivery and refine their requirements.</li>
+</ul>
+<p><strong>Incremental delivery</strong></p>
+<ul>
+<li>System increments are delivered to the customer for comment and experimentation.</li>
+<li>This supports both change anticipation and change tolerance.</li>
+</ul>
+<hr>
+<h4 id="243-software-prototyping">2.4.3 Software Prototyping</h4>
+<p>A prototype is an initial version of a system used to demonstrate concepts, try out design options, and find out more about the problem and its possible solutions.</p>
+<ul>
+<li>A prototype can be used
+<ul>
+<li>in the requirements engineering process to help with requirements elicitation and validation;</li>
+<li>in the design process to explore options and develop a UI design;</li>
+</ul>
+</li>
+</ul>
+<p><strong>Benefits</strong></p>
+<ul>
+<li>Improved system usability.</li>
+<li>A closer match to users’ real needs.</li>
+<li>Improved design quality.</li>
+<li>Improved maintainability.</li>
+<li>Reduced development effort.</li>
+</ul>
+<hr>
+<h4 id="244-prototyping-development">2.4.4 Prototyping Development</h4>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/2_5.png"
+        data-srcset="./pic/2_5.png, ./pic/2_5.png 1.5x, ./pic/2_5.png 2x"
+        data-sizes="auto"
+        alt="./pic/2_5.png"
+        title="./pic/2_5.png" />
+May be based on <strong>rapid</strong> prototyping languages or tools</p>
+<p>May involve leaving out functionality</p>
+<ul>
+<li>Prototype should focus on areas of the product that are not well- understood</li>
+<li>Error checking and recovery may not be included in the prototype</li>
+<li>Focus on functional rather than non-functional requirements such as reliability and security</li>
+</ul>
+<hr>
+<h4 id="245-incremental-delivery">2.4.5 Incremental Delivery</h4>
+<p>The development and delivery is <strong>broken down</strong> into <strong>increments</strong> with each increment delivering part of the <strong>required functionality</strong></p>
+<ul>
+<li>User requirements are <strong>prioritized</strong> and the <strong>highest priority</strong> requirements are included in <strong>early increments</strong>.</li>
+<li>Once the development of an increment is started, the requirements are frozen though requirements for later increments can continue to evolve.</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/2_6.png"
+        data-srcset="./pic/2_6.png, ./pic/2_6.png 1.5x, ./pic/2_6.png 2x"
+        data-sizes="auto"
+        alt="./pic/2_6.png"
+        title="./pic/2_6.png" /></p>
+<p><strong>Advantages</strong>:</p>
+<ul>
+<li>elicit requirements for later increments.</li>
+<li>Customer value can be delivered with each increment, so system functionality is available earlier</li>
+<li>relatively easy to incorporate changes into the system</li>
+<li>The highest priority system services tend to receive the most testing</li>
+</ul>
+<p><strong>Problems</strong>:</p>
+<ul>
+<li>difficult to implement for replacement systems as increments have less functionality than the system being replaced.</li>
+<li>common facilities can be difficult to identify with incremental delivery but most systems require a set of basic facilities</li>
+<li>Its essence is that the spec is developed in conjunction with the software, which conflicts with the procurement model of many organizations</li>
+</ul>
+<hr>
+<h3 id="25-process-improvement">2.5 PROCESS IMPROVEMENT</h3>
+<h4 id="251-software-process-performance-and-capability">2.5.1 Software Process Performance and Capability</h4>
+<p><strong>Software Process Performance</strong></p>
+<ul>
+<li>Represents the <strong>actual</strong> results achieved by following a software process.</li>
+<li>E.g., our actual defect rate is 2 defect/KLOC</li>
+<li>Software process performance focuses on the <strong>achieved results</strong></li>
+</ul>
+<p><strong>Software Process Capability</strong></p>
+<ul>
+<li>Describes the <strong>expected</strong> results that can be achieved by following a software process.</li>
+<li>E.g., the final defect rate will likely be 1.5 defect/KLOC</li>
+<li>Software process capability focuses on the <strong>expected results</strong></li>
+</ul>
+<hr>
+<h4 id="252-software-process-maturity">2.5.2 Software Process Maturity</h4>
+<p><strong>Process Maturity</strong></p>
+<ul>
+<li>It is the extent to which an organization’s processes are explicitly, defined, managed, measured, controlled, and effective.</li>
+<li>Maturity implies a potential for <strong>growth in capability</strong></li>
+</ul>
+<p><strong>Immature software organization</strong></p>
+<ul>
+<li>Processes being improvised by practitioners</li>
+<li>Managers being forced to solve immediate crises (fire fighting)</li>
+<li>No objective basis for judging quality</li>
+</ul>
+<p><strong>Mature software organization</strong></p>
+<ul>
+<li>Processes are documented, usable, and consistent with the way the work is actually done</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/2_7.png"
+        data-srcset="./pic/2_7.png, ./pic/2_7.png 1.5x, ./pic/2_7.png 2x"
+        data-sizes="auto"
+        alt="./pic/2_7.png"
+        title="./pic/2_7.png" /></p>
+<hr>
+<h4 id="253-quality-assurance-qa">2.5.3 Quality Assurance (QA)</h4>
+<ul>
+<li>the identification, planning, adoption, and implementation of the disciplines and actions (the process) necessary to assure that the product satisfies its users.</li>
+<li>focus on improving the <strong>process</strong></li>
+</ul>
+<p>Use <strong>error</strong> and <strong>trend analysis</strong> to locate weaknesses in:</p>
+<ul>
+<li>Development process</li>
+<li>Test process</li>
+<li>Maintenance process</li>
+<li>Support process (Quality, Configuration management)</li>
+</ul>
+<hr>
+<h4 id="254-capability-maturity-model-integration-cmmi">2.5.4 Capability Maturity Model Integration (CMMI)</h4>
+<p>CMMI is a <strong>framework</strong> to <strong>improve</strong> <strong>product quality and development efficiency</strong> for systems (both hardware and software)</p>
+<p>CMMI supports <strong>2 representations</strong>: <strong>staged</strong> and <strong>continuous</strong>. To initiate the process improvement, an organization must first select a representation.</p>
+<h5 id="2541-staged-representation-of-cmmi">2.5.4.1 Staged Representation of CMMI</h5>
+<p>Staged models provide a proven sequence of improvements, beginning with basic management practices and progressing through successive levels.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/2_8.png"
+        data-srcset="./pic/2_8.png, ./pic/2_8.png 1.5x, ./pic/2_8.png 2x"
+        data-sizes="auto"
+        alt="./pic/2_8.png"
+        title="./pic/2_8.png" /></p>
+<h5 id="2542-continuous-representation-of-cmmi">2.5.4.2 Continuous Representation of CMMI</h5>
+<p>Continuous representation designates capability levels: numbered 0 through 3: incomplete, performed, managed, and defined</p>
+<hr>
+<h2 id="3-agile-software-development">3 Agile Software Development</h2>
+<h3 id="31-agile-methods-or-agile-development">3.1 Agile Methods (or Agile Development)</h3>
+<p>Dissatisfaction with the overheads involved in plan-driven software design methods</p>
+<ul>
+<li>The plan-driven approach was mainly used for developing <strong>large</strong>, <strong>long-lived</strong> software systems.</li>
+</ul>
+<p><strong>Aim</strong>:</p>
+<ul>
+<li>reduce overheads in the software process, such as limiting documentation;</li>
+<li>respond quickly to changing requirements without excessive rework.</li>
+</ul>
+<p>All agile methods suggest that software should be developed and delivered <strong>incrementally</strong>.</p>
+<hr>
+<h4 id="312-plan-driven-and-agile-development">3.1.2 Plan-Driven and Agile Development</h4>
+<p><strong>Plan-driven development</strong></p>
+<ul>
+<li>Based around <strong>separate</strong> development stages with the outputs to be produced at each stage.</li>
+<li><strong>Iteration</strong> occurs <strong>within</strong> activities.</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/3_1.png"
+        data-srcset="./pic/3_1.png, ./pic/3_1.png 1.5x, ./pic/3_1.png 2x"
+        data-sizes="auto"
+        alt="./pic/3_1.png"
+        title="./pic/3_1.png" /></p>
+<p><strong>Agile development</strong></p>
+<ul>
+<li>Specification, design, implementation, and testing are <strong>inter-leaved</strong> and the outputs from the development process are negotiated during the software development process.</li>
+<li>Iteration occurs <strong>across</strong> activities.</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/3_2.png"
+        data-srcset="./pic/3_2.png, ./pic/3_2.png 1.5x, ./pic/3_2.png 2x"
+        data-sizes="auto"
+        alt="./pic/3_2.png"
+        title="./pic/3_2.png" /></p>
+<hr>
+<h4 id="313-agile-methods-applicability">3.1.3 Agile Methods Applicability</h4>
+<p>Agile methods have been particularly successful for two kinds of system development.</p>
+<ul>
+<li><strong>Product development</strong> where a software company is developing a small or medium-sized product for sale.
+<ul>
+<li>Most software products and apps are now developed using an agile approach</li>
+</ul>
+</li>
+</ul>
+<p><strong>Custom system development</strong> within an organization, where there is a clear commitment from the customer to become <strong>involved</strong> in the development process and where there are few external rules and regulations that affect the software.</p>
+<hr>
+<h4 id="314-principles-of-agile-manifesto">3.1.4 Principles of Agile Manifesto</h4>
+<ul>
+<li><strong>Customer involvement</strong>
+<ul>
+<li>Customers should be closely involved throughout the development process</li>
+</ul>
+</li>
+<li><strong>Incremental delivery</strong>
+<ul>
+<li>The software is developed in increments with the customer specifying the requirements to be included in each increment.</li>
+</ul>
+</li>
+<li><strong>People not process</strong>
+<ul>
+<li>The skills of the development team should be recognized and exploited.</li>
+</ul>
+</li>
+<li><strong>Embrace change</strong>
+<ul>
+<li>Expect the system requirements to change and so design the system to accommodate these changes.</li>
+</ul>
+</li>
+<li><strong>Maintain simplicity</strong>
+<ul>
+<li>Focus on simplicity in both the software being developed and in the development process.</li>
+<li>Wherever possible, actively work to eliminate complexity from the system.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="32-agile-development-techniques">3.2 AGILE DEVELOPMENT TECHNIQUES</h3>
+<blockquote>
+<p>Agile methods are <strong>incremental development</strong> methods that focus on <strong>rapid</strong> software development, <strong>frequent releases</strong> of the software, reducing process overheads by <strong>minimizing documentation</strong> and producing <strong>high-quality code</strong>.</p>
+</blockquote>
+<h4 id="321-extreme-programming-xp">3.2.1 Extreme Programming (XP)</h4>
+<ul>
+<li>A very influential agile method</li>
+</ul>
+<p>Pushing recognized good practice to “extreme” levels</p>
+<ul>
+<li>New versions may be built several times per day;</li>
+<li>Increments are delivered to customers every 2 weeks</li>
+<li>All tests must be run for every build and the build is only accepted if tests run successfully.</li>
+</ul>
+<p>The extreme programming release cycle</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/3_3.png"
+        data-srcset="./pic/3_3.png, ./pic/3_3.png 1.5x, ./pic/3_3.png 2x"
+        data-sizes="auto"
+        alt="./pic/3_3.png"
+        title="./pic/3_3.png" /></p>
+<hr>
+<h4 id="322-xp-principles-and-practices">3.2.2 XP Principles and Practices</h4>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/3_4.png"
+        data-srcset="./pic/3_4.png, ./pic/3_4.png 1.5x, ./pic/3_4.png 2x"
+        data-sizes="auto"
+        alt="./pic/3_4.png"
+        title="./pic/3_4.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/3_5.png"
+        data-srcset="./pic/3_5.png, ./pic/3_5.png 1.5x, ./pic/3_5.png 2x"
+        data-sizes="auto"
+        alt="./pic/3_5.png"
+        title="./pic/3_5.png" /></p>
+<hr>
+<h4 id="323-support-for-agile-principles-in-xp-practices">3.2.3 Support for Agile Principles in XP Practices</h4>
+<p><strong>Incremental delivery</strong> is supported through <strong>small releases</strong>.</p>
+<p><strong>Customer involvement</strong> is supported through <strong>on-site customers</strong>.</p>
+<p><strong>People, not process</strong>, are supported through <strong>pair programming</strong>, collective ownership, and sustainable pace.</p>
+<p><strong>Change is embraced</strong> through <strong>small releases, test-first development, refactoring, and continuous integration.</strong></p>
+<p><strong>Maintaining simplicity</strong> is supported by <strong>refactoring</strong> and <strong>simple design</strong>.</p>
+<hr>
+<h4 id="324-influential-xp-practices">3.2.4 Influential XP Practices</h4>
+<p>Key practices</p>
+<ul>
+<li><strong>User stories for specification</strong></li>
+<li><strong>Refactoring</strong></li>
+<li><strong>Test-first development</strong></li>
+<li><strong>Pair programming</strong></li>
+</ul>
+<h5 id="3241-user-stories-for-requirements">3.2.4.1 User Stories for Requirements</h5>
+<p>A user story is a description of a system requirement from a user perspective, is a scenario of use that a system user might experience</p>
+<ul>
+<li>User making decisions on requirements.</li>
+<li>written on cards, and the customer chooses the stories for inclusion in the next release based on their priorities and the schedule estimates.</li>
+<li>development team breaks the selected user stories into implementation tasks.</li>
+<li>easier to relate to these stories than a conventional requirements document or use cases.</li>
+</ul>
+<p>Drawbacks</p>
+<ul>
+<li>difficult to judge if enough user stories have been developed to cover <strong>all the essential requirements</strong></li>
+<li>if a single story gives a <strong>true</strong> picture of an activity.</li>
+</ul>
+<p><strong>user stories $\to$ tasks</strong></p>
+<hr>
+<h5 id="3242-refactoring">3.2.4.2 Refactoring</h5>
+<p>Look for <strong>possible</strong> software <strong>improvements</strong> and make them even when there is no immediate need.</p>
+<ul>
+<li>Local changes tend to degrade software structure and readability</li>
+<li>This improves the understandability of the software and reduces the need for documentation.</li>
+<li>Changes are easier to make because the code is well-structured and clear.</li>
+<li>However, refactoring sometimes gets delayed, and some changes require expensive architecture refactoring.</li>
+</ul>
+<hr>
+<h5 id="3243-test-in-xp-test-driven-development">3.2.4.3 Test in XP/ Test-Driven Development</h5>
+<p>With XP, no system specification can be used by an external testing team to develop system tests</p>
+<ul>
+<li>User stories are user requirements but not system requirements as they often miss important information about the system</li>
+</ul>
+<p>XP has developed an approach to test the program after every change. XP testing features:</p>
+<ul>
+<li>Incremental test development from scenarios.</li>
+<li>Test-first development - Tests are written as programs <strong>after</strong> code</li>
+<li>User involvement in test development and validation.</li>
+<li>Use of automated testing frameworks</li>
+</ul>
+<p><strong>Test-Driven Development(TDD)</strong>: Tests are written as programs <strong>before</strong> code, only need a rough idea of the functionality of the program</p>
+<ul>
+<li>Each test includes a check of whether its execution is correct.</li>
+</ul>
+<blockquote>
+<p>write a falling test $\to$ make the test pass $\to$ refactor the code $\to$ next falling test $\to$ &hellip;</p>
+</blockquote>
+<p><strong>Customer involvement</strong>: The customer helps develop acceptance tests for the stories to be implemented in the next release of the system.</p>
+<p><strong>limitations</strong>:</p>
+<ul>
+<li>People adopting the customer role have limited time and cannot work full-time with the development team.</li>
+<li>They may feel that providing the requirements was enough of a contribution and may be reluctant to get involved in the testing process.</li>
+</ul>
+<p><strong>Test Automation</strong>: tests are written as executable components (before the task is implemented)</p>
+<ul>
+<li>These testing components should be stand-alone, simulate the submission of input to be tested, and check that the result meets the output specification.</li>
+<li>An automated test framework (e.g., JUnit) is a system that makes it easy to write executable tests and submit a set of tests for execution.</li>
+</ul>
+<p>As testing is automated, there is always a set of tests that can be quickly and easily executed</p>
+<hr>
+<p><strong>Drawbacks of Test-first development</strong></p>
+<ul>
+<li>
+<p>Programmers prefer programming to testing and sometimes they take short cuts when writing tests.</p>
+<ul>
+<li>not all possible exceptions may occur</li>
+</ul>
+</li>
+<li>
+<p>Some tests can be very difficult to write incrementally.</p>
+<ul>
+<li>&lsquo;display logic&rsquo; and workflow between screens</li>
+</ul>
+</li>
+<li>
+<p>difficult to judge the completeness of a set of tests.</p>
+<ul>
+<li>the test set may not provide complete coverage</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h5 id="3244-pair-programming">3.2.4.4 Pair Programming</h5>
+<p>Programmers sit <strong>together</strong> at the <strong>same computer</strong> to develop the software.</p>
+<ul>
+<li>Pairs are created dynamically so that all team members work with each other during the development process.</li>
+</ul>
+<p>Benefits:</p>
+<ul>
+<li>supports the idea of collective ownership and responsibility for the system.</li>
+<li>acts as an informal review process because at least two people look at each line of code</li>
+<li>encourages refactoring to improve the software structure.</li>
+<li>It is not necessarily inefficient.</li>
+</ul>
+<hr>
+<h3 id="33-agile-project-management">3.3 Agile Project Management</h3>
+<p>Plan-driven software development</p>
+<ul>
+<li>requires a manager to have a stable view of everything that has to be developed and the development processes.</li>
+</ul>
+<p>Agile methods</p>
+<ul>
+<li>Self-organizing teams</li>
+<li>Little or no documentation</li>
+<li>Short-term development plans</li>
+<li>adapted to incremental development</li>
+</ul>
+<hr>
+<h4 id="331-scrum">3.3.1 Scrum</h4>
+<blockquote>
+<p><strong>Scrum</strong> is an agile method that focuses on managing <strong>iterative development</strong> rather than specific agile practices.</p>
+</blockquote>
+<p><strong>Three phases</strong>:</p>
+<ul>
+<li><em>Initial</em> phase is an outline planning phase</li>
+<li>A series of <em>sprint cycles</em>, where each cycle develops an increment of the system.</li>
+<li>The <em>project closure</em> phase wraps up the project, completes required documentation, and assesses the lessons learned.</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/3_6.png"
+        data-srcset="./pic/3_6.png, ./pic/3_6.png 1.5x, ./pic/3_6.png 2x"
+        data-sizes="auto"
+        alt="./pic/3_6.png"
+        title="./pic/3_6.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/3_7.png"
+        data-srcset="./pic/3_7.png, ./pic/3_7.png 1.5x, ./pic/3_7.png 2x"
+        data-sizes="auto"
+        alt="./pic/3_7.png"
+        title="./pic/3_7.png" /></p>
+<p><strong>Benefits</strong></p>
+<ul>
+<li>The product is broken down into a set of manageable and  understandable chunks that stakeholders can relate to.
+<ul>
+<li>Unstable requirements do not hold up progress.</li>
+<li>The whole team has visibility of everything, and consequently, team communication is improved.</li>
+</ul>
+</li>
+<li>Customers see on-time delivery of increments and gain feedback on how the product works.</li>
+<li>Trust between customers and developers is established</li>
+</ul>
+<hr>
+<h2 id="4-requirements-engineering">4 Requirements Engineering</h2>
+<h3 id="41-requirements-and-requirements-engineering">4.1 Requirements and Requirements Engineering</h3>
+<p><strong>requirements</strong></p>
+<ul>
+<li><strong>descriptions</strong> of the <em>services</em> that a system should <strong>provide</strong> and</li>
+<li><strong>constraints on its operation</strong>.</li>
+</ul>
+<p><strong>Requirements Engineering</strong></p>
+<ul>
+<li>The process of <strong>finding out</strong>, <strong>analyzing</strong>, <strong>documenting</strong>, and <strong>checking</strong> these services and constraints</li>
+</ul>
+<p><strong>Two types of requirements</strong></p>
+<ul>
+<li><strong>User</strong> requirements: Statements in natural language plus diagrams</li>
+<li><strong>System</strong> requirements: A detailed, structured document</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/4_1.png"
+        data-srcset="./pic/4_1.png, ./pic/4_1.png 1.5x, ./pic/4_1.png 2x"
+        data-sizes="auto"
+        alt="./pic/4_1.png"
+        title="./pic/4_1.png" /></p>
+<p><strong>Example</strong>
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/4_2.png"
+        data-srcset="./pic/4_2.png, ./pic/4_2.png 1.5x, ./pic/4_2.png 2x"
+        data-sizes="auto"
+        alt="./pic/4_2.png"
+        title="./pic/4_2.png" /></p>
+<hr>
+<h4 id="411-agile-methods-and-requirements">4.1.1 Agile Methods and Requirements</h4>
+<p>Requirements in agile processes</p>
+<ul>
+<li>Use <strong>incremental</strong> requirements engineering and often express requirements as &ldquo;<strong>user stories</strong>&rdquo;</li>
+<li>may a waste of time</li>
+<li>Practical for business systems but problematic for many others</li>
+</ul>
+<p>For a &ldquo;traditional&rdquo; view of requirements.</p>
+<ul>
+<li>For most large systems, there is a clearly identifiable requirements engineering phase <strong>before</strong> system implementation begins</li>
+</ul>
+<hr>
+<h3 id="42-functional-and-non-functional-requirements">4.2 FUNCTIONAL AND NON-FUNCTIONAL REQUIREMENTS</h3>
+<ul>
+<li>The line between them is <strong>not</strong> always <strong>clear</strong> since requirements are not independent;</li>
+<li>The system requirements should include both types of requirements;</li>
+<li>Non-functional requirements may generates functional requirements;</li>
+</ul>
+<h4 id="421-functional-requirements-and-non-functional-requirements">4.2.1 Functional Requirements and Non-Functional Requirements</h4>
+<h5 id="4211-functional-requirements">4.2.1.1 Functional Requirements</h5>
+<ul>
+<li><strong>statements</strong> of services the system should <strong>provide</strong>, also may state what the system should <strong>not do</strong>.
+<ul>
+<li>May be in different forms and at different levels of detail</li>
+<li>may be high-level statements of what the system should do.</li>
+<li>should describe the system services in detail.</li>
+<li>should be <strong>complete</strong> and <strong>consistent</strong>.</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><strong>Functional User Requirements</strong></li>
+</ol>
+<ul>
+<li>The high-level (overview) of the what the system should do;</li>
+</ul>
+<ol start="2">
+<li><strong>Functional System Requirements</strong></li>
+</ol>
+<ul>
+<li>Detailed description of the services provided by the system;</li>
+</ul>
+<p><strong>Example</strong>
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/4_3.png"
+        data-srcset="./pic/4_3.png, ./pic/4_3.png 1.5x, ./pic/4_3.png 2x"
+        data-sizes="auto"
+        alt="./pic/4_3.png"
+        title="./pic/4_3.png" /></p>
+<h5 id="4212-non-functional-requirements">4.2.1.2 Non-Functional Requirements</h5>
+<ul>
+<li><strong>System properties and constrains</strong>
+<ul>
+<li>properties: reliability, response time, and storage requirements;</li>
+<li>constrains: I/O device capability and the data representations;</li>
+</ul>
+</li>
+<li>May be more <strong>critical</strong> than <strong>functional requirements</strong></li>
+<li>more difficult to identify which system components implement specific non-functional requirements
+<ul>
+<li>may affect the <strong>overall architecture</strong> of a system rather than the individual components.(e.g. a 4 parts system, if only one part is safe, the whole system is not safe)</li>
+<li>may generate other related functional and/or non-functional requirements</li>
+</ul>
+</li>
+</ul>
+<h5 id="4213-verifying-non-functional-requirements">4.2.1.3 Verifying Non-Functional Requirements</h5>
+<blockquote>
+<p>Non-functional requirements may be difficult to state precisely, and imprecise requirements may be difficult to verify.</p>
+</blockquote>
+<p>Two parts:</p>
+<ul>
+<li><strong>Goals</strong>:
+<ul>
+<li>A general intention of the user, like Ease of Use;</li>
+</ul>
+</li>
+<li><strong>Verifiable (Testable)</strong>:
+<ul>
+<li>Some measure (satisfaction) that can be objectively tested.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Metrics for Specifying Non-Functional Requirements</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property(Goals)</th>
+<th>Measure(Verifiable)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Speed</td>
+<td>Processed transactions/second; User/event response time; Screen refresh time</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>Mbytes; Number of ROM chips</td>
+</tr>
+<tr>
+<td>Ease of use</td>
+<td>Training time; Number of help frames</td>
+</tr>
+<tr>
+<td>Reliability</td>
+<td>Mean time to failure; Probability of unavailability; Rate of failure occurrence; Availability</td>
+</tr>
+<tr>
+<td>Robustness</td>
+<td>Time to restart after failure; Percentage of events causing failure; Probability of data corruption on failure</td>
+</tr>
+<tr>
+<td>Portability</td>
+<td>Percentage of target dependent statements; Number of target systems</td>
+</tr>
+</tbody>
+</table>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/4_13.png"
+        data-srcset="./pic/4_13.png, ./pic/4_13.png 1.5x, ./pic/4_13.png 2x"
+        data-sizes="auto"
+        alt="./pic/4_13.png"
+        title="./pic/4_13.png" /></p>
+<p><em>[Example]</em>
+<strong>Goals</strong></p>
+<blockquote>
+<p>The system should be <strong>easy to use</strong> by medical staff and should be organized in such a way that user errors are <em><strong>minimized</strong></em>.</p>
+</blockquote>
+<p><strong>Verifiable</strong></p>
+<blockquote>
+<p>Medical staff <strong>shall</strong> be able to use all the system functions <strong>after four hours of training</strong> (easy to use). After this training, the average number of errors made by experienced users <em><strong>shall not exceed two per hour</strong></em> (minimized) of system use.</p>
+</blockquote>
+<hr>
+<h5 id="4214-challenges-in-specifying-non-functional-requirements">4.2.1.4 Challenges in Specifying Non-Functional Requirements</h5>
+<ul>
+<li>
+<p>Difficult for customer to <strong>translate their goals</strong> into measurable requirements.</p>
+<ul>
+<li>No simple metrics for some goals (e.g., maintainability)</li>
+<li>Unclear connection between metrics and everyday experience</li>
+<li>High costs for verification</li>
+</ul>
+</li>
+<li>
+<p><strong>conflict</strong> and <strong>interact</strong> with <em>other</em> functional and/or non-functional requirements</p>
+</li>
+<li>
+<p><strong>difficult</strong> to <strong>separate</strong> functional and non-functional requirements in the requirements document.</p>
+</li>
+</ul>
+<hr>
+<h3 id="43-requirements-engineering-processes">4.3 REQUIREMENTS ENGINEERING PROCESSES</h3>
+<p>Generic activities common to all processes</p>
+<ul>
+<li>Requirements elicitation;</li>
+<li>Requirements specification;</li>
+<li>Requirements validation;</li>
+</ul>
+<p>In practice, RE is an iterative activity in which these processes are interleaved.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/4_5.png"
+        data-srcset="./pic/4_5.png, ./pic/4_5.png 1.5x, ./pic/4_5.png 2x"
+        data-sizes="auto"
+        alt="./pic/4_5.png"
+        title="./pic/4_5.png" /></p>
+<hr>
+<h3 id="44-requirements-elicitation">4.4 REQUIREMENTS ELICITATION</h3>
+<h4 id="441-requirements-elicitation">4.4.1 Requirements Elicitation</h4>
+<blockquote>
+<p>working with stakeholders to find out about the <strong>application domain</strong>, <strong>work activities</strong>, <strong>services, system features</strong> that <strong>stakeholders want</strong>, etc.</p>
+</blockquote>
+<p>Stages:</p>
+<ul>
+<li><strong>discovery and understanding</strong>:
+<ul>
+<li>Interacting with stakeholders to discover their requirements</li>
+</ul>
+</li>
+<li><strong>classification and organization</strong>:
+<ul>
+<li>Groups related requirements and organises them into coherent clusters.</li>
+</ul>
+</li>
+<li><strong>Prioritisation and negotiation</strong>:
+<ul>
+<li>Prioritising requirements and resolving requirements conflicts.</li>
+</ul>
+</li>
+<li><strong>Documentation</strong>:
+<ul>
+<li>The requirements are documented and input into the next round of the spiral.</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/4_6.png"
+        data-srcset="./pic/4_6.png, ./pic/4_6.png 1.5x, ./pic/4_6.png 2x"
+        data-sizes="auto"
+        alt="./pic/4_6.png"
+        title="./pic/4_6.png" /></p>
+<h5 id="techniques---1">Techniques - 1</h5>
+<p><strong>Interviewing</strong></p>
+<ul>
+<li>Closed interviews vs. Open interviews</li>
+<li>Normally a mixture of closed and open interviewing.</li>
+</ul>
+<p><strong>Problems</strong></p>
+<ul>
+<li>Application specialists may use language that isn’t easy for the requirements engineer to understand to describe their work.</li>
+<li>Interviews are not good for understanding domain requirements</li>
+</ul>
+<p><strong>Effective interviewing</strong></p>
+<ul>
+<li>Be open-minded, avoid pre-conceived ideas about the requirements, and be willing to listen to stakeholders.</li>
+<li>Prompt the interviewee to talk about the system by suggesting requirements rather than simply asking them what they want.</li>
+</ul>
+<h5 id="techniques---2">Techniques - 2</h5>
+<p>Observation or ethnography</p>
+<p><strong>Benefits</strong>:</p>
+<ul>
+<li>People do not have to explain or articulate their work.</li>
+<li>It is relatively inexpensive.</li>
+<li>The observer will get a practical insight into the work. Social and organizational factors of importance may be observed.</li>
+<li>Improvement areas can be easily identified.</li>
+</ul>
+<p><strong>Drawbacks</strong>:</p>
+<ul>
+<li>Participants might get disturbed.</li>
+<li>Participants might change their way of working during observation and the observer might not get a clear picture.</li>
+<li>Knowledge-based activities (e.g., debugging) are hard to observe.</li>
+</ul>
+<h5 id="problems-of-requirements-elicitation">Problems of Requirements Elicitation</h5>
+<ul>
+<li>Stakeholders don’t know what they really want.</li>
+<li>They express requirements in their <strong>own</strong> terms and with implicit knowledge of their work.</li>
+<li>Different stakeholders, with diverse requirements, may express their requirements in different ways.</li>
+<li>Organisational and political factors may influence the system requirements.</li>
+<li>The requirements change during the analysis process. New stakeholders may emerge, and the business environment may change.</li>
+</ul>
+<hr>
+<h3 id="45-requirements-specification">4.5 REQUIREMENTS SPECIFICATION</h3>
+<blockquote>
+<p>The process of writing down the user and system requirements in a requirements document.</p>
+</blockquote>
+<h4 id="451-requirements-specification">4.5.1 Requirements Specification</h4>
+<p>The process of writing down the user and system requirements in a <strong>requirements document</strong>.</p>
+<ul>
+<li>User requirements: <strong>understandable</strong> by <strong>end-users</strong> and <strong>customers</strong> who <strong>do not have a technical background</strong>.</li>
+<li>System requirements: more <strong>detailed</strong> requirements and may include more technical information.</li>
+</ul>
+<p>Common notations for writing system requirements</p>
+<ul>
+<li>Natural language sentences</li>
+<li>Structured natural language</li>
+<li>Graphical notations</li>
+<li>Mathematical specifications</li>
+</ul>
+<p><strong>requirements</strong>: <strong>what</strong> the system should do
+<strong>design</strong>: <strong>how</strong> it does this.</p>
+<p>They are <strong>inseparable</strong>;</p>
+<hr>
+<h4 id="452-natural-language-specifications">4.5.2 Natural Language Specifications</h4>
+<p>Guidelines on writing natural language requirements</p>
+<ul>
+<li><strong>standard forma</strong>t and use it for all requirements.</li>
+<li>Use &ldquo;<strong>shall</strong>&rdquo; for <strong>mandatory</strong> requirements; Use &ldquo;<strong>should</strong>&rdquo; for <strong>desirable</strong> requirements.</li>
+<li>Use text highlighting to identify key parts of the requirement.</li>
+<li>Avoid the use of computer jargon.</li>
+<li>Include an <strong>explanation</strong> (rationale) of why a requirement is necessary.</li>
+</ul>
+<blockquote>
+<p><strong>Example</strong>
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/4_7.png"
+        data-srcset="./pic/4_7.png, ./pic/4_7.png 1.5x, ./pic/4_7.png 2x"
+        data-sizes="auto"
+        alt="./pic/4_7.png"
+        title="./pic/4_7.png" /></p>
+</blockquote>
+<hr>
+<h4 id="453-structured-natural-language-specifications">4.5.3 Structured Natural Language Specifications</h4>
+<blockquote>
+<p>An approach to writing requirements in a standard way rather than as <strong>free-form text</strong>.</p>
+<ul>
+<li>Maintains most expressiveness and understandability of NL</li>
+<li>Removes some of the problems of NL specification</li>
+<li>It is still sometimes difficult to write requirements in a clear and unambiguous way</li>
+</ul>
+</blockquote>
+<p><strong>Example</strong>
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/4_8.png"
+        data-srcset="./pic/4_8.png, ./pic/4_8.png 1.5x, ./pic/4_8.png 2x"
+        data-sizes="auto"
+        alt="./pic/4_8.png"
+        title="./pic/4_8.png" /></p>
+<hr>
+<h4 id="454-use-cases">4.5.4 Use Cases</h4>
+<blockquote>
+<p>Describe interactions between users and a system using a <strong>graphical model</strong> and <strong>structured text</strong>.</p>
+</blockquote>
+<ul>
+<li>Identify the actors involved in an interaction and name the type of the interaction.</li>
+<li>Additional information can be added to describe the interaction</li>
+</ul>
+<p>Use case diagram</p>
+<ul>
+<li>Each use case (a named ellipse) represents a class of interaction.</li>
+<li>An actor (a stick figure) is a person or a system.</li>
+<li>Lines link actors with the interaction.</li>
+<li>Documented with a textual description</li>
+</ul>
+<blockquote>
+<p><em>[Example] - UML</em>
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/4_9.png"
+        data-srcset="./pic/4_9.png, ./pic/4_9.png 1.5x, ./pic/4_9.png 2x"
+        data-sizes="auto"
+        alt="./pic/4_9.png"
+        title="./pic/4_9.png" /></p>
+</blockquote>
+<hr>
+<h4 id="455-requirements-and-design">4.5.5 Requirements and Design</h4>
+<blockquote>
+<ul>
+<li><strong>requirements</strong> should state <strong>what</strong> the system should do</li>
+<li><strong>design</strong> should describe <strong>how</strong> it does this.</li>
+<li>requirements and design are <strong>inseparable</strong></li>
+</ul>
+</blockquote>
+<hr>
+<h4 id="456-the-software-requirements-specification-srs">4.5.6 The Software Requirements Specification (SRS)</h4>
+<blockquote>
+<p>The official statement of what the system developers should implement
+It is NOT a design document. As far as possible, it should set out WHAT the system should do rather than HOW it should do it.</p>
+</blockquote>
+<ul>
+<li>The information in the SRS depends on the type of system and the development process used.</li>
+<li>Should include both user and system requirements.</li>
+<li>Requirements specification standards have been designed (e.g., IEEE standard).</li>
+</ul>
+<hr>
+<h4 id="457-the-structure-of-a-requirements-specification">4.5.7 The Structure of A Requirements Specification</h4>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/4_10.png"
+        data-srcset="./pic/4_10.png, ./pic/4_10.png 1.5x, ./pic/4_10.png 2x"
+        data-sizes="auto"
+        alt="./pic/4_10.png"
+        title="./pic/4_10.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/4_11.png"
+        data-srcset="./pic/4_11.png, ./pic/4_11.png 1.5x, ./pic/4_11.png 2x"
+        data-sizes="auto"
+        alt="./pic/4_11.png"
+        title="./pic/4_11.png" /></p>
+<hr>
+<h3 id="46-requirements-validation">4.6 REQUIREMENTS VALIDATION</h3>
+<h4 id="461-requirements-validation">4.6.1 Requirements Validation</h4>
+<blockquote>
+<p>The process of <strong>checking</strong> that requirements <strong>define</strong> the <strong>system</strong> that the <strong>customer</strong> really <strong>wants</strong></p>
+</blockquote>
+<p><em>Overlaps with elicitation and analysis</em></p>
+<p><strong>Types of checks</strong></p>
+<ul>
+<li><strong>Validity</strong> checks. Do the requirements reflect the real needs of system users?</li>
+<li><strong>Consistency</strong> checks. Are there any requirements conflicts?</li>
+<li><strong>Completeness</strong> checks. Are all functions required by the customer included?</li>
+<li><strong>Realism</strong> checks. Can the requirements be implemented, given the available budget and technology?</li>
+<li><strong>Verifiability</strong> checks. Can the requirements be verified?</li>
+</ul>
+<hr>
+<h4 id="462-requirements-validation-techniques">4.6.2 Requirements Validation Techniques</h4>
+<p>Various techniques that can be used <strong>individually</strong> or <strong>together</strong></p>
+<ul>
+<li>
+<p>==Requirements reviews==: <strong>Systematically</strong> and <strong>manually</strong> analyze the requirements to check for errors and inconsistencies</p>
+<ul>
+<li>Should be held regularly</li>
+<li>Should involve both client and contractor staff</li>
+<li>May be formal (with completed documents) or informal.</li>
+</ul>
+</li>
+<li>
+<p>==Prototyping==: Using an <strong>executable</strong> model of the system to check requirements.</p>
+</li>
+<li>
+<p>==Test-case generation==: Developing tests for requirements to check verifiability.</p>
+</li>
+</ul>
+<hr>
+<h3 id="47-requirements-change">4.7 REQUIREMENTS CHANGE</h3>
+<h4 id="471-changing-requirements">4.7.1 Changing Requirements</h4>
+<p>Once a system is installed and regularly used, <strong>new requirements <em>inevitably</em> emerge</strong>.</p>
+<ul>
+<li>original requirements may have errors and omissions.</li>
+<li>business and technical environment of the system always changes after installation.</li>
+<li>stakeholders as well as their priorities and requirements may change</li>
+</ul>
+<hr>
+<h4 id="472-requirements-traceability-matrix">4.7.2 Requirements Traceability Matrix</h4>
+<p>It helps to</p>
+<ul>
+<li>link requirements to business and project objectives,</li>
+<li>track requirements throughout the software life cycle, and</li>
+<li>manage changes.</li>
+</ul>
+<hr>
+<h2 id="5-system-modeling">5 System Modeling</h2>
+<blockquote>
+<p>The process of developing abstract models of a system</p>
+</blockquote>
+<p><strong>model</strong></p>
+<ul>
+<li>an <strong>abstraction</strong> of the system being studied</li>
+<li><strong>not</strong> an <strong>alternative representation</strong> of that system.</li>
+</ul>
+<p>each model presents a <strong>different view/perspective</strong> of the system</p>
+<ul>
+<li>External, structural, behavioral, interaction, etc.</li>
+</ul>
+<p>Models can be</p>
+<ul>
+<li>from different perspectives</li>
+<li>in different forms
+<ul>
+<li><strong>graphical</strong></li>
+<li><strong>formal/mathematical</strong></li>
+<li><strong>natural language</strong></li>
+</ul>
+</li>
+<li>for systems at different stages
+<ul>
+<li><strong>existing</strong></li>
+<li>to be <strong>developed</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>Abstraction &amp; Representation</strong></p>
+<ul>
+<li>
+<p><em><strong>Abstraction</strong></em></p>
+<ul>
+<li>Focus on the <strong>essential</strong> aspects of the system, without the <strong>irrelevant</strong> details, leave out the details;
+<ul>
+<li>Model is an abstraction of the system;</li>
+<li>Not an alternative representation;
+<ul>
+<li>For a English book:
+<ul>
+<li>the representation is the Chinese version;</li>
+<li>the slide is the abstraction of the book;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><em><strong>Representation</strong></em></p>
+<ul>
+<li>Each model <strong>represents</strong> a system from a <strong>particular</strong> perspective;
+<ul>
+<li><strong>External</strong> perspective: context or environment of the system;</li>
+<li><strong>Interaction</strong> perspective: Interactions between systems and external agent between system components;</li>
+<li><strong>Structural</strong> perspective: components, organizations, data structures;</li>
+<li><strong>Behavioral</strong> perspective: dynamic behavior, responds;</li>
+</ul>
+</li>
+<li>example: UML (Unified Modeling Language) diagrams</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="51-usage-of-graphical-system-models">5.1 Usage of Graphical System Models</h3>
+<ul>
+<li><strong>stimulate</strong> and focus <strong>discussion</strong> about a system
+<ul>
+<li><strong>incomplete</strong> and <strong>informal</strong> (normal in agile modeling)</li>
+</ul>
+</li>
+<li><strong>document</strong> an existing system
+<ul>
+<li><strong>correct</strong> but <strong>incomplete</strong></li>
+</ul>
+</li>
+<li><strong>generate</strong> a system implementation
+<ul>
+<li><strong>correct</strong> and <strong>complete</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="52-uml-unified-modeling-language">5.2 UML (Unified Modeling Language)</h3>
+<blockquote>
+<p>UML is a standard language for  specifying, visualizing, constructing, and documenting (software) systems.
+A general purpose modeling language for (OO software) systems</p>
+</blockquote>
+<p><strong>Diagram Types</strong></p>
+<ul>
+<li>A UML model consists of diagrams and documentation that complements\ the diagrams</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/5_1.png"
+        data-srcset="./pic/5_1.png, ./pic/5_1.png 1.5x, ./pic/5_1.png 2x"
+        data-sizes="auto"
+        alt="./pic/5_1.png"
+        title="./pic/5_1.png" /></p>
+<hr>
+<h3 id="53-context-models">5.3 Context Models</h3>
+<blockquote>
+<p>illustrate a system&rsquo;s operational context</p>
+</blockquote>
+<ul>
+<li>shows other systems used by or depend on the system being developed</li>
+<li>not how the system interact with each other</li>
+</ul>
+<p><strong>System boundary</strong></p>
+<ul>
+<li>what is inside and outside</li>
+<li>social and organizational concerns may affect the system boundary</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/5_2.png"
+        data-srcset="./pic/5_2.png, ./pic/5_2.png 1.5x, ./pic/5_2.png 2x"
+        data-sizes="auto"
+        alt="./pic/5_2.png"
+        title="./pic/5_2.png" /></p>
+<blockquote>
+<p>add arrow to indicate the direction of the work flow</p>
+</blockquote>
+<hr>
+<h4 id="531-process-perspective">5.3.1 Process Perspective</h4>
+<ul>
+<li>A type of the context;</li>
+<li>Context models simply show the other systems in the environment, but <strong>NOT</strong> the types of relationships between, no details;</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/5_3.png"
+        data-srcset="./pic/5_3.png, ./pic/5_3.png 1.5x, ./pic/5_3.png 2x"
+        data-sizes="auto"
+        alt="./pic/5_3.png"
+        title="./pic/5_3.png" /></p>
+<hr>
+<h3 id="54-interaction-models">5.4 Interaction Models</h3>
+<blockquote>
+<p>All systems involve interactions of some kind</p>
+</blockquote>
+<ul>
+<li><strong>user interaction</strong> helps to identify user requirements</li>
+<li><strong>component interaction</strong> helps to understand the performance and dependability of the system</li>
+<li><strong>system-to-system interaction</strong> highlights the communication problems may arise</li>
+</ul>
+<p><strong>Two related approaches</strong></p>
+<ul>
+<li><strong>Use case diagrams</strong> model interactions between systems and external agents (human users or other systems);</li>
+<li><strong>Sequence diagrams</strong> model interactions between system components (and external agents)</li>
+</ul>
+<hr>
+<h4 id="541-use-case-modelling">5.4.1 Use Case Modelling</h4>
+<p><strong>Use Case diagram</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/5_4.png"
+        data-srcset="./pic/5_4.png, ./pic/5_4.png 1.5x, ./pic/5_4.png 2x"
+        data-sizes="auto"
+        alt="./pic/5_4.png"
+        title="./pic/5_4.png" /></p>
+<p>ellipse: use case
+stick figure: actor, person, system</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/5_5.png"
+        data-srcset="./pic/5_5.png, ./pic/5_5.png 1.5x, ./pic/5_5.png 2x"
+        data-sizes="auto"
+        alt="./pic/5_5.png"
+        title="./pic/5_5.png" /></p>
+<hr>
+<h4 id="542-sequence-diagrams">5.4.2 Sequence Diagrams</h4>
+<ul>
+<li>Interactions between the <strong>actors</strong> and the <strong>objects</strong> within a system and those between the objects themselves.</li>
+<li>Shows the sequence of interactions that take place during a particular use case or use case instance.</li>
+</ul>
+<p><strong>Sequence diagram</strong>:
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/5_6.png"
+        data-srcset="./pic/5_6.png, ./pic/5_6.png 1.5x, ./pic/5_6.png 2x"
+        data-sizes="auto"
+        alt="./pic/5_6.png"
+        title="./pic/5_6.png" /></p>
+<p><strong>Loop</strong>:
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/5_7.png"
+        data-srcset="./pic/5_7.png, ./pic/5_7.png 1.5x, ./pic/5_7.png 2x"
+        data-sizes="auto"
+        alt="./pic/5_7.png"
+        title="./pic/5_7.png" /></p>
+<p><strong>Condition</strong>:
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/5_8.png"
+        data-srcset="./pic/5_8.png, ./pic/5_8.png 1.5x, ./pic/5_8.png 2x"
+        data-sizes="auto"
+        alt="./pic/5_8.png"
+        title="./pic/5_8.png" /></p>
+<p><strong>Sequence Diagram</strong>
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/5_9.png"
+        data-srcset="./pic/5_9.png, ./pic/5_9.png 1.5x, ./pic/5_9.png 2x"
+        data-sizes="auto"
+        alt="./pic/5_9.png"
+        title="./pic/5_9.png" /></p>
+<hr>
+<h3 id="55-structural-models">5.5 Structural Models</h3>
+<blockquote>
+<p>Organization of a system in terms of the components
+Class, Objects</p>
+</blockquote>
+<ul>
+<li>The organization of a system in terms of the components
+<ul>
+<li>Used when discussing and designing the system architecture</li>
+</ul>
+</li>
+</ul>
+<p><strong>Static</strong> models: <strong>Class</strong>; used at both the analysis and the implementation phase of software development
+<strong>Dynamic</strong> models: <strong>Object</strong>;</p>
+<h4 id="551-classes">5.5.1 Classes</h4>
+<ul>
+<li><strong>encapsulates</strong> <strong>state</strong> (<em>attributes</em>) and <strong>behavior</strong>(<em>operations</em>)</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/6_1.png"
+        data-srcset="./pic/6_1.png, ./pic/6_1.png 1.5x, ./pic/6_1.png 2x"
+        data-sizes="auto"
+        alt="./pic/6_1.png"
+        title="./pic/6_1.png" /></p>
+<ul>
+<li>each attribute has a type, each operation  has a signature</li>
+</ul>
+<hr>
+<h4 id="552-relationships">5.5.2 Relationships</h4>
+<blockquote>
+<p>Dependency</p>
+</blockquote>
+<p><strong>Instance-level</strong> (objects are also called instances)</p>
+<ul>
+<li>Association</li>
+<li>Aggregation</li>
+<li>Composition</li>
+</ul>
+<p><strong>Class-level</strong></p>
+<ul>
+<li>Generalization</li>
+<li>Realization/Implementation</li>
+</ul>
+<p><strong>Dependency</strong></p>
+<ul>
+<li><strong>semantic</strong> connection between <strong>dependent</strong> and <strong>independent</strong> classes (modules).
+<ul>
+<li>If changes to the definition of one class (module) (the server or target) may cause changes to the other (the client or source).</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/6_2.png"
+        data-srcset="./pic/6_2.png, ./pic/6_2.png 1.5x, ./pic/6_2.png 2x"
+        data-sizes="auto"
+        alt="./pic/6_2.png"
+        title="./pic/6_2.png" /></p>
+<hr>
+<h5 id="5521-instance-level-relationship">5.5.2.1 Instance-level Relationship</h5>
+<p><strong>Associations</strong></p>
+<blockquote>
+<p>a type of relation between class instances</p>
+</blockquote>
+<ul>
+<li>using association to communicate classes</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/6_3.png"
+        data-srcset="./pic/6_3.png, ./pic/6_3.png 1.5x, ./pic/6_3.png 2x"
+        data-sizes="auto"
+        alt="./pic/6_3.png"
+        title="./pic/6_3.png" /></p>
+<ul>
+<li>Class A has an attribute of type B</li>
+<li>Class A creates instances of B</li>
+<li>Class A received a message with argument of type B</li>
+</ul>
+<p><strong>Association Multiplicity</strong></p>
+<blockquote>
+<p>Multiplicity denotes how many objects of the class take part in the relation</p>
+</blockquote>
+<p><em>[1-to-1]</em>
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/6_4.png"
+        data-srcset="./pic/6_4.png, ./pic/6_4.png 1.5x, ./pic/6_4.png 2x"
+        data-sizes="auto"
+        alt="./pic/6_4.png"
+        title="./pic/6_4.png" /></p>
+<p><em>[1-to-many]</em>
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/6_5.png"
+        data-srcset="./pic/6_5.png, ./pic/6_5.png 1.5x, ./pic/6_5.png 2x"
+        data-sizes="auto"
+        alt="./pic/6_5.png"
+        title="./pic/6_5.png" /></p>
+<p><em>[many-to-many]</em>
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/6_6.png"
+        data-srcset="./pic/6_6.png, ./pic/6_6.png 1.5x, ./pic/6_6.png 2x"
+        data-sizes="auto"
+        alt="./pic/6_6.png"
+        title="./pic/6_6.png" /></p>
+<p><strong>Special Associations (Has-A Relation) - Aggregation &amp; Composition</strong></p>
+<ul>
+<li><strong>Aggregation</strong>: “part-of” relation between objects
+<ul>
+<li>Component can be part of multiple aggregates</li>
+<li>Component can be created and destroyed <strong>independently</strong> of the aggregate</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/6_7.png"
+        data-srcset="./pic/6_7.png, ./pic/6_7.png 1.5x, ./pic/6_7.png 2x"
+        data-sizes="auto"
+        alt="./pic/6_7.png"
+        title="./pic/6_7.png" /></p>
+<ul>
+<li><strong>Composition</strong>:  strong aggregation
+<ul>
+<li>Component can be part of <strong>only one</strong> aggregate</li>
+<li>Exists only together with the aggregate</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/6_8.png"
+        data-srcset="./pic/6_8.png, ./pic/6_8.png 1.5x, ./pic/6_8.png 2x"
+        data-sizes="auto"
+        alt="./pic/6_8.png"
+        title="./pic/6_8.png" /></p>
+<p><strong>Navigability of Association</strong></p>
+<ul>
+<li>whether objects can be accessed through this association(directed)</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/6_9.png"
+        data-srcset="./pic/6_9.png, ./pic/6_9.png 1.5x, ./pic/6_9.png 2x"
+        data-sizes="auto"
+        alt="./pic/6_9.png"
+        title="./pic/6_9.png" /></p>
+<hr>
+<h5 id="5522-class-level-relationship">5.5.2.2 Class-level Relationship</h5>
+<blockquote>
+<p>Generalization relation</p>
+</blockquote>
+<ul>
+<li><code>Is-A</code> relationship</li>
+<li><strong>inheritance</strong>
+<ul>
+<li>Generalization simplifies the model by eliminating redundancy</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/6_10.png"
+        data-srcset="./pic/6_10.png, ./pic/6_10.png 1.5x, ./pic/6_10.png 2x"
+        data-sizes="auto"
+        alt="./pic/6_10.png"
+        title="./pic/6_10.png" /></p>
+<hr>
+<h3 id="56-behavioral-models">5.6 Behavioral Models</h3>
+<blockquote>
+<p>a system <strong>responds</strong> to a <strong>stimulus</strong> from its <strong>environment</strong>.</p>
+</blockquote>
+<ul>
+<li>a system&rsquo;s <strong>dynamic behavior</strong> as it executes.</li>
+<li>system <strong>responds</strong> to a <strong>stimulus</strong> from its environment
+<ul>
+<li>Data</li>
+<li>Event</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="561-data-driven-modeling">5.6.1 Data-Driven Modeling</h4>
+<ul>
+<li>show the sequence of actions involved in processing input data and generating an associated output.
+<ul>
+<li>business system(data-processing system) is driven by data</li>
+</ul>
+</li>
+</ul>
+<p><em>[Activity diagrams example]</em></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/6_11.png"
+        data-srcset="./pic/6_11.png, ./pic/6_11.png 1.5x, ./pic/6_11.png 2x"
+        data-sizes="auto"
+        alt="./pic/6_11.png"
+        title="./pic/6_11.png" /></p>
+<p><em>[Sequence diagrams example]</em></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/6_12.png"
+        data-srcset="./pic/6_12.png, ./pic/6_12.png 1.5x, ./pic/6_12.png 2x"
+        data-sizes="auto"
+        alt="./pic/6_12.png"
+        title="./pic/6_12.png" /></p>
+<hr>
+<h4 id="562-event-driven-modeling">5.6.2 Event-Driven Modeling</h4>
+<ul>
+<li>shows how a system responds to external and internal <strong>events</strong>.
+<ul>
+<li>a finite number of states</li>
+<li>events (stimuli) may cause transitions between states.</li>
+</ul>
+</li>
+<li>UML state diagrams show system <strong>states</strong> and <strong>events</strong> that cause transitions from one state to another.</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/6_13.png"
+        data-srcset="./pic/6_13.png, ./pic/6_13.png 1.5x, ./pic/6_13.png 2x"
+        data-sizes="auto"
+        alt="./pic/6_13.png"
+        title="./pic/6_13.png" /></p>
+<blockquote>
+<p>states are nodes; events are arcs between nodes</p>
+</blockquote>
+<hr>
+<h4 id="563-states-and-stimuli-for-the-microwave-oven">5.6.3 States and Stimuli for The Microwave Oven</h4>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/6_14.png"
+        data-srcset="./pic/6_14.png, ./pic/6_14.png 1.5x, ./pic/6_14.png 2x"
+        data-sizes="auto"
+        alt="./pic/6_14.png"
+        title="./pic/6_14.png" /></p>
+<hr>
+<h4 id="564-superstates">5.6.4 Superstates</h4>
+<ul>
+<li>looks like a single state in a high-level model</li>
+<li>expanded to show more detail in a separate diagram</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/6_15.png"
+        data-srcset="./pic/6_15.png, ./pic/6_15.png 1.5x, ./pic/6_15.png 2x"
+        data-sizes="auto"
+        alt="./pic/6_15.png"
+        title="./pic/6_15.png" /></p>
+<hr>
+<h2 id="6-architectural-design">6 Architectural Design</h2>
+<blockquote>
+<p>how a software system should be organized and designing the overall structure</p>
+</blockquote>
+<ul>
+<li>output is an <strong>architectural model</strong>, describing how the system is organized as a set of communications components</li>
+<li>critical link between design and requirements engineering</li>
+<li>should be designed at the early stage of an agile development process</li>
+</ul>
+<p><strong>Architectural Abstraction</strong></p>
+<ul>
+<li><em>Architecture in the small</em> is concerned with the architecture of individual programs.</li>
+<li><em>Architecture in the large</em> is concerned with the architecture of complex enterprise systems that include other systems, programs, and program components.</li>
+</ul>
+<hr>
+<p><strong>Advantages of Explicit Architecture</strong></p>
+<ul>
+<li>Stakeholder communication:
+<ul>
+<li>high-level presentation;</li>
+<li>Be understandable by non-technical people;</li>
+<li>Discussed by a range of different stakeholders;</li>
+</ul>
+</li>
+<li>System analysis:
+<ul>
+<li>Whether or not the system can meet critical requirements;</li>
+</ul>
+</li>
+<li>Large-scale reuse:
+<ul>
+<li>be reusable across a range of systems</li>
+<li>product-line architectures</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>Representations</strong></p>
+<ul>
+<li>
+<p>using simple block diagrams</p>
+<ul>
+<li>Box: component</li>
+<li>Boxes in boxes: component decomposition</li>
+<li>Arrows: data and control flow</li>
+</ul>
+</li>
+<li>
+<p>no types of relationship or components externally visible properties</p>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/7_1.png"
+        data-srcset="./pic/7_1.png, ./pic/7_1.png 1.5x, ./pic/7_1.png 2x"
+        data-sizes="auto"
+        alt="./pic/7_1.png"
+        title="./pic/7_1.png" /></p>
+<hr>
+<h3 id="61-architectural-design-decisions">6.1 Architectural Design Decisions</h3>
+<blockquote>
+<p>The solution to the architecture choose;</p>
+</blockquote>
+<ul>
+<li><strong>Reuse</strong>: template of generic application architecture</li>
+<li>How distribute <strong>across</strong> hardware core/processors? (optional);</li>
+<li>What patterns should be used?
+<ul>
+<li>how to structure?</li>
+<li>how components be decomposed?</li>
+<li>how to control components?</li>
+</ul>
+</li>
+<li>Best for delivering the non-functional?</li>
+<li>How should the architecture of the system be documented?</li>
+</ul>
+<hr>
+<p><strong>Architecture on Non-Functional Requirements</strong></p>
+<ul>
+<li><strong>Performance</strong>:
+<ul>
+<li>Localize critical operations, minimize communications:
+<ul>
+<li>In local, not remote;</li>
+<li>Using large, NOT small components/fine-grain;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Security</strong>:
+<ul>
+<li>layered architecture with critical assets in the inner layers</li>
+</ul>
+</li>
+<li><strong>Safety</strong>:
+<ul>
+<li>Will not cause harm to the user and others;</li>
+<li>Localize safety-critical features in a small number of sub-systems;
+<ul>
+<li>Perform several checking for each small sub-system rather than one big system;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Availability</strong>:
+<ul>
+<li>Include redundant components and mechanisms for fault tolerance.
+<ul>
+<li>e.g. Multiple servers for a web application; one down, other can still provide service;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Maintainability</strong>:
+<ul>
+<li>Use fine-grain, self-contained components that may easily be changed.
+<ul>
+<li>Easy to replace problem components;</li>
+<li>Easy to extend;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="62-architectural-views">6.2 Architectural Views</h3>
+<ul>
+<li>Different view on a architecture design
+<ul>
+<li>Each architectural model <strong>only</strong> shows one views</li>
+</ul>
+</li>
+<li>Informal models and notations
+<ul>
+<li>UML: remain the most way of documenting architectures</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="63-architectural-patterns">6.3 Architectural Patterns</h3>
+<blockquote>
+<p>stylized description of good design practice</p>
+<ul>
+<li>include information when they are/not to use</li>
+<li>mixture of narrative description and diagrams</li>
+</ul>
+</blockquote>
+<p><strong>Architectural patterns</strong>:</p>
+<ul>
+<li>The Model-View-Controller (MVC) pattern</li>
+<li>The Client-Server pattern</li>
+<li>The Pipe and Filter pattern</li>
+<li>The Layered pattern</li>
+<li>The Repository pattern</li>
+</ul>
+<hr>
+<h4 id="631-the-model-view-controller-mvc-pattern">6.3.1 The Model-View-Controller (MVC) Pattern</h4>
+<p><strong>Model</strong></p>
+<ul>
+<li>manages system data and associated operations on that data</li>
+</ul>
+<p><strong>View</strong></p>
+<ul>
+<li>defines and manages how the data is presented to the user</li>
+</ul>
+<p><strong>Controller</strong></p>
+<ul>
+<li>manages interaction(key presses, mouse clicks, etc.) passes these interactions to View and Model</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/7_2.png"
+        data-srcset="./pic/7_2.png, ./pic/7_2.png 1.5x, ./pic/7_2.png 2x"
+        data-sizes="auto"
+        alt="./pic/7_2.png"
+        title="./pic/7_2.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/7_3.png"
+        data-srcset="./pic/7_3.png, ./pic/7_3.png 1.5x, ./pic/7_3.png 2x"
+        data-sizes="auto"
+        alt="./pic/7_3.png"
+        title="./pic/7_3.png" /></p>
+<hr>
+<h4 id="632-layered-architectures">6.3.2 Layered Architectures</h4>
+<blockquote>
+<p>Organized into <strong>separate layers</strong>, and each layer <strong>ONLY relies</strong> on the facilities and services offered by <strong>the layer immediately beneath it</strong>.</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/7_4.png"
+        data-srcset="./pic/7_4.png, ./pic/7_4.png 1.5x, ./pic/7_4.png 2x"
+        data-sizes="auto"
+        alt="./pic/7_4.png"
+        title="./pic/7_4.png" /></p>
+<p>Benefit:</p>
+<ul>
+<li>Supports the <strong>incremental development</strong>;</li>
+<li>Layer interface changes, <strong>ONLY the adjacent layer</strong> is <strong>affected</strong>;</li>
+<li>Allows <strong>replacement</strong> of entire layers;</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/7_5.png"
+        data-srcset="./pic/7_5.png, ./pic/7_5.png 1.5x, ./pic/7_5.png 2x"
+        data-sizes="auto"
+        alt="./pic/7_5.png"
+        title="./pic/7_5.png" /></p>
+<p><strong>Disadvantage</strong>:</p>
+<ul>
+<li>Clean separation between layers is often difficult</li>
+<li>High-level layer may have to interact directly with lower-level layers rather than through the layer immediately below it.
+<ul>
+<li>e.g., from 1 to 3 directly, not access 2; 2 provide a special gate;</li>
+<li>the performance will be low;</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/7_6.png"
+        data-srcset="./pic/7_6.png, ./pic/7_6.png 1.5x, ./pic/7_6.png 2x"
+        data-sizes="auto"
+        alt="./pic/7_6.png"
+        title="./pic/7_6.png" /></p>
+<hr>
+<h4 id="633-repository-architectures">6.3.3 Repository Architectures</h4>
+<p>Exchange of data among subsystems:</p>
+<ul>
+<li><strong>Centralized</strong> storage
+<ul>
+<li>Shared <strong>data</strong> is held in a <strong>central</strong> database. High efficiency;</li>
+</ul>
+</li>
+<li><strong>Distributed</strong> storage
+<ul>
+<li>Sub-system maintains its <strong>own database(copy of)</strong> and passes data explicitly to other sub-systems. Low efficiency;</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/7_7.png"
+        data-srcset="./pic/7_7.png, ./pic/7_7.png 1.5x, ./pic/7_7.png 2x"
+        data-sizes="auto"
+        alt="./pic/7_7.png"
+        title="./pic/7_7.png" /></p>
+<p><strong>Benefit</strong>:</p>
+<ul>
+<li>Components can be independent;</li>
+</ul>
+<p><strong>Disadvantage</strong>:</p>
+<ul>
+<li>Repository is a single point of failure</li>
+<li>Distributing may be difficult;</li>
+</ul>
+<hr>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/7_8.png"
+        data-srcset="./pic/7_8.png, ./pic/7_8.png 1.5x, ./pic/7_8.png 2x"
+        data-sizes="auto"
+        alt="./pic/7_8.png"
+        title="./pic/7_8.png" /></p>
+<blockquote>
+<p><strong>Repository</strong> model: A repository is <strong>passive</strong>, the <strong>components</strong> to <strong>control</strong> with the data in repository;
+<strong>Blackboard</strong> model: A blackboard <strong>notifies(actively)</strong> components when particular data become available;</p>
+<ul>
+<li>Updates in the blackboard will notifies other components;</li>
+</ul>
+</blockquote>
+<hr>
+<h4 id="634-client-server-architectures">6.3.4 Client-Server Architectures</h4>
+<blockquote>
+<p><strong>Distributed</strong> system model.</p>
+</blockquote>
+<p><strong>Stand-alone servers</strong>:</p>
+<ul>
+<li>provide specific services such as printing, data management, etc.</li>
+</ul>
+<p><strong>Clients</strong>:</p>
+<ul>
+<li>call on these services they want to;</li>
+<li>Can be implemented on single computer</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/7_9.png"
+        data-srcset="./pic/7_9.png, ./pic/7_9.png 1.5x, ./pic/7_9.png 2x"
+        data-sizes="auto"
+        alt="./pic/7_9.png"
+        title="./pic/7_9.png" /></p>
+<p><strong>Advantages</strong>:</p>
+<ul>
+<li>Servers can be distributed across a network;</li>
+<li>Servers can also be client to access other servers;</li>
+</ul>
+<p><strong>Disadvantage</strong>:</p>
+<ul>
+<li>Performance may be unpredictable because it depends on the network;</li>
+</ul>
+<hr>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/7_10.png"
+        data-srcset="./pic/7_10.png, ./pic/7_10.png 1.5x, ./pic/7_10.png 2x"
+        data-sizes="auto"
+        alt="./pic/7_10.png"
+        title="./pic/7_10.png" /></p>
+<hr>
+<h4 id="635-pipe-and-filter-architectures">6.3.5 Pipe and Filter Architectures</h4>
+<blockquote>
+<p>The <strong>runtime organization</strong> of a system where functional transformations process inputs and produce outputs</p>
+</blockquote>
+<ul>
+<li><strong>pipes</strong>: link processes using &ldquo;pipes&rdquo;</li>
+<li><strong>filter</strong>: transformation “filters out” the data it can process from its input data stream.</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/7_11.png"
+        data-srcset="./pic/7_11.png, ./pic/7_11.png 1.5x, ./pic/7_11.png 2x"
+        data-sizes="auto"
+        alt="./pic/7_11.png"
+        title="./pic/7_11.png" /></p>
+<p><strong>Advantage:</strong></p>
+<ul>
+<li>easy to understand and supports transformation reuse</li>
+<li>matches structure of many <strong>business</strong> processes</li>
+</ul>
+<p><strong>Disadvantage:</strong></p>
+<ul>
+<li>format for data transfer has to be agreed</li>
+<li>Each <strong>transformation</strong> must <strong>parse</strong> its <strong>input</strong> and <strong>unparse</strong> its <strong>output</strong> to the <strong>agreed form</strong>;</li>
+</ul>
+<hr>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/7_12.png"
+        data-srcset="./pic/7_12.png, ./pic/7_12.png 1.5x, ./pic/7_12.png 2x"
+        data-sizes="auto"
+        alt="./pic/7_12.png"
+        title="./pic/7_12.png" /></p>
+<hr>
+<h3 id="64-application-architectures">6.4 Application Architectures</h3>
+<ul>
+<li>An architecture that encapsulates the principal characteristics of a class of systems;</li>
+<li>Be configured and adapted to create a system that meets specific requirements.</li>
+</ul>
+<p><strong>Usage</strong></p>
+<ul>
+<li>As a <strong>starting</strong> point for architectural design.</li>
+<li>As a design <strong>checklist</strong>.</li>
+<li>As a way of organizing the work of the <strong>development team</strong>.</li>
+<li>As a means of assessing components for <strong>reuse</strong>.</li>
+<li>As a vocabulary for talking about <strong>application types</strong></li>
+</ul>
+<hr>
+<h4 id="641-applications-types-examples">6.4.1 Applications Types Examples</h4>
+<ul>
+<li>
+<p><strong>Transaction processing systems</strong>:</p>
+<ul>
+<li>Database-centred applications;</li>
+<li>User requests for information and update;</li>
+<li>Like E-commerce systems and information systems</li>
+</ul>
+</li>
+<li>
+<p>a customer request to withdraw money from a bank account using an ATM</p>
+<ul>
+<li>May be organized as a “pipe and filter” architecture</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/7_13.png"
+        data-srcset="./pic/7_13.png, ./pic/7_13.png 1.5x, ./pic/7_13.png 2x"
+        data-sizes="auto"
+        alt="./pic/7_13.png"
+        title="./pic/7_13.png" /></p>
+<p><strong>Information Systems</strong></p>
+<ul>
+<li>can be organized as a layered architecture</li>
+</ul>
+<hr>
+<ul>
+<li><strong>Language processing systems</strong>:</li>
+</ul>
+<hr>
+<h2 id="7-brief-introduction-to-oop-in-java">7 Brief Introduction to OOP in Java</h2>
+<p><strong>Variables</strong></p>
+<ul>
+<li><strong>Primitive</strong> data types: boolean, char, byte, short, int, long, float, double</li>
+<li><strong>Reference</strong> data type: Sting, Date, etc.</li>
+</ul>
+<p><strong>Expressions</strong> and <strong>expression statements</strong></p>
+<ul>
+<li>Assignment operators: =, +=, -=, *=, /=, …</li>
+<li>Arithmetic operators: +, -, *, /, %</li>
+<li>Unary operators: +, -, ++, &ndash;, !</li>
+<li>Equality and relational operators: ==, !=, &gt;, &gt;=, &lt;, &lt;=</li>
+<li>Conditional operators: &amp;&amp;, ||, ?:</li>
+<li>Type comparison operators: instanceof</li>
+<li>Bitwise and bit shift operators: ~, &laquo;, &raquo;, &raquo;&gt;, &amp;, ^, |</li>
+</ul>
+<p><strong>Control Structures</strong></p>
+<ul>
+<li>Selection: if, switch</li>
+<li>Loop: for, while, do-while, break, continue</li>
+<li>Exception handling: try, catch, finally</li>
+</ul>
+<hr>
+<h3 id="71-class-and-object">7.1 Class and Object</h3>
+<p><strong>Filed</strong> <strong>(instance variable/state)</strong>: the values can be stored;
+<strong>Method</strong>: the <strong>operations</strong> can be performed;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// Hero.java 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">class</span> <span class="nc">Hero</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">String</span> <span class="n">name</span><span class="o">;</span> <span class="c1">// field
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kt">int</span> <span class="n">health</span><span class="o">;</span> <span class="c1">// field
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kt">void</span> <span class="nf">initHero</span><span class="o">(){</span><span class="err">…</span><span class="o">}</span> <span class="c1">// method
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kt">void</span> <span class="nf">increaseHealth</span><span class="o">(</span><span class="kt">int</span> <span class="n">amount</span><span class="o">){</span><span class="err">…</span><span class="o">}</span> <span class="c1">// method
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>Both fields and methods are instance members</p>
+</blockquote>
+<hr>
+<ul>
+<li>
+<p><strong>Object</strong></p>
+<ul>
+<li>contains all the fields in the class, and takes space;</li>
+<li>Methods do <strong>NOT</strong> take any space in objects;</li>
+<li>Multiple references can point to the same object (aliasing);</li>
+</ul>
+</li>
+<li>
+<p><em><strong>Reference</strong></em>: only contain <strong>NULL</strong> or the <strong>address of the object</strong>;</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Hero</span> <span class="n">heroA</span><span class="o">,</span><span class="n">heroB</span><span class="o">,</span><span class="n">heroC</span> <span class="c1">// only the Hero reference, NO Hero object
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<p><strong>Call method</strong>: <strong>Sending a message</strong> to an object</p>
+<hr>
+<p><strong>Constructors</strong>: <strong>special</strong> kind of <strong>methods</strong> that are invoked to <strong>initialize</strong> objects</p>
+<ul>
+<li><strong>MUST</strong> have the <strong>same name as the class itself</strong></li>
+<li><strong>MUST</strong>: No return type, not even void;</li>
+<li>May have parameters, <strong>NOT</strong> <code>this</code>;</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// a regular method called Hero
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">Hero</span><span class="o">(){...}</span> <span class="c1">// NOT a constructor
+</span></span></span><span class="line"><span class="cl"><span class="c1">// constructors
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Hero</span><span class="o">(){...}</span> <span class="c1">// default constructor
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Hero</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">){...}</span> <span class="c1">// constructor with parameter
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<p><strong>Method overload</strong>:</p>
+<ul>
+<li>Method <strong>signature</strong> = <strong>Method name</strong> + <strong>List of parameter types</strong>;</li>
+<li>Using signature to distinguish different methods, even with the same name;</li>
+</ul>
+<hr>
+<h3 id="72-encapsulation">7.2 Encapsulation</h3>
+<p><strong>Information Hiding</strong></p>
+<blockquote>
+<p>Principle of Least Privilege</p>
+<blockquote>
+<p>Every module must be able to access only the information and resources that are necessary for its legitimate purpose.</p>
+</blockquote>
+</blockquote>
+<p><strong>Access control</strong>:
+public(all) &gt; protected(package+subclass) &gt; default(package) &gt; private(same class only)</p>
+<hr>
+<h3 id="73-inheritance">7.3 Inheritance</h3>
+<p><strong>IS-A</strong> relationship, reuse.</p>
+<ul>
+<li>To be <strong>part</strong> of:
+<ul>
+<li>Instance variables of the superclass are <strong>PART</strong> of the objects of the subclass <strong>(Whatever public, private, protected, default)</strong>;</li>
+</ul>
+</li>
+<li>To <strong>inherit</strong>:
+<ul>
+<li><strong>Public</strong> variables of the superclass are <strong>inherited</strong> into the subclass, which means the subclass can access them directly by using the variable name in the superclass;</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="74-polymorphism">7.4 Polymorphism</h3>
+<blockquote>
+<p>poly: many; morph: shape, form
+<code>extends</code></p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Hero</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">private</span> <span class="kt">int</span> <span class="n">health</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">public</span> <span class="nf">Hero</span><span class="o">(){</span><span class="err">…</span><span class="o">}</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">travel</span><span class="o">(){</span><span class="err">…</span><span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// keyword: extends
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Monster</span> <span class="kd">extends</span> <span class="n">Hero</span><span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">private</span> <span class="kt">boolean</span> <span class="n">isAngry</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">public</span> <span class="nf">Monster</span><span class="o">(){</span><span class="err">…</span><span class="o">}</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">travel</span><span class="o">(){</span><span class="err">…</span><span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Hero</span> <span class="n">h</span><span class="o">;</span> 
+</span></span><span class="line"><span class="cl"><span class="n">h</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Hero</span><span class="o">();</span> 
+</span></span><span class="line"><span class="cl"><span class="n">h</span><span class="o">.</span><span class="na">travel</span><span class="o">();</span>  <span class="c1">// calling travel() defined in
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Hero</span> <span class="n">h</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Monster</span><span class="o">();</span> 
+</span></span><span class="line"><span class="cl"><span class="n">h</span><span class="o">.</span><span class="na">travel</span><span class="o">();</span>  <span class="c1">// calling travel() defined in Monster
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p><strong>Generic Programming</strong>: need to know the precise type of an object.</p>
+</blockquote>
+<hr>
+<h3 id="75-abstract-class-and-methods">7.5 Abstract Class and Methods</h3>
+<blockquote>
+<p>A abstract method with NO any implementation within the current class</p>
+</blockquote>
+<ul>
+<li>A class with at least one abstract method must be abstract
+<ul>
+<li>can be inherited</li>
+<li>meant to be overridden</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>The compiler does not allow to create any instance of an abstract class, as the class is not complete yet</p>
+</blockquote>
+<hr>
+<h3 id="76-interface">7.6 Interface</h3>
+<blockquote>
+<p>Groups of abstract methods
+provides a way to define <strong>common behavior(s)</strong> that multiple classes can adhere to, <strong>WITHOUT</strong> specifying the actual implementation details.</p>
+</blockquote>
+<ul>
+<li><strong>NO instance field</strong></li>
+<li>All instance methods <strong>MUST</strong> be <strong>public</strong> and <strong>abstract</strong>.
+<ul>
+<li>Keywords public and abstract can be <strong>omitted</strong>;</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// Parent interface
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">interface</span> <span class="nc">Animal</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">void</span> <span class="nf">eat</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">void</span> <span class="nf">sleep</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Child interface extending the Animal interface
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">interface</span> <span class="nc">Pet</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">void</span> <span class="nf">play</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Implementing the interfaces in classes
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">implements</span> <span class="n">Pet</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">eat</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Implementation for eating behavior
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sleep</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Implementation for sleeping behavior
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">play</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// Implementation for playing behavior
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="8-object-oriented-analysis-and-design">8 Object-Oriented Analysis and Design</h2>
+<h3 id="81-object-oriented-analysis-ooa">8.1 Object-Oriented Analysis (OOA)</h3>
+<ul>
+<li><strong>Goal</strong>: <strong>understand</strong> the problem and to begin to develop a model of what you are trying to build (<strong>problem domain</strong>)</li>
+<li><strong>Independent</strong> of implementation and technology concerns.</li>
+<li>Translating the <strong>functional requirements</strong> into software concepts.
+<ul>
+<li>get a rough cut at the object</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<p>Two types:</p>
+<ul>
+<li><strong>Function-oriented</strong> analysis – concentrating on the <strong>decomposition of complex functions</strong> to simple ones.</li>
+<li><strong>Object-oriented</strong> analysis – identifying <strong>objects</strong> and the
+<strong>relationship</strong> between objects.</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/8_1.png"
+        data-srcset="./pic/8_1.png, ./pic/8_1.png 1.5x, ./pic/8_1.png 2x"
+        data-sizes="auto"
+        alt="./pic/8_1.png"
+        title="./pic/8_1.png" /></p>
+<hr>
+<h4 id="811-domain-model">8.1.1 Domain Model</h4>
+<blockquote>
+<p>representation of conceptual classes in a domain of interest</p>
+</blockquote>
+<ul>
+<li>Using UML notation, a set of class diagrams</li>
+<li>It may show:
+<ul>
+<li>conceptual classes</li>
+<li>associations between the conceptual classes</li>
+<li>attributes of the conceptual classes</li>
+</ul>
+</li>
+<li>NOT in domain model
+<ul>
+<li>Software artifacts, like window or a database</li>
+<li>Responsibilities, or</li>
+<li>methods.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><em><strong>1. Conceptual classes</strong></em></p>
+<ul>
+<li><strong>Real-world concept</strong> or thing, NOT an implementation class</li>
+<li>It is better to <strong>over-specify</strong> a domain model with many fine-
+grained conceptual classes than to under-specify it.</li>
+</ul>
+<p><strong>Identify conceptual classes</strong></p>
+<ul>
+<li>
+<p>Conceptual class category
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/8_2.png"
+        data-srcset="./pic/8_2.png, ./pic/8_2.png 1.5x, ./pic/8_2.png 2x"
+        data-sizes="auto"
+        alt="./pic/8_2.png"
+        title="./pic/8_2.png" /></p>
+</li>
+<li>
+<p>Noun phrase identification</p>
+<ul>
+<li>find noun phrases in the specification
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/8_3.png"
+        data-srcset="./pic/8_3.png, ./pic/8_3.png 1.5x, ./pic/8_3.png 2x"
+        data-sizes="auto"
+        alt="./pic/8_3.png"
+        title="./pic/8_3.png" /></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ol>
+<li>
+<p>Discard some class:</p>
+<ul>
+<li>Outside the current requirements, <code>Price Rule</code></li>
+<li>Redundant, <code>System</code></li>
+<li>Looks like an attribute more than a class, <code>Price</code></li>
+<li>NOT being considered in this iteration, <code>Receipt</code></li>
+<li>NO correct set of conceptual classes</li>
+</ul>
+</li>
+<li>
+<p>Draw them in a domain model, i.e., a set of UML class diagram</p>
+</li>
+<li>
+<p>Add associations and attributes</p>
+</li>
+</ol>
+<hr>
+<p><em><strong>2. Associations between conceptual classes</strong></em></p>
+<blockquote>
+<p>relationship between types (or instances of those types)</p>
+</blockquote>
+<ul>
+<li>Not a statement about data flows, instance variables, or object connections in a software solution</li>
+</ul>
+<p>How to find relationship:</p>
+<ul>
+<li>It is more important to identify conceptual classes than to identify associations.</li>
+<li><strong>Too many</strong> associations confuse a domain model</li>
+<li><strong>Avoid</strong> showing <strong>redundant</strong> or <strong>derivable</strong> associations.</li>
+</ul>
+<hr>
+<p><em><strong>3. Attributes</strong></em></p>
+<blockquote>
+<p>logical data value of an object</p>
+</blockquote>
+<ul>
+<li>Mistake 1：may treat a class as an attribute;
+<ul>
+<li>Treat a <code>destination</code>(Airport) as a class than as a attribute of a flight</li>
+</ul>
+</li>
+<li>Mistake 2: Add a kind of foreign key attribute, as is typically done in relational database designs,</li>
+</ul>
+<hr>
+<h3 id="82-object-oriented-design-ood">8.2 Object-Oriented Design (OOD)</h3>
+<p><strong>Goal</strong>: A process that uses the analysis results to produce a specification for implementing a system.</p>
+<ul>
+<li>Emphases on <strong>defining</strong> software objects and how they collaborate to <strong>fulfill</strong> the requirements.
+<ul>
+<li>look at class design in detail</li>
+<li>design activities like database design and interface design
+<strong>Result</strong>: the specification of a logical software solution in terms of software objects,</li>
+</ul>
+</li>
+<li>such as <strong>classes</strong>, <strong>attributes</strong>, <strong>methods</strong>, and <strong>collaborations</strong>.</li>
+<li></li>
+</ul>
+<hr>
+<p>Two kinds of design models: <strong>dynamic</strong> and <strong>static</strong>.</p>
+<ul>
+<li><strong>Static</strong>
+<ul>
+<li>definition of packages, class names, attributes, and method signatures (but not method bodies).</li>
+<li>UML class diagram</li>
+<li>Fundamental activity: Assigning <strong>responsibilities</strong> to classes/objects!</li>
+</ul>
+</li>
+<li><strong>Dynamic</strong>
+<ul>
+<li>the logic and the behavior of the code or the method bodies.</li>
+<li>UML interaction diagram(e.g., sequence diagrams)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="821-doing-and-knowing-responsibilities">8.2.1 Doing and Knowing Responsibilities</h4>
+<p><strong>Doing responsibilities</strong></p>
+<ul>
+<li><strong>Methods</strong>:
+<ul>
+<li><strong>creating</strong> an object or doing a calculation</li>
+</ul>
+</li>
+<li><strong>Initiating</strong> actions in other objects</li>
+<li><strong>Controlling</strong> and coordinating activities in other objects</li>
+</ul>
+<p><strong>Knowing responsibilities</strong></p>
+<ul>
+<li>knowing about private encapsulated data</li>
+<li>related objects</li>
+<li>Things it can <strong>derive</strong> or <strong>calculate</strong></li>
+</ul>
+<hr>
+<h4 id="822-responsibility-driven-design-rdd">8.2.2 Responsibility-Driven Design (RDD)</h4>
+<blockquote>
+<p>A general metaphor for thinking about OOD
+Software <strong>objects</strong> are like <strong>people</strong> with <strong>responsibilities</strong> who collaborate to get <strong>work done</strong></p>
+</blockquote>
+<ul>
+<li>Responsibilities are implemented by means of methods
+<ul>
+<li>Either act alone or collaborate with other methods and objects</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>How to do RDD</strong></p>
+<ul>
+<li>Using <strong>Class-Responsibility-Collaborator (CRC)</strong> Cards
+<ul>
+<li>One card per class, shows its responsibilities and with which other class(es) it must collaborate to fulfill each responsibility</li>
+<li>A brief description of the class on the back of the card.</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/8_4.png"
+        data-srcset="./pic/8_4.png, ./pic/8_4.png 1.5x, ./pic/8_4.png 2x"
+        data-sizes="auto"
+        alt="./pic/8_4.png"
+        title="./pic/8_4.png" /></p>
+<ul>
+<li>In the example, class <code>Foo</code> must collaborate with (send messages to) <code>ClassX</code> and <code>ClassY</code> in order to fulfill its responsibility to be able to &ldquo;<code>do something</code>.&rdquo;</li>
+</ul>
+<hr>
+<h3 id="83-solid-design-principles">8.3 SOLID DESIGN PRINCIPLES</h3>
+<ul>
+<li><strong>S</strong>ingle responsibility principle</li>
+<li><strong>O</strong>pen/closed principle</li>
+<li><strong>L</strong>iskov substitution principle</li>
+<li><strong>I</strong>nterface segregation principle</li>
+<li><strong>D</strong>ependency inversion principle</li>
+</ul>
+<hr>
+<h4 id="831-single-responsibility-principle">8.3.1 Single Responsibility Principle</h4>
+<blockquote>
+<p>Each responsibility is a reason for change.
+A class should have <strong>ONLY ONE</strong> reason to change.</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/8_5.png"
+        data-srcset="./pic/8_5.png, ./pic/8_5.png 1.5x, ./pic/8_5.png 2x"
+        data-sizes="auto"
+        alt="./pic/8_5.png"
+        title="./pic/8_5.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/8_6.png"
+        data-srcset="./pic/8_6.png, ./pic/8_6.png 1.5x, ./pic/8_6.png 2x"
+        data-sizes="auto"
+        alt="./pic/8_6.png"
+        title="./pic/8_6.png" /></p>
+<hr>
+<h4 id="832-openclosed-principle">8.3.2 Open/Closed Principle</h4>
+<blockquote>
+<p>Software entities should be <strong>open</strong> for <strong>extension</strong> (good for inheritance)
+but <strong>closed</strong> for <strong>modification</strong>.(modification should not be open to clients)</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/8_7.png"
+        data-srcset="./pic/8_7.png, ./pic/8_7.png 1.5x, ./pic/8_7.png 2x"
+        data-sizes="auto"
+        alt="./pic/8_7.png"
+        title="./pic/8_7.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/8_8.png"
+        data-srcset="./pic/8_8.png, ./pic/8_8.png 1.5x, ./pic/8_8.png 2x"
+        data-sizes="auto"
+        alt="./pic/8_8.png"
+        title="./pic/8_8.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/8_9.png"
+        data-srcset="./pic/8_9.png, ./pic/8_9.png 1.5x, ./pic/8_9.png 2x"
+        data-sizes="auto"
+        alt="./pic/8_9.png"
+        title="./pic/8_9.png" /></p>
+<hr>
+<h4 id="833-liskov-substitution-principle">8.3.3 Liskov Substitution Principle</h4>
+<blockquote>
+<p>Objects in a program should be <strong>replaceable</strong> with instances of their <strong>subtypes</strong> without <strong>altering</strong> the correctness of that program</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/8_10.png"
+        data-srcset="./pic/8_10.png, ./pic/8_10.png 1.5x, ./pic/8_10.png 2x"
+        data-sizes="auto"
+        alt="./pic/8_10.png"
+        title="./pic/8_10.png" />
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/8_11.png"
+        data-srcset="./pic/8_11.png, ./pic/8_11.png 1.5x, ./pic/8_11.png 2x"
+        data-sizes="auto"
+        alt="./pic/8_11.png"
+        title="./pic/8_11.png" /></p>
+<hr>
+<h4 id="834-interface-segregation-principle">8.3.4 Interface Segregation Principle</h4>
+<blockquote>
+<p>Many client-specific interfaces(small) are better than one general-purpose(big) interface. One interface for each responsibility.</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/8_12.png"
+        data-srcset="./pic/8_12.png, ./pic/8_12.png 1.5x, ./pic/8_12.png 2x"
+        data-sizes="auto"
+        alt="./pic/8_12.png"
+        title="./pic/8_12.png" /></p>
+<hr>
+<h4 id="835-dependency-inversion-principle">8.3.5 Dependency Inversion Principle</h4>
+<blockquote>
+<p>Limited reusability of the higher-level components
+High-level modules should not depend on low-level modules. Both should depend on <strong>abstractions</strong>(interface);
+<strong>Abstractions</strong> should <strong>NOT</strong> depend on <strong>details</strong>. Details should depend on <strong>abstractions</strong>.</p>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/8_13.png"
+        data-srcset="./pic/8_13.png, ./pic/8_13.png 1.5x, ./pic/8_13.png 2x"
+        data-sizes="auto"
+        alt="./pic/8_13.png"
+        title="./pic/8_13.png" /></p>
+<hr>
+<h2 id="9-software-testing">9 Software Testing</h2>
+<h3 id="91-program-testing">9.1 Program Testing</h3>
+<ul>
+<li><strong>Testing</strong> is intended to show that a program does what it is intended to do and discover program defects before it is used.
+<ul>
+<li>using input data and checking the results of the test run for errors, anomalies, or information about the program’s non-functional attributes.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Goals:</strong></p>
+<ul>
+<li>To <strong>demonstrate</strong> to the developer and the customer that the <strong>software</strong> <strong>meets</strong> its <strong>requirements</strong>.</li>
+<li>To <strong>discover</strong> situations in which the behavior of the software is incorrect, undesirable or does not conform to its specification</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/9_1.png"
+        data-srcset="./pic/9_1.png, ./pic/9_1.png 1.5x, ./pic/9_1.png 2x"
+        data-sizes="auto"
+        alt="./pic/9_1.png"
+        title="./pic/9_1.png" /></p>
+<hr>
+<h4 id="912-validation-and-defect-testing">9.1.2 Validation and Defect Testing</h4>
+<ul>
+<li>first goal leads to <strong>validation testing</strong>
+<ul>
+<li>perform correctly using a given set of test cases</li>
+<li>A successful test shows that the system operates as intended.</li>
+</ul>
+</li>
+<li>second goal leads to <strong>defect testing</strong>
+<ul>
+<li>The test cases are designed to expose defects.
+<ul>
+<li>The test cases in defect testing can be deliberately obscure and need not reflect how the system is normally used.</li>
+</ul>
+</li>
+<li>A successful test makes the system perform incorrectly and expose a defect in the system.</li>
+<li>Can reveal the presence of errors but NOT their absence.</li>
+<li>Extreme case like, Integer.MAX_VALUE;</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="913-verification-and-validation">9.1.3 Verification and Validation</h4>
+<blockquote>
+<p>Testing is part of a more general V&amp;V process</p>
+</blockquote>
+<ul>
+<li>Verification: The software should conform to its specification.
+<ul>
+<li>&ldquo;Are we building the product right”.</li>
+</ul>
+</li>
+<li>Validation: The software should do what the user really requires.
+<ul>
+<li>&ldquo;Are we building the right product.”</li>
+</ul>
+</li>
+<li>Aim to establish confidence that the system is &ldquo;fit for purpose&rdquo;
+<ul>
+<li>Software purpose:The level of confidence depends on how critical the software is to an organization.</li>
+<li>User expectations: Users may have low expectations of certain software.</li>
+<li>Marketing environment: Getting a product to market early may be more important than finding defects in the program.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="914-software-inspections">9.1.4 Software Inspections</h4>
+<blockquote>
+<p>examining the source representation with the aim of discovering anomalies and defects.</p>
+</blockquote>
+<ul>
+<li>Applicable to any representation of the system(Requirements, design,configuration data, test data, etc)</li>
+<li>During testing, errors can <strong>mask</strong>(hide) other errors.
+<ul>
+<li>a static process, do not have to be concerned with interactions between errors;</li>
+</ul>
+</li>
+<li>broader quality attributes of a program, like compliance with standards, <strong>portability</strong>, <strong>maintainability</strong>, etc.</li>
+</ul>
+<hr>
+<h4 id="915-stages-of-testing">9.1.5 Stages of Testing</h4>
+<ul>
+<li><strong>Development testing</strong>: test during development to discover bugs and defects.</li>
+<li><strong>Release testing</strong>: tests a complete version of the system before it is released to users.(separate testing teal)</li>
+<li><strong>User testing</strong>: Users or potential users of a system are involved in testing</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/9_2.png"
+        data-srcset="./pic/9_2.png, ./pic/9_2.png 1.5x, ./pic/9_2.png 2x"
+        data-sizes="auto"
+        alt="./pic/9_2.png"
+        title="./pic/9_2.png" /></p>
+<hr>
+<h3 id="92-development-testing">9.2 DEVELOPMENT TESTING</h3>
+<h4 id="921-development-testing">9.2.1 Development Testing</h4>
+<blockquote>
+<p>Including <strong>all</strong> testing activities carried out by the development team</p>
+</blockquote>
+<ul>
+<li><strong>Unit testing</strong>: Individual program units or object classes are
+tested.
+<ul>
+<li>Focus on testing the functionality of objects or methods.</li>
+</ul>
+</li>
+<li><strong>Component testing</strong>: Individual units are integrated to create composite components.
+<ul>
+<li>Focus on testing component interfaces.</li>
+</ul>
+</li>
+<li><strong>System testing</strong>: Some or all of the components in a system are integrated, and the system is tested as a whole.
+<ul>
+<li>Focus on testing component interactions.</li>
+</ul>
+</li>
+</ul>
+<p><strong>White</strong> box testing vs. <em>black</em> box testing</p>
+<ul>
+<li><strong>With</strong> vs. <em>without</em> knowledge about the internal structure, design, or implementation of the software</li>
+</ul>
+<hr>
+<h4 id="922-unit-testing">9.2.2 Unit Testing</h4>
+<ul>
+<li>The process of testing individual code units in isolation
+<ul>
+<li>Individual functions or methods within an object</li>
+<li>Object classes with several attributes and methods</li>
+</ul>
+</li>
+</ul>
+<p><strong>Object class testing</strong>: Coverage of all the features of an object</p>
+<ul>
+<li>Getting and setting <strong>ALL</strong> object attributes</li>
+<li>Testing <strong>ALL</strong> operations associated with an object</li>
+<li>Exercising the object in <strong>ALL</strong> possible states.</li>
+<li>Simulating <strong>ALL</strong> events that cause a state change.</li>
+<li>Inheritance makes it more difficult to design object class tests as the information to be tested is not localized.</li>
+</ul>
+<p><strong>Automated Testing</strong></p>
+<ul>
+<li>unit test execution should be automated</li>
+<li><strong>Automated Test Components</strong>
+<ul>
+<li>A <strong>setup</strong> part, namely the inputs and expected results whe initiating the test</li>
+<li>A <strong>call</strong> part, call the object or method to be tested</li>
+<li>An <strong>automated mechanism</strong> to <strong>compare</strong> the <strong>result</strong> of the call with the <strong>expected result</strong></li>
+</ul>
+</li>
+<li><strong>Test Automation Framework</strong>
+<ul>
+<li>like JUnit</li>
+<li>use framework to write and run tests</li>
+<li>provided generic test classes</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>Testing Strategies</strong></p>
+<ul>
+<li><strong>Partition testing</strong>
+<ul>
+<li>Identify groups have common characteristics</li>
+<li>should be processed in the same way</li>
+<li>Choose tests from within each of these groups.</li>
+</ul>
+</li>
+<li><strong>Guideline-based testing</strong>
+<ul>
+<li><strong>Software with sequences</strong>
+<ul>
+<li>only a single value.</li>
+<li>different sizes in different tests</li>
+<li>Derive tests so that the sequence&rsquo;s first, middle, and last elements are accessed.</li>
+<li>sequences of zero length.</li>
+</ul>
+</li>
+<li><strong>General software</strong>
+<ul>
+<li>Choose inputs that force the system to generate all error messages</li>
+<li>cause input buffers to overflow;</li>
+<li>Repeat the same input or series of inputs numerous times;</li>
+<li>Force computation results to be too large or too small.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="923-component-testing">9.2.3 Component Testing</h4>
+<ul>
+<li>Software <strong>components</strong> are often composite units comprising several interacting objects.</li>
+<li>functionality is accessed through defined interface:
+<ul>
+<li>component interface behaves according to its specification.</li>
+<li>assume unit tests on individual objects within component is completed</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>Interface Testing</strong>
+Goals: detect <strong>faults</strong> due to <strong>interface errors</strong> or <strong>invalid interface assumptions</strong>.</p>
+<p><strong>Interface types</strong></p>
+<ul>
+<li>Parameter interfaces.</li>
+<li>Shared memory interfaces.</li>
+<li>Procedural interfaces.</li>
+<li>Message passing interfaces.</li>
+</ul>
+<p><strong>Interface Errors</strong></p>
+<ul>
+<li>Interface misuse</li>
+<li>Interface misunderstanding</li>
+<li>Timing errors</li>
+</ul>
+<hr>
+<p><strong>Interface Testing Guidelines</strong></p>
+<ul>
+<li>Design tests so that parameters to a called procedure are at the extreme ends of their ranges.</li>
+<li>Always test pointer parameters with null pointers.</li>
+<li>Design tests that cause the component to fail.</li>
+<li>Use stress testing in message-passing systems.</li>
+<li>In shared memory systems, vary the order in which components are activated.</li>
+</ul>
+<hr>
+<h4 id="924-system-testing">9.2.4 System Testing</h4>
+<ul>
+<li>Involves <strong>integrating</strong> components to create a system and then testing the integrated system.
+<ul>
+<li>Tests can be derived from the use cases</li>
+<li>checks that components are compatible, interact correctly, and transfer the right data at the right time</li>
+</ul>
+</li>
+<li>System testing <strong>overlaps</strong> with component testing, but there are two important differences:
+<ul>
+<li>The complete system is tested.</li>
+<li>A collective rather than an individual process.
+<ul>
+<li>component testing may be <strong>individual</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Testing Policies</strong></p>
+<ul>
+<li><strong>Exhaustive</strong> system testing is <strong>impossible</strong>;</li>
+<li>required system <strong>test coverage</strong> may be developed.
+<ul>
+<li>When to <strong>stop</strong> the testing;</li>
+</ul>
+</li>
+<li><strong>Policies</strong>:
+<ul>
+<li>Functions accessed through <strong>menus</strong> should be tested;</li>
+<li>Combinations of functions (e.g., text formatting) that are <strong>accessed through the same menu</strong> must be tested;</li>
+<li>On user input is provided, all functions must be tested with both <strong>correct and incorrect input</strong>.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>Regression testing</strong></p>
+<blockquote>
+<p>check that changes have not &lsquo;broken&rsquo; previously working code.</p>
+</blockquote>
+<ul>
+<li>In a manual testing process, regression testing is expensive.</li>
+<li>With automated testing, it is simple and straightforward</li>
+<li>All tests are rerun every time a change is made to the program</li>
+<li>Tests must run &lsquo;successfully&rsquo; before the change is committed.</li>
+</ul>
+<hr>
+<h3 id="93-release-testing">9.3 Release Testing</h3>
+<h4 id="931-release-testing">9.3.1 Release Testing</h4>
+<blockquote>
+<p>testing a particular release of a system that is intended for use outside of the development team.
+Validation testing;</p>
+</blockquote>
+<ul>
+<li>to convince the supplier of the system that it is good enough for use(primary goal)
+<ul>
+<li>has to show system delivers specified functionality, performance, and dependability</li>
+<li>no expected behaviors or results</li>
+</ul>
+</li>
+<li>black-box testing process</li>
+</ul>
+<hr>
+<h4 id="932-release-testing-and-system-testing">9.3.2 Release Testing and System Testing</h4>
+<ul>
+<li>A form of system test
+<ul>
+<li><strong>Requirements-based</strong> testing examines each requirement and developing or tests for it.</li>
+<li><strong>Scenario</strong> testing uses typical scenarios to develop test cases for the system.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Differences</strong></p>
+<ul>
+<li>separate team in release testing, NOT in system testing;</li>
+<li>Discovering bug is in System testing, NOT in release testing;</li>
+<li>Release testing: meets its requirements and is good enough for external use (validation testing).</li>
+</ul>
+<hr>
+<p><strong>performance testing</strong></p>
+<ul>
+<li>performance and reliability.</li>
+<li>Tests should reflect the profile of use of the system.</li>
+<li><strong>Performance tests</strong>: planning a series of tests where the load is steadily increased until the system performance becomes unacceptable.</li>
+<li><strong>Stress testing</strong>: a form of performance testing - system is <strong>deliberately overloaded</strong> to test its failure behavior.</li>
+</ul>
+<hr>
+<h3 id="94-user-testing">9.4 User Testing</h3>
+<blockquote>
+<p>users or customers provide input and advice on system testing.</p>
+</blockquote>
+<ul>
+<li>Essential than system and release testing have been carried out.
+<ul>
+<li>influences from the user’s working environment have a major effect on the reliability, performance, usability, and robustness of a system.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>Types of User Testing</strong></p>
+<ul>
+<li><strong>Alpha testing</strong>: Users are involved, but still inside the develop team; from their site;</li>
+<li><strong>Beta testing</strong>: <strong>open to users</strong> to allow them to experiment with a special release of software</li>
+</ul>
+<blockquote>
+<p>above are on how test performed.</p>
+</blockquote>
+<ul>
+<li><strong>Acceptance testing</strong>
+<ul>
+<li>whether or not it is ready to be accepted from the system developers and deployed in the customer environment.</li>
+<li>An inherent part of custom systems development.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>The Acceptance Testing Process</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/9_3.png"
+        data-srcset="./pic/9_3.png, ./pic/9_3.png 1.5x, ./pic/9_3.png 2x"
+        data-sizes="auto"
+        alt="./pic/9_3.png"
+        title="./pic/9_3.png" /></p>
+<ul>
+<li>Agile Methods and Acceptance Testing
+<ul>
+<li>user/customer is part of the development team and is responsible for making decisions on the acceptability of the system.</li>
+<li>NO separate acceptance testing process.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="10-software-evolution">10 Software Evolution</h2>
+<p><strong>Software change is inevitable</strong></p>
+<ul>
+<li>Errors must be repaired;</li>
+<li>Performance or reliability of the system may have to be improved.</li>
+<li>Business environment changes;</li>
+<li>New computers and equipment is added to the system;</li>
+<li>New requirements emerge when the software is used;</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/10_1.png"
+        data-srcset="./pic/10_1.png, ./pic/10_1.png 1.5x, ./pic/10_1.png 2x"
+        data-sizes="auto"
+        alt="./pic/10_1.png"
+        title="./pic/10_1.png" /></p>
+<p><strong>Evolution</strong></p>
+<ul>
+<li>The software system is in operational use</li>
+<li>Significant changes to the architecture and functionality are made</li>
+</ul>
+<p><strong>Servicing</strong></p>
+<ul>
+<li>The software remains useful</li>
+<li>Only small tactical changes are made</li>
+</ul>
+<p><strong>Retirement</strong></p>
+<ul>
+<li><strong>Only essential</strong> changes are made, and users must work <strong>around problems</strong></li>
+<li>The software is taken out of use after its data is transferred</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/10_2.png"
+        data-srcset="./pic/10_2.png, ./pic/10_2.png 1.5x, ./pic/10_2.png 2x"
+        data-sizes="auto"
+        alt="./pic/10_2.png"
+        title="./pic/10_2.png" /></p>
+<hr>
+<h3 id="101-evolution-processes">10.1 Evolution Processes</h3>
+<p><strong>Depend</strong> on</p>
+<ul>
+<li>type of software being maintained;</li>
+<li>development processes used;</li>
+<li>skills and experience of the people involved.</li>
+</ul>
+<p><strong>Proposals for change are the driver for system evolution</strong></p>
+<ul>
+<li>bug reports from system stakeholders</li>
+<li>requests for adaptation to the new environment</li>
+<li>new ideas for software improvement from the system development team</li>
+<li>requests for new requirements</li>
+</ul>
+<hr>
+<h4 id="1011-general-model">10.1.1 General Model</h4>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/10_3.png"
+        data-srcset="./pic/10_3.png, ./pic/10_3.png 1.5x, ./pic/10_3.png 2x"
+        data-sizes="auto"
+        alt="./pic/10_3.png"
+        title="./pic/10_3.png" /></p>
+<p><strong>Change Implementation</strong></p>
+<ul>
+<li>Iteration of the development process where the revisions to the system are designed, implemented, and tested.</li>
+<li>Different between development and evolution
+<ul>
+<li>the <strong>first stage</strong> of <strong>change implementation</strong> may involve program understanding</li>
+</ul>
+</li>
+</ul>
+<h4 id="1012-change-management-process">10.1.2 Change Management Process</h4>
+<blockquote>
+<p>The process of analyzing the <strong>costs</strong> and <strong>benefits</strong> of proposed changes</p>
+<blockquote>
+<p>approving those changes that are cost-effective, and tracking which components in the system have been changed.</p>
+</blockquote>
+</blockquote>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/10_4.png"
+        data-srcset="./pic/10_4.png, ./pic/10_4.png 1.5x, ./pic/10_4.png 2x"
+        data-sizes="auto"
+        alt="./pic/10_4.png"
+        title="./pic/10_4.png" /></p>
+<h4 id="1013-agile-methods-and-evolution">10.1.3 Agile Methods and Evolution</h4>
+<ul>
+<li>Agile methods are based on <strong>incremental</strong> development so the transition from <strong>development</strong> to <strong>evolution</strong> is a <em><strong>seamless</strong></em> one.
+<ul>
+<li>Evolution is simply a <strong>continuation of the development process</strong> based on <strong>frequent system releases</strong>.</li>
+<li><strong>Automated regression testing</strong> is particularly valuable when changes are made to a system.</li>
+<li>Changes may be expressed as additional user stories.</li>
+</ul>
+</li>
+<li><strong>Problems</strong>
+<ul>
+<li>Development team $\to$ agile approach, however evolution team $\to$ plan-based approach</li>
+<li>A plan-based approach has been used for development, but the evolution team prefer to use agile methods.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="102-software-maintenance">10.2 Software Maintenance</h3>
+<blockquote>
+<p>Modifying a custom software after it has been put into use
+Generic software products evolve to create new versions.</p>
+<blockquote>
+<p>Does not normally involve <strong>major changes</strong> to the system’s <strong>architecture</strong>.
+Changes are implemented by modifying existing components and adding new components to the system.</p>
+</blockquote>
+</blockquote>
+<p><strong>Types of maintenance</strong></p>
+<ul>
+<li>Fault repairs(24%)</li>
+<li>Environmental adaptation(19%)</li>
+<li>Functionality addition and modification(58%)</li>
+</ul>
+<hr>
+<h4 id="1021-maintenance-cost">10.2.1 Maintenance Cost</h4>
+<blockquote>
+<p>greater than development costs (2* to 100* depending on the application).</p>
+</blockquote>
+<ul>
+<li>Cost increases as software is maintained.</li>
+<li>Expensive to add new features to a system during <strong>maintenance</strong> than it is to add the same features during <strong>development</strong></li>
+<li><strong>Reasons</strong>s:
+<ul>
+<li>Program maintenance work is <strong>unpopular</strong></li>
+<li>Separating maintenance and development means <strong>no incentive</strong> for the development team to write maintainable software</li>
+<li>New team has to understand the programs being maintained</li>
+<li>As programs age, their structure <strong>degrades</strong>, and they become <strong>harder to change</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="1022-software-re-engineering">10.2.2 Software Re-engineering</h4>
+<ul>
+<li>Restructuring or rewriting part or all of a legacy system without changing its functionality
+<ul>
+<li>make them easier to maintain.</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/10_5.png"
+        data-srcset="./pic/10_5.png, ./pic/10_5.png 1.5x, ./pic/10_5.png 2x"
+        data-sizes="auto"
+        alt="./pic/10_5.png"
+        title="./pic/10_5.png" /></p>
+<p><strong>Advantages of reengineering over replacement</strong></p>
+<ul>
+<li>Reduce risk</li>
+<li>Reduce cost</li>
+</ul>
+<p><strong>Reengineering cost factors</strong></p>
+<ul>
+<li><strong>Quality</strong> of the software to be reengineered.</li>
+<li><strong>Tool</strong> support available for reengineering.</li>
+<li><strong>Extent of the data conversion</strong> which is required.</li>
+<li>Availability of <strong>expert</strong> staff for reengineering.</li>
+</ul>
+<p><strong>Limitation</strong></p>
+<ul>
+<li>Converting the programming paradigm is impossible</li>
+<li>Major architectural or data management changes are <strong>expensive</strong></li>
+<li>The resulting system probably is not as <strong>maintainable</strong> as a new system</li>
+</ul>
+<hr>
+<h3 id="1023-refactoring-vs-re-engineering">10.2.3 Refactoring vs. Re-engineering</h3>
+<ul>
+<li><strong>Refactoring</strong>
+<ul>
+<li>A <strong>continuous</strong> process of improvement throughout the <strong>development and evolution process</strong>
+<ul>
+<li>When refactoring a program, you should <strong>NOT</strong> add <strong>functionality</strong> but rather <strong>concentrate</strong> on program improvement.</li>
+<li>Like preventative maintenance</li>
+</ul>
+</li>
+<li>It is intended to avoid the structure and code <strong>degradation</strong> that <strong>increases</strong> the <strong>costs</strong> and <strong>difficulties</strong> of maintaining a system.</li>
+</ul>
+</li>
+<li><strong>Re-engineering</strong>
+<ul>
+<li>Happens after a system has been maintained for <strong>some</strong> time and maintenance <strong>costs</strong> are <strong>increasing</strong></li>
+<li>Uses automated tools to process and re-engineer a legacy system to create a new, more <strong>maintainable</strong> system.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="103-version-management">10.3 Version Management</h3>
+<blockquote>
+<p>The process of keeping <strong>track</strong> of <strong>different versions</strong> of software <strong>components</strong> or <strong>configuration</strong> items and the systems in which these components are used.</p>
+</blockquote>
+<ul>
+<li>Ensures that changes made by different developers to these versions do not interfere with each other.</li>
+</ul>
+<hr>
+<h4 id="1031-codelines-and-baselines">10.3.1 Codelines and Baselines</h4>
+<ul>
+<li><strong>Codeline</strong>
+<ul>
+<li>A sequence of versions of source code with later versions in the sequence derived from earlier versions.</li>
+</ul>
+</li>
+<li><strong>Baseline</strong>
+<ul>
+<li>specifies the component versions included in a specific system and the libraries and configuration files, etc., used.</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/10_6.png"
+        data-srcset="./pic/10_6.png, ./pic/10_6.png 1.5x, ./pic/10_6.png 2x"
+        data-sizes="auto"
+        alt="./pic/10_6.png"
+        title="./pic/10_6.png" /></p>
+<hr>
+<h4 id="1032-version-control-systems">10.3.2 Version Control Systems</h4>
+<blockquote>
+<p><strong>Identify</strong>, <strong>store</strong> and <strong>control</strong> access to the <strong>different versions of components</strong>.</p>
+</blockquote>
+<ul>
+<li>
+<p><strong>Two types</strong></p>
+<ul>
+<li>Centralized systems: a single master repository that maintains all versions of the software components that are being developed.
+<ul>
+<li>Example: Subversion</li>
+</ul>
+</li>
+<li>Distributed systems: Multiple versions of the component repository exist simultaneously.
+<ul>
+<li>Example: Git</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Five Features</strong></p>
+<ul>
+<li>Version and release identification</li>
+<li>Change history recording</li>
+<li>Support for independent development</li>
+<li>Project support</li>
+<li>Storage management</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>Version control systems vs. cloud storage systems</p>
+<ul>
+<li>VCS
+<ul>
+<li>Contains multiple changes;</li>
+<li>Help to merge the changes</li>
+</ul>
+</li>
+<li>CSS
+<ul>
+<li>Totally overwrite the old version, like Google Drive;</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="1033-project-repository-and-private-workspace">10.3.3 Project Repository and Private Workspace</h4>
+<p><strong>Project Repository</strong></p>
+<ul>
+<li>Maintains the &lsquo;<strong>master</strong>&rsquo; version of all components, which is used to create <strong>baselines</strong> for system building.
+<ul>
+<li>When modifying components, developers copy (check-out) these from the repository into their workspace and work on these copies.</li>
+<li>When they have finished their changes, the changed components are returned (checked-in) to the repository.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Centralized vs. distributed</strong></p>
+<ul>
+<li>In <strong>centralized</strong> version control, a <strong>private workspace contains only components</strong> from the project repository.</li>
+<li>In <strong>distributed</strong> version control, a <strong>clone</strong> of the project repository.</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/10_7.png"
+        data-srcset="./pic/10_7.png, ./pic/10_7.png 1.5x, ./pic/10_7.png 2x"
+        data-sizes="auto"
+        alt="./pic/10_7.png"
+        title="./pic/10_7.png" /></p>
+<p><strong>Benefits of Centralized vs Distributed VC</strong></p>
+<ul>
+<li><strong>Centralized</strong>
+<ul>
+<li>It is easier to learn and set up</li>
+<li>It takes less time and space to download part of a project</li>
+</ul>
+</li>
+<li><strong>Distributed</strong>
+<ul>
+<li>Provides a backup mechanism for the repository</li>
+<li>Allows for offline working</li>
+<li>faster</li>
+<li>Project support is the default way of working</li>
+<li>Working on branches is easier</li>
+<li>Fewer merge conflicts with other developer’s code</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="1034-organization-of-open-source-development">10.3.4 Organization of Open-Source Development</h4>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/10_8.png"
+        data-srcset="./pic/10_8.png, ./pic/10_8.png 1.5x, ./pic/10_8.png 2x"
+        data-sizes="auto"
+        alt="./pic/10_8.png"
+        title="./pic/10_8.png" /></p>
+<hr>
+<h4 id="1035-branching-and-merging">10.3.5 Branching and Merging</h4>
+<ul>
+<li>Rather than a linear sequence of versions that reflect changes to the component over time, there may be several independent sequences.</li>
+<li><strong>Branch</strong>:
+<ul>
+<li>Avoid to interfere with each other;</li>
+</ul>
+</li>
+<li><strong>Merge</strong>:
+<ul>
+<li>Merge codeline branches to create a new version of a component that includes all changes that have been made.</li>
+<li>Improve the flexibility of the VCS; when new idea coming in;</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="1036-storage-management">10.3.6 Storage Management</h4>
+<ul>
+<li>Instead of keeping a complete copy of each version, the system <strong>stores a list of differences (deltas)</strong> <strong>between one version and another</strong>, because disk space was expensive. (Centralized VCS)</li>
+<li>Drawback:
+<ul>
+<li>Difficult to get the least version of the code; find from the first version from beginning;</li>
+<li>chain of operations.</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/10_9.png"
+        data-srcset="./pic/10_9.png, ./pic/10_9.png 1.5x, ./pic/10_9.png 2x"
+        data-sizes="auto"
+        alt="./pic/10_9.png"
+        title="./pic/10_9.png" /></p>
+<hr>
+<p><strong>Git</strong></p>
+<ul>
+<li>(Distributed VCS)</li>
+<li>Git does <strong>NOT</strong> use <strong>deltas</strong> but</li>
+<li>applies a standard <strong>compression</strong> algorithm to stored files and their associated meta-information.</li>
+<li><strong>does not store duplicate copies of files</strong>.</li>
+<li>simply involves decompressing it, with no need to apply a chain of operations.</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/10_10.png"
+        data-srcset="./pic/10_10.png, ./pic/10_10.png 1.5x, ./pic/10_10.png 2x"
+        data-sizes="auto"
+        alt="./pic/10_10.png"
+        title="./pic/10_10.png" /></p>
+<hr>
+<h3 id="104-legacy-system">10.4 Legacy System</h3>
+<blockquote>
+<p><strong>Older</strong> systems that rely on languages and technology that are no longer used for new systems development.</p>
+</blockquote>
+<p><strong>Problems</strong></p>
+<ul>
+<li>Legacy system replacement is risky and expensive
+<ul>
+<li>Lack of complete system specification</li>
+<li>Tight integration of system and business processes</li>
+<li>Undocumented business rules embedded in the legacy system</li>
+<li>New software development may be late and/or over budget</li>
+</ul>
+</li>
+<li>Legacy systems are expensive to change
+<ul>
+<li>No consistent programming style</li>
+<li>Use of obsolete programming languages with few people available with these language skills</li>
+<li>Inadequate system documentation</li>
+<li>System structure degradation</li>
+<li>Program optimizations may make them hard to understand</li>
+<li>Data errors, duplication, and inconsistency</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="11-software-reuse">11 Software Reuse</h2>
+<p><strong>Reuse-based software engineering</strong></p>
+<ul>
+<li>System reuse</li>
+<li>Application reuse</li>
+<li>Component reuse</li>
+<li>Object and function reuse</li>
+</ul>
+<p><strong>Benefits</strong></p>
+<ul>
+<li>Accelerated development</li>
+<li>Effective use of specialists</li>
+<li>Increased dependability</li>
+<li>Lower development costs</li>
+<li>Reduced process risk</li>
+<li>Standards compliance</li>
+</ul>
+<p><strong>Problems</strong></p>
+<ul>
+<li>Creating, maintaining, and using a component library</li>
+<li>Finding, understanding, and adapting reusable components</li>
+<li>Increased maintenance costs</li>
+<li>Lack of tool support</li>
+<li>Not-invented-here syndrome</li>
+</ul>
+<hr>
+<h3 id="111-reuse-landscape">11.1 Reuse Landscape</h3>
+<ul>
+<li>Reuse is possible at a range of levels from simple functions to complete application systems. The reuse landscape covers the range of possible reuse techniques.</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/11_1.png"
+        data-srcset="./pic/11_1.png, ./pic/11_1.png 1.5x, ./pic/11_1.png 2x"
+        data-sizes="auto"
+        alt="./pic/11_1.png"
+        title="./pic/11_1.png" /></p>
+<p><strong>Approach</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Approach</th>
+<th style="text-align:center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Architectural patterns</td>
+<td style="text-align:center">Standard software architectures that support common types of application patterns system are used as the basis of applications</td>
+</tr>
+<tr>
+<td style="text-align:center">Program libraries</td>
+<td style="text-align:center">Class and function libraries that implement commonly used abstractions are available for reuse.</td>
+</tr>
+<tr>
+<td style="text-align:center">Application frameworks</td>
+<td style="text-align:center">Collections of abstract and concrete classes are adapted and extended to create application systems.</td>
+</tr>
+<tr>
+<td style="text-align:center">Software product lines</td>
+<td style="text-align:center">An application type is generalized around a common architecture so that it can be adapted for different customers.</td>
+</tr>
+<tr>
+<td style="text-align:center">Component-based software engineering</td>
+<td style="text-align:center">Systems are developed by integrating components (collections of objects) that conform to component-model standards.</td>
+</tr>
+<tr>
+<td style="text-align:center">Service-oriented systems</td>
+<td style="text-align:center">Systems are developed by linking shared services, which may be externally provided.</td>
+</tr>
+<tr>
+<td style="text-align:center">Design patterns</td>
+<td style="text-align:center">Generic abstractions that occur across applications are represented as design patterns showing abstract and concrete objects and interactions.</td>
+</tr>
+<tr>
+<td style="text-align:center">Model-driven engineering</td>
+<td style="text-align:center">Software is represented as domain models and implementation independent engineering models and code is generated from these models.</td>
+</tr>
+<tr>
+<td style="text-align:center">Application system integration</td>
+<td style="text-align:center">Two or more application systems are integrated to provide extended functionality</td>
+</tr>
+</tbody>
+</table>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/11_2.png"
+        data-srcset="./pic/11_2.png, ./pic/11_2.png 1.5x, ./pic/11_2.png 2x"
+        data-sizes="auto"
+        alt="./pic/11_2.png"
+        title="./pic/11_2.png" /></p>
+<p><strong>Reuse Planning Factors</strong></p>
+<ul>
+<li>The development <strong>schedule</strong> for the software.</li>
+<li>The expected software <strong>lifetime</strong>.</li>
+<li>The <strong>background</strong>, skills and experience of the development team.</li>
+<li>The <strong>criticality</strong> of the software and its <strong>non-functional requirements</strong>.</li>
+<li>The application <strong>domain</strong>.</li>
+<li>The execution platform for the software.</li>
+</ul>
+<p><strong>Reasons not to reuse</strong></p>
+<ul>
+<li>Unwillingness to compromise the requirements</li>
+<li>Preference to known risks of development over unknown risks of reuse, even if the latter may be larger</li>
+</ul>
+<hr>
+<h3 id="112-application-frameworks">11.2 APPLICATION FRAMEWORKS</h3>
+<blockquote>
+<p>&ldquo;an integrated set of software artifacts(such as classes, objects, and components) that collaborate to provide a <strong>reusable</strong> architecture for a family of related applications.&rdquo;</p>
+</blockquote>
+<ul>
+<li>Classes are reused directly and may be extended using features such as inheritance and polymorphism.</li>
+<li>Frameworks support design <strong>reuse</strong>
+<ul>
+<li>providing a skeleton architecture for the application</li>
+<li>specific classes in the system.</li>
+</ul>
+</li>
+<li>Frameworks provide support for generic features
+<ul>
+<li>all applications of a similar type</li>
+</ul>
+</li>
+<li>The problem with frameworks is complexity, meaning a long time yo use effectively.</li>
+</ul>
+<hr>
+<h4 id="1121-web-application-frameworkswafs">11.2.1 Web Application Frameworks(WAFs)</h4>
+<ul>
+<li>Commonly used to develop web applications
+<ul>
+<li>Spring for Java, Django for Python, and Angular for JavaScript.</li>
+<li>Support the <strong>construction</strong> of <strong>dynamic</strong> websites as a <strong>front-end</strong> for web applications.
+<ul>
+<li>Security, dynamic web pages, database support, session management, user interaction</li>
+</ul>
+</li>
+<li>Architecture of WAFs is based on MVC composite pattern.</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/11_3.png"
+        data-srcset="./pic/11_3.png, ./pic/11_3.png 1.5x, ./pic/11_3.png 2x"
+        data-sizes="auto"
+        alt="./pic/11_3.png"
+        title="./pic/11_3.png" /></p>
+<hr>
+<h4 id="1122-extending-frameworks">11.2.2 Extending Frameworks</h4>
+<ul>
+<li>Frameworks are generic and are extended to create a more specific application or sub-system.</li>
+<li>Involves:
+<ul>
+<li>Adding concrete classes that inherit operations from abstract classes in the framework;</li>
+<li>Adding (callback) methods that are called in response to events that are recognized by the framework.</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/11_4.png"
+        data-srcset="./pic/11_4.png, ./pic/11_4.png 1.5x, ./pic/11_4.png 2x"
+        data-sizes="auto"
+        alt="./pic/11_4.png"
+        title="./pic/11_4.png" /></p>
+<hr>
+<h3 id="113-software-product-lines">11.3 SOFTWARE PRODUCT LINES</h3>
+<blockquote>
+<p>A set of applications with a common architecture and shared components, with each application specialized to reflect different requirements.</p>
+<blockquote>
+<p>Printer drivers, MS Office</p>
+</blockquote>
+</blockquote>
+<ul>
+<li><strong>Specialization</strong>
+<ul>
+<li>Selecting from a library of existing components;</li>
+<li>Component and system configuration;</li>
+<li>Modifying components to meet new requirements.</li>
+<li>Adding new components to the system;</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="1131-base-system">11.3.1 Base System</h4>
+<ul>
+<li>Software product lines usually emerge from existing applications.</li>
+<li>Designing a generic product line involves
+<ul>
+<li>identifying <strong>common functionality</strong> in product instances;</li>
+<li>developing a <strong>base application</strong> to <strong>simplify</strong> reuse and reconfiguration.</li>
+</ul>
+</li>
+<li>A base application includes
+<ul>
+<li>Core components that provide <strong>infrastructure</strong> support;</li>
+<li><strong>Configurable</strong> components that may be <strong>modified</strong> and <strong>configured</strong> to <strong>specialize</strong> them to a <strong>new application</strong>.</li>
+<li>Specialized, domain-specific components some or all of which may be <strong>replaced</strong> when a new instance of a product line is created.</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/11_5.png"
+        data-srcset="./pic/11_5.png, ./pic/11_5.png 1.5x, ./pic/11_5.png 2x"
+        data-sizes="auto"
+        alt="./pic/11_5.png"
+        title="./pic/11_5.png" /></p>
+<hr>
+<h4 id="1132-application-frameworks-and-product-lines">11.3.2 Application Frameworks and Product Lines</h4>
+<ul>
+<li><strong>Both</strong>
+<ul>
+<li>support a common architecture and components</li>
+<li>require new development to create a specific version of a system.</li>
+</ul>
+</li>
+<li><strong>Differences</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Application framework</th>
+<th style="text-align:center">Software product line</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Application frameworks rely on object-oriented features</td>
+<td style="text-align:center">Product lines need not be object-oriented.</td>
+</tr>
+<tr>
+<td style="text-align:center">Application frameworks provide general rather than domain- specific support</td>
+<td style="text-align:center">Product lines embed domain and platform information.</td>
+</tr>
+<tr>
+<td style="text-align:center">Application frameworks are usually software-oriented.</td>
+<td style="text-align:center">Product lines are often control applications for equipment.</td>
+</tr>
+<tr>
+<td style="text-align:center">Application frameworks are Not</td>
+<td style="text-align:center">Product lines are made up of a family of applications, usually owned by the same organization.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The architecture of a software <strong>product line</strong> often reflects a <strong>general, application-specific</strong> architectural style or pattern.</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/11_6.png"
+        data-srcset="./pic/11_6.png, ./pic/11_6.png 1.5x, ./pic/11_6.png 2x"
+        data-sizes="auto"
+        alt="./pic/11_6.png"
+        title="./pic/11_6.png" /></p>
+<hr>
+<h3 id="114-component-based-software-engineering-cbse">11.4 COMPONENT-BASED SOFTWARE ENGINEERING (CBSE)</h3>
+<blockquote>
+<p>An <strong>approach</strong> to software development that relies on the reuse of entities called &ldquo;software components&rdquo;</p>
+</blockquote>
+<ul>
+<li>
+<p>The failure of <strong>object-oriented development</strong> to support effective reuse: <strong>Single object classes</strong> are <strong>too detailed</strong> and <strong>specific</strong>.</p>
+</li>
+<li>
+<p>Components are more <strong>abstract</strong> than object classes and can be <strong>stand-alone</strong> service providers.</p>
+</li>
+<li>
+<p><strong>CBSE essential</strong></p>
+<ul>
+<li>Independent components specified by their interfaces.</li>
+<li>Component standards to facilitate component integration.</li>
+<li>Middleware that provides support for component inter-operability</li>
+<li>A development process that is geared to reuse.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Component Characteristics</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/11_7.png"
+        data-srcset="./pic/11_7.png, ./pic/11_7.png 1.5x, ./pic/11_7.png 2x"
+        data-sizes="auto"
+        alt="./pic/11_7.png"
+        title="./pic/11_7.png" /></p>
+<hr>
+<h4 id="1141-components-as-providers-of-services">11.4.1 Components As Providers of Services</h4>
+<ul>
+<li>A component is a provider of one or more services
+<ul>
+<li>an <strong>independent executable entity</strong> defined by its <strong>interfaces</strong>.</li>
+</ul>
+</li>
+<li>In principle, all components have two related interfaces
+<ul>
+<li>The &ldquo;<strong>provides</strong>&rdquo; interface: defines the <strong>services</strong> provided by the component.</li>
+<li>The &ldquo;<strong>requires</strong>&rdquo; interface: specifies the <strong>services</strong> that <strong>other components</strong> in the system must provide if a component is to operate <strong>correctly</strong>.</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/11_8.png"
+        data-srcset="./pic/11_8.png, ./pic/11_8.png 1.5x, ./pic/11_8.png 2x"
+        data-sizes="auto"
+        alt="./pic/11_8.png"
+        title="./pic/11_8.png" /></p>
+<hr>
+<h4 id="1142-component-models">11.4.2 Component Models</h4>
+<ul>
+<li>
+<p>A component model defines <strong>standards</strong> for component <strong>implementation</strong>, <strong>documentation</strong>, and <strong>deployment</strong>.</p>
+<ul>
+<li>EJB model (Enterprise Java Beans)</li>
+<li>COM+ model (.NET model)</li>
+<li>CORBA Component Model (CCM)</li>
+</ul>
+</li>
+<li>
+<p>Basic elements</p>
+<ul>
+<li>Interfaces</li>
+<li>Usage information</li>
+<li>Deployment</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/11_9.png"
+        data-srcset="./pic/11_9.png, ./pic/11_9.png 1.5x, ./pic/11_9.png 2x"
+        data-sizes="auto"
+        alt="./pic/11_9.png"
+        title="./pic/11_9.png" /></p>
+<hr>
+<p><strong>Component Model Implementation</strong></p>
+<ul>
+<li>A component model implementation provides <strong>platform services</strong> and <strong>support services</strong></li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/11_10.png"
+        data-srcset="./pic/11_10.png, ./pic/11_10.png 1.5x, ./pic/11_10.png 2x"
+        data-sizes="auto"
+        alt="./pic/11_10.png"
+        title="./pic/11_10.png" /></p>
+<ul>
+<li>Components can be considered as being deployed in <strong>containers</strong>
+<ul>
+<li>A container is an <strong>implementation</strong> of these services <strong>plus</strong> a <strong>definition</strong> of the interfaces a component <strong>MUST</strong> provide to integrate it with the container.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="1143-cbse-processes">11.4.3 CBSE Processes</h4>
+<blockquote>
+<p>Software processes that support component-based software engineering.</p>
+</blockquote>
+<ul>
+<li>Development <strong>for</strong> reuse: Process concerned with developing components or services that <strong>will be reused</strong> in other applications.</li>
+<li>Development <strong>with</strong> reuse: Process of developing <strong>new</strong> applications using <strong>existing</strong> components and services.</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/11_11.png"
+        data-srcset="./pic/11_11.png, ./pic/11_11.png 1.5x, ./pic/11_11.png 2x"
+        data-sizes="auto"
+        alt="./pic/11_11.png"
+        title="./pic/11_11.png" /></p>
+<p><strong>Supporting Processes</strong></p>
+<ul>
+<li>Component <strong>acquisition</strong> is the process of acquiring components for reuse or development into a reusable component.
+<ul>
+<li>involve accessing <strong>locally-developed</strong> components or services or finding these components from an <strong>external</strong> source.</li>
+</ul>
+</li>
+<li>Component <strong>management</strong> is concerned with managing a company’s reusable components, ensuring that they are properly catalogued, stored and made available for reuse.</li>
+<li>Component <strong>certification</strong> is the process of checking a component and certifying that it meets its specification.</li>
+</ul>
+<hr>
+<h3 id="115-service-oriented-architectures">11.5 SERVICE-ORIENTED ARCHITECTURES</h3>
+<blockquote>
+<p>A way of building distributed applications using web services.</p>
+<blockquote>
+<p>A web service is a loosely coupled, reusable software entity that encapsulates discrete functionality, which may be distribute and programmatically accessed.</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>Service-oriented SE vs. Component-based SE
+<ul>
+<li>When building a <strong>service-oriented</strong> system, reference the external service;
+<ul>
+<li>Each system that reused a component had to incorporate its own copy of that component.</li>
+</ul>
+</li>
+<li><strong>Components</strong> are deployed in containers and rely on the containers&rsquo; support to communicate with each other.
+<ul>
+<li>Services communicate based on established protocols (e.g., HTTP, HTTPS) and data format (e.g., XML, Schemata)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>Benefits</strong></p>
+<ul>
+<li>Services can be offered by any service provider inside or outside of an organization.</li>
+<li>The service provider makes information about the service public so that any authorized user can use the service.</li>
+<li><strong>Applications can delay the binding of services until they are deployed or until execution.</strong>
+<ul>
+<li>loosely coupled</li>
+<li>can choose which service at run time;</li>
+<li>flexible</li>
+</ul>
+</li>
+<li>Opportunistic construction of new services is possible.</li>
+<li>Service users can <strong>pay for services</strong> according to their use rather than their provision.</li>
+<li>Applications can be made smaller, which is particularly important for mobile devices with limited processing and memory capabilities.</li>
+</ul>
+<hr>
+<p><strong>Service-Oriented Architecture (SOA)</strong></p>
+<blockquote>
+<p>An architectural style that focuses on the <strong>use of services to support business requirements.</strong></p>
+</blockquote>
+<ul>
+<li><strong>Service providers</strong>
+<ul>
+<li><strong>design</strong> and <strong>implement</strong> services and <strong>specify the interface</strong> to these services;</li>
+<li><strong>publish</strong> information about these <strong>services</strong> in an <strong>accessible registry</strong>.</li>
+</ul>
+</li>
+<li><strong>Service requestors(service clients)</strong>
+<ul>
+<li>make use of a service <strong>discover</strong> the <strong>specification</strong> of that service and <strong>locate the service provider</strong>.</li>
+<li><strong>bind</strong> their application to that <strong>specific service</strong> and <strong>communicate</strong> with it, using <strong>standard service protocols</strong>.</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/11_12.png"
+        data-srcset="./pic/11_12.png, ./pic/11_12.png 1.5x, ./pic/11_12.png 2x"
+        data-sizes="auto"
+        alt="./pic/11_12.png"
+        title="./pic/11_12.png" /></p>
+<hr>
+<p><strong>Service Engineering</strong></p>
+<blockquote>
+<p>The process of developing services for reuse in service-oriented applications</p>
+</blockquote>
+<ul>
+<li><strong>Service candidate identification</strong>
+<ul>
+<li><strong>identify</strong> possible <strong>services</strong> that might be implemented and <strong>define</strong> the service <strong>requirements</strong>.</li>
+</ul>
+</li>
+<li><strong>Service design</strong>
+<ul>
+<li>design the <strong>logical service interface</strong> and its <strong>implementation interfaces</strong>.</li>
+</ul>
+</li>
+<li><strong>Service implementation and deployment</strong>
+<ul>
+<li>implement and <strong>test</strong> the <strong>service</strong> and make it <strong>available</strong> for use.</li>
+</ul>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./pic/11_13.png"
+        data-srcset="./pic/11_13.png, ./pic/11_13.png 1.5x, ./pic/11_13.png 2x"
+        data-sizes="auto"
+        alt="./pic/11_13.png"
+        title="./pic/11_13.png" /></p>
+<hr>
+<p><em><strong>学习笔记，仅供参考</strong></em></p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023-11-14</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/se/l/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/software-engineering/">Software Engineering</a>,&nbsp;<a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/sp/l/" class="prev" rel="prev" title="System Programming"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>System Programming</a></div>
+</div>
+
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.5.0/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"gVyw2XjY83zqSfHqJBAeOgjR-MdYXbMMI","appKey":"a5Yl6yevpS8Bwp4G4790edGK","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-CN","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"serverURLs":"https://leancloud.hugoloveit.com","visitor":true}},"data":{"id-1":"山雨欲来风满楼的网站","id-2":"山雨欲来风满楼的网站"},"lightgallery":true,"search":{"algoliaAppID":"SACBDHJDQ3","algoliaIndex":"ShanSearch","algoliaSearchKey":"37347a56eb55bf14a8d7cc96bf602045","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script><script type="text/javascript" src="/js/custom.js"></script></body>
+</html>
