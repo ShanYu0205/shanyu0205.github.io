@@ -79,7 +79,7 @@ There are separate identified phases in the waterfall model, and in principle, a
   - This approach can be either plan-driven, agile or, more usually, a mixture of these approaches.
   - You don’t have to deliver each increment to the system customer. 
 
-![](./pic/2_1.png)
+![](../pic/2_1.png)
 
 ---
 #### 2.2.4 Incremental Development Benefits and Problems 
@@ -106,7 +106,7 @@ Types of reusable software
 ---
 #### 2.2.6 Reuse-oriented Software Engineering
 
-![](./pic/2_2.png)
+![](../pic/2_2.png)
 
 Advantages and disadvantages
 - Reduced costs and risks as less software is developed from scratch 
@@ -134,7 +134,7 @@ Requirements engineering process
 - Requirements validation
   - Checking the validity of the requirements
 
-![](./pic/2_3.png)
+![](../pic/2_3.png)
 
 ---
 #### 2.3.2 Software Development
@@ -176,7 +176,7 @@ The process of developing an executable system for delivery to the customer.
 - Although there has been a demarcation between development and evolution (maintenance), the distinction is increasingly irrelevant as fewer and fewer systems are completely new. 
 - It is more realistic to think of software engineering as an evolutionary process where software is continually changed in response to changing requirements and customer needs.
 
-![](./pic/2_4.png)
+![](../pic/2_4.png)
 
 ---
 ### 2.4 Coping with Change
@@ -227,7 +227,7 @@ A prototype is an initial version of a system used to demonstrate concepts, try 
 ---
 #### 2.4.4 Prototyping Development
 
-![](./pic/2_5.png)
+![](../pic/2_5.png)
 May be based on **rapid** prototyping languages or tools 
 
 May involve leaving out functionality
@@ -241,7 +241,7 @@ The development and delivery is **broken down** into **increments** with each in
 - User requirements are **prioritized** and the **highest priority** requirements are included in **early increments**.
 - Once the development of an increment is started, the requirements are frozen though requirements for later increments can continue to evolve.
 
-![](./pic/2_6.png)
+![](../pic/2_6.png)
 
 **Advantages**:
 - elicit requirements for later increments. 
@@ -282,7 +282,7 @@ The development and delivery is **broken down** into **increments** with each in
 **Mature software organization**
 - Processes are documented, usable, and consistent with the way the work is actually done
 
-![](./pic/2_7.png)
+![](../pic/2_7.png)
 
 ---
 #### 2.5.3 Quality Assurance (QA)
@@ -304,7 +304,7 @@ CMMI supports **2 representations**: **staged** and **continuous**. To initiate 
 ##### 2.5.4.1 Staged Representation of CMMI 
 Staged models provide a proven sequence of improvements, beginning with basic management practices and progressing through successive levels.
 
-![](./pic/2_8.png)
+![](../pic/2_8.png)
 
 ##### 2.5.4.2 Continuous Representation of CMMI
 Continuous representation designates capability levels: numbered 0 through 3: incomplete, performed, managed, and defined
@@ -329,13 +329,13 @@ All agile methods suggest that software should be developed and delivered **incr
 - Based around **separate** development stages with the outputs to be produced at each stage.
 - **Iteration** occurs **within** activities.
 
-![](./pic/3_1.png)
+![](../pic/3_1.png)
 
 **Agile development**
 - Specification, design, implementation, and testing are **inter-leaved** and the outputs from the development process are negotiated during the software development process.
 - Iteration occurs **across** activities.
 
-![](./pic/3_2.png)
+![](../pic/3_2.png)
 
 ---
 #### 3.1.3 Agile Methods Applicability
@@ -375,12 +375,12 @@ Pushing recognized good practice to “extreme” levels
   
 The extreme programming release cycle
 
-![](./pic/3_3.png)
+![](../pic/3_3.png)
 
 ---
 #### 3.2.2 XP Principles and Practices
-![](./pic/3_4.png)
-![](./pic/3_5.png)
+![](../pic/3_4.png)
+![](../pic/3_5.png)
 
 ---
 #### 3.2.3 Support for Agile Principles in XP Practices
@@ -494,8 +494,8 @@ Agile methods
 - A series of *sprint cycles*, where each cycle develops an increment of the system.
 - The *project closure* phase wraps up the project, completes required documentation, and assesses the lessons learned.
 
-![](./pic/3_6.png)
-![](./pic/3_7.png)
+![](../pic/3_6.png)
+![](../pic/3_7.png)
 
 **Benefits**
 - The product is broken down into a set of manageable and  understandable chunks that stakeholders can relate to. 
@@ -519,10 +519,10 @@ Agile methods
 - **User** requirements: Statements in natural language plus diagrams
 - **System** requirements: A detailed, structured document
 
-![](./pic/4_1.png)
+![](../pic/4_1.png)
 
 **Example**
-![](./pic/4_2.png)
+![](../pic/4_2.png)
 
 ---
 #### 4.1.1 Agile Methods and Requirements
@@ -555,7 +555,7 @@ For a "traditional" view of requirements.
 - Detailed description of the services provided by the system;
 
 **Example**
-![](./pic/4_3.png)
+![](../pic/4_3.png)
 
 ##### 4.2.1.2 Non-Functional Requirements
 - **System properties and constrains**
@@ -585,7 +585,7 @@ Two parts:
 |Robustness|Time to restart after failure; Percentage of events causing failure; Probability of data corruption on failure |
 |Portability|Percentage of target dependent statements; Number of target systems|
 
-![](./pic/4_13.png)
+![](../pic/4_13.png)
 
 *[Example]*
 **Goals**
@@ -614,7 +614,7 @@ Generic activities common to all processes
 
 In practice, RE is an iterative activity in which these processes are interleaved.
 
-![](./pic/4_5.png)
+![](../pic/4_5.png)
 
 ---
 ### 4.4 REQUIREMENTS ELICITATION
@@ -632,7 +632,7 @@ Stages:
 - **Documentation**:
   - The requirements are documented and input into the next round of the spiral.
 
-![](./pic/4_6.png)
+![](../pic/4_6.png)
 
 ##### Techniques - 1
 **Interviewing**
@@ -698,7 +698,7 @@ Guidelines on writing natural language requirements
 - Include an **explanation** (rationale) of why a requirement is necessary.
 
 > **Example**
-> ![](./pic/4_7.png)
+> ![](../pic/4_7.png)
 
 ---
 #### 4.5.3 Structured Natural Language Specifications
@@ -708,7 +708,7 @@ Guidelines on writing natural language requirements
 > - It is still sometimes difficult to write requirements in a clear and unambiguous way
 
 **Example**
-![](./pic/4_8.png)
+![](../pic/4_8.png)
 
 ---
 #### 4.5.4 Use Cases
@@ -723,7 +723,7 @@ Use case diagram
 - Documented with a textual description
 
 > *[Example] - UML*
-> ![](./pic/4_9.png)
+> ![](../pic/4_9.png)
 
 ---
 #### 4.5.5 Requirements and Design
@@ -742,8 +742,8 @@ Use case diagram
 
 ---
 #### 4.5.7 The Structure of A Requirements Specification
-![](./pic/4_10.png)
-![](./pic/4_11.png)
+![](../pic/4_10.png)
+![](../pic/4_11.png)
 
 ---
 ### 4.6 REQUIREMENTS VALIDATION
@@ -843,7 +843,7 @@ Models can be
 **Diagram Types**
 - A UML model consists of diagrams and documentation that complements\ the diagrams
 
-![](./pic/5_1.png)
+![](../pic/5_1.png)
 
 ---
 ### 5.3 Context Models
@@ -856,7 +856,7 @@ Models can be
 - what is inside and outside
 - social and organizational concerns may affect the system boundary
 
-![](./pic/5_2.png)
+![](../pic/5_2.png)
 
 > add arrow to indicate the direction of the work flow
 
@@ -865,7 +865,7 @@ Models can be
 - A type of the context;
 - Context models simply show the other systems in the environment, but **NOT** the types of relationships between, no details;
 
-![](./pic/5_3.png)
+![](../pic/5_3.png)
 
 ---
 ### 5.4 Interaction Models
@@ -882,12 +882,12 @@ Models can be
 #### 5.4.1 Use Case Modelling
 **Use Case diagram**
 
-![](./pic/5_4.png)
+![](../pic/5_4.png)
 
 ellipse: use case 
 stick figure: actor, person, system
 
-![](./pic/5_5.png)
+![](../pic/5_5.png)
 
 ---
 #### 5.4.2 Sequence Diagrams
@@ -895,16 +895,16 @@ stick figure: actor, person, system
 - Shows the sequence of interactions that take place during a particular use case or use case instance.
 
 **Sequence diagram**:
-![](./pic/5_6.png)
+![](../pic/5_6.png)
 
 **Loop**:
-![](./pic/5_7.png)
+![](../pic/5_7.png)
 
 **Condition**:
-![](./pic/5_8.png)
+![](../pic/5_8.png)
 
 **Sequence Diagram**
-![](./pic/5_9.png)
+![](../pic/5_9.png)
 
 ---
 ### 5.5 Structural Models
@@ -920,7 +920,7 @@ stick figure: actor, person, system
 #### 5.5.1 Classes
 - **encapsulates** **state** (*attributes*) and **behavior**(*operations*)
 
-![](./pic/6_1.png)
+![](../pic/6_1.png)
 
 - each attribute has a type, each operation  has a signature
 
@@ -941,7 +941,7 @@ stick figure: actor, person, system
 - **semantic** connection between **dependent** and **independent** classes (modules).
   - If changes to the definition of one class (module) (the server or target) may cause changes to the other (the client or source).
 
-![](./pic/6_2.png)
+![](../pic/6_2.png)
 
 ---
 ##### 5.5.2.1 Instance-level Relationship
@@ -949,7 +949,7 @@ stick figure: actor, person, system
 > a type of relation between class instances 
 - using association to communicate classes
 
-![](./pic/6_3.png)
+![](../pic/6_3.png)
 
 - Class A has an attribute of type B 
 - Class A creates instances of B 
@@ -959,31 +959,31 @@ stick figure: actor, person, system
 > Multiplicity denotes how many objects of the class take part in the relation
 
 *[1-to-1]*
-![](./pic/6_4.png)
+![](../pic/6_4.png)
 
 *[1-to-many]*
-![](./pic/6_5.png)
+![](../pic/6_5.png)
 
 *[many-to-many]*
-![](./pic/6_6.png)
+![](../pic/6_6.png)
 
 **Special Associations (Has-A Relation) - Aggregation & Composition**
 - **Aggregation**: “part-of” relation between objects
   - Component can be part of multiple aggregates
   - Component can be created and destroyed **independently** of the aggregate
 
-![](./pic/6_7.png)
+![](../pic/6_7.png)
 
 - **Composition**:  strong aggregation
   - Component can be part of **only one** aggregate
   - Exists only together with the aggregate
 
-![](./pic/6_8.png)
+![](../pic/6_8.png)
 
 **Navigability of Association**
 - whether objects can be accessed through this association(directed)
 
-![](./pic/6_9.png)
+![](../pic/6_9.png)
 
 ---
 ##### 5.5.2.2 Class-level Relationship
@@ -992,7 +992,7 @@ stick figure: actor, person, system
 - **inheritance**
   - Generalization simplifies the model by eliminating redundancy
 
-![](./pic/6_10.png)
+![](../pic/6_10.png)
 
 ---
 ### 5.6 Behavioral Models
@@ -1009,11 +1009,11 @@ stick figure: actor, person, system
 
 *[Activity diagrams example]*
 
-![](./pic/6_11.png)
+![](../pic/6_11.png)
 
 *[Sequence diagrams example]*
 
-![](./pic/6_12.png)
+![](../pic/6_12.png)
 
 ---
 #### 5.6.2 Event-Driven Modeling
@@ -1022,21 +1022,21 @@ stick figure: actor, person, system
   - events (stimuli) may cause transitions between states.
 - UML state diagrams show system **states** and **events** that cause transitions from one state to another.
 
-![](./pic/6_13.png)
+![](../pic/6_13.png)
 
 > states are nodes; events are arcs between nodes
 
 ---
 #### 5.6.3 States and Stimuli for The Microwave Oven
 
-![](./pic/6_14.png)
+![](../pic/6_14.png)
 
 ---
 #### 5.6.4 Superstates
 - looks like a single state in a high-level model
 - expanded to show more detail in a separate diagram
 
-![](./pic/6_15.png)
+![](../pic/6_15.png)
 
 ---
 ## 6 Architectural Design
@@ -1070,7 +1070,7 @@ stick figure: actor, person, system
 
 - no types of relationship or components externally visible properties
 
-![](./pic/7_1.png)
+![](../pic/7_1.png)
 
 ---
 ### 6.1 Architectural Design Decisions
@@ -1136,21 +1136,21 @@ stick figure: actor, person, system
 - manages interaction(key presses, mouse clicks, etc.) passes these interactions to View and Model
 
 
-![](./pic/7_2.png)
-![](./pic/7_3.png)
+![](../pic/7_2.png)
+![](../pic/7_3.png)
 
 ---
 #### 6.3.2 Layered Architectures
 > Organized into **separate layers**, and each layer **ONLY relies** on the facilities and services offered by **the layer immediately beneath it**.
 
-![](./pic/7_4.png)
+![](../pic/7_4.png)
 
 Benefit:
 - Supports the **incremental development**;
 - Layer interface changes, **ONLY the adjacent layer** is **affected**;
 - Allows **replacement** of entire layers;
 
-![](./pic/7_5.png)
+![](../pic/7_5.png)
 
 **Disadvantage**:
 - Clean separation between layers is often difficult
@@ -1159,7 +1159,7 @@ Benefit:
   - the performance will be low;
 
 ---
-![](./pic/7_6.png)
+![](../pic/7_6.png)
 
 ---
 #### 6.3.3 Repository Architectures
@@ -1169,7 +1169,7 @@ Exchange of data among subsystems:
 - **Distributed** storage
   - Sub-system maintains its **own database(copy of)** and passes data explicitly to other sub-systems. Low efficiency;
 
-![](./pic/7_7.png)
+![](../pic/7_7.png)
 
 **Benefit**:
 - Components can be independent;
@@ -1179,7 +1179,7 @@ Exchange of data among subsystems:
 - Distributing may be difficult;
 
 ---
-![](./pic/7_8.png)
+![](../pic/7_8.png)
 
 > **Repository** model: A repository is **passive**, the **components** to **control** with the data in repository;
 > **Blackboard** model: A blackboard **notifies(actively)** components when particular data become available;
@@ -1195,7 +1195,7 @@ Exchange of data among subsystems:
 - call on these services they want to;
 - Can be implemented on single computer
 
-![](./pic/7_9.png)
+![](../pic/7_9.png)
 
 **Advantages**:
 - Servers can be distributed across a network;
@@ -1205,7 +1205,7 @@ Exchange of data among subsystems:
 - Performance may be unpredictable because it depends on the network;
 
 ---
-![](./pic/7_10.png)
+![](../pic/7_10.png)
 
 ---
 #### 6.3.5 Pipe and Filter Architectures
@@ -1214,7 +1214,7 @@ Exchange of data among subsystems:
 - **pipes**: link processes using "pipes"
 - **filter**: transformation “filters out” the data it can process from its input data stream.
 
-![](./pic/7_11.png)
+![](../pic/7_11.png)
 
 **Advantage:**
 - easy to understand and supports transformation reuse
@@ -1225,7 +1225,7 @@ Exchange of data among subsystems:
 - Each **transformation** must **parse** its **input** and **unparse** its **output** to the **agreed form**;
 
 ---
-![](./pic/7_12.png)
+![](../pic/7_12.png)
 
 ---
 ### 6.4 Application Architectures
@@ -1249,7 +1249,7 @@ Exchange of data among subsystems:
 - a customer request to withdraw money from a bank account using an ATM
   - May be organized as a “pipe and filter” architecture
 
-![](./pic/7_13.png)
+![](../pic/7_13.png)
 
 **Information Systems**
 - can be organized as a layered architecture
@@ -1428,7 +1428,7 @@ Two types:
 - **Object-oriented** analysis – identifying **objects** and the
 **relationship** between objects.
 
-![](./pic/8_1.png)
+![](../pic/8_1.png)
 
 ---
 #### 8.1.1 Domain Model
@@ -1452,11 +1452,11 @@ grained conceptual classes than to under-specify it.
 
 **Identify conceptual classes**
 - Conceptual class category
-![](./pic/8_2.png)
+![](../pic/8_2.png)
 
 - Noun phrase identification
   - find noun phrases in the specification
-![](./pic/8_3.png)
+![](../pic/8_3.png)
 
 ---
 1. Discard some class:
@@ -1531,7 +1531,7 @@ Two kinds of design models: **dynamic** and **static**.
   - One card per class, shows its responsibilities and with which other class(es) it must collaborate to fulfill each responsibility 
   - A brief description of the class on the back of the card.
 
-![](./pic/8_4.png)
+![](../pic/8_4.png)
 
 - In the example, class `Foo` must collaborate with (send messages to) `ClassX` and `ClassY` in order to fulfill its responsibility to be able to "`do something`."
 
@@ -1548,31 +1548,31 @@ Two kinds of design models: **dynamic** and **static**.
 > Each responsibility is a reason for change. 
 > A class should have **ONLY ONE** reason to change.
 
-![](./pic/8_5.png)
-![](./pic/8_6.png)
+![](../pic/8_5.png)
+![](../pic/8_6.png)
 
 ---
 #### 8.3.2 Open/Closed Principle
 > Software entities should be **open** for **extension** (good for inheritance)
 > but **closed** for **modification**.(modification should not be open to clients)
 
-![](./pic/8_7.png)
-![](./pic/8_8.png)
-![](./pic/8_9.png)
+![](../pic/8_7.png)
+![](../pic/8_8.png)
+![](../pic/8_9.png)
 
 
 ---
 #### 8.3.3 Liskov Substitution Principle
 > Objects in a program should be **replaceable** with instances of their **subtypes** without **altering** the correctness of that program
 
-![](./pic/8_10.png)
-![](./pic/8_11.png)
+![](../pic/8_10.png)
+![](../pic/8_11.png)
 
 ---
 #### 8.3.4 Interface Segregation Principle
 > Many client-specific interfaces(small) are better than one general-purpose(big) interface. One interface for each responsibility.
 
-![](./pic/8_12.png)
+![](../pic/8_12.png)
 
 ---
 #### 8.3.5 Dependency Inversion Principle
@@ -1580,7 +1580,7 @@ Two kinds of design models: **dynamic** and **static**.
 > High-level modules should not depend on low-level modules. Both should depend on **abstractions**(interface);
 > **Abstractions** should **NOT** depend on **details**. Details should depend on **abstractions**.
 
-![](./pic/8_13.png)
+![](../pic/8_13.png)
 
 ---
 ## 9 Software Testing
@@ -1592,7 +1592,7 @@ Two kinds of design models: **dynamic** and **static**.
 - To **demonstrate** to the developer and the customer that the **software** **meets** its **requirements**.
 -  To **discover** situations in which the behavior of the software is incorrect, undesirable or does not conform to its specification
 
-![](./pic/9_1.png)
+![](../pic/9_1.png)
 
 ---
 #### 9.1.2 Validation and Defect Testing
@@ -1633,7 +1633,7 @@ Two kinds of design models: **dynamic** and **static**.
 - **Release testing**: tests a complete version of the system before it is released to users.(separate testing teal)
 - **User testing**: Users or potential users of a system are involved in testing
 
-![](./pic/9_2.png)
+![](../pic/9_2.png)
 
 ---
 ### 9.2 DEVELOPMENT TESTING
@@ -1796,7 +1796,7 @@ Goals: detect **faults** due to **interface errors** or **invalid interface assu
 ---
 **The Acceptance Testing Process**
 
-![](./pic/9_3.png)
+![](../pic/9_3.png)
 
 - Agile Methods and Acceptance Testing
   - user/customer is part of the development team and is responsible for making decisions on the acceptability of the system.
@@ -1811,7 +1811,7 @@ Goals: detect **faults** due to **interface errors** or **invalid interface assu
 - New computers and equipment is added to the system;
 - New requirements emerge when the software is used;
 
-![](./pic/10_1.png)
+![](../pic/10_1.png)
 
 **Evolution**
 - The software system is in operational use
@@ -1825,7 +1825,7 @@ Goals: detect **faults** due to **interface errors** or **invalid interface assu
 - **Only essential** changes are made, and users must work **around problems** 
 - The software is taken out of use after its data is transferred
 
-![](./pic/10_2.png)
+![](../pic/10_2.png)
 
 ---
 ### 10.1 Evolution Processes
@@ -1842,7 +1842,7 @@ Goals: detect **faults** due to **interface errors** or **invalid interface assu
 
 ---
 #### 10.1.1 General Model
-![](./pic/10_3.png)
+![](../pic/10_3.png)
 
 **Change Implementation**
 - Iteration of the development process where the revisions to the system are designed, implemented, and tested. 
@@ -1853,7 +1853,7 @@ Goals: detect **faults** due to **interface errors** or **invalid interface assu
 > The process of analyzing the **costs** and **benefits** of proposed changes
 > > approving those changes that are cost-effective, and tracking which components in the system have been changed.
 
-![](./pic/10_4.png)
+![](../pic/10_4.png)
 
 #### 10.1.3 Agile Methods and Evolution
 - Agile methods are based on **incremental** development so the transition from **development** to **evolution** is a ***seamless*** one.
@@ -1892,7 +1892,7 @@ Goals: detect **faults** due to **interface errors** or **invalid interface assu
 - Restructuring or rewriting part or all of a legacy system without changing its functionality
   - make them easier to maintain.
 
-![](./pic/10_5.png)
+![](../pic/10_5.png)
 
 **Advantages of reengineering over replacement**
 - Reduce risk
@@ -1932,7 +1932,7 @@ Goals: detect **faults** due to **interface errors** or **invalid interface assu
 - **Baseline**
   - specifies the component versions included in a specific system and the libraries and configuration files, etc., used.
 
-![](./pic/10_6.png)
+![](../pic/10_6.png)
 
 ---
 #### 10.3.2 Version Control Systems
@@ -1970,7 +1970,7 @@ Version control systems vs. cloud storage systems
 - In **centralized** version control, a **private workspace contains only components** from the project repository. 
 - In **distributed** version control, a **clone** of the project repository.
 
-![](./pic/10_7.png)
+![](../pic/10_7.png)
 
 **Benefits of Centralized vs Distributed VC**
 - **Centralized**
@@ -1987,7 +1987,7 @@ Version control systems vs. cloud storage systems
 ---
 #### 10.3.4 Organization of Open-Source Development
 
-![](./pic/10_8.png)
+![](../pic/10_8.png)
 
 ---
 #### 10.3.5 Branching and Merging
@@ -2005,7 +2005,7 @@ Version control systems vs. cloud storage systems
   - Difficult to get the least version of the code; find from the first version from beginning;
   - chain of operations.
 
-![](./pic/10_9.png)
+![](../pic/10_9.png)
 
 ---
 **Git**
@@ -2015,7 +2015,7 @@ Version control systems vs. cloud storage systems
 - **does not store duplicate copies of files**.
 - simply involves decompressing it, with no need to apply a chain of operations.
 
-![](./pic/10_10.png)
+![](../pic/10_10.png)
 
 ---
 ### 10.4 Legacy System
@@ -2062,7 +2062,7 @@ Version control systems vs. cloud storage systems
 ### 11.1 Reuse Landscape
 - Reuse is possible at a range of levels from simple functions to complete application systems. The reuse landscape covers the range of possible reuse techniques.
 
-![](./pic/11_1.png)
+![](../pic/11_1.png)
 
 **Approach**
 
@@ -2079,7 +2079,7 @@ Version control systems vs. cloud storage systems
 |Application system integration|Two or more application systems are integrated to provide extended functionality|
 
 
-![](./pic/11_2.png)
+![](../pic/11_2.png)
 
 **Reuse Planning Factors**
 - The development **schedule** for the software. 
@@ -2112,7 +2112,7 @@ Version control systems vs. cloud storage systems
     - Security, dynamic web pages, database support, session management, user interaction
   - Architecture of WAFs is based on MVC composite pattern.
 
-![](./pic/11_3.png)
+![](../pic/11_3.png)
 
 ---
 #### 11.2.2 Extending Frameworks
@@ -2121,7 +2121,7 @@ Version control systems vs. cloud storage systems
   - Adding concrete classes that inherit operations from abstract classes in the framework; 
   - Adding (callback) methods that are called in response to events that are recognized by the framework.
 
-![](./pic/11_4.png)
+![](../pic/11_4.png)
 
 ---
 ### 11.3 SOFTWARE PRODUCT LINES
@@ -2145,7 +2145,7 @@ Version control systems vs. cloud storage systems
   - **Configurable** components that may be **modified** and **configured** to **specialize** them to a **new application**. 
   - Specialized, domain-specific components some or all of which may be **replaced** when a new instance of a product line is created.
 
-![](./pic/11_5.png)
+![](../pic/11_5.png)
 
 ---
 #### 11.3.2 Application Frameworks and Product Lines
@@ -2164,7 +2164,7 @@ Version control systems vs. cloud storage systems
 
 - The architecture of a software **product line** often reflects a **general, application-specific** architectural style or pattern.
 
-![](./pic/11_6.png)
+![](../pic/11_6.png)
 
 ---
 ### 11.4 COMPONENT-BASED SOFTWARE ENGINEERING (CBSE)
@@ -2180,7 +2180,7 @@ Version control systems vs. cloud storage systems
 
 **Component Characteristics**
 
-![](./pic/11_7.png)
+![](../pic/11_7.png)
 
 ---
 #### 11.4.1 Components As Providers of Services
@@ -2190,7 +2190,7 @@ Version control systems vs. cloud storage systems
   - The "**provides**" interface: defines the **services** provided by the component. 
   - The "**requires**" interface: specifies the **services** that **other components** in the system must provide if a component is to operate **correctly**.
 
-![](./pic/11_8.png)
+![](../pic/11_8.png)
 
 ---
 #### 11.4.2 Component Models
@@ -2204,13 +2204,13 @@ Version control systems vs. cloud storage systems
   - Usage information 
   - Deployment
 
-![](./pic/11_9.png)
+![](../pic/11_9.png)
 
 ---
 **Component Model Implementation**
 - A component model implementation provides **platform services** and **support services**
 
-![](./pic/11_10.png)
+![](../pic/11_10.png)
 
 - Components can be considered as being deployed in **containers**
   - A container is an **implementation** of these services **plus** a **definition** of the interfaces a component **MUST** provide to integrate it with the container.
@@ -2221,7 +2221,7 @@ Version control systems vs. cloud storage systems
 - Development **for** reuse: Process concerned with developing components or services that **will be reused** in other applications.
 - Development **with** reuse: Process of developing **new** applications using **existing** components and services.
 
-![](./pic/11_11.png)
+![](../pic/11_11.png)
 
 **Supporting Processes**
 - Component **acquisition** is the process of acquiring components for reuse or development into a reusable component.
@@ -2262,7 +2262,7 @@ Version control systems vs. cloud storage systems
   - make use of a service **discover** the **specification** of that service and **locate the service provider**. 
   - **bind** their application to that **specific service** and **communicate** with it, using **standard service protocols**.
 
-![](./pic/11_12.png)
+![](../pic/11_12.png)
 
 ---
 **Service Engineering**
@@ -2274,7 +2274,7 @@ Version control systems vs. cloud storage systems
 - **Service implementation and deployment**
   -  implement and **test** the **service** and make it **available** for use.
 
-![](./pic/11_13.png)
+![](../pic/11_13.png)
 
 ---
 ***学习笔记，仅供参考***
